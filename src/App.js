@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import { translate } from "react-i18next";
 
 class App extends Component {
   render() {
+    const { t } = this.props;
+
     return (
       <div className="App">
         <img 
@@ -10,15 +13,15 @@ class App extends Component {
           className="App__background-image"
         />
         <header className="App__header">
-          <h1 className="App__title">Coding Coach</h1>
-          <h4 className="App__tagline">Connecting developers with mentors worldwide.</h4>
+          <h1 className="App__title">{t("landing-page-header")}</h1>
+          <h4 className="App__tagline">{t("landing-page-subheader")}</h4>
           <button className="button button__white--fill">
             <a 
               href="https://docs.google.com/forms/d/1TraoygcJay39cLiBQM-ROlToy7xIgcdx_VvCQuE1lJw/edit#responses"
               target="blank"
               className="button__link"
             >
-              Get Started
+              {t("landing-page-start")}
             </a>
           </button>
         </header>
@@ -27,4 +30,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default translate("translations")(App);
