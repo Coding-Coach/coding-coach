@@ -13,6 +13,7 @@ node_modules/
 build/
 dist/
 out/
+src/styles/css/
 
 # NYC Output files.
 .nyc_output/
