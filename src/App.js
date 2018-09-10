@@ -10,7 +10,7 @@ class App extends Component {
           className="App__background-image"
         />
         <header className="App__header">
-          <h1 className="App__title">Coding Mentor</h1>
+          <h1 className="App__title">Coding Coach</h1>
           <h4 className="App__tagline">Connecting developers with mentors worldwide.</h4>
           <button className="button button__white--fill">
             <a 
