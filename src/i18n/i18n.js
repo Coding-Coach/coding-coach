@@ -6,9 +6,16 @@ i18n.use(LanguageDetector).init({
   resources: {
     en: {
       translations: {
-        "landing-page-header": "Conding Coach",
+        "landing-page-header": "Coding Coach",
         "landing-page-start": "Get Started",
         "landing-page-subheader": "Connecting developers with mentor worldwide"
+      }
+    },
+    fr: {
+      translations: {
+        "landing-page-header": "Coding Coach",
+        "landing-page-start": "Commencez maintenant",
+        "landing-page-subheader": "Apprenez avec des mentors partout à travers le monde"
       }
     }
   },
