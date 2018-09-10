@@ -5,7 +5,7 @@ class App extends Component {
     return (
       <div className="App">
         <img 
-          src={require('./images/mentor.png')} 
+          src={require('./images/mentor.jpg')} 
           alt="Mentor" 
           className="App__background-image"
         />
