@@ -44,6 +44,7 @@ body, html {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  padding: 24px;
   background: #f44336 url("../../images/mentor.jpg") bottom center/cover;
 }
 .App__header {
@@ -66,6 +67,10 @@ body, html {
   font-weight: 100;
   margin: 10px 0px;
   text-align: center;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=index.css.map */

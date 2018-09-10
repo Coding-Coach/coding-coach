@@ -7,7 +7,10 @@
   &__hero {
     width: 100vw;
     height: 100vh;
+
     overflow: hidden;
+    padding: 24px;
+
     background: #f44336 url("../../images/mentor.jpg") bottom center / cover;
   }
 
