@@ -1,5 +1,7 @@
 # coding-coach
 
+Connecting developers with mentors worldwide.
+
 ### Installing
 
 Installing the node modules
