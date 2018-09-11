@@ -1,3 +1,37 @@
-node_modules
+# PyCharm/IDEA files.
+.idea
+*.iml
+
+# Visual Studio Code files.
+.vscode/
+.sonarlint/
+
+# Node modules folder.
+node_modules/
+
+# Build & dist folders.
+build/
+dist/
+out/
+src/styles/css/
+
+# NYC Output files.
+.nyc_output/
+
+# Luna's coverage folder.
+coverage/
+
+# Private key folder.
+keys/
+
+# Environment files.
+.env.dev
+.env
+.env*
+
+# Nohup bullshit logs.
+nohup.out
+
+# Other files
 README.old.md
 .DS_Store
