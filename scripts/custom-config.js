@@ -1,3 +1,4 @@
+/* eslint-disable */
 /*
   Ref : https://daveceddia.com/customize-create-react-app-webpack-without-ejecting/
   This module runs the scripts from react-scripts (Create React App)
@@ -12,29 +13,35 @@
     webpackConfig.module.rules[0].use[0].options.useEslintrc = true;
   };
 */
-var rewire = require('rewire');
-var proxyquire = require('proxyquire');
+var rewire = require("rewire");
+var proxyquire = require("proxyquire");
 
-switch(process.argv[2]) {
+switch (process.argv[2]) {
   // The "start" script is run during development mode
-  case 'start':
-    rewireModule('react-scripts/scripts/start.js', loadCustomizer('../scripts/config-overrides.dev'));
+  case "start":
+    rewireModule(
+      "react-scripts/scripts/start.js",
+      loadCustomizer("../scripts/config-overrides.dev")
+    );
     break;
   // The "build" script is run to produce a production bundle
-  case 'build':
-    rewireModule('react-scripts/scripts/build.js', loadCustomizer('../scripts/config-overrides.prod'));
+  case "build":
+    rewireModule(
+      "react-scripts/scripts/build.js",
+      loadCustomizer("../scripts/config-overrides.prod")
+    );
     break;
   // The "test" script runs all the tests with Jest
-  case 'test':
+  case "test":
     // Load customizations from the config-overrides.testing file.
     // That file should export a single function that takes a config and returns a config
-    let customizer = loadCustomizer('../config-overrides.testing');
-    proxyquire('react-scripts/scripts/test.js', {
+    let customizer = loadCustomizer("../config-overrides.testing");
+    proxyquire("react-scripts/scripts/test.js", {
       // When test.js asks for '../utils/createJestConfig' it will get this instead:
-      '../utils/createJestConfig': (...args) => {
+      "../utils/createJestConfig": (...args) => {
         // Use the existing createJestConfig function to create a config, then pass
         // it through the customizer
-        var createJestConfig = require('react-scripts/utils/createJestConfig');
+        var createJestConfig = require("react-scripts/utils/createJestConfig");
         return customizer(createJestConfig(...args));
       }
     });
@@ -48,8 +55,8 @@ switch(process.argv[2]) {
 function loadCustomizer(module) {
   try {
     return require(module);
-  } catch(e) {
-    if(e.code !== "MODULE_NOT_FOUND") {
+  } catch (e) {
+    if (e.code !== "MODULE_NOT_FOUND") {
       throw e;
     }
   }
@@ -69,6 +76,6 @@ function rewireModule(modulePath, customizer) {
   // The customizer should *mutate* the config object, because
   // react-scripts imports the config as a `const` and we can't
   // modify that reference.
-  let config = defaults.__get__('config');
+  let config = defaults.__get__("config");
   customizer(config);
 }

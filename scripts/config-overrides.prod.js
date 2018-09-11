@@ -1,5 +1,5 @@
-const path = require('path');
-
+/* eslint-disable */
+const path = require("path");
 module.exports = function(config) {
   // Use your own ESLint file
   let eslintLoader = config.module.rules[0];
@@ -12,4 +12,4 @@ module.exports = function(config) {
     test: /\.scss$/,
     use: ["style-loader", "css-loader", "sass-loader"]
   });
-}
+};
