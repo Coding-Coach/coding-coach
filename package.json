@@ -4,21 +4,26 @@
   "private": true,
   "homepage": "http://coding-coach.github.io/",
   "dependencies": {
+    "proxyquire": "^2.1.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
-    "react-scripts": "1.1.5"
+    "react-scripts": "1.1.5",
+    "rewire": "^4.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "node scripts/custom-config start",
+    "build": "node scripts/custom-config build",
     "deploy": "gh-pages -d build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "node scripts/custom-config test --env=jsdom",
     "eject": "react-scripts eject",
     "sass": "sass --watch src/styles/scss:src/styles/css"
   },
   "devDependencies": {
     "ajv": "^6.5.3",
+    "css-loader": "^1.0.0",
     "gh-pages": "^1.2.0",
-    "sass": "^1.13.2"
+    "node-sass": "^4.9.3",
+    "sass": "^1.13.2",
+    "sass-loader": "^7.1.0"
   }
 }
