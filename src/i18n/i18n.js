@@ -1,23 +1,19 @@
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
+import { reactI18nextModule } from 'react-i18next';
 
-i18n.use(LanguageDetector).init({
+// individual language translation file
+import { loadFr } from './fr';
+import { loadEn } from './en';
+
+i18n
+  .use(LanguageDetector)
+  .use(reactI18nextModule)
+  .init({
   // we init with resources
   resources: {
-    en: {
-      translations: {
-        "landing-page-header": "Coding Coach",
-        "landing-page-start": "Get Started",
-        "landing-page-subheader": "Connecting developers with mentor worldwide"
-      }
-    },
-    fr: {
-      translations: {
-        "landing-page-header": "Coding Coach",
-        "landing-page-start": "Commencez maintenant",
-        "landing-page-subheader": "Apprenez avec des mentors partout à travers le monde"
-      }
-    }
+    en: loadEn(),
+    fr: loadFr()
   },
   fallbackLng: "en",
   debug: true,
