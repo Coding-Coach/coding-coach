@@ -1,5 +1,7 @@
 # coding-coach
 
+Platform for Mentors and Mentees on Internet.
+
 ### Installing
 
 Installing the node modules
