@@ -1,6 +1,6 @@
 # coding-coach
 
-Platform for Mentors and Mentees on Internet.
+Connecting developers with mentors worldwide.
 
 ### Installing
 
