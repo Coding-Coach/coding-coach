@@ -1,9 +1,10 @@
 import React from 'react';
+import background from './images/mentor.jpg';
 
 function App() {
   return (
     <div className="App">
-      <img src="./images/mentor.jpg" alt="Mentor" className="App__background-image" />
+      <img src={background} alt="Mentor" className="App__background-image" />
       <header className="App__header">
         <h1 className="App__title">Coding Coach</h1>
         <h4 className="App__tagline">Connecting developers with mentors worldwide.</h4>
