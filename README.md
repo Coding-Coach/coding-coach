@@ -1,4 +1,5 @@
 # coding-coach
+[![Build Status](https://travis-ci.org/coding-coach/coding-coach.svg?branch=development)](https://travis-ci.org/coding-coach/coding-coach)
 
 Connecting developers with mentors worldwide.
 
