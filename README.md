@@ -35,7 +35,7 @@ This section describes the workflow we are going to follow when working in a new
 2. Clone the forked project to your local environment, for example: `git clone git@github.com:crysfel/coding-coach-front-end.git` (Make sure to replace the URL to your own repository).
 3. Add the original project as a remote, for this example the name is `upstream`, feel free to use whatever name you want. `git remote add upstream git@github.com:Coding-Coach/coding-coach.git`.
 
-Forking the project will create a copy of that project in your own GitHub account, you will commit your work agains your own repository.
+Forking the project will create a copy of that project in your own GitHub account, you will commit your work against your own repository.
 
 
 #### Updating your local
