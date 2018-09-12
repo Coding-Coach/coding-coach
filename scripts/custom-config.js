@@ -21,21 +21,21 @@ switch (process.argv[2]) {
   case 'start':
     rewireModule(
       'react-scripts/scripts/start.js',
-      loadCustomizer('../scripts/config-overrides.dev')
+      loadCustomizer('./config-overrides.dev')
     );
     break;
   // The "build" script is run to produce a production bundle
   case 'build':
     rewireModule(
       'react-scripts/scripts/build.js',
-      loadCustomizer('../scripts/config-overrides.prod')
+      loadCustomizer('./config-overrides.prod')
     );
     break;
   // The "test" script runs all the tests with Jest
   case 'test':
     // Load customizations from the config-overrides.testing file.
     // That file should export a single function that takes a config and returns a config
-    let customizer = loadCustomizer('../config-overrides.testing');
+    let customizer = loadCustomizer('./config-overrides.testing');
     proxyquire('react-scripts/scripts/test.js', {
       // When test.js asks for '../utils/createJestConfig' it will get this instead:
       '../utils/createJestConfig': (...args) => {
