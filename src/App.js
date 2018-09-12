@@ -6,8 +6,8 @@ function App() {
   return (
     <I18n ns="translations">
       {t => (
-          <div className="App">
-            <img src="./images/mentor.jpg" alt="Mentor" className="App__background-image" />
+        <div className="App">
+          <section className="App__hero">
             <header className="App__header">
               <h1 className="App__title">{t('landing-page-header')}</h1>
               <h4 className="App__tagline">{t('landing-page-subheader')}</h4>
@@ -20,8 +20,9 @@ function App() {
                 Get Started
               </a>
             </header>
-          </div>
-        )}
+          </section>
+        </div>
+      )}
     </I18n>
   );
 }

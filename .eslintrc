@@ -11,7 +11,7 @@
     "browser": true,
     "jest": true
   },
-  "extends": ["airbnb", "prettier/react", "prettier"],
+  "extends": ["prettier/react", "prettier"],
   "rules": {
     "react/jsx-filename-extension": "off"
   },
