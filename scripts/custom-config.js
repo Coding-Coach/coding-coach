@@ -1,3 +1,4 @@
+/* eslint-disable */
 /*
   Ref : https://daveceddia.com/customize-create-react-app-webpack-without-ejecting/
   This module runs the scripts from react-scripts (Create React App)
@@ -15,14 +16,20 @@
 var rewire = require('rewire');
 var proxyquire = require('proxyquire');
 
-switch(process.argv[2]) {
+switch (process.argv[2]) {
   // The "start" script is run during development mode
   case 'start':
-    rewireModule('react-scripts/scripts/start.js', loadCustomizer('../scripts/config-overrides.dev'));
+    rewireModule(
+      'react-scripts/scripts/start.js',
+      loadCustomizer('../scripts/config-overrides.dev')
+    );
     break;
   // The "build" script is run to produce a production bundle
   case 'build':
-    rewireModule('react-scripts/scripts/build.js', loadCustomizer('../scripts/config-overrides.prod'));
+    rewireModule(
+      'react-scripts/scripts/build.js',
+      loadCustomizer('../scripts/config-overrides.prod')
+    );
     break;
   // The "test" script runs all the tests with Jest
   case 'test':
@@ -48,8 +55,8 @@ switch(process.argv[2]) {
 function loadCustomizer(module) {
   try {
     return require(module);
-  } catch(e) {
-    if(e.code !== "MODULE_NOT_FOUND") {
+  } catch (e) {
+    if (e.code !== 'MODULE_NOT_FOUND') {
       throw e;
     }
   }
