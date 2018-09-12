@@ -15,7 +15,6 @@ body, html {
   border-radius: 25px;
   padding: 10px 30px;
   font-size: 1em;
-  height: 50px;
   transition: all .1s linear;
 
   &__white--fill {
@@ -26,9 +25,7 @@ body, html {
     &:hover {
       background-color: $color-main;
       cursor: pointer;
-      > a {
-        color: white;
-      }
+      color: white;
     }
   }
 

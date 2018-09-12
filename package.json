@@ -6,21 +6,50 @@
   "dependencies": {
     "i18next": "^11.7.0",
     "i18next-browser-languagedetector": "^2.2.3",
+    "react-i18next": "^7.12.0",
+    "proxyquire": "^2.1.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
-    "react-i18next": "^7.12.0",
-    "react-scripts": "1.1.5"
+    "react-scripts": "1.1.5",
+    "rewire": "^4.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "node scripts/custom-config start",
+    "build": "node scripts/custom-config build",
     "deploy": "gh-pages -d build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "node scripts/custom-config test --env=jsdom",
     "eject": "react-scripts eject",
-    "sass": "sass --watch src/styles/scss:src/styles/css"
+    "sass": "sass --watch src/styles/scss:src/styles/css",
+    "precommit": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/src/**/*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
   },
   "devDependencies": {
     "ajv": "^6.5.3",
-    "gh-pages": "^1.2.0"
+    "css-loader": "^1.0.0",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.11.1",
+    "gh-pages": "^1.2.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "node-sass": "^4.9.3",
+    "prettier": "^1.14.2",
+    "sass": "^1.13.2",
+    "sass-loader": "^7.1.0"
   }
 }
