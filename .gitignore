@@ -11,6 +11,7 @@ yarn-error.log*
 # Visual Studio Code files.
 .vscode/
 .sonarlint/
+.history/
 
 # Node modules folder.
 node_modules/
