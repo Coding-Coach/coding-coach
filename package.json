@@ -17,7 +17,7 @@
     "start": "node scripts/custom-config start",
     "build": "node scripts/custom-config build",
     "deploy": "gh-pages -d build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "node scripts/custom-config test --env=jsdom",
     "eject": "react-scripts eject",
     "sass": "sass --watch src/styles/scss:src/styles/css",
     "precommit": "lint-staged"
@@ -33,9 +33,6 @@
       "eslint --fix",
       "git add"
     ]
-  },
-  "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/tests/setup/setupTests.js"
   },
   "devDependencies": {
     "ajv": "^6.5.3",
