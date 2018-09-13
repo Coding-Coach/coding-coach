@@ -34,6 +34,9 @@
       "git add"
     ]
   },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/tests/setup/setupTests.js"
+  },
   "devDependencies": {
     "ajv": "^6.5.3",
     "css-loader": "^1.0.0",
