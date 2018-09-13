@@ -12,6 +12,8 @@ before_script:
   - greenkeeper-lockfile-update
 script:
   - npm run lint
+  - npm run test
+  - npm run build
 after_script: greenkeeper-lockfile-upload
 notifications:
   email: true
