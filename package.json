@@ -17,7 +17,7 @@
     "start": "node scripts/custom-config start",
     "build": "node scripts/custom-config build",
     "deploy": "gh-pages -d build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "node scripts/custom-config test --env=jsdom",
     "eject": "react-scripts eject",
     "sass": "sass --watch src/styles/scss:src/styles/css",
     "precommit": "lint-staged"
@@ -44,9 +44,11 @@
     "eslint-plugin-react": "^7.11.1",
     "gh-pages": "^1.2.0",
     "husky": "^0.14.3",
+    "jest-dom": "^1.12.0",
     "lint-staged": "^7.2.2",
     "node-sass": "^4.9.3",
     "prettier": "^1.14.2",
+    "react-testing-library": "^5.0.1",
     "sass": "^1.13.2",
     "sass-loader": "^7.1.0"
   }
