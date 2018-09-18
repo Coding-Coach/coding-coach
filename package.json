@@ -55,6 +55,7 @@
     "react-testing-library": "^5.0.1",
     "rewire": "^4.0.1",
     "sass": "^1.13.2",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0"
   }
 }
