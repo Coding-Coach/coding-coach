@@ -7,11 +7,10 @@
     "i18next": "^11.7.0",
     "i18next-browser-languagedetector": "^2.2.3",
     "react-i18next": "^7.12.0",
-    "proxyquire": "^2.1.0",
+    "classnames": "^2.2.6",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
-    "react-scripts": "1.1.5",
-    "rewire": "^4.0.1"
+    "react-scripts": "1.1.5"
   },
   "scripts": {
     "start": "node scripts/custom-config start",
@@ -48,7 +47,9 @@
     "lint-staged": "^7.2.2",
     "node-sass": "^4.9.3",
     "prettier": "^1.14.2",
+    "proxyquire": "^2.1.0",
     "react-testing-library": "^5.0.1",
+    "rewire": "^4.0.1",
     "sass": "^1.13.2",
     "sass-loader": "^7.1.0"
   }
