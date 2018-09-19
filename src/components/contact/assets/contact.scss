@@ -1,9 +1,8 @@
-$text-color: #32B88C;
-$fz-giant: 4.25rem;
+@import '~theme/base/variables';
 
 section.App__Contact {
   display: flex;
-  margin: 24px;
+  margin: 40px;
   
   
   .App__LeftSection {
@@ -18,14 +17,21 @@ section.App__Contact {
     flex-flow: column;
     margin-left: auto;
     h1 {
-      width: 60%;
+      width: 50%;
       margin-left: auto;
       text-align: right;
       font-size: $fz-giant;
-      color: $text-color;
+      color: $color-text-heading-green;
       text-transform: uppercase;
-      border-bottom: 1px solid rgba(0,0,0,.1);
+      border-bottom: 1px solid $color-light-grey;
       font-family: 'Fjalla One', sans-serif;
+      margin-bottom: 0;
+    }
+    p {
+      text-align: right;
+      width: 70%;
+      margin-left: auto;
+      color: $color-text-body-black;
     }
     
   }
