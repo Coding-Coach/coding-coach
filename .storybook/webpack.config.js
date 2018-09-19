@@ -17,5 +17,7 @@ module.exports = (storybookBaseConfig, configType) => {
     },
   );
 
+  storybookBaseConfig.resolve.modules.push('src');
+
   return storybookBaseConfig;
 };
