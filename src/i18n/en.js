@@ -6,7 +6,8 @@ export default function loadEn() {
       'landing-page-subheader': 'Connecting developers with mentor worldwide',
       'contact-page-header': 'Contact',
       'contact-page-msg':
-        'We want to hear your thoughts! Feel free to join our Slack organization or send us an email at'
-    }
+        'We want to hear your thoughts! Feel free to join our {{slackOrg}} or send us an email at {{email}}',
+      'slack-org': 'Slack Organization',
+    },
   };
 }
