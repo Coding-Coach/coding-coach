@@ -1,0 +1,32 @@
+$text-color: #32B88C;
+$fz-giant: 4.25rem;
+
+section.App__Contact {
+  display: flex;
+  margin: 24px;
+  
+  
+  .App__LeftSection {
+    flex: 0 0 40%;
+    img {
+      width: 100%;
+    }
+  }
+
+  .App__RightSection {
+    display: flex;
+    flex-flow: column;
+    margin-left: auto;
+    h1 {
+      width: 60%;
+      margin-left: auto;
+      text-align: right;
+      font-size: $fz-giant;
+      color: $text-color;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(0,0,0,.1);
+      font-family: 'Fjalla One', sans-serif;
+    }
+    
+  }
+}

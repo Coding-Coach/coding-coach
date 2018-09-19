@@ -1,6 +1,7 @@
 import React from 'react';
 import { I18n } from 'react-i18next';
 import './i18n/i18n';
+import Contact from './components/contact/Contact';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
                 Get Started
               </a>
             </header>
+            <Contact />
           </section>
         </div>
       )}
