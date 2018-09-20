@@ -26,7 +26,7 @@ export function App({ t }) {
 }
 
 App.propTypes = {
-  t: func
+  t: func,
 };
 
 // App.defaultProps = {
