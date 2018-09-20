@@ -72,3 +72,9 @@ You might have some conflicts while rebasing, try to resolve the conflicts for e
 In order to merge a PR, it will first go through a review process. Once it is approved, we will merge to the `development` branch using the `Squash` button in github.
 
 When using squash, all the commits will be squashed into one. The idea is to merge features/fixes as oppose of merging each individual commit. This helps when looking back in time for changes in the code base, and if the PR has a great comment, it's easier to know why that code was introduced.
+
+### Google Analytics
+
+Create a `.env` file in the root directory. Add your Tracking ID under the variable `GA_TRACKING_ID` e.g:
+
+    GA_TRACKING_ID='UA-xxxxxxxxx-x'
