@@ -4,12 +4,13 @@
   "private": true,
   "homepage": "http://coding-coach.github.io/",
   "dependencies": {
+    "classnames": "^2.2.6",
     "i18next": "^11.7.0",
     "i18next-browser-languagedetector": "^2.2.3",
-    "react-i18next": "^7.12.0",
-    "classnames": "^2.2.6",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
+    "react-ga": "^2.5.3",
+    "react-i18next": "^7.12.0",
     "react-scripts": "1.1.5"
   },
   "scripts": {
@@ -36,6 +37,7 @@
   "devDependencies": {
     "ajv": "^6.5.3",
     "css-loader": "^1.0.0",
+    "dotenv": "^6.0.0",
     "eslint": "^5.5.0",
     "eslint-config-prettier": "^3.0.1",
     "eslint-plugin-import": "^2.14.0",

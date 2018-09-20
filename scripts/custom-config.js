@@ -15,6 +15,8 @@
 */
 var rewire = require('rewire');
 var proxyquire = require('proxyquire');
+var dotenv = require('dotenv');
+var webpack = require('webpack');
 
 switch (process.argv[2]) {
   // The "start" script is run during development mode
@@ -71,5 +73,18 @@ function rewireModule(modulePath, customizer) {
   // react-scripts imports the config as a `const` and we can't
   // modify that reference.
   let config = defaults.__get__('config');
+
+  // Have webpack compile the env keys so the can be used on the client
+  var env = dotenv.config().parsed;
+
+  // Reduce the env keys into an object
+  var envKeys = Object.keys(env).reduce((prev, next) => {
+    prev[`process.env.${next}`] = JSON.stringify(env[next]);
+    return prev;
+  }, {});
+
+  // Pass object to webpack DefinePlugin method
+  config.plugins.push(new webpack.DefinePlugin(envKeys))
+
   customizer(config);
 }
