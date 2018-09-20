@@ -42,7 +42,7 @@ Forking the project will create a copy of that project in your own GitHub accoun
 
 
 #### Updating your local
-In order to update your local environment to the latest version on `development`, you will have to pull the changes using the `upstream` repository, for example: `git pull upstream development`. This will pull all the new commits from the origin repository to your local environment.
+In order to update your local environment to the latest version on `development`, you will have to pull the changes using the `upstream` repository, for example: `git pull upstream development` or just `git pull`. This will pull all the new commits from the origin repository to your local environment.
 
 #### Features/Bugs
 When working on a new feature, create a new branch `feature/something` from the `development` branch, for example `feature/login-form`. Commit your work agains this new branch and push everything to your forked project. Once everything is completed, you should create a PR to the original project. Make sure to add a description about your work and a link to the trello task.
@@ -54,7 +54,7 @@ Let's say you've been working on a feature for a couple days, most likely there 
 
 ```
 $ git checkout development
-$ git pull upstream development
+$ git pull upstream development or $git pull
 $ git checkout feature/something-awesome
 $ git rebase development
 ```
