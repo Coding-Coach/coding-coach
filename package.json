@@ -22,7 +22,8 @@
     "test": "node scripts/custom-config test --env=jsdom",
     "eject": "react-scripts eject",
     "sass": "sass --watch src/styles/scss:src/styles/css",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "analyze": "source-map-explorer build/static/js/main.*"
   },
   "husky": {
     "hooks": {

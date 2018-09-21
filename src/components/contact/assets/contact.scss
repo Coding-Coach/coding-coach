@@ -21,9 +21,9 @@ section.contact {
     margin-left: auto;
     text-align: right;
     font-size: $fz-giant;
-    color: $color-text-heading-green;
+    color: $green300;
     text-transform: uppercase;
-    border-bottom: 1px solid $color-light-grey;
+    border-bottom: 1px solid $gray;
     font-family: 'Fjalla One', sans-serif;
     margin-bottom: 0;
   }
@@ -31,17 +31,17 @@ section.contact {
     text-align: right;
     width: 60%;
     margin-left: auto;
-    color: $color-text-body-black;
+    color: $gray29;
   }
 }
 
 .email {
   text-decoration: none;
-  color: $color-light-green
+  color: $green500;
 }
 
 .slack_org {
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid $color-underline-text;
+  border-bottom: 1px solid $black;
 }
