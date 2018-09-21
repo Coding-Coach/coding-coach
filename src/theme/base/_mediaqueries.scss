@@ -1,0 +1,77 @@
+/*
+  Global rules for adding Media Queries to a classname
+  mixin function respond-to takes an argument for the screen size, eg mobile, tablet
+  usage:  @include respond-to(mobile){ // css for mobile here }
+  eg.
+  .header {
+    height: 50px;
+    @include respond-to(mobile){
+      height: 40px // This will overide the height in mobile screen sizes
+    }
+
+    @include respond-to(tablet){
+      height: 30px // This will overide the height in tablet screen sizes
+    }
+  }
+*/
+
+$break-xsmall:322px;        // for even smaller mobiles
+$break-msmall:375px;        // for medium smaller mobiles
+$break-small:450px;         // mobile portrait
+$break-small-medium:682px;  // landscape
+$break-medium: 768px;       // big mobile screens
+$break-large: 992px;        // tablets
+
+/*
+  Breakpoints specified
+
+  smobile = 321px;
+  mmobile = 375px
+  mobile = 450px;
+  landscape = 681px;
+  lgmobile = 767px;
+  tablet = 991px
+  pc = 992px
+*/
+@mixin respond-to($media) {
+  @if $media==smobile {
+    @media screen and (max-width: $break-xsmall - 1) {
+      @content;
+    }
+  }
+  @else if $media==mmobile {
+    @media screen and (max-width: $break-msmall) {
+      @content;
+    }
+  }
+  @else if $media==mobile {
+    @media screen and (max-width: $break-small) {
+      @content;
+    }
+  }
+  @else if $media==landscape {
+    @media screen and (max-width: $break-small-medium - 1) {
+      @content;
+    }
+  }
+ @else if $media==lgmobile {
+    @media screen and (max-width: $break-medium - 1) {
+        @content;
+    }
+  }
+  @else if $media==tablet {
+    @media screen and (max-width: $break-large - 1) {
+        @content;
+    }
+  }
+  @else if $media==pc {
+    @media (min-width: $break-large) {
+        @content;
+    }
+  }
+  @else if $media==notmobile {
+    @media (min-width: $break-small) {
+        @content;
+    }
+  }
+}
