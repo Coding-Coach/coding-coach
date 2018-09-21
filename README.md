@@ -76,6 +76,6 @@ When using squash, all the commits will be squashed into one. The idea is to mer
 
 ### Google Analytics
 
-Create a `.env` file in the root directory. Add your Tracking ID under the variable `GA_TRACKING_ID` e.g:
+Create a `.env` file in the root directory. Add your Tracking ID under the variable `REACT_APP_GA_TRACKING_ID` e.g:
 
-    GA_TRACKING_ID='UA-xxxxxxxxx-x'
+    REACT_APP_GA_TRACKING_ID='UA-xxxxxxxxx-x'

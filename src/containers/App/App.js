@@ -5,12 +5,12 @@ import 'i18n/i18n';
 import styles from './assets/app.scss';
 
 import Contact from 'components/contact/Contact';
-import ga from 'utils/ga';
+import GA from 'utils/ga';
 
 class App extends React.Component {
   componentDidMount() {
-    ga.initGA();
-    ga.trackCurrentPage();
+    GA.initGA();
+    GA.trackCurrentPage();
   }
   render() {
     return (
@@ -38,9 +38,5 @@ class App extends React.Component {
 App.propTypes = {
   t: func,
 };
-
-// App.defaultProps = {
-//   t: () => true,
-// };
 
 export default translate('translations')(App);
