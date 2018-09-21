@@ -13,7 +13,8 @@
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-i18next": "^7.12.0",
-    "react-scripts": "1.1.5"
+    "react-scripts": "1.1.5",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "start": "node scripts/custom-config start",
