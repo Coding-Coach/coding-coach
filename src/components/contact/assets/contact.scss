@@ -1,8 +1,12 @@
 @import '~theme/base/variables';
+@import '~theme/base/mediaqueries';
 
 section.contact {
   display: flex;
   margin: 40px;
+  @include respond-to(landscape){
+    flex-flow: column;
+  }
 }
 
 .left_section {
@@ -26,12 +30,21 @@ section.contact {
     border-bottom: 1px solid $gray;
     font-family: 'Fjalla One', sans-serif;
     margin-bottom: 0;
+    @include respond-to(landscape){
+      width: auto;
+      margin-left: initial;
+      text-align: center;
+    }
   }
   p {
     text-align: right;
     width: 60%;
     margin-left: auto;
     color: $gray29;
+    @include respond-to(landscape){
+      width: auto;
+      text-align: center;
+    }
   }
 }
 
