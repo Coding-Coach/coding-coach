@@ -3,12 +3,12 @@ import { func } from 'prop-types';
 import { translate } from 'react-i18next';
 import 'i18n/i18n';
 import styles from './assets/app.scss';
-import { initializeGA, trackCurrentPage } from '../../googleAnalytics';
+import GA from '../../googleAnalytics';
 
 class App extends React.Component {
   componentDidMount() {
-    initializeGA();
-    trackCurrentPage();
+    GA.initGA();
+    GA.trackCurrentPage();
   }
   render() {
     return (
@@ -35,9 +35,5 @@ class App extends React.Component {
 App.propTypes = {
   t: func,
 };
-
-// App.defaultProps = {
-//   t: () => true,
-// };
 
 export default translate('translations')(App);
