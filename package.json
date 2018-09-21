@@ -20,7 +20,8 @@
     "test": "node scripts/custom-config test --env=jsdom",
     "eject": "react-scripts eject",
     "sass": "sass --watch src/styles/scss:src/styles/css",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "husky": {
     "hooks": {
@@ -35,7 +36,10 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-viewport": "^3.4.10",
+    "@storybook/react": "^3.4.10",
     "ajv": "^6.5.3",
+    "babel-core": "^6.26.3",
     "css-loader": "^1.0.0",
     "dotenv": "^6.0.0",
     "eslint": "^5.5.0",
@@ -43,6 +47,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^2.0.0",
     "gh-pages": "^1.2.0",
     "husky": "^0.14.3",
     "jest-dom": "^1.12.0",
@@ -53,6 +58,7 @@
     "react-testing-library": "^5.0.1",
     "rewire": "^4.0.1",
     "sass": "^1.13.2",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0"
   }
 }
