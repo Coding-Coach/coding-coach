@@ -3,7 +3,7 @@ import { func } from 'prop-types';
 import { translate } from 'react-i18next';
 import 'i18n/i18n';
 import styles from './assets/app.scss';
-import GA from '../../googleAnalytics';
+import GA from 'googleAnalytics';
 
 class App extends React.Component {
   componentDidMount() {
