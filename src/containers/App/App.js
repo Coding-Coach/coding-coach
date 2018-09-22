@@ -5,8 +5,7 @@ import 'i18n/i18n';
 import styles from './assets/app.scss';
 
 import Contact from 'components/contact/Contact';
-import { initializeGA, trackCurrentPage } from '../../googleAnalytics';
-import GA from '../../googleAnalytics';
+import GA from 'googleAnalytics';
 
 class App extends React.Component {
   componentDidMount() {
