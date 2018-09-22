@@ -33,16 +33,23 @@ storiesOf('Section', module)
       </Section>
     );
   })
-  .add('Pastel', () => {
+  .add('Primary', () => {
     return (
-      <Section backgroundColor="pastel">
+      <Section backgroundColor="primary">
         <LoremIpsum />
       </Section>
     );
   })
-  .add('Water', () => {
+  .add('Secondary', () => {
     return (
-      <Section backgroundColor="watercolor">
+      <Section backgroundColor="secondary">
+        <LoremIpsum />
+      </Section>
+    );
+  })
+  .add('Tertiary', () => {
+    return (
+      <Section backgroundColor="tertiary">
         <LoremIpsum />
       </Section>
     );

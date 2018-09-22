@@ -28,10 +28,14 @@
     background-color: $color-grey-light;
 }
 
-.isPastel {
+.isPrimary {
+    background-color: $color-primary;
+}
+
+.isSecondary {
     background-color: $color-secondary;
 }
 
-.isWaterColor {
-    background-color: $color-terciary;
+.isTertiary {
+    background-color: $color-tertiary;
 }

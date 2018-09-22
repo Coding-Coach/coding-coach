@@ -9,10 +9,12 @@ function getBackgroundColorClass(bgc) {
     return styles.isWhite;
   } else if (bgc === 'grey') {
     return styles.isGrey;
-  } else if (bgc === 'pastel') {
-    return styles.isPastel;
-  } else if (bgc === 'watercolor') {
-    return styles.isWaterColor;
+  } else if (bgc === 'primary') {
+    return styles.isPrimary;
+  } else if (bgc === 'secondary') {
+    return styles.isSecondary;
+  } else if (bgc === 'tertiary') {
+    return styles.isTertiary;
   } else {
     return '';
   }
@@ -33,7 +35,14 @@ const Section = ({ backgroundColor, paddingVertical, paddingHorizontal, children
 );
 
 Section.propTypes = {
-  backgroundColor: PropTypes.oneOf(['transparent', 'white', 'grey', 'pastel', 'watercolor']),
+  backgroundColor: PropTypes.oneOf([
+    'transparent',
+    'white',
+    'grey',
+    'primary',
+    'secondary',
+    'tertiary',
+  ]),
   paddingVertical: PropTypes.bool,
   paddingHorizontal: PropTypes.bool,
   children: PropTypes.node.isRequired,
