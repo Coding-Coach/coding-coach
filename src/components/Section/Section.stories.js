@@ -16,24 +16,31 @@ const LoremIpsum = () => (
   </p>
 );
 storiesOf('Section', module)
-  .add('Transparent background', () => (
+  .add('Transparent', () => (
     <Section>
       <LoremIpsum />
     </Section>
   ))
-  .add('White background', () => (
+  .add('White', () => (
     <Section backgroundColor="white">
       <LoremIpsum />
     </Section>
   ))
-  .add('Grey background', () => {
+  .add('Grey', () => {
     return (
       <Section backgroundColor="grey">
         <LoremIpsum />
       </Section>
     );
   })
-  .add('Water Main color background', () => {
+  .add('Pastel', () => {
+    return (
+      <Section backgroundColor="pastel">
+        <LoremIpsum />
+      </Section>
+    );
+  })
+  .add('Water', () => {
     return (
       <Section backgroundColor="watercolor">
         <LoremIpsum />

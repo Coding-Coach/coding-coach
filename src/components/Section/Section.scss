@@ -1,25 +1,8 @@
 @import '~theme/base/variables';
 
-// Create an utils-class called for example .u-hasLayout
-// So all the content inside that element that has this class will
-// always be inside the grid we want to build
-// Need to include mediaqueries
-    // decide a grid max-width for resolutions.
-    // Example:
-    // mediaqueries(min-width: 767px)
-    //   max-width: 700px
-    //
-    // mediaqueries(min-width: 1024px)
-    //   max-width: 800px
-    //
-    // mediaqueries(min-width: 1200px)
-    //   max-width: 900px
-    //
-    // mediaqueries(min-width: 1400px)
-    //   max-width: 1200px
 
 .section {
-    background: red;
+    background-color: transparent;
 }
 
 .hasPaddingHorizontal {
@@ -32,15 +15,23 @@
     padding-bottom: 30px;
 }
 
+// Colors Modifiers
 .isTransparent {
     background-color: transparent;
 }
+
 .isWhite {
     background-color: $color-white;
 }
+
 .isGrey {
     background-color: $color-grey;
 }
-.isWaterMain {
+
+.isPastel {
+    background-color: $color-main-pastel;
+}
+
+.isWaterColor {
     background-color: $color-main-water;
 }
