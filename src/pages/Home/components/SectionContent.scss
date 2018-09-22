@@ -1,0 +1,26 @@
+@import '~theme/base/variables';
+
+.header {
+    margin-bottom: 2rem;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        width: 200px;
+        height: 1px;
+        background: $color-grey-light;
+    }
+}
+
+.title {
+    margin: 0;
+    font-size: 2rem;
+    color: $color-grey-dark;
+    $font-family: $font-alternative;
+}
+
+.isColored {
+    color: $color-main;
+}

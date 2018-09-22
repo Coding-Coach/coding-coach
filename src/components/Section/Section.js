@@ -13,24 +13,24 @@ function getBackgroundColorClass(bgc) {
     return styles.isPastel;
   } else if (bgc === 'watercolor') {
     return styles.isWaterColor;
+  } else {
+    return '';
   }
 }
 
-const Section = ({ backgroundColor, paddingVertical, paddingHorizontal, children, className }) => {
-  return (
-    <section
-      className={[
-        styles.section,
-        backgroundColor ? getBackgroundColorClass(backgroundColor) : '',
-        paddingVertical ? styles.hasPaddingHorizontal : '',
-        paddingHorizontal ? styles.hasPaddingVertical : '',
-        className,
-      ].join(' ')}
-    >
-      {children}
-    </section>
-  );
-};
+const Section = ({ backgroundColor, paddingVertical, paddingHorizontal, children, className }) => (
+  <section
+    className={[
+      styles.section,
+      backgroundColor ? getBackgroundColorClass(backgroundColor) : '',
+      paddingVertical ? styles.hasPaddingHorizontal : '',
+      paddingHorizontal ? styles.hasPaddingVertical : '',
+      className,
+    ].join(' ')}
+  >
+    {children}
+  </section>
+);
 
 Section.propTypes = {
   backgroundColor: PropTypes.oneOf(['transparent', 'white', 'grey', 'pastel', 'watercolor']),
