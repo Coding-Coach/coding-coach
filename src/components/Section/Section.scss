@@ -22,23 +22,25 @@
     background: red;
 }
 
-.section.section--paddingHorizontal {
-    padding-left: 30px; // Need to ask about this. It will be a varaible
+.hasPaddingHorizontal {
+    padding-left: 30px; 
     padding-right: 30px;
-    
 }
 
-.section.section--paddingVertical {
+.hasPaddingVertical {
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.section.section--white {
+.isTransparent {
+    background-color: transparent;
+}
+.isWhite {
     background-color: $color-white;
 }
-.section.section--grey {
+.isGrey {
     background-color: $color-grey;
 }
-.section.section--waterMain {
+.isWaterMain {
     background-color: $color-main-water;
 }
