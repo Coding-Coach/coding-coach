@@ -20,8 +20,16 @@ function getBackgroundColorClass(bgc) {
   }
 }
 
-const Section = ({ backgroundColor, paddingVertical, paddingHorizontal, children, className }) => (
+const Section = ({
+  id,
+  className,
+  backgroundColor,
+  paddingVertical,
+  paddingHorizontal,
+  children,
+}) => (
   <section
+    id={id}
     className={[
       styles.section,
       backgroundColor ? getBackgroundColorClass(backgroundColor) : '',
@@ -35,6 +43,8 @@ const Section = ({ backgroundColor, paddingVertical, paddingHorizontal, children
 );
 
 Section.propTypes = {
+  id: PropTypes.string,
+  className: PropTypes.string,
   backgroundColor: PropTypes.oneOf([
     'transparent',
     'white',

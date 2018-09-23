@@ -1,0 +1,30 @@
+.sectionDirection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    > * {
+        flex-grow: 1;
+    }
+
+    @media screen and (min-width: 767px) {
+        flex-direction: row;
+        align-items: center;
+
+        > * {
+            width: 50%;
+        }
+    }
+}
+
+.hasLeftDirection {
+    @media screen and (min-width: 767px) {
+        flex-direction: row;
+    }
+}
+
+.hasRightDirection {
+    @media screen and (min-width: 767px) {
+        flex-direction: row-reverse;
+    }
+}

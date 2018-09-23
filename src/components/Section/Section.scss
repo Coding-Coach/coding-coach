@@ -15,27 +15,22 @@
     padding-bottom: 30px;
 }
 
-// Colors Modifiers
+// Color Modifiers
 .isTransparent {
     background-color: transparent;
 }
-
 .isWhite {
     background-color: $color-white;
 }
-
 .isGrey {
     background-color: $color-grey-light;
 }
-
 .isPrimary {
     background-color: $color-primary;
 }
-
 .isSecondary {
     background-color: $color-secondary;
 }
-
 .isTertiary {
     background-color: $color-tertiary;
 }

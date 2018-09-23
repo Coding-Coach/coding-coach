@@ -49,7 +49,7 @@ storiesOf('Section', module)
   })
   .add('Tertiary', () => {
     return (
-      <Section backgroundColor="tertiary">
+      <Section id="first" backgroundColor="tertiary">
         <LoremIpsum />
       </Section>
     );

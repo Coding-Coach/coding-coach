@@ -1,7 +1,7 @@
 @import '~theme/base/variables';
 
 .header {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     position: relative;
 
     &:after {
@@ -19,8 +19,31 @@
     font-size: 2rem;
     color: $color-grey-dark;
     $font-family: $font-alternative;
+    text-transform: uppercase;
+}
+
+.description {
+    line-height: 1.75;
+    font-size: 14px;
+    font-family: $font-main;
 }
 
 .isColored {
     color: $color-primary;
+}
+
+.isLeftAligned {
+    text-align: left;
+}
+.isLeftAligned.header {
+    &:after {
+        left: 0;
+    }
+}
+
+.isRightAligned {
+    text-align: right;
+    &:after {
+        right: 0;
+    }
 }
