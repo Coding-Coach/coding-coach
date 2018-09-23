@@ -16,6 +16,7 @@
     "start": "node scripts/custom-config start",
     "build": "node scripts/custom-config build",
     "deploy": "gh-pages -d build",
+    "lint": "eslint src/",
     "test": "node scripts/custom-config test --env=jsdom",
     "eject": "react-scripts eject",
     "sass": "sass --watch src/styles/scss:src/styles/css",
