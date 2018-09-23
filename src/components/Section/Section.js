@@ -3,20 +3,19 @@ import PropTypes from 'prop-types';
 import styles from './Section.scss';
 
 function getBackgroundColorClass(bgc) {
-  if (bgc === 'transparent') {
-    return styles.isTransparent;
-  } else if (bgc === 'white') {
-    return styles.isWhite;
-  } else if (bgc === 'grey') {
-    return styles.isGrey;
-  } else if (bgc === 'primary') {
-    return styles.isPrimary;
-  } else if (bgc === 'secondary') {
-    return styles.isSecondary;
-  } else if (bgc === 'tertiary') {
-    return styles.isTertiary;
-  } else {
-    return '';
+  switch (bgc) {
+    case 'transparent':
+      return styles.isTransparent;
+    case 'white':
+      return styles.isWhite;
+    case 'grey':
+      return styles.isGrey;
+    case 'primary':
+      return styles.isPrimary;
+    case 'secondary':
+      return styles.isSecondary;
+    case 'tertiary':
+      return styles.isTertiary;
   }
 }
 
