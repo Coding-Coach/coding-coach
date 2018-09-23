@@ -5,6 +5,26 @@
     background-color: transparent;
 }
 
+.inner {
+    margin: 0 auto;
+    
+    @media screen and (min-width: 767px) {
+        width: 90%;
+        max-width: 800px;    
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 90%;
+        max-width: 900px;
+    }
+
+    @media screen and (min-width: 1400px) {
+        width: 90%;
+        max-width: 1200px;
+    }
+}
+
+
 .hasPaddingHorizontal {
     padding-left: 30px; 
     padding-right: 30px;

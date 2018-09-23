@@ -24,7 +24,7 @@ const Section = ({
       className,
     ].join(' ')}
   >
-    {children}
+    <div className={styles.inner}>{children}</div>
   </section>
 );
 

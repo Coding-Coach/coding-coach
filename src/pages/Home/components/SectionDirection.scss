@@ -3,16 +3,12 @@
     flex-direction: column;
     justify-content: space-between;
 
-    > * {
-        flex-grow: 1;
-    }
-
     @media screen and (min-width: 767px) {
         flex-direction: row;
         align-items: center;
 
         > * {
-            width: 50%;
+            max-width: 40%;
         }
     }
 }
