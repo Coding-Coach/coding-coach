@@ -3,20 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Section.scss';
 
 function getBackgroundColorClass(bgc) {
-  switch (bgc) {
-    case 'transparent':
-      return styles.isTransparent;
-    case 'white':
-      return styles.isWhite;
-    case 'grey':
-      return styles.isGrey;
-    case 'primary':
-      return styles.isPrimary;
-    case 'secondary':
-      return styles.isSecondary;
-    case 'tertiary':
-      return styles.isTertiary;
-  }
+  return bgc ? styles[`is${bgc.charAt(0).toUpperCase() + bgc.slice(1)}`] : '';
 }
 
 const Section = ({
