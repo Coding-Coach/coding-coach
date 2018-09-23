@@ -28,7 +28,7 @@ section.contact {
     color: $green300;
     text-transform: uppercase;
     border-bottom: 1px solid $gray;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: $font-fjalla-one;
     margin-bottom: 0;
     @include respond-to(landscape){
       width: auto;
