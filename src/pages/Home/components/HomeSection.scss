@@ -1,5 +1,6 @@
 @import '~theme/base/variables';
 @import '~theme/base/mediaqueries';
+@import '~theme/base/utils';
 
 .section {
     padding: 45px 30px;
@@ -16,8 +17,7 @@
     flex-direction: column;
 
     @media screen and (min-width: 768px) {
-        width: 90%;
-        max-width: 800px;
+        @include generalAligment();
         margin: 0 auto;
         flex-direction: row;
         justify-content: space-between;
@@ -59,4 +59,8 @@
     line-height: 1.75;
     font-size: 14px;
     font-family: $font-main;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 16px;
+    }
 }
