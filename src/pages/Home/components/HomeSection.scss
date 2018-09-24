@@ -15,10 +15,10 @@ $second-flex-element-width: 40px;
 }
 
 .sectionInner {
-    display: flex;
-    width: 100%;
     align-items: center;
+    display: flex;
     flex-direction: column;
+    width: 100%;
 
     @media screen and (min-width: 768px) {
         @include generalAlignment();
@@ -37,33 +37,35 @@ $second-flex-element-width: 40px;
 }
 
 .header {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     position: relative;
 
     &:after {
         content: '';
-        position: absolute;
-        bottom: -5px;
-        width: 200px;
-        height: 1px;
         background: $color-grey-light;
+        bottom: 0;
+        position: absolute;
+        height: 1px;
+        width: 200px;
     }
 }
 
 .title {
+    color: $color-grey-dark;
+    text-transform: uppercase;
+    font-family: $font-alternative;
+    font-size: 2.5rem;
     margin: 0;
     line-height: 1.25;
-    font-size: 2.5rem;
-    color: $color-grey-dark;
-    font-family: $font-alternative;
     text-transform: uppercase;
 }
 
 .description {
     color: $color-grey-dark;
-    line-height: 1.5;
     font-size: 14px;
     font-family: $font-main;
+    line-height: 1.5;
+    margin: 0;
 
     @media screen and (min-width: 1024px) {
         font-size: 16px;
