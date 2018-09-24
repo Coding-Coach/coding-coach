@@ -1,0 +1,37 @@
+@import '~theme/base/variables';
+
+// Sections with the text at the right
+@mixin isReverseSection() {
+    text-align: right;
+    header {
+        &:after {
+            right: 0;
+        }
+    }
+    
+    @media screen and (min-width: 768px) {
+        > div {
+            flex-direction: row-reverse;    
+        }
+    }
+}
+
+// Sections with 
+@mixin hasColoredTitle($color) {
+    h1 {
+        color: $color;
+    }
+}
+
+.home {
+
+    > section:nth-child(1) {
+        background-color: $color-white;
+        @include hasColoredTitle($color-primary);
+        @include isReverseSection();
+    }
+
+    > section:nth-child(2) {
+        background-color: $color-tertiary;
+    }
+}
