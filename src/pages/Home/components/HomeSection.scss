@@ -2,6 +2,9 @@
 @import '~theme/base/mediaqueries';
 @import '~theme/base/utils';
 
+$first-flex-element-width: 50px;
+$second-flex-element-width: 40px;
+
 .section {
     padding: 100px 30px;
     position: relative;
@@ -18,17 +21,17 @@
     flex-direction: column;
 
     @media screen and (min-width: 768px) {
-        @include generalAligment();
+        @include generalAlignment();
         margin: 0 auto;
         flex-direction: row;
         justify-content: space-between;
 
         > *:nth-child(1) {
-            width: 50%;
+            width: $first-flex-element-width;
         }
 
         > *:nth-child(2) {
-            width: 35%;
+            width: $second-flex-element-width;
         }
     }
 }
