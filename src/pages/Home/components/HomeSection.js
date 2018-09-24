@@ -2,8 +2,6 @@ import React from 'react';
 import styles from './HomeSection.scss';
 import PropTypes from 'prop-types';
 
-// import Section from 'components/Section/Section'
-
 const HomeSection = ({ title, text, media, children }) => (
   <section className={styles.section}>
     <div className={styles.sectionInner}>

@@ -1,5 +1,8 @@
 @import '~theme/base/variables';
 
+$distance-height-variation-before: 20px;
+$distance-height-variation-after: 75px;
+
 // Sections with the text at the right
 @mixin isReverseSection() {
     text-align: right;
@@ -17,7 +20,7 @@
 }
 
 // Sections with 
-@mixin hasColoredTitle($color) {
+@mixin titleColor($color) {
     h1 {
         color: $color;
     }
@@ -27,11 +30,33 @@
 
     > section:nth-child(1) {
         background-color: $color-white;
-        @include hasColoredTitle($color-primary);
+        @include titleColor($color-primary);
         @include isReverseSection();
+        
     }
 
     > section:nth-child(2) {
         background-color: $color-tertiary;
+
+        &:before,
+        &:after {
+            content: "";
+            background: $color-tertiary;
+            width: 100%;
+            position: absolute;
+            left: 0;
+        }
+
+        &:before {
+            height: $distance-height-variation-before;
+            top: -$distance-height-variation-before;
+            background: linear-gradient(to top right, $color-tertiary, $color-tertiary 50%, white 50%, white);
+        }
+
+        &:after {
+            height: $distance-height-variation-after;
+            bottom: -$distance-height-variation-after;
+            background: linear-gradient(to bottom left, $color-tertiary, $color-tertiary 50%, white 50%, white);
+        }
     }
 }
