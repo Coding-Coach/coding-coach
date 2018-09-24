@@ -4,6 +4,7 @@
 
 $first-flex-element-width: 50%;
 $second-flex-element-width: 40%;
+$space-between-text-image: 50px;
 
 .section {
     padding: 75px 30px;
@@ -20,6 +21,11 @@ $second-flex-element-width: 40%;
     flex-direction: column;
     width: 100%;
 
+
+    > *:nth-child(1) {
+        margin-bottom: $space-between-text-image;
+    }
+
     @media screen and (min-width: 768px) {
         @include generalAlignment();
         margin: 0 auto;
@@ -27,6 +33,7 @@ $second-flex-element-width: 40%;
         justify-content: space-between;
 
         > *:nth-child(1) {
+            margin-bottom: 0;
             width: $first-flex-element-width;
         }
 
