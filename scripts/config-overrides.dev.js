@@ -21,6 +21,7 @@ module.exports = function(config) {
           minimize: false,
         },
       },
+      'resolve-url-loader',
       'sass-loader',
     ],
   });

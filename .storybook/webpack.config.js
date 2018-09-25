@@ -4,7 +4,7 @@ module.exports = (storybookBaseConfig, configType) => {
   storybookBaseConfig.module.rules.push(
     {
       test: /\.scss$/,
-      loaders: ['style-loader', 'css-loader?modules', 'sass-loader'],
+      loaders: ['style-loader', 'css-loader?modules', 'resolve-url-loader', 'sass-loader'],
       include: path.resolve(__dirname, '..', 'src'),
     },
     {
@@ -15,6 +15,14 @@ module.exports = (storybookBaseConfig, configType) => {
         },
       ],
     },
+    {
+      test: /\.(woff2?)$/,
+      exclude: /node_modules/,
+      loader: 'file-loader',
+      options: {
+          name: '[path][name].[ext]'
+      }
+  }
   );
 
   storybookBaseConfig.resolve.modules.push('src');
