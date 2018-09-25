@@ -74,8 +74,6 @@ In order to merge a PR, it will first go through a review process. Once it is ap
 
 When using squash, all the commits will be squashed into one. The idea is to merge features/fixes as oppose of merging each individual commit. This helps when looking back in time for changes in the code base, and if the PR has a great comment, it's easier to know why that code was introduced.
 
-### Google Analytics
+### .env Keys
 
-Create a `.env` file in the root directory. Add your Tracking ID under the variable `REACT_APP_GA_TRACKING_ID` e.g:
-
-    REACT_APP_GA_TRACKING_ID='UA-xxxxxxxxx-x'
+Look in `.env.example` in the root directory to see the relevant `process.env` keys used in this project.
