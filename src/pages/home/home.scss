@@ -1,73 +1,74 @@
+@import "~theme/base/variables";
+
 .homeContainer {
   height: 100%;
-
-  & .mainHeaderBackground {
-    background: url('../../assets/main-header-background.png') no-repeat;
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    position: absolute;
-    z-index: -1;
-  }
-
-  & .mainHeaderContent {
-    display: flex;
-    margin-left: 4em;
-
-    & div {
-      flex: 1;
-
-      & .header {
-        font-family: 'Fjalla One', sans-serif;
-        font-size: 4.25rem;
-        color: #ffffff;
-  
-        &:nth-child(1) {
-          margin-bottom: 0px;
-        }
-  
-        &:nth-child(2) {
-          margin-top: 0px;
-        }
-      }
-
-      & h4 {
-        font-family: 'Lato', sans-serif;
-        font-size: 1.5rem;
-        font-weight: 300;
-        color: #ffffff;
-      }
-
-      & .learnMore {
-        border-radius: 3px;
-        padding: 10px 30px;
-        font-family: 'Lato', sans-serif;
-        font-size: 1rem;
-        border: 0px;
-        text-transform: uppercase;
-        color: #ffffff;
-        background-color: #32B88C;
-      }
-    }
-  }
 }
-
 
 .navigationBar {
   padding: 1.25em 0em;
+}
 
-  & .leftNavLinks {
-    margin-left: 4em;
-  }
+.navigationBar .leftNavLinks {
+  margin-left: 4em;
+}
 
-  & .navLinks {
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #179A6F;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    margin-right: 2em;
-  }
+.navigationBar .navLinks {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #179A6F;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-right: 2em;
+}
+
+.mainHeaderBackground {
+  background: url('../../assets/main-header-background.png') no-repeat;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+  z-index: -1; 
+}
+
+.mainHeaderContent {
+  display: flex;
+  margin-left: 4em;
+}
+
+.mainHeaderContent > div {
+  flex: 1;
+}
+
+.mainHeaderContent > div .header {
+  font-family: $font-header;
+  font-size: 4.25rem;
+  color: #ffffff;
+}
+
+.mainHeaderContent > div .header:nth-child(1) {
+  margin-bottom: 0px;
+}
+
+.mainHeaderContent > div .header:nth-child(2) {
+  margin-top: 0px;
+}
+
+.mainHeaderContent > div h4 {
+  font-family: $font-primary;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.mainHeaderContent > div .learnMore {
+  border-radius: 3px;
+  padding: 10px 30px;
+  font-family: $font-primary;
+  font-size: 1rem;
+  border: 0px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #32B88C;
 }

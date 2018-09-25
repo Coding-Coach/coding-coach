@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './home.scss';
 
+const logo = require('assets/logo.png');
+
 const Home = () => {
   return (
     <div className={styles.homeContainer}>
@@ -26,7 +28,7 @@ const Home = () => {
           <button className={styles.learnMore}>Learn More</button>
         </div>
         <div>
-          <img src={require('../../assets/logo.png')} />
+          <img src={logo} />
         </div>
       </div>
     </div>
