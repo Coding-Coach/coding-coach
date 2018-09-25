@@ -10,7 +10,7 @@ const Home = ({ t }) => {
     <section className={styles.homeContainer}>
       <div className={styles.mainHeaderBackground} />
       <Navbar />
-      <div className={styles.mainHeaderContent}>
+      <main className={styles.mainHeaderContent}>
         <div>
           <h1 className={styles.header}>{t('Coding')}</h1>
           <h1 className={styles.header}>{t('Coach')}</h1>
@@ -20,7 +20,7 @@ const Home = ({ t }) => {
         <div>
           <img alt="coding coach logo" src={meeting} />
         </div>
-      </div>
+      </main>
     </section>
   );
 };
