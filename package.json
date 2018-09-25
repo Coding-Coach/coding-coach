@@ -2,7 +2,7 @@
   "name": "coding-coach",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://coding-coach.github.io/",
+  "homepage": "https://codingcoach.io/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
     "@fortawesome/free-brands-svg-icons": "^5.3.1",
