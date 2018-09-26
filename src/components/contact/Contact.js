@@ -7,8 +7,16 @@ import peopleSearch from './assets/people-search.svg';
 import SocialMedia from './SocialMedia';
 
 const Contact = ({ t }) => {
-  const emailLink = <a target="_blank" href={`mailto:${process.env.REACT_APP_EMAIL}`} className={styles.email}>{process.env.REACT_APP_EMAIL}</a>;
-  const slackOrg = <a href={process.env.REACT_APP_SLACK_URL} className={styles.slack_org}>{t('slack-org')}</a>;
+  const emailLink = (
+    <a target="_blank" href={`mailto:${process.env.REACT_APP_EMAIL}`} className={styles.email}>
+      {process.env.REACT_APP_EMAIL}
+    </a>
+  );
+  const slackOrg = (
+    <a href={process.env.REACT_APP_SLACK_URL} className={styles.slack_org}>
+      {t('slack-org')}
+    </a>
+  );
 
   return (
     <section className={styles.contact}>
