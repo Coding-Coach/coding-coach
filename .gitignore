@@ -33,8 +33,7 @@ keys/
 
 # Environment files.
 .env.dev
-.env
-.env*
+.env.*
 
 # Nohup bullshit logs.
 nohup.out
