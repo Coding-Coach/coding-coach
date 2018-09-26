@@ -30,7 +30,7 @@ const Home = ({ t }) => {
           <button className={styles.learnMore}>{t('Learn More')}</button>
         </div>
         <div>
-          <img src={logo} />
+          <img alt="coding coach logo" src={logo} />
         </div>
       </div>
     </div>

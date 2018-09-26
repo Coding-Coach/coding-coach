@@ -8,11 +8,11 @@
   padding: 1.25em 0em;
 }
 
-.navigationBar .leftNavLinks {
+.leftNavLinks {
   margin-left: 4em;
 }
 
-.navigationBar .navLinks {
+.navLinks {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
@@ -24,7 +24,7 @@
 }
 
 .mainHeaderBackground {
-  background: url('../../assets/main-header-background.png') no-repeat;
+  background: url('assets/main-header-background.png') no-repeat;
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -41,28 +41,31 @@
   flex: 1;
 }
 
-.mainHeaderContent > div .header {
-  font-family: $font-header;
-  font-size: 4.25rem;
-  color: #ffffff;
+.mainHeaderContent {
+  & .header {
+    font-family: $font-header;
+    font-size: 4.25rem;
+    color: #ffffff;
+
+    &:nth-child(1) {
+      margin-bottom: 0px;
+    }
+
+    &:nth-child(2) {
+      margin-top: 0px;
+    }
+  }
+
+  h4 {
+    font-family: $font-primary;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #ffffff;
+  }
+
 }
 
-.mainHeaderContent > div .header:nth-child(1) {
-  margin-bottom: 0px;
-}
-
-.mainHeaderContent > div .header:nth-child(2) {
-  margin-top: 0px;
-}
-
-.mainHeaderContent > div h4 {
-  font-family: $font-primary;
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: #ffffff;
-}
-
-.mainHeaderContent > div .learnMore {
+.learnMore {
   border-radius: 3px;
   padding: 10px 30px;
   font-family: $font-primary;

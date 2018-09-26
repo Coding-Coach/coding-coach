@@ -7,11 +7,9 @@ import 'i18n/i18n';
 
 const App = ({ t }) => {
   return (
-    <React.Fragment>
-      <Router>
-        <Home path="/" />
-      </Router>
-    </React.Fragment>
+    <Router>
+      <Home path="/" />
+    </Router>
   );
 };
 
