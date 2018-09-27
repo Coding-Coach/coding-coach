@@ -6,6 +6,7 @@ exports[`renders the contact page 1`] = `
     <a
       target="_blank"
       href="https://www.facebook.com/codingcoachio/"
+      rel="noreferrer noopener"
     >
       <svg
         aria-hidden="true"
@@ -27,6 +28,7 @@ exports[`renders the contact page 1`] = `
     <a
       target="_blank"
       href="#"
+      rel="noreferrer noopener"
     >
       <svg
         aria-hidden="true"
@@ -48,6 +50,7 @@ exports[`renders the contact page 1`] = `
     <a
       target="_blank"
       href="https://twitter.com/codingcoach_io"
+      rel="noreferrer noopener"
     >
       <svg
         aria-hidden="true"
