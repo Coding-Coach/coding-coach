@@ -22,6 +22,7 @@ module.exports = function(config) {
           minimize: true,
         },
       },
+      'resolve-url-loader',
       'sass-loader',
     ],
   });
