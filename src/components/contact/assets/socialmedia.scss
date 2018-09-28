@@ -16,8 +16,7 @@
   border: 1px solid rgba($green500, 0.6);
   border-radius: 50%;
   cursor: pointer;
-  transition: background 400ms;
-  transition-timing-function: ease-out;
+  transition: background 400ms ease-out;
 }
 .icon_wrapper:hover{
   background: $green500;
@@ -29,6 +28,5 @@
 }
 .green_icons {
   color: $green500;
-  transition: color 400ms;
-  transition-timing-function: ease-out;
+  transition: color 400ms ease-out;
 }
