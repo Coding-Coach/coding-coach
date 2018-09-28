@@ -25,8 +25,8 @@
 .mainHeaderContent {
   & .header {
     font-family: $font-header;
-    font-size: 4.25rem;
-    color: #ffffff;
+    font-size: $font-xxl;
+    color: $color-white;
 
     &:nth-child(1) {
       margin-bottom: 0px;
@@ -39,9 +39,9 @@
 
   h4 {
     font-family: $font-primary;
-    font-size: 1.5rem;
+    font-size: $font-l;
     font-weight: 300;
-    color: #ffffff;
+    color: $color-white;
   }
 
 }
@@ -53,6 +53,6 @@
   font-size: 1rem;
   border: 0px;
   text-transform: uppercase;
-  color: #ffffff;
-  background-color: #32B88C;
+  color: $color-white;
+  background-color: $green300;
 }

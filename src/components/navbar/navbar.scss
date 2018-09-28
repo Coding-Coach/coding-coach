@@ -1,3 +1,5 @@
+@import "~theme/base/variables";
+
 .navigationBar {
   padding: 1.25em 0em;
 }
@@ -10,9 +12,9 @@
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
-  color: #179A6F;
-  font-family: 'Lato', sans-serif;
+  color: $primary100;
+  font-family: $font-primary;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: $font-s;
   margin-right: 2em;
 }

@@ -8,7 +8,7 @@ const logo = require('assets/logo.png');
 
 const Home = ({ t }) => {
   return (
-    <div className={styles.homeContainer}>
+    <section className={styles.homeContainer}>
       <div className={styles.mainHeaderBackground} />
       <Navbar />
       <div className={styles.mainHeaderContent}>
@@ -22,7 +22,7 @@ const Home = ({ t }) => {
           <img alt="coding coach logo" src={logo} />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
