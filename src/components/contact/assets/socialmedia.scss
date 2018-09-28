@@ -16,37 +16,19 @@
   border: 1px solid rgba($green500, 0.6);
   border-radius: 50%;
   cursor: pointer;
+  transition: background 400ms;
+  transition-timing-function: ease-out;
 }
 .icon_wrapper:hover{
-  animation: social-icon-highlight 400ms ease-out forwards;
+  background: $green500;
+
   .green_icons {
-    animation:  social-icon-highlight-inverse 400ms ease-out forwards;
+    color: $color-white;
   }
+
 }
 .green_icons {
   color: $green500;
-}
-
-
-/*
- Put animations specific to Component here.
-*/
-
-@keyframes social-icon-highlight {
-  0% {
-    background: $color-white
-  }
-  100% {
-    background: $green500;
-  }
-}
-
-@keyframes social-icon-highlight-inverse {
-  0% {
-    color: $green500;
-  }
-  100% {
-    color: $color-white
-
-  }
+  transition: color 400ms;
+  transition-timing-function: ease-out;
 }

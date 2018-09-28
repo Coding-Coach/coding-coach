@@ -3,7 +3,7 @@
 
 section.contact {
   display: flex;
-  margin: 4rem;
+  margin: $margin-xlarge;
   @include respond-to(landscape){
     flex-flow: column;
   }
@@ -26,11 +26,11 @@ section.contact {
     text-align: right;
     font-size: $font-xxl;
     color: $green500;
-    font-weight: 300;
+    font-weight: $font-weight-thin;
     text-transform: uppercase;
     border-bottom: 1px solid $gray;
     font-family: $font-fjalla-one;
-    margin-bottom: 0;
+    margin-bottom: $margin-none;
     @include respond-to(landscape){
       width: auto;
       margin-left: initial;
@@ -58,23 +58,11 @@ section.contact {
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid $black;
+  transition: background 300ms, color 300ms;
   cursor: pointer;
 }
 .slack_org:hover {
-  animation: slack-org-highlight 200ms ease-out forwards;
-}
+  background: $green500;
+  color:$color-white;
 
-/*
- Put animations specific to Component here.
-*/
-
-@keyframes slack-org-highlight {
-  0% {
-    background: $color-white;
-    color:inherit;
-  }
-  100% {
-    background: $green500;
-    color:$color-white;
-  }
 }
