@@ -20,18 +20,18 @@
 
     &__white--fill {
       background-color: $color-white;
-      color: $color-main;
+      color: $tertiary500;
       border: 2px solid $color-white;
 
       &:hover {
-        background-color: $color-main;
+        background-color: $tertiary500;
         cursor: pointer;
         color: white;
       }
     }
 
     &__link {
-      color: $color-main;
+      color: $tertiary500;
       text-decoration: none;
     }
   }

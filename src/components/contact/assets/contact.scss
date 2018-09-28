@@ -24,8 +24,8 @@ section.contact {
     width: 50%;
     margin-left: auto;
     text-align: right;
-    font-size: $font-giant;
-    color: $green300;
+    font-size: $font-xxxl;
+    color: $primary300;
     text-transform: uppercase;
     border-bottom: 1px solid $gray;
     font-family: $font-fjalla-one;
@@ -50,7 +50,7 @@ section.contact {
 
 .email {
   text-decoration: none;
-  color: $green500;
+  color: $primary500;
 }
 
 .slack_org {
