@@ -59,6 +59,7 @@ section.contact {
   text-decoration: none;
   border-bottom: 1px solid $black;
   transition: background 300ms, color 300ms;
+  transition-timing-function: ease-out;
   cursor: pointer;
 }
 .slack_org:hover {
