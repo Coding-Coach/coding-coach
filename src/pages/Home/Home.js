@@ -19,7 +19,7 @@ function Home({ t }) {
       <HomeSection
         title={t('home-mission-title')}
         text={t('home-mission-text')}
-        media={<img src={ImageAbout} alt={t('home-mission-media-alt')} />}
+        media={<img src={ImageMission} alt={t('home-mission-media-alt')} />}
       />
       <Contact />
     </main>
