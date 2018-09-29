@@ -10,16 +10,16 @@ import Contact from 'components/contact/Contact';
 
 function Home({ t }) {
   return (
-    <main className={['u-layout', styles.home].join(' ')}>
+    <main className={styles.home}>
       <HomeSection
         title={t('landing-page-about-title')}
         text={t('landing-page-about-text')}
-        media={<img src={ImageAbout} alt="" />}
+        media={<img src={ImageAbout} alt="Man walking into a laptop" />}
       />
       <HomeSection
         title={t('landing-page-mission-title')}
         text={t('landing-page-mission-text')}
-        media={<img src={ImageMission} alt="" />}
+        media={<img src={ImageMission} alt="Group of people" />}
       />
       <Contact />
     </main>
