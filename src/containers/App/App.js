@@ -3,6 +3,8 @@ import { func } from 'prop-types';
 import { translate } from 'react-i18next';
 import 'i18n/i18n';
 import styles from './assets/app.scss';
+import Home from 'pages/Home/Home';
+import Contact from 'components/contact/Contact';
 
 export function App({ t }) {
   return (
@@ -21,6 +23,8 @@ export function App({ t }) {
           {t('landing-page-start')}
         </a>
       </header>
+      <Home />
+      <Contact />
     </div>
   );
 }

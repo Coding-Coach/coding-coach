@@ -1,0 +1,67 @@
+@import '~theme/base/variables';
+@import '~theme/base/mediaqueries';
+
+section.contact {
+  display: flex;
+  margin: 4rem;
+  @include respond-to(landscape){
+    flex-flow: column;
+  }
+}
+
+.left_section {
+  flex: 0 0 40%;
+  img {
+    width: 100%;
+  }
+}
+
+.right_section {
+  display: flex;
+  flex-flow: column;
+  margin-left: auto;
+  h1 {
+    width: 50%;
+    margin-left: auto;
+    text-align: right;
+    font-size: $font-xxl;
+    color: $color-secondary;
+    font-weight: $font-weight-thin;
+    text-transform: uppercase;
+    border-bottom: 1px solid $color-grey-light;
+    font-family: $font-alternative;
+    margin-bottom: 0;
+    @include respond-to(landscape){
+      width: auto;
+      margin-left: initial;
+      text-align: center;
+    }
+  }
+  p {
+    text-align: right;
+    width: 60%;
+    margin-left: auto;
+    color: $color-grey-medium;
+    @include respond-to(landscape){
+      width: auto;
+      text-align: center;
+    }
+  }
+}
+
+.email {
+  text-decoration: none;
+  color: $color-secondary;
+}
+
+.slack_org {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid $color-black;
+  transition: background 300ms ease-out, color 300ms ease-out;
+  cursor: pointer;
+}
+.slack_org:hover {
+  background: $color-secondary;
+  color:$color-white;
+}

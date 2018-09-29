@@ -1,0 +1,30 @@
+@import '~theme/base/variables';
+@import '~theme/base/mediaqueries';
+
+.social_media {
+  display: flex;
+  margin-top: 20px;
+  flex-flow: row-reverse;
+  @include respond-to(landscape){
+    align-self: center;
+  }
+}
+
+.icon_wrapper {
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid rgba($color-secondary, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 400ms ease-out;
+}
+.icon_wrapper:hover{
+  background: $color-secondary;
+  .green_icons {
+    color: $color-white;
+  }
+}
+.green_icons {
+  color: $color-secondary;
+  transition: color 400ms ease-out;
+}

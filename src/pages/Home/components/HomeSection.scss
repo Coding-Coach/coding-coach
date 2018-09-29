@@ -61,20 +61,21 @@ $space-between-text-image: 50px;
     color: $color-grey-dark;
     text-transform: uppercase;
     font-family: $font-alternative;
-    font-size: 2.5rem;
+    font-size: $font-xxl;
     margin: 0;
     line-height: 1.25;
     text-transform: uppercase;
+    font-weight: normal;
 }
 
 .description {
     color: $color-grey-dark;
-    font-size: 14px;
+    font-size: $font-s;
     font-family: $font-main;
     line-height: 1.5;
     margin: 0;
 
     @media screen and (min-width: 1024px) {
-        font-size: 16px;
+        font-size: $font-m;
     }
 }

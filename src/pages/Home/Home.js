@@ -4,6 +4,8 @@ import 'i18n/i18n';
 
 import styles from './Home.scss';
 import HomeSection from './components/HomeSection';
+import ImageAbout from './assets/images/about.svg';
+import ImageMission from './assets/images/mission.svg';
 
 const AboutMedia = () => (
   <img
@@ -18,12 +20,12 @@ function Home({ t }) {
       <HomeSection
         title={t('landing-page-about-title')}
         text={t('landing-page-about-text')}
-        media={<AboutMedia />}
+        media={<img src={ImageAbout} alt="" />}
       />
       <HomeSection
         title={t('landing-page-mission-title')}
         text={t('landing-page-mission-text')}
-        media={<AboutMedia />}
+        media={<img src={ImageMission} alt="" />}
       />
     </main>
   );
