@@ -12,14 +12,14 @@ function Home({ t }) {
   return (
     <main className={styles.home}>
       <HomeSection
-        title={t('landing-page-about-title')}
-        text={t('landing-page-about-text')}
-        media={<img src={ImageAbout} alt="Man walking into a laptop" />}
+        title={t('home-about-title')}
+        text={t('home-about-text')}
+        media={<img src={ImageAbout} alt={t('home-about-media-alt')} />}
       />
       <HomeSection
-        title={t('landing-page-mission-title')}
-        text={t('landing-page-mission-text')}
-        media={<img src={ImageMission} alt="Group of people" />}
+        title={t('home-mission-title')}
+        text={t('home-mission-text')}
+        media={<img src={ImageAbout} alt={t('home-mission-media-alt')} />}
       />
       <Contact />
     </main>
