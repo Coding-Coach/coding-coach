@@ -15,7 +15,7 @@
   .button {
     border-radius: 25px;
     padding: 10px 30px;
-    font-size: 1em;
+    font-size: $font-s;
     transition: all .1s linear;
 
     &__white--fill {
