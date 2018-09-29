@@ -6,6 +6,7 @@ import styles from './Home.scss';
 import HomeSection from './components/HomeSection';
 import ImageAbout from './assets/images/about.svg';
 import ImageMission from './assets/images/mission.svg';
+import Contact from 'components/contact/Contact';
 
 const AboutMedia = () => (
   <img
@@ -27,6 +28,7 @@ function Home({ t }) {
         text={t('landing-page-mission-text')}
         media={<img src={ImageMission} alt="" />}
       />
+      <Contact />
     </main>
   );
 }

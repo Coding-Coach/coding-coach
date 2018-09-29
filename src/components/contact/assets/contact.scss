@@ -3,7 +3,7 @@
 
 section.contact {
   display: flex;
-  margin: 4rem;
+  margin: 8rem 4rem 4rem;
   @include respond-to(landscape){
     flex-flow: column;
   }

@@ -3,7 +3,7 @@
 @import '~theme/base/utils';
 
 $first-flex-element-width: 50%;
-$second-flex-element-width: 40%;
+$second-flex-element-width: 45%;
 $space-between-text-image: 50px;
 
 .section {
@@ -21,9 +21,13 @@ $space-between-text-image: 50px;
     flex-direction: column;
     width: 100%;
 
-
+    // Section Title and text
     > *:nth-child(1) {
         margin-bottom: $space-between-text-image;
+    }
+    // Media
+    > *:nth-child(2) {
+        max-width: 100%;
     }
 
     @media screen and (min-width: 768px) {
@@ -53,12 +57,12 @@ $space-between-text-image: 50px;
         bottom: 0;
         position: absolute;
         height: 1px;
-        width: 200px;
+        width: 250px;
     }
 }
 
 .title {
-    color: $color-grey-dark;
+    color: $color-grey-medium;
     text-transform: uppercase;
     font-family: $font-alternative;
     font-size: $font-xxl;
@@ -69,7 +73,7 @@ $space-between-text-image: 50px;
 }
 
 .description {
-    color: $color-grey-dark;
+    color: $color-grey-medium;
     font-size: $font-s;
     font-family: $font-main;
     line-height: 1.5;

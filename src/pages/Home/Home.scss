@@ -30,7 +30,7 @@ $distance-height-variation-after: 40px;
 
     > section:nth-child(1) {
         background-color: $color-white;
-        @include titleColor($color-primary);
+        @include titleColor($color-secondary);
         @include isReverseSection();
         
     }
