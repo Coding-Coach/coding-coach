@@ -1,9 +1,11 @@
 @import '~theme/base/variables';
 @import '~theme/base/mediaqueries';
+@import '~theme/base/utils';
 
-section.contact {
+.contact {
   display: flex;
   margin: 8rem 4rem 4rem;
+  @include generalAlignment();
   @include respond-to(landscape){
     flex-flow: column;
   }
