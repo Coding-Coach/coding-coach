@@ -4,6 +4,7 @@ export default function loadEn() {
       'landing-page-header': 'Coding Coach',
       'landing-page-start': 'Get Started',
       'landing-page-subheader': 'Connecting developers with mentor worldwide',
+      'landing-page-hero-image-alt-text': 'Mentor',
       'contact-page-header': 'Contact',
       'contact-page-msg':
         'We want to hear your thoughts! Feel free to join our {{slackOrg}} or send us an email at {{email}}',

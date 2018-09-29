@@ -8,7 +8,11 @@ import Contact from 'components/contact/Contact';
 export function App({ t }) {
   return (
     <div className={styles.app}>
-      <img src={require('./assets/mentor.jpg')} alt="Mentor" className={styles.image} />
+      <img
+        src={require('./assets/mentor.jpg')}
+        alt={t('landing-page-hero-image-alt-text')}
+        className={styles.image}
+      />
       <header className={styles.header}>
         <h1 className={styles.title}>{t('landing-page-header')}</h1>
         <h4 className={styles.tagline}>{t('landing-page-subheader')}</h4>
