@@ -1,3 +1,7 @@
+// This class makes the elements have a max-width in certain resolutions
+// Use this to create a visual grid in a page. 
+// So, all the elements will be contained in 992px, 1200px, ...
+// Giving them then a perfect alignment with the rest of the page
 @mixin generalAlignment() {
     margin-left: auto;
     margin-right: auto;
