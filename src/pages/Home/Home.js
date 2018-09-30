@@ -11,12 +11,6 @@ import Contact from 'components/contact/Contact';
 
 const heroImage = require('assets/logo.png');
 
-function handleOnCTAClick() {
-  document.getElementById('about').scrollIntoView({
-    behavior: 'smooth',
-  });
-}
-
 function Home({ t }) {
   return (
     <React.Fragment>
@@ -30,9 +24,7 @@ function Home({ t }) {
               <span>{t('Coach')}</span>
             </h1>
             <h2>{t('Connecting developers with mentors worldwide')}</h2>
-            <button onClick={handleOnCTAClick} className={styles.callToAction}>
-              {t('Learn More')}
-            </button>
+            <button className={styles.callToAction}>{t('Learn More')}</button>
           </header>
           <img className={styles.heroImage} alt="coding coach logo" src={heroImage} />
         </div>
