@@ -81,10 +81,11 @@ $distance-height-variation-after: 40px;
 
 .heroImage {
     display: none;
-    width: 400px;
+    width: 350px;
 
     @media screen and (min-width: 767px) {
         display: block;
+        width: 400px;
     }
 }
 

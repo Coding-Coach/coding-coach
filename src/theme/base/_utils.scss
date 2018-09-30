@@ -5,8 +5,8 @@
 @mixin generalAlignment() {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 2rem;
+    padding-right: 2rem;
     
     @media screen and (min-width: 768px) {
         max-width: 992px;
@@ -14,5 +14,7 @@
 
     @media screen and (min-width: 1400px) {
         max-width: 1200px;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 }
