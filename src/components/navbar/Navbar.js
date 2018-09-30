@@ -6,13 +6,13 @@ import styles from './navbar.scss';
 const Navbar = ({ t }) => (
   <nav className={styles.navigationBar}>
     <div className={styles.inner}>
-      <a href="#" className={styles.navLinks}>
+      <a href="#about" className={styles.navLinks}>
         {t('About')}
       </a>
-      <a href="#" className={styles.navLinks}>
+      <a href="#mission" className={styles.navLinks}>
         {t('Mission')}
       </a>
-      <a href="#" className={styles.navLinks}>
+      <a href="#contact" className={styles.navLinks}>
         {t('Contact')}
       </a>
     </div>

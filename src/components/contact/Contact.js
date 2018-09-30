@@ -19,7 +19,7 @@ const Contact = ({ t }) => {
   );
 
   return (
-    <section className={styles.contact}>
+    <section id="contact" className={styles.contact}>
       <div className={styles.left_section}>
         <img src={peopleSearch} alt="people search logo" />
       </div>
