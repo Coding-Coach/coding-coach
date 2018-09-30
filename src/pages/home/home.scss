@@ -1,0 +1,58 @@
+@import "~theme/base/variables";
+
+.homeContainer {
+  height: 100%;
+}
+
+.mainHeaderBackground {
+  background: url('assets/main-header-background.png') no-repeat;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+  z-index: -1; 
+}
+
+.mainHeaderContent {
+  display: flex;
+  margin-left: 4em;
+}
+
+.mainHeaderContent > div {
+  flex: 1;
+}
+
+.mainHeaderContent {
+  & .header {
+    font-family: $font-header;
+    font-size: $font-xxl;
+    color: $color-white;
+
+    &:nth-child(1) {
+      margin-bottom: 0px;
+    }
+
+    &:nth-child(2) {
+      margin-top: 0px;
+    }
+  }
+
+  h4 {
+    font-family: $font-primary;
+    font-size: $font-l;
+    font-weight: 300;
+    color: $color-white;
+  }
+
+}
+
+.learnMore {
+  border-radius: 3px;
+  padding: 10px 30px;
+  font-family: $font-primary;
+  font-size: 1rem;
+  border: 0px;
+  text-transform: uppercase;
+  color: $color-white;
+  background-color: $green300;
+}

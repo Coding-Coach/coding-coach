@@ -1,0 +1,20 @@
+@import "~theme/base/variables";
+
+.navigationBar {
+  padding: 1.25em 0em;
+}
+
+.leftNavLinks {
+  margin-left: 4em;
+}
+
+.navLinks {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $primary100;
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: $font-s;
+  margin-right: 2em;
+}
