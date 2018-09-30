@@ -18,12 +18,14 @@ function Home({ t }) {
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <header>
-            <h1 className={styles.title}>
+            <h1 className={styles.heroTitle}>
               <span>{t('Coding')}</span>
               <br />
               <span>{t('Coach')}</span>
             </h1>
-            <h2>{t('Connecting developers with mentors worldwide')}</h2>
+            <h2 className={styles.heroSubtitle}>
+              {t('Connecting developers with mentors worldwide')}
+            </h2>
             <button className={styles.callToAction}>{t('Learn More')}</button>
           </header>
           <img className={styles.heroImage} alt="coding coach logo" src={heroImage} />
