@@ -1,24 +1,20 @@
 import React from 'react';
 import { func } from 'prop-types';
 import { translate } from 'react-i18next';
+import { Router } from '@reach/router';
+import { Home } from 'pages';
 import 'i18n/i18n';
-import styles from './assets/app.scss';
-import Home from 'pages/Home/Home';
 
-export function App({ t }) {
+const App = ({ t }) => {
   return (
-    <div className={styles.app}>
-      <Home />
-    </div>
+    <Router>
+      <Home path="/" />
+    </Router>
   );
-}
+};
 
 App.propTypes = {
   t: func,
 };
-
-// App.defaultProps = {
-//   t: () => true,
-// };
 
 export default translate('translations')(App);
