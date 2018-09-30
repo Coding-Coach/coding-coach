@@ -91,10 +91,10 @@ $distance-height-variation-after: 40px;
 
 .callToAction {
     text-decoration: none;
-    border-radius: 3px;
+    border-radius: $border-radius-rounded;
     padding: 10px 30px;
     font-family: $font-primary;
-    font-size: 1rem;
+    font-size: $font-s;
     border: 0px;
     text-transform: uppercase;
     color: $color-white;
