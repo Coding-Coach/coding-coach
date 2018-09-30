@@ -31,7 +31,7 @@
     font-weight: $font-weight-thin;
     text-transform: uppercase;
     border-bottom: 1px solid $color-grey-light;
-    font-family: $font-alternative;
+    font-family: $font-secondary;
     margin-bottom: 0;
     @include respond-to(landscape){
       width: auto;

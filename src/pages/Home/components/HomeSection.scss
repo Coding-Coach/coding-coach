@@ -64,7 +64,7 @@ $space-between-text-image: 50px;
 .title {
     color: $color-grey-medium;
     text-transform: uppercase;
-    font-family: $font-alternative;
+    font-family: $font-secondary;
     font-size: $font-xxl;
     margin: 0;
     line-height: 1.25;
@@ -75,7 +75,7 @@ $space-between-text-image: 50px;
 .description {
     color: $color-grey-medium;
     font-size: $font-s;
-    font-family: $font-main;
+    font-family: $font-primary;
     line-height: 1.5;
     margin: 0;
 
