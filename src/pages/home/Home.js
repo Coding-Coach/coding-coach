@@ -2,9 +2,8 @@ import React from 'react';
 import 'i18n/i18n';
 import { translate } from 'react-i18next';
 import { Navbar } from 'components';
-import styles from './home.scss';
-
-const logo = require('assets/logo.png');
+import styles from './assets/home.scss';
+import meeting from './assets/meeting.svg';
 
 const Home = ({ t }) => {
   return (
@@ -19,7 +18,7 @@ const Home = ({ t }) => {
           <button className={styles.learnMore}>{t('Learn More')}</button>
         </div>
         <div>
-          <img alt="coding coach logo" src={logo} />
+          <img alt="coding coach logo" src={meeting} />
         </div>
       </div>
     </section>
