@@ -13,17 +13,17 @@ const Contact = ({ t }) => {
     </a>
   );
   const slackOrg = (
-    <a href={process.env.REACT_APP_SLACK_URL} className={styles.slack_org}>
+    <a href={process.env.REACT_APP_SLACK_URL} className={styles.slackOrg}>
       {t('slack-org')}
     </a>
   );
 
   return (
     <section id="contact" className={styles.contact}>
-      <div className={styles.left_section}>
+      <div className={styles.leftSection}>
         <img src={peopleSearch} alt="people search logo" />
       </div>
-      <div className={styles.right_section}>
+      <div className={styles.rightSection}>
         <h1>{t('contact-page-header')}</h1>
         <p>
           <Interpolate i18nKey="contact-page-msg" slackOrg={slackOrg} email={emailLink} />

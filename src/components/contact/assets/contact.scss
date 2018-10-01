@@ -11,14 +11,14 @@
   }
 }
 
-.left_section {
+.leftSection {
   flex: 0 0 40%;
   img {
     width: 100%;
   }
 }
 
-.right_section {
+.rightSection {
   display: flex;
   flex-flow: column;
   margin-left: auto;
@@ -56,14 +56,14 @@
   color: $color-secondary;
 }
 
-.slack_org {
+.slackOrg {
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid $color-black;
   transition: background 300ms ease-out, color 300ms ease-out;
   cursor: pointer;
 }
-.slack_org:hover {
+.slackOrg:hover {
   background: $color-secondary;
   color:$color-white;
 }
