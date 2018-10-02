@@ -1,12 +1,9 @@
 import React from 'react';
-import { translate, Interpolate } from 'react-i18next';
-
-import 'i18n/i18n';
 import styles from './assets/contact.scss';
 import peopleSearch from './assets/people-search.svg';
 import SocialMedia from './SocialMedia';
 
-const Contact = ({ t }) => {
+const Contact = () => {
   const emailLink = (
     <a target="_blank" href={`mailto:${process.env.REACT_APP_EMAIL}`} className={styles.email}>
       {process.env.REACT_APP_EMAIL}
@@ -24,9 +21,10 @@ const Contact = ({ t }) => {
         <img src={peopleSearch} alt="people search logo" />
       </div>
       <div className={styles.rightSection}>
-        <h1>{t('contact-page-header')}</h1>
+        <h1>Contact</h1>
         <p>
-          <Interpolate i18nKey="contact-page-msg" slackOrg={slackOrg} email={emailLink} />
+          We want to hear your thoughts! Feel free to join our {slackOrg} or send us an email at{' '}
+          {emailLink}{' '}
         </p>
         <SocialMedia />
       </div>
@@ -34,4 +32,4 @@ const Contact = ({ t }) => {
   );
 };
 
-export default translate('translations')(Contact);
+export default Contact;

@@ -1,21 +1,19 @@
 import React from 'react';
-import 'i18n/i18n';
-import { translate } from 'react-i18next';
 import { Navbar } from 'components';
 import styles from './assets/home.scss';
 import meeting from './assets/meeting.svg';
 
-const Home = ({ t }) => {
+const Home = () => {
   return (
     <section className={styles.homeContainer}>
       <div className={styles.mainHeaderBackground} />
       <Navbar />
       <div className={styles.mainHeaderContent}>
         <div>
-          <h1 className={styles.header}>{t('Coding')}</h1>
-          <h1 className={styles.header}>{t('Coach')}</h1>
-          <h4>{t('Connecting developers with mentors worldwide')}</h4>
-          <button className={styles.learnMore}>{t('Learn More')}</button>
+          <h1 className={styles.header}>Coding</h1>
+          <h1 className={styles.header}>Coach</h1>
+          <h4>Connecting developers with mentors worldwide</h4>
+          <button className={styles.learnMore}>Learn More</button>
         </div>
         <div>
           <img alt="coding coach logo" src={meeting} />
@@ -25,4 +23,4 @@ const Home = ({ t }) => {
   );
 };
 
-export default translate('translations')(Home);
+export default Home;
