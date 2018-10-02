@@ -5,7 +5,7 @@
 }
 
 .mainHeaderBackground {
-  background: url('assets/main-header-background.png') no-repeat;
+  background: url('./main-header-background.png') no-repeat;
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -53,4 +53,5 @@
   text-transform: uppercase;
   color: $color-white;
   background-color: $green300;
+  cursor: pointer;
 }

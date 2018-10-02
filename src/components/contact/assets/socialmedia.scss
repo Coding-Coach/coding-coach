@@ -1,7 +1,7 @@
 @import '~theme/base/variables';
 @import '~theme/base/mediaqueries';
 
-.social_media {
+.socialMedia {
   display: flex;
   margin-top: 20px;
   flex-flow: row-reverse;
@@ -10,7 +10,7 @@
   }
 }
 
-.icon_wrapper {
+.iconWrapper {
   margin: 10px;
   padding: 15px;
   border: 1px solid rgba($green500, 0.6);
@@ -18,13 +18,13 @@
   cursor: pointer;
   transition: background 400ms ease-out;
 }
-.icon_wrapper:hover{
+.iconWrapper:hover{
   background: $green500;
   .green_icons {
     color: $color-white;
   }
 }
-.green_icons {
+.greenIcons {
   color: $green500;
   transition: color 400ms ease-out;
 }
