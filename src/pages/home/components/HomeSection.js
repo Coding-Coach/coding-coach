@@ -21,7 +21,7 @@ HomeSection.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   media: PropTypes.node.isRequired,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 export default HomeSection;
