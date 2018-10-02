@@ -28,13 +28,11 @@
     font-size: $font-xxl;
     color: $color-white;
 
-    &:nth-child(1) {
-      margin-bottom: 0px;
-    }
-
-    &:nth-child(2) {
-      margin-top: 0px;
-    }
+    // Break words in multiple lines
+    width: min-intrinsic;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
   }
 
   h4 {
