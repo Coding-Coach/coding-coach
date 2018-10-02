@@ -1,0 +1,18 @@
+{
+  "slack-org": {
+    "origin": [
+      [
+        "src/components/contact/Contact.js",
+        15
+      ]
+    ]
+  },
+  "contact-page-header": {
+    "origin": [
+      [
+        "src/components/contact/Contact.js",
+        26
+      ]
+    ]
+  }
+}

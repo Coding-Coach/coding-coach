@@ -17,5 +17,15 @@
       return n == 1 && v0 ? 'one' : 'other';
     },
   },
-  messages: { Coding: 'Coding Da' },
+  messages: {
+    About: 'About',
+    Coach: 'Coach',
+    Coding: 'Coding',
+    'Connecting developers with mentors worldwide': 'Connecting developers with mentors worldwide',
+    Contact: 'Contact',
+    'Learn More': 'Learn More',
+    Mission: 'Mission',
+    'contact-page-header': 'contact-page-header',
+    'slack-org': 'slack-org',
+  },
 };

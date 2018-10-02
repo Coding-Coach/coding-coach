@@ -6,5 +6,29 @@
         15
       ]
     ]
+  },
+  "Coach": {
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        18
+      ]
+    ]
+  },
+  "Connecting developers with mentors worldwide": {
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        21
+      ]
+    ]
+  },
+  "Learn More": {
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        24
+      ]
+    ]
   }
 }

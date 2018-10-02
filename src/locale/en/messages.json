@@ -1,9 +1,81 @@
 {
-  "Coding": {
-    "translation": "Coding Da",
+  "About": {
+    "translation": "About",
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        9
+      ]
+    ]
+  },
+  "Coach": {
+    "translation": "Coach",
     "origin": [
       [
         "src/pages/home/Home.js",
+        18
+      ]
+    ]
+  },
+  "Coding": {
+    "translation": "Coding",
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        15
+      ]
+    ]
+  },
+  "Connecting developers with mentors worldwide": {
+    "translation": "Connecting developers with mentors worldwide",
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        21
+      ]
+    ]
+  },
+  "Contact": {
+    "translation": "Contact",
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        15
+      ]
+    ]
+  },
+  "Learn More": {
+    "translation": "Learn More",
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        24
+      ]
+    ]
+  },
+  "Mission": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        12
+      ]
+    ]
+  },
+  "contact-page-header": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/contact/Contact.js",
+        26
+      ]
+    ]
+  },
+  "slack-org": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/contact/Contact.js",
         15
       ]
     ]

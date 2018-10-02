@@ -1,0 +1,26 @@
+{
+  "About": {
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        9
+      ]
+    ]
+  },
+  "Mission": {
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        12
+      ]
+    ]
+  },
+  "Contact": {
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        15
+      ]
+    ]
+  }
+}

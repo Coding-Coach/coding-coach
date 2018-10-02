@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './assets/contact.scss';
 import peopleSearch from './assets/people-search.svg';
 import SocialMedia from './SocialMedia';
+import { Trans, withI18n } from '@lingui/react';
 
 const Contact = () => {
   const emailLink = (
@@ -11,7 +12,7 @@ const Contact = () => {
   );
   const slackOrg = (
     <a href={process.env.REACT_APP_SLACK_URL} className={styles.slackOrg}>
-      Slack Organization
+      <Trans id="slack-org" />
     </a>
   );
 
@@ -21,7 +22,9 @@ const Contact = () => {
         <img src={peopleSearch} alt="people search logo" />
       </div>
       <div className={styles.rightSection}>
-        <h1>Contact</h1>
+        <h1>
+          <Trans id="contact-page-header" />
+        </h1>
         <p>
           We want to hear your thoughts! Feel free to join our {slackOrg} or send us an email at{' '}
           {emailLink}{' '}
@@ -32,4 +35,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default withI18n()(Contact);
