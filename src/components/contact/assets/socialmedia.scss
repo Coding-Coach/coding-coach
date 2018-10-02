@@ -16,17 +16,18 @@
   border: 1px solid rgba($color-secondary, 0.6);
   border-radius: 50%;
   cursor: pointer;
-  transition: background 400ms ease-out;
-}
+  transition: all .15s linear;
 
-.iconWrapper:hover{
-  background: $color-secondary;
-  .green_icons {
-    color: $color-white;
+  &:hover {
+    background: $color-secondary;  
+    .greenIcons {
+      color: $color-white;
+      fill: $color-white;
+    }
   }
 }
 
 .greenIcons {
   color: $color-secondary;
-  transition: color 400ms ease-out;
+  transition: all .15s linear;
 }
