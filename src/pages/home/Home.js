@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar } from 'components';
 import styles from './assets/home.scss';
 import meeting from './assets/meeting.svg';
+import { Trans, withI18n } from '@lingui/react';
 
 const Home = () => {
   return (
@@ -10,7 +11,9 @@ const Home = () => {
       <Navbar />
       <div className={styles.mainHeaderContent}>
         <div>
-          <h1 className={styles.header}>Coding</h1>
+          <h1 className={styles.header}>
+            <Trans>Coding</Trans>
+          </h1>
           <h1 className={styles.header}>Coach</h1>
           <h4>Connecting developers with mentors worldwide</h4>
           <button className={styles.learnMore}>Learn More</button>
@@ -23,4 +26,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default withI18n()(Home);

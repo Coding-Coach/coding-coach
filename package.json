@@ -7,6 +7,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
     "@fortawesome/free-brands-svg-icons": "^5.3.1",
     "@fortawesome/react-fontawesome": "^0.1.3",
+    "@lingui/react": "^2.7.0",
     "@reach/router": "^1.1.1",
     "classnames": "^2.2.6",
     "react": "^16.5.0",
@@ -23,7 +24,11 @@
     "sass": "sass --watch src/styles/scss:src/styles/css",
     "precommit": "lint-staged",
     "analyze": "source-map-explorer build/static/js/main.*",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "lingui-init": "lingui init",
+    "lingui-add-locale": "lingui add-locale en fr",
+    "lingui-extract": "lingui extract",
+    "lingui-compile": "lingui compile"
   },
   "husky": {
     "hooks": {
@@ -38,10 +43,13 @@
     ]
   },
   "devDependencies": {
+    "@lingui/cli": "^2.7.0",
+    "@lingui/macro": "^2.7.0",
     "@storybook/addon-viewport": "^3.4.10",
     "@storybook/react": "^3.4.10",
     "ajv": "^6.5.3",
     "babel-core": "^6.26.3",
+    "babel-plugin-macros": "^2.4.2",
     "css-loader": "^1.0.0",
     "eslint": "^5.5.0",
     "eslint-config-prettier": "^3.0.1",

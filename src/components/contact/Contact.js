@@ -11,7 +11,7 @@ const Contact = () => {
   );
   const slackOrg = (
     <a href={process.env.REACT_APP_SLACK_URL} className={styles.slackOrg}>
-      {t('slack-org')}
+      Slack Organization
     </a>
   );
 

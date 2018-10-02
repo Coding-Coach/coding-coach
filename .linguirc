@@ -1,0 +1,4 @@
+{
+  "localeDir": "<rootDir>/src/locale",
+  "format": "lingui",
+}
