@@ -2,7 +2,7 @@ export default function loadEn() {
   return {
     translations: {
       'landing-page-header': 'Coding Coach',
-      'landing-page-start': 'Get Started',
+      'landing-page-start': 'Learn More',
       'landing-page-subheader': 'Connecting developers with mentor worldwide',
       'contact-page-header': 'Contact',
       'contact-page-msg':

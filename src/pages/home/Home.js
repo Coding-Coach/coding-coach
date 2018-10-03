@@ -12,10 +12,9 @@ const Home = ({ t }) => {
       <Navbar />
       <div className={styles.mainHeaderContent}>
         <div>
-          <h1 className={styles.header}>{t('Coding')}</h1>
-          <h1 className={styles.header}>{t('Coach')}</h1>
-          <h4>{t('Connecting developers with mentors worldwide')}</h4>
-          <button className={styles.learnMore}>{t('Learn More')}</button>
+          <h1 className={styles.header}>{t('landing-page-header')}</h1>
+          <h4>{t('landing-page-subheader')}</h4>
+          <button className={styles.learnMore}>{t('landing-page-start')}</button>
         </div>
         <div>
           <img alt="coding coach logo" src={meeting} />
