@@ -23,12 +23,10 @@ function Home({ t }) {
               <br />
               <span>{t('Coach')}</span>
             </h1>
-            <h2 className={styles.heroSubtitle}>
-              {t('Connecting developers with mentors worldwide')}
-            </h2>
+            <h2 className={styles.heroSubtitle}>{t('home-hero-subheader')}</h2>
             <button className={styles.callToAction}>{t('Learn More')}</button>
           </header>
-          <img className={styles.heroImage} alt="coding coach logo" src={heroImage} />
+          <img className={styles.heroImage} alt={t('home-hero-img-alt')} src={heroImage} />
         </div>
       </section>
 
