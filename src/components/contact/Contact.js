@@ -21,7 +21,7 @@ const Contact = ({ t }) => {
   return (
     <section id="contact" className={styles.contact}>
       <section className={styles.leftSection}>
-        <img src={peopleSearch} alt="people search logo" />
+        <img src={peopleSearch} alt={t('contact-page-media-alt')} />
       </section>
       <section className={styles.rightSection}>
         <h1>{t('contact-page-header')}</h1>
