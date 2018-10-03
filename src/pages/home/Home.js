@@ -10,7 +10,7 @@ const Home = ({ t }) => {
     <section className={styles.homeContainer}>
       <div className={styles.mainHeaderBackground} />
       <Navbar />
-      <div className={styles.mainHeaderContent}>
+      <main className={styles.mainHeaderContent}>
         <div>
           <h1 className={styles.header}>{t('landing-page-header')}</h1>
           <h4>{t('landing-page-subheader')}</h4>
@@ -19,7 +19,7 @@ const Home = ({ t }) => {
         <div>
           <img alt="coding coach logo" src={meeting} />
         </div>
-      </div>
+      </main>
     </section>
   );
 };
