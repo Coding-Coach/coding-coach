@@ -1,16 +1,19 @@
-$font-main: 'Open Sans', sans-serif;
-$font-primary: 'Lato', sans-serif;
-$font-header: 'Fjalla One', sans-serif;
+// Font Family
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Fjalla One', sans-serif;
 
 // Palette
-$color-main: #EB6E64;
-$color-white: #FFF;
-$green300: #32B88C;
-$gray29: #4A4A4A;
-$gray: #E8E7E7;
-$black: #000;
-$green500: #69D5B1;
-$primary100: #179A6F;
+$color-primary: #32B88C;
+$color-primary-darker: #1EA478;
+$color-secondary: #69D5B1;
+$color-tertiary: #E6F5F0;
+
+$color-white: #FFFFFF;
+$color-grey-light: #E8E7E7;
+$color-grey-medium: #4A4A4A;
+$color-grey-dark: #1A1A1A;
+$color-black: #000000;
+
 
 // Font Sizes
 $font-xxs: 0.75rem;     // 12px
@@ -22,9 +25,10 @@ $font-xl: 2rem;         // 32px
 $font-xxl: 4.25rem;     // 68px
 $font-xxxl: 5.25rem;    // 84px
 
-$font-weight-thin:100;
-$font-weight-light:300;
-$font-weight-regular:400;
-$font-weight-medium:500;
-$font-weight-bold:700;
+$font-thin:100;
+$font-light:300;
+$font-regular:400;
+$font-medium:500;
+$font-bold:700;
 
+$border-radius-rounded: 3px;

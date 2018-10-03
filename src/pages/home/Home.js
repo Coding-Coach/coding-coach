@@ -1,27 +1,50 @@
 import React from 'react';
-import 'i18n/i18n';
 import { translate } from 'react-i18next';
-import { Navbar } from 'components';
-import styles from './assets/home.scss';
-import meeting from './assets/meeting.svg';
+import 'i18n/i18n';
 
-const Home = ({ t }) => {
+import styles from './Home.scss';
+import { Navbar } from 'components';
+import HomeSection from './components/HomeSection';
+import ImageAbout from './assets/images/about.svg';
+import ImageMission from './assets/images/mission.svg';
+import Contact from 'components/contact/Contact';
+
+const heroImage = require('./assets/images/meeting.svg');
+
+function Home({ t }) {
   return (
-    <section className={styles.homeContainer}>
-      <div className={styles.mainHeaderBackground} />
+    <React.Fragment>
       <Navbar />
-      <main className={styles.mainHeaderContent}>
-        <div>
-          <h1 className={styles.header}>{t('landing-page-header')}</h1>
-          <h4>{t('landing-page-subheader')}</h4>
-          <button className={styles.learnMore}>{t('landing-page-start')}</button>
+      <section className={styles.hero}>
+        <div className={styles.heroInner}>
+          <header>
+            <h1 className={styles.heroTitle}>
+              <span>{t('home-header-title')}</span>
+            </h1>
+            <h2 className={styles.heroSubtitle}>{t('home-header-subtitle')}</h2>
+            <button className={styles.callToAction}>{t('home-header-cta')}</button>
+          </header>
+          <img className={styles.heroImage} alt={t('home-header-media-alt')} src={heroImage} />
         </div>
-        <div>
-          <img alt="coding coach logo" src={meeting} />
-        </div>
+      </section>
+
+      <main className={styles.content}>
+        <HomeSection
+          id="about"
+          title={t('home-about-title')}
+          text={t('home-about-text')}
+          media={<img src={ImageAbout} alt={t('home-about-media-alt')} />}
+        />
+        <HomeSection
+          id="mission"
+          title={t('home-mission-title')}
+          text={t('home-mission-text')}
+          media={<img src={ImageMission} alt={t('home-mission-media-alt')} />}
+        />
+        <Contact />
       </main>
-    </section>
+    </React.Fragment>
   );
-};
+}
 
 export default translate('translations')(Home);

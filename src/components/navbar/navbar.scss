@@ -1,20 +1,33 @@
 @import "~theme/base/variables";
+@import '~theme/base/utils';
 
 .navigationBar {
-  padding: 1.25em 0em;
+  padding: 1em 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+
+  @media screen and (min-width: 768px) {
+    padding: 1.25em 0;
+  }
 }
 
-.leftNavLinks {
-  margin-left: 4em;
+.inner {
+  @include generalAlignment();
 }
 
 .navLinks {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
-  color: $primary100;
+  color: $color-primary-darker;
   font-family: $font-primary;
-  font-weight: 700;
+  font-weight: $font-bold;
   font-size: $font-s;
-  margin-right: 2em;
+
+  &:not(:last-child) {
+    margin-right: 2em;
+  }
 }
