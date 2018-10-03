@@ -20,16 +20,16 @@ const Contact = ({ t }) => {
 
   return (
     <section id="contact" className={styles.contact}>
-      <div className={styles.leftSection}>
+      <section className={styles.leftSection}>
         <img src={peopleSearch} alt="people search logo" />
-      </div>
-      <div className={styles.rightSection}>
+      </section>
+      <section className={styles.rightSection}>
         <h1>{t('contact-page-header')}</h1>
         <p>
           <Interpolate i18nKey="contact-page-msg" slackOrg={slackOrg} email={emailLink} />
         </p>
         <SocialMedia />
-      </div>
+      </section>
     </section>
   );
 };

@@ -19,14 +19,12 @@ function Home({ t }) {
         <div className={styles.heroInner}>
           <header>
             <h1 className={styles.heroTitle}>
-              <span>{t('Coding')}</span>
-              <br />
-              <span>{t('Coach')}</span>
+              <span>{t('home-header-title')}</span>
             </h1>
-            <h2 className={styles.heroSubtitle}>{t('home-hero-subheader')}</h2>
-            <button className={styles.callToAction}>{t('Learn More')}</button>
+            <h2 className={styles.heroSubtitle}>{t('home-header-subtitle')}</h2>
+            <button className={styles.callToAction}>{t('home-header-cta')}</button>
           </header>
-          <img className={styles.heroImage} alt={t('home-hero-img-alt')} src={heroImage} />
+          <img className={styles.heroImage} alt={t('home-header-media-alt')} src={heroImage} />
         </div>
       </section>
 

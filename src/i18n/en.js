@@ -1,10 +1,10 @@
 export default function loadEn() {
   return {
     translations: {
-      'home-header': 'Coding Coach',
-      'home-start': 'Get Started',
-      'home-subheader': 'Connecting developers with mentor worldwide',
-      'home-hero-img-alt':
+      'home-header-title': 'Coding\nCoach',
+      'home-header-subtitle': 'Connecting developers with mentor worldwide',
+      'home-header-cta': 'Learn More',
+      'home-header-media-alt':
         'A woman and a bear are co-working and sharing knowledge. She is taking notes and the bear is reading them',
       'home-about-title': 'About',
       'home-about-text':
