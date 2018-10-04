@@ -1,76 +1,55 @@
 /*
-  Global rules for adding Media Queries to a classname
-  mixin function respond-to takes an argument for the screen size, eg mobile, tablet
-  usage:  @include respond-to(mobile){ // css for mobile here }
-  eg.
+  MEDIAQUERIES
+  
+  We should follow mobile-first methodology. It means that our default styles will be applied since the lowest resolutions.
+  We should start always giving scss with the mobile resolution and once they are finished, expand our device simulator to tablet and so on.
+  Doing this, we will prevent writting lots of lines of code and extra mediaqueries that are not needed.
+  
+  
+  #Definition
+  -----------------------
+  @mixin respond-to takes an argument to apply styles to that resolution and wider:
+    - tablet
+    - desktop
+
+  #Usage:
+  -----------------------
   .header {
     height: 50px;
-    @include respond-to(mobile){
-      height: 40px // This will overide the height in mobile screen sizes
+    @include respond-to(tablet){
+      height: 40px // This will overide the height in tablet and wider screen sizes
     }
 
-    @include respond-to(tablet){
-      height: 30px // This will overide the height in tablet screen sizes
+    @include respond-to(desktop){
+      height: 30px // This will overide the height in desktop and wider screen sizes
     }
   }
 */
 
-$break-xsmall:322px;        // for even smaller mobiles
-$break-msmall:375px;        // for medium smaller mobiles
-$break-small:450px;         // mobile portrait
-$break-small-medium:682px;  // landscape
-$break-medium: 768px;       // big mobile screens
-$break-large: 992px;        // tablets
+$tablet-and-wider: 768px;
+$desktop-and-wider: 1024px;
+$desktop-large-and-wider: 1440px;
 
 /*
   Breakpoints specified
 
-  smobile = 321px;
-  mmobile = 375px
-  mobile = 450px;
-  landscape = 681px;
-  lgmobile = 767px;
-  tablet = 991px
-  pc = 992px
+  tablet = 768px;
+  desktop = 1024px;
+  ultrawide = 1440px;
 */
 @mixin respond-to($media) {
-  @if $media==smobile {
-    @media screen and (max-width: $break-xsmall - 1) {
-      @content;
-    }
-  }
-  @else if $media==mmobile {
-    @media screen and (max-width: $break-msmall) {
-      @content;
-    }
-  }
-  @else if $media==mobile {
-    @media screen and (max-width: $break-small) {
-      @content;
-    }
-  }
-  @else if $media==landscape {
-    @media screen and (max-width: $break-small-medium - 1) {
-      @content;
-    }
-  }
- @else if $media==lgmobile {
-    @media screen and (max-width: $break-medium - 1) {
+  @if $media == tablet {
+    @media screen and (min-width: $tablet-and-wider) {
         @content;
     }
   }
-  @else if $media==tablet {
-    @media screen and (max-width: $break-large - 1) {
+  @else if $media == desktop {
+    @media screen and (min-width: $desktop-and-wider) {
         @content;
     }
   }
-  @else if $media==pc {
-    @media (min-width: $break-large) {
-        @content;
-    }
-  }
-  @else if $media==notmobile {
-    @media (min-width: $break-small) {
+  @else if $media == ultrawide {
+    @media screen and (min-width: $desktop-and-wider) {
         @content;
     }
   }
