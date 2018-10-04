@@ -7,14 +7,19 @@
 }
 
 .footerInner {
-  padding: 1.5em;
+  padding: 1em 0;
   border-top: 1px solid $color-grey-medium;
   display: flex;
-  flex-flow: column;
-  text-align: center;
-  align-items: center;
-  width: 90%;
-  @include generalAlignment();
+  flex-flow: row;
+  justify-content: flex-end;
+  text-align: right;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  @include respond-to(mobile){
+    flex-flow: column;
+    text-align: center;
+    justify-content: center;
+  };
 }
 
 .footerLink {
@@ -27,12 +32,3 @@
     color:$color-grey-dark;
   }
 }
-
-
-
-
-// @include respond-to(tablet){
-//   flex-flow: initial;
-//   text-align: left;
-//   align-items: flex-end;
-// };
