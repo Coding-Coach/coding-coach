@@ -6,13 +6,13 @@
   Doing this, we will prevent writting lots of lines of code and extra mediaqueries that are not needed.
   
   
-  #Definition
+  # Definition
   -----------------------
   @mixin respond-to takes an argument to apply styles to that resolution and wider:
     - tablet
     - desktop
 
-  #Usage:
+  # Usage:
   -----------------------
   .header {
     height: 50px;
@@ -32,17 +32,10 @@
   }
 */
 
-$tablet-and-wider: 768px;
-$desktop-and-wider: 1024px;
-$desktop-large-and-wider: 1440px;
+$tablet-and-wider: 768px; // Tablet
+$desktop-and-wider: 1024px; // Desktop
+$desktop-large-and-wider: 1440px; // Large desktops
 
-/*
-  Breakpoints specified
-
-  tablet = 768px;
-  desktop = 1024px;
-  ultrawide = 1440px;
-*/
 @mixin respond-to($media) {
   @if $media == tablet {
     @media screen and (min-width: $tablet-and-wider) {
