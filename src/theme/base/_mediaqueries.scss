@@ -22,6 +22,12 @@
 
     @include respond-to(desktop){
       height: 30px // This will overide the height in desktop and wider screen sizes
+      color: red;
+    }
+
+    @include respond-to(ultrawide){
+      height: 30px // This will overide the height in desktop and wider screen sizes
+      max-width: 50px;
     }
   }
 */
