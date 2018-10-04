@@ -1,0 +1,34 @@
+@import '~theme/base/variables';
+@import '~theme/base/mediaqueries';
+@import '~theme/base/utils';
+
+.footerMain {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  width: 100%;
+  padding: 2rem;
+  @include respond-to(tablet){
+    flex-flow: initial;
+    text-align: left;
+    align-items: flex-end;
+  };
+  border-top: 1px solid $color-grey-medium;
+}
+
+.footerInner {
+  width: 98%;
+  a {
+    font-size: $font-xs;
+    color: $color-grey-medium;
+    text-decoration: none;
+    &:not(:last-child) {
+      margin-right: 2em;
+    }
+    &:hover {
+      color:$color-grey-light;
+    }
+  };
+  @include generalAlignment();
+
+}
