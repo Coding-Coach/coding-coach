@@ -6,9 +6,15 @@ import styles from './footer.scss';
 const Footer = ({ t }) => (
   <footer className={styles.footerMain}>
     <div className={styles.footerInner}>
-      <a href="#terms">{t('footer-terms')}</a>
-      <a href="#cookies">{t('footer-cookies')}</a>
-      <a href="#privacy">{t('footer-privacy')}</a>
+      <a href="#terms" className={styles.footerLink}>
+        {t('footer-terms')}
+      </a>
+      <a href="#cookies" className={styles.footerLink}>
+        {t('footer-cookies')}
+      </a>
+      <a href="#privacy" className={styles.footerLink}>
+        {t('footer-privacy')}
+      </a>
     </div>
   </footer>
 );

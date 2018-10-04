@@ -3,32 +3,36 @@
 @import '~theme/base/utils';
 
 .footerMain {
-  display: flex;
-  flex-flow: column;
-  text-align: center;
   width: 100%;
-  padding: 2rem;
-  @include respond-to(tablet){
-    flex-flow: initial;
-    text-align: left;
-    align-items: flex-end;
-  };
-  border-top: 1px solid $color-grey-medium;
 }
 
 .footerInner {
-  width: 98%;
-  a {
-    font-size: $font-xs;
-    color: $color-grey-medium;
-    text-decoration: none;
-    &:not(:last-child) {
-      margin-right: 2em;
-    }
-    &:hover {
-      color:$color-grey-light;
-    }
-  };
+  padding: 1.5em;
+  border-top: 1px solid $color-grey-medium;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  align-items: center;
+  width: 90%;
   @include generalAlignment();
-
 }
+
+.footerLink {
+  display: inline-block;
+  padding: 0.5em;
+  font-size: $font-xxs;
+  color: $color-grey-medium;
+  text-decoration: none;
+  &:hover {
+    color:$color-grey-dark;
+  }
+}
+
+
+
+
+// @include respond-to(tablet){
+//   flex-flow: initial;
+//   text-align: left;
+//   align-items: flex-end;
+// };
