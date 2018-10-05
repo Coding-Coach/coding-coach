@@ -25,7 +25,6 @@
     "precommit": "lint-staged",
     "analyze": "source-map-explorer build/static/js/main.*",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "lingui-add-locale": "lingui add-locale en fr",
     "lingui-extract": "lingui extract",
     "lingui-compile": "lingui compile"
   },
