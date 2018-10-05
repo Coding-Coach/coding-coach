@@ -1,5 +1,5 @@
 {
-  "About": {
+  "about.title": {
     "origin": [
       [
         "src/components/navbar/Navbar.js",
@@ -7,7 +7,7 @@
       ]
     ]
   },
-  "Mission": {
+  "mission.title": {
     "origin": [
       [
         "src/components/navbar/Navbar.js",
@@ -15,7 +15,7 @@
       ]
     ]
   },
-  "Contact": {
+  "contact.title": {
     "origin": [
       [
         "src/components/navbar/Navbar.js",

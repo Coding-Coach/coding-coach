@@ -1,0 +1,92 @@
+{
+  "about.title": {
+    "translation": "About",
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        9
+      ]
+    ]
+  },
+  "contact.header": {
+    "translation": "Contact",
+    "origin": [
+      [
+        "src/components/contact/Contact.js",
+        26
+      ]
+    ]
+  },
+  "contact.message": {
+    "translation": "We want to hear your thoughts! Feel free to join our {slackOrg} or send us an email at {email}",
+    "origin": [
+      [
+        "src/components/contact/Contact.js",
+        29
+      ]
+    ]
+  },
+  "contact.slack": {
+    "translation": "Slack Organization",
+    "origin": [
+      [
+        "src/components/contact/Contact.js",
+        15
+      ]
+    ]
+  },
+  "contact.title": {
+    "translation": "Contact",
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        15
+      ]
+    ]
+  },
+  "home.coach": {
+    "translation": "Coach",
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        18
+      ]
+    ]
+  },
+  "home.coding": {
+    "translation": "Coding",
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        15
+      ]
+    ]
+  },
+  "home.learn": {
+    "translation": "Learn more",
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        24
+      ]
+    ]
+  },
+  "home.mission": {
+    "translation": "Connecting Developers with mentors worldwide",
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        21
+      ]
+    ]
+  },
+  "mission.title": {
+    "translation": "Mission",
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        12
+      ]
+    ]
+  }
+}

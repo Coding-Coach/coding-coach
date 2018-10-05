@@ -2,8 +2,8 @@ import React from 'react';
 import { Router } from '@reach/router';
 import { Home } from 'pages';
 import { I18nProvider } from '@lingui/react';
-import catalogEn from '../../locale/en/messages.js';
-// import catalogFr from '../../locale/fr/messages.js';
+import catalogEn from '../../config/i18n/en/messages.js';
+// import catalogFr from '../../config/i18n/fr/messages.js';
 
 const App = () => {
   return (

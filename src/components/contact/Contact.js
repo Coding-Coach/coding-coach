@@ -12,7 +12,7 @@ const Contact = () => {
   );
   const slackOrg = (
     <a href={process.env.REACT_APP_SLACK_URL} className={styles.slackOrg}>
-      <Trans id="slack-org" />
+      <Trans id="contact.slack">Slack Organization</Trans>
     </a>
   );
 
@@ -23,11 +23,13 @@ const Contact = () => {
       </div>
       <div className={styles.rightSection}>
         <h1>
-          <Trans id="contact-page-header" />
+          <Trans id="contact.header">Contact</Trans>
         </h1>
         <p>
-          We want to hear your thoughts! Feel free to join our {slackOrg} or send us an email at{' '}
-          {emailLink}{' '}
+          <Trans id="contact.message">
+            We want to hear your thoughts! Feel free to join our {slackOrg} or send us an email at{' '}
+            {email}
+          </Trans>
         </p>
         <SocialMedia />
       </div>

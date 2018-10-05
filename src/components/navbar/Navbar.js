@@ -6,13 +6,13 @@ const Navbar = () => (
   <nav className={styles.navigationBar}>
     <div className={styles.leftNavLinks}>
       <a href="#" className={styles.navLinks}>
-        <Trans id="About" />
+        <Trans id="about.title">About</Trans>
       </a>
       <a href="#" className={styles.navLinks}>
-        <Trans id="Mission" />
+        <Trans id="mission.title">Mission</Trans>
       </a>
       <a href="#" className={styles.navLinks}>
-        <Trans id="Contact" />
+        <Trans id="contact.title">Contact</Trans>
       </a>
     </div>
   </nav>

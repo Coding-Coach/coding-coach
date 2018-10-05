@@ -12,16 +12,16 @@ const Home = () => {
       <div className={styles.mainHeaderContent}>
         <div>
           <h1 className={styles.header}>
-            <Trans id="Coding" />
+            <Trans id="home.coding">Coding</Trans>
           </h1>
           <h1 className={styles.header}>
-            <Trans id="Coach" />
+            <Trans id="home.coach">Coach</Trans>
           </h1>
           <h4>
-            <Trans id="Connecting developers with mentors worldwide" />
+            <Trans id="home.mission">Connecting Developers with mentors worldwide</Trans>
           </h4>
           <button className={styles.learnMore}>
-            <Trans id="Learn More" />
+            <Trans id="home.learn">Learn more</Trans>
           </button>
         </div>
         <div>

@@ -1,5 +1,5 @@
 {
-  "About": {
+  "about.title": {
     "translation": "",
     "origin": [
       [
@@ -8,61 +8,7 @@
       ]
     ]
   },
-  "Coach": {
-    "translation": "",
-    "origin": [
-      [
-        "src/pages/home/Home.js",
-        18
-      ]
-    ]
-  },
-  "Coding": {
-    "translation": "Coodng",
-    "origin": [
-      [
-        "src/pages/home/Home.js",
-        15
-      ]
-    ]
-  },
-  "Connecting developers with mentors worldwide": {
-    "translation": "",
-    "origin": [
-      [
-        "src/pages/home/Home.js",
-        21
-      ]
-    ]
-  },
-  "Contact": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/navbar/Navbar.js",
-        15
-      ]
-    ]
-  },
-  "Learn More": {
-    "translation": "",
-    "origin": [
-      [
-        "src/pages/home/Home.js",
-        24
-      ]
-    ]
-  },
-  "Mission": {
-    "translation": "",
-    "origin": [
-      [
-        "src/components/navbar/Navbar.js",
-        12
-      ]
-    ]
-  },
-  "contact-page-header": {
+  "contact.header": {
     "translation": "",
     "origin": [
       [
@@ -71,12 +17,75 @@
       ]
     ]
   },
-  "slack-org": {
+  "contact.message": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/contact/Contact.js",
+        29
+      ]
+    ]
+  },
+  "contact.slack": {
     "translation": "",
     "origin": [
       [
         "src/components/contact/Contact.js",
         15
+      ]
+    ]
+  },
+  "contact.title": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        15
+      ]
+    ]
+  },
+  "home.coach": {
+    "translation": "",
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        18
+      ]
+    ]
+  },
+  "home.coding": {
+    "translation": "",
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        15
+      ]
+    ]
+  },
+  "home.learn": {
+    "translation": "",
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        24
+      ]
+    ]
+  },
+  "home.mission": {
+    "translation": "",
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        21
+      ]
+    ]
+  },
+  "mission.title": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        12
       ]
     ]
   }
