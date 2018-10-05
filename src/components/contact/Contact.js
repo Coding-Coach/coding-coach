@@ -3,6 +3,8 @@ import { translate, Interpolate } from 'react-i18next';
 import config from 'config/constants';
 
 import 'i18n/i18n';
+
+import Image from 'components/image/Image';
 import styles from './assets/contact.scss';
 import peopleSearch from './assets/people-search.svg';
 import SocialMedia from './SocialMedia';
@@ -22,7 +24,7 @@ const Contact = ({ t }) => {
   return (
     <section id="contact" className={styles.contact}>
       <section className={styles.leftSection}>
-        <img src={peopleSearch} alt={t('contact-page-media-alt')} />
+        <Image src={peopleSearch} alt={t('contact-page-media-alt')} />
       </section>
       <section className={styles.rightSection}>
         <h1>{t('contact-page-header')}</h1>
