@@ -31,3 +31,8 @@
     margin-right: 2em;
   }
 }
+@media screen and (max-width: 600px) {
+  .navLinks:hover {
+    background-color:#94F2D8;
+  }
+  }
