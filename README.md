@@ -25,3 +25,7 @@ or
 ```
 yarn start
 ```
+
+# Slack
+
+Coding Coach is on Slack! [Click here](https://coding-coach.slack.com/) to join.
