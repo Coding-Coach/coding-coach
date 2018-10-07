@@ -2,7 +2,7 @@ import React from 'react';
 import { translate } from 'react-i18next';
 import 'i18n/i18n';
 
-import styles from './Home.scss';
+import styles from './assets/home.scss';
 import { Navbar } from 'components';
 import HomeSection from './components/HomeSection';
 import ImageAbout from './assets/images/about.svg';
@@ -18,9 +18,7 @@ function Home({ t }) {
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <header>
-            <h1 className={styles.heroTitle}>
-              <span>{t('home-header-title')}</span>
-            </h1>
+            <h1 className={styles.heroTitle}>{t('home-header-title')}</h1>
             <h2 className={styles.heroSubtitle}>{t('home-header-subtitle')}</h2>
             <button className={styles.callToAction}>{t('home-header-cta')}</button>
           </header>

@@ -1,7 +1,7 @@
 export default function loadEn() {
   return {
     translations: {
-      'home-header-title': 'Coding\nCoach',
+      'home-header-title': 'Coding Coach',
       'home-header-subtitle': 'Connecting developers with mentor worldwide',
       'home-header-cta': 'Learn More',
       'home-header-media-alt':
