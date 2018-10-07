@@ -1,23 +1,20 @@
 import React from 'react';
 import { translate, Interpolate } from 'react-i18next';
+import config from 'config/constants';
 
 import 'i18n/i18n';
 import styles from './assets/contact.scss';
 import peopleSearch from './assets/people-search.svg';
 import SocialMedia from './SocialMedia';
 
-export const EMAIL = 'codingcoachio@gmail.com';
-export const SLACK_URL =
-  'https://join.slack.com/t/coding-coach/shared_invite/enQtNDMyMzUzNjAxODQyLTUwYTFkMzZmNGFhMzZjYTQwOWE2YWFjOGJhNzYyOGIxNDM5Zjc1YWQ4NjMwN2U5YzBlNjkwMTI2ZDNiOWQyMzM';
-
 const Contact = ({ t }) => {
   const emailLink = (
-    <a target="_blank" href={`mailto:${EMAIL}`} className={styles.email}>
-      {EMAIL}
+    <a target="_blank" href={`mailto:${config.contact.EMAIL}`} className={styles.email}>
+      {config.contact.EMAIL}
     </a>
   );
   const slackOrg = (
-    <a href={SLACK_URL} className={styles.slackOrg}>
+    <a href={config.contact.SLACK_URL} className={styles.slackOrg}>
       {t('slack-org')}
     </a>
   );
