@@ -1,0 +1,12 @@
+
+.footer {
+  display: flex;
+
+  &::first-child {
+    margin-left: auto;
+  }
+}
+
+.pullRight {
+  margin-left: auto;
+}
