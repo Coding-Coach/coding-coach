@@ -6,14 +6,18 @@ import styles from './assets/contact.scss';
 import peopleSearch from './assets/people-search.svg';
 import SocialMedia from './SocialMedia';
 
+export const EMAIL = 'codingcoachio@gmail.com';
+export const SLACK_URL =
+  'https://join.slack.com/t/coding-coach/shared_invite/enQtNDMyMzUzNjAxODQyLTUwYTFkMzZmNGFhMzZjYTQwOWE2YWFjOGJhNzYyOGIxNDM5Zjc1YWQ4NjMwN2U5YzBlNjkwMTI2ZDNiOWQyMzM';
+
 const Contact = ({ t }) => {
   const emailLink = (
-    <a target="_blank" href={`mailto:${process.env.REACT_APP_EMAIL}`} className={styles.email}>
-      {process.env.REACT_APP_EMAIL}
+    <a target="_blank" href={`mailto:${EMAIL}`} className={styles.email}>
+      {EMAIL}
     </a>
   );
   const slackOrg = (
-    <a href={process.env.REACT_APP_SLACK_URL} className={styles.slackOrg}>
+    <a href={SLACK_URL} className={styles.slackOrg}>
       {t('slack-org')}
     </a>
   );
