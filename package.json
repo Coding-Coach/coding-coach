@@ -23,6 +23,7 @@
     "deploy": "gh-pages -d build",
     "lint": "eslint src/",
     "test": "node scripts/custom-config test --env=jsdom",
+    "test:staged": "cross-env CI=true node scripts/custom-config test --env=jsdom --findRelatedTests",
     "eject": "react-scripts eject",
     "sass": "sass --watch src/styles/scss:src/styles/css",
     "precommit": "lint-staged",
@@ -38,6 +39,7 @@
     "**/src/**/*.js": [
       "prettier --write",
       "eslint --fix",
+      "test:staged",
       "git add"
     ]
   },
@@ -46,6 +48,7 @@
     "@storybook/react": "^3.4.10",
     "ajv": "^6.5.3",
     "babel-core": "^6.26.3",
+    "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "eslint": "^5.5.0",
     "eslint-config-prettier": "^3.0.1",

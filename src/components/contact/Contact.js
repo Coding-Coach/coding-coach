@@ -1,5 +1,6 @@
 import React from 'react';
 import { translate, Interpolate } from 'react-i18next';
+import config from 'config/constants';
 
 import 'i18n/i18n';
 import styles from './assets/contact.scss';
@@ -8,12 +9,12 @@ import SocialMedia from './SocialMedia';
 
 const Contact = ({ t }) => {
   const emailLink = (
-    <a target="_blank" href={`mailto:${process.env.REACT_APP_EMAIL}`} className={styles.email}>
-      {process.env.REACT_APP_EMAIL}
+    <a target="_blank" href={`mailto:${config.contact.EMAIL}`} className={styles.email}>
+      {config.contact.EMAIL}
     </a>
   );
   const slackOrg = (
-    <a href={process.env.REACT_APP_SLACK_URL} className={styles.slackOrg}>
+    <a href={config.contact.SLACK_URL} className={styles.slackOrg}>
       {t('slack-org')}
     </a>
   );
