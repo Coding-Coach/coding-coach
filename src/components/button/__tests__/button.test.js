@@ -1,9 +1,6 @@
 import React from 'react';
-import { render, cleanup, fireEvent } from 'react-testing-library';
-console.log(__dirname);
+import { render, fireEvent } from 'react-testing-library';
 import Button from './../';
-
-afterEach(cleanup);
 
 test('renders the button component', () => {
   const { container } = render(<Button>CLICK ME</Button>);
