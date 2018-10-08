@@ -1,6 +1,8 @@
 /* eslint-disable */
 const path = require('path');
-module.exports = function(config) {
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
+module.exports = function (config) {
   // Use your own ESLint file
   let eslintLoader = config.module.rules[0];
   eslintLoader.use[0].options.useEslintrc = true;
@@ -30,4 +32,7 @@ module.exports = function(config) {
   // Adding the `src` folder to the resolvers, this will
   // allows to import js files using the `src` as root.
   config.resolve.modules.push('src');
+
+  // Adds the bundle analyzer to inspect the production build
+  config.plugins.push(new BundleAnalyzerPlugin({ analyzerMode: 'static' }));
 }

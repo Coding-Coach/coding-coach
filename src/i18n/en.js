@@ -21,7 +21,7 @@ export default function loadEn() {
       'contact-page-msg':
         'We want to hear your thoughts! Feel free to join our {{slackOrg}} or send us an email at {{email}}',
       'contact-page-media-alt':
-        'Person using a magnifying glass to see the details of another guy.      ',
+        'Person using a magnifying glass to see the details of another guy.',
       'slack-org': 'Slack Organization',
     },
   };
