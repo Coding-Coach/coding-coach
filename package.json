@@ -39,8 +39,8 @@
     "**/src/**/*.js": [
       "prettier --write",
       "eslint --fix",
-      "git add",
-      "test"
+      "test:staged",
+      "git add"
     ]
   },
   "devDependencies": {
