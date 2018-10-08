@@ -4,15 +4,32 @@ $font-secondary: 'Fjalla One', sans-serif;
 
 // Palette
 $color-primary: #32B88C;
+$color-primary-lighter: #69D5B1;
 $color-primary-darker: #1EA478;
+$color-primary-shadow: #24A87C;
+$color-primary-active: #187153;
+
+$color-secondary-lime: #B6EA94;
+$color-secondary-lime-lighter: #C5F4A7;
+$color-secondary-lime-darker: #97CC74;
+$color-secondary-lime-shadow: #76AC53;
+$color-secondary-lime-active: #466034;
+
 $color-secondary: #69D5B1;
 $color-tertiary: #E6F5F0;
 
 $color-white: #FFFFFF;
 $color-grey-light: #E8E7E7;
+$color-grey: #929292; // Clarify this color with @emma
 $color-grey-medium: #4A4A4A;
 $color-grey-dark: #1A1A1A;
 $color-black: #000000;
+
+$color-danger: #EB6E64;
+$color-danger-lighter: #EA7A71;
+$color-danger-darker: #E35F54;
+$color-danger-shadow: #6B1F19;
+$color-danger-active: #a24339;
 
 
 // Font Sizes
