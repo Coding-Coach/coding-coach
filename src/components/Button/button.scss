@@ -1,0 +1,91 @@
+@import '~theme/base/variables';
+
+.button {
+  display: inline-block;
+  min-height: 46px;
+  line-height: 46px;
+  min-width: 96px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  transition: all 0.15s;
+  padding: 0px 16px;
+  font-size: $font-xs;
+
+
+
+  &.primary {
+    background: $color-primary;
+    box-shadow: 0px 3px 0px 0px $color-primary-shadow;
+    color: $color-white;
+    text-shadow: 0 1px $color-grey-dark;
+    &:hover {
+      background: $color-primary-lighter;
+      transform: translateY(-0.5px);
+      box-shadow: 0px 4px 0px 0px $color-primary-shadow;
+    }
+    &:active {
+      background: $color-primary-darker;
+      transform: translateY(0.5px);
+      box-shadow: 0px 1px 0px 0px $color-primary-shadow;
+      text-shadow: none;
+      color: $color-primary-active;
+    }
+  }
+
+  &.danger {
+    background: $color-danger;
+    box-shadow: 0px 3px 0px 0px $color-danger-shadow;
+    color: $color-white;
+    text-shadow: 0 1px $color-danger-shadow;
+
+    &:hover {
+      box-shadow: 0px 4px 0px 0px $color-danger-shadow;
+      background: $color-danger-lighter;
+      transform: translateY(-0.5px);
+    }
+    &:active {
+      box-shadow: 0px 1px 0px 0px $color-danger-shadow;
+      background: $color-danger-darker;
+      transform: translateY(0.5px);
+      text-shadow: none;
+      color: $color-danger-active;
+    }
+  }
+
+  &.secondary {
+    background: $color-secondary-lime;
+    box-shadow: 0px 3px 0px 0px $color-secondary-lime-shadow;
+    color: $color-secondary-lime-shadow;
+    text-shadow: 0 1px $color-white;
+    &:hover {
+      box-shadow: 0px 4px 0px 0px $color-secondary-lime-shadow;
+      background: $color-secondary-lime-lighter;
+      transform: translateY(-0.5px);
+    }
+    &:active {
+      box-shadow: 0px 1px 0px 0px $color-grey;
+      background: $color-secondary-lime-darker;
+      text-shadow: none;
+      color: $color-secondary-lime-active;
+      transform: translateY(0.5px);
+    }
+  }
+
+  &:disabled {
+    background: $color-grey-light;
+    box-shadow: 0px 1px 0px 0px $color-grey;
+    text-shadow: none;
+    color: $color-grey;
+
+    &:hover, &:active {
+      transform: none;
+      box-shadow: 0px 1px 0px 0px $color-grey;
+      background: $color-grey-light;
+    }
+  }
+}
