@@ -2,7 +2,7 @@
 const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-module.exports = function(config) {
+module.exports = function (config) {
   // Use your own ESLint file
   let eslintLoader = config.module.rules[0];
   eslintLoader.use[0].options.useEslintrc = true;
@@ -34,5 +34,5 @@ module.exports = function(config) {
   config.resolve.modules.push('src');
 
   // Adds the bundle analyzer to inspect the production build
-  config.plugins.push(new BundleAnalyzerPlugin());
+  config.plugins.push(new BundleAnalyzerPlugin({ analyzerMode: 'static' }));
 }
