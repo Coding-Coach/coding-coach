@@ -3,7 +3,7 @@ import { translate } from 'react-i18next';
 import 'i18n/i18n';
 import { slide as Menu } from 'react-burger-menu';
 import styles from './navbar.scss';
-
+import './burgerMenu.scss';
 const Navbar = ({ t }) => {
   const BurgerMenustyles = {
     bmBurgerButton: {
@@ -60,7 +60,7 @@ const Navbar = ({ t }) => {
   );
   const renderMobile = (
     <div>
-      <Menu styles={BurgerMenustyles} isOpen={false}>
+      <Menu isOpen={false}>
         <a href="#about" className={styles.navLinks}>
           {t('About')}
         </a>
