@@ -2,8 +2,8 @@
 
 .button {
   display: inline-block;
-  min-height: 46px;
-  line-height: 46px;
+  min-height: $default-button;
+  line-height: $default-button;
   min-width: 96px;
   box-sizing: border-box;
   text-transform: uppercase;
@@ -12,11 +12,8 @@
   outline: none;
   border: none;
   border-radius: 3px;
-  transition: all 0.15s;
-  padding: 0px 16px;
+  transition: all 0.55s;
   font-size: $font-xs;
-
-
 
   &.primary {
     background: $color-primary;
@@ -25,14 +22,11 @@
     text-shadow: 0 1px $color-grey-dark;
     &:hover {
       background: $color-primary-lighter;
-      transform: translateY(-0.5px);
       box-shadow: 0px 4px 0px 0px $color-primary-shadow;
     }
     &:active {
       background: $color-primary-darker;
-      transform: translateY(0.5px);
       box-shadow: 0px 1px 0px 0px $color-primary-shadow;
-      text-shadow: none;
       color: $color-primary-active;
     }
   }
@@ -46,13 +40,10 @@
     &:hover {
       box-shadow: 0px 4px 0px 0px $color-danger-shadow;
       background: $color-danger-lighter;
-      transform: translateY(-0.5px);
     }
     &:active {
       box-shadow: 0px 1px 0px 0px $color-danger-shadow;
       background: $color-danger-darker;
-      transform: translateY(0.5px);
-      text-shadow: none;
       color: $color-danger-active;
     }
   }
@@ -65,14 +56,13 @@
     &:hover {
       box-shadow: 0px 4px 0px 0px $color-secondary-lime-shadow;
       background: $color-secondary-lime-lighter;
-      transform: translateY(-0.5px);
+      
     }
     &:active {
-      box-shadow: 0px 1px 0px 0px $color-grey;
+      box-shadow: 0px 1px 0px 0px $color-secondary-lime-shadow;
       background: $color-secondary-lime-darker;
-      text-shadow: none;
       color: $color-secondary-lime-active;
-      transform: translateY(0.5px);
+      
     }
   }
 
@@ -87,5 +77,43 @@
       box-shadow: 0px 1px 0px 0px $color-grey;
       background: $color-grey-light;
     }
+  }
+
+  /* Common Hover and Active styles for all Buttons*/
+  &:hover {
+    transform: translateY(-0.5px);
+  }
+
+  &:active {
+    transform: translateY(0.5px);
+    text-shadow: none;
+  }
+
+
+  &.default {
+    padding: 0px $font-s;
+  }
+
+  &.large {
+    padding: 0px $font-l;
+    min-height: $large-button;
+    line-height: $large-button;
+    font-size: $font-l;
+  }
+
+  &.small {
+    padding: 0px $font-xs;
+    min-height: $small-button;
+    line-height: $small-button;
+    font-size: $font-xxs
+  }
+  &.fullWidth {
+    width: 100%;
+  }
+
+  // For icons and svgs
+  i, svg {
+    vertical-align: middle;
+    margin-right: 4px;
   }
 }
