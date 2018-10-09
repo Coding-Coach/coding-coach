@@ -8,12 +8,14 @@ import HomeSection from './components/HomeSection';
 import ImageAbout from './assets/images/about.svg';
 import ImageMission from './assets/images/mission.svg';
 import Contact from 'components/contact/Contact';
+import OverlayCookie from 'components/overlayCookie/OverlayCookie';
 
 const heroImage = require('./assets/images/meeting.svg');
 
 function Home({ t }) {
   return (
     <React.Fragment>
+      <OverlayCookie />
       <Navbar />
       <section className={styles.hero}>
         <div className={styles.heroInner}>
