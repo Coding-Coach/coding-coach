@@ -1,6 +1,12 @@
 export default function loadEn() {
   return {
     translations: {
+      'cookie-notification':
+        'To help personalize content, tailor and measure ads, and provide a safer experience, we use cookies. By clicking or navigating the site, you agree to allow our collecion of information on and off Coding Coach through cookies. Learn more, including about available controls:',
+      'cookie-link': 'Cookies Policy',
+      'footer-terms': 'Terms & Conditions',
+      'footer-cookies': 'Cookies',
+      'footer-privacy': 'Privacy Policy',
       'home-header-title': 'Coding\nCoach',
       'home-header-subtitle': 'Connecting developers with mentor worldwide',
       'home-header-cta': 'Learn More',
