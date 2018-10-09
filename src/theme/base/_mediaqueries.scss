@@ -21,6 +21,7 @@ $break-small:450px;         // mobile portrait
 $break-small-medium:682px;  // landscape
 $break-medium: 768px;       // big mobile screens
 $break-large: 992px;        // tablets
+$break-xlarge: 1024px;
 
 /*
   Breakpoints specified
@@ -31,7 +32,8 @@ $break-large: 992px;        // tablets
   landscape = 681px;
   lgmobile = 767px;
   tablet = 991px
-  pc = 992px
+  pc = 992px,
+  largepc = 1024px
 */
 @mixin respond-to($media) {
   @if $media==smobile {
@@ -66,6 +68,11 @@ $break-large: 992px;        // tablets
   }
   @else if $media==pc {
     @media (min-width: $break-large) {
+        @content;
+    }
+  }
+  @else if $media==largepc {
+    @media (min-width: $break-xlarge) {
         @content;
     }
   }
