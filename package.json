@@ -6,10 +6,11 @@
   "dependencies": {
     "i18next": "^11.7.0",
     "i18next-browser-languagedetector": "^2.2.3",
-    "react-i18next": "^7.12.0",
+    "prop-types": "^15.6.2",
     "proxyquire": "^2.1.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
+    "react-i18next": "^7.12.0",
     "react-scripts": "1.1.5",
     "rewire": "^4.0.1"
   },

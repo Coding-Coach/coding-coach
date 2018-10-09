@@ -34,3 +34,34 @@ body, html {
     text-decoration: none;
   }
 }
+
+.textfield {
+
+  &__root {
+   display: flex;
+  }
+
+  &__input {
+    background: $color-white;
+    height: 38px;
+    width: 227px;
+    border: 1px Solid gray;
+    box-shadow: 1px 2px $color-shadow;
+    border-radius: 4px;
+    padding-left: 5px;
+  }
+
+  &__labelStyle {
+    padding-right: 10px;
+  }
+
+  &__textarea {
+    background: $color-white;
+    height: 200px;
+    width: 400px;
+    border: 1px Solid gray;
+    box-shadow: 1px 2px $color-shadow;
+    border-radius: 4px;
+    padding-left: 5px;
+  }
+}
