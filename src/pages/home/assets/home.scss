@@ -1,5 +1,6 @@
 @import '~theme/base/variables';
 @import '~theme/base/utils';
+@import '~theme/base/mediaqueries';
 
 $distance-height-variation-before: 20px;
 $distance-height-variation-after: 40px;
@@ -14,7 +15,7 @@ $distance-height-variation-after: 40px;
         }
     }
 
-    @media screen and (min-width: 768px) {
+    @include respond-to(pc) {
         > div {
             flex-direction: row-reverse;
         }
@@ -27,7 +28,7 @@ $distance-height-variation-after: 40px;
     padding-top: 6rem;
     padding-bottom: 3rem;
 
-    @media screen and (min-width: 768px) {
+    @include respond-to(pc) {
         min-height: 550px;
     }
 
@@ -105,7 +106,7 @@ $distance-height-variation-after: 40px;
     display: none;
     width: 350px;
 
-    @media screen and (min-width: 768px) {
+    @include respond-to(pc) {
         display: block;
         width: 400px;
     }
