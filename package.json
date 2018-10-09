@@ -23,7 +23,7 @@
     "deploy": "gh-pages -d build",
     "lint": "eslint src/",
     "test": "node scripts/custom-config test --env=jsdom",
-    "test:staged": "cross-env CI=true node scripts/custom-config test --env=jsdom",
+    "test:staged": "cross-env CI=true node scripts/custom-config test --env=jsdom --findRelatedTests",
     "eject": "react-scripts eject",
     "sass": "sass --watch src/styles/scss:src/styles/css",
     "precommit": "lint-staged",
