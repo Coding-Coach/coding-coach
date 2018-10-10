@@ -7,7 +7,7 @@ import Content from './PanelContent';
 import Footer from './PanelFooter';
 
 const noop = () => {};
-let cx = classNames.bind(styles);
+const cx = classNames.bind(styles);
 
 /**
  * Usage:
@@ -15,7 +15,6 @@ let cx = classNames.bind(styles);
  * const classes = {
  *    root: styles.classNameForRootElement,
  *    title: styles.classForTheTitle,
- *    close: styles.classForTheCloseButton,
  *    body: styles.classForTheBodyContainer,
  *    footer: 'custom-class-for-the-footer-container',
  * };

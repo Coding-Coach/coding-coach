@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import Panel from './Panel';
+import styles from './assets/panel.scss';
 
 const Button = ({ onClick, text }) => <button onClick={onClick}>{text}</button>;
 
@@ -16,7 +17,7 @@ storiesOf('Panel Component', module).add('Panel', () => {
   let open = false;
   const classes = {
     root: 'dummyRoot',
-    body: 'dummyBody',
+    body: styles.dummyBody,
   };
 
   return (
