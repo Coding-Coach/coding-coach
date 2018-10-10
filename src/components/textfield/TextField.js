@@ -9,9 +9,10 @@ class TextField extends React.Component {
     const _renderTextInput = () => {
       if (!multiline) {
         return (
-          <div>
-            <label>{label}</label>
+          <div className={styles.root}>
+            <label className={styles.labelStyle}>{label}</label>
             <input
+              className={styles.inputStyle}
               label={label}
               onChange={onChange}
               onBlur={onBlur}
@@ -24,9 +25,10 @@ class TextField extends React.Component {
         );
       } else {
         return (
-          <div>
-            <label>{label}</label>
+          <div className={styles.root}>
+            <label className={styles.labelStyle}>{label}</label>
             <textarea
+              className={styles.textAreaStyle}
               label={label}
               onChange={onChange}
               onBlur={onBlur}
