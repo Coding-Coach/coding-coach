@@ -1,0 +1,32 @@
+@import '../../styles/scss/base/variables.scss';
+@import '../../styles/scss/base/elements.scss';
+.textField {
+
+  &__root {
+   display: flex;
+  }
+
+  &__input {
+    background: #FFF;
+    height: 38px;
+    width: 227px;
+    border: 1px Solid gray;
+    box-shadow: 1px 2px #D3D3D3;;
+    border-radius: 4px;
+    padding-left: 5px;
+  }
+
+  &__labelStyle {
+    padding-right: 10px;
+  }
+
+  &__textArea {
+    background: #FFF;
+    height: 200px;
+    width: 400px;
+    border: 1px Solid gray;
+    box-shadow: 1px 2px #FFF;
+    border-radius: 4px;
+    padding-left: 5px;
+  }
+}

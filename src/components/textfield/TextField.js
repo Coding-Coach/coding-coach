@@ -1,28 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './textfield.scss';
 
 class TextField extends React.Component {
   render() {
-    const {
-      value,
-      onChange,
-      onFocus,
-      onBlur,
-      label,
-      placeholder,
-      type,
-      multiline,
-      classes = defaultClasses
-    } = this.props;
+    const { value, onChange, onFocus, onBlur, label, placeholder, type, multiline } = this.props;
 
-    const { root, input, labelStyle } = classes;
     const _renderTextInput = () => {
       if (!multiline) {
         return (
-          <div className={root}>
-            <label className={labelStyle}>{label}</label>
+          <div>
+            <label>{label}</label>
             <input
-              className={input}
               label={label}
               onChange={onChange}
               onBlur={onBlur}
@@ -35,10 +24,9 @@ class TextField extends React.Component {
         );
       } else {
         return (
-          <div className={root}>
-            <label className={labelStyle}>{label}</label>
+          <div>
+            <label>{label}</label>
             <textarea
-              className={input}
               label={label}
               onChange={onChange}
               onBlur={onBlur}
@@ -54,12 +42,6 @@ class TextField extends React.Component {
     return _renderTextInput();
   }
 }
-
-const defaultClasses = {
-  root: 'textfield__root',
-  input: 'textfield__input',
-  labelStyle: 'textfield__labelStyle'
-};
 
 TextField.propTypes = {
   onChange: PropTypes.func,
