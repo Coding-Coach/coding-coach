@@ -25,8 +25,8 @@ $distance-height-variation-after: 40px;
 .hero {
     position: relative;
     min-height: 50vh;
-    padding-top: 6rem;
-    padding-bottom: 3rem;
+    padding-top: 96px;
+    padding-bottom: 48px;
 
     @include respond-to(pc) {
         min-height: 550px;
@@ -81,13 +81,13 @@ $distance-height-variation-after: 40px;
     font-family: $font-primary;
     font-size: $font-l;
     font-weight: $font-thin;
-    margin: 1rem 0 1.25rem 0;
+    margin: 16px 0 20px 0;
 }
 
 .callToAction {
     text-decoration: none;
     border-radius: $border-radius-rounded;
-    padding: 0.75rem 2rem;
+    padding: 12px 32px;
     font-family: $font-primary;
     font-size: $font-s;
     border: 0px;
