@@ -1,6 +1,9 @@
 export default function loadEn() {
   return {
     translations: {
+      'footer-terms': 'Terms & Conditions',
+      'footer-cookies': 'Cookies',
+      'footer-privacy': 'Privacy Policy',
       'home-header-title': 'Coding Coach',
       'home-header-subtitle': 'Connecting developers with mentor worldwide',
       'home-header-cta': 'Learn More',

@@ -8,6 +8,7 @@ import HomeSection from './components/HomeSection';
 import ImageAbout from './assets/images/about.svg';
 import ImageMission from './assets/images/mission.svg';
 import Contact from 'components/contact/Contact';
+import Footer from 'components/footer/Footer';
 
 const heroImage = require('./assets/images/meeting.svg');
 
@@ -41,6 +42,7 @@ function Home({ t }) {
         />
         <Contact />
       </main>
+      <Footer />
     </React.Fragment>
   );
 }

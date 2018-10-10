@@ -43,7 +43,7 @@
     text-align: right;
     width: 60%;
     margin-left: auto;
-    color: $color-grey-medium;
+    color: $color-grey-dark;
     @include respond-to(landscape){
       width: auto;
       text-align: center;
