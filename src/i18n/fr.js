@@ -1,9 +1,12 @@
 export default function loadFr() {
   return {
     translations: {
-      'landing-page-header': 'Coding Coach',
-      'landing-page-start': 'Commencez maintenant',
-      'landing-page-subheader': 'Apprenez avec des mentors partout à travers le monde'
-    }
+      'footer-terms': "Conditions d'utilisation",
+      'footer-cookies': 'Cookies',
+      'footer-privacy': 'Politique de confidentialité',
+      'home-header': 'Coding Coach',
+      'home-start': 'Commencez maintenant',
+      'home-subheader': 'Apprenez avec des mentors partout à travers le monde',
+    },
   };
 }

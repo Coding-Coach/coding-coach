@@ -9,6 +9,25 @@ module.exports = function(config) {
   let loaderList = config.module.rules[1].oneOf;
   loaderList.splice(loaderList.length - 1, 0, {
     test: /\.scss$/,
-    use: ['style-loader', 'css-loader', 'sass-loader']
+    use: [
+      'style-loader',
+      {
+        loader: 'css-loader',
+        options: {
+          sourceMap: true,
+          importLoaders: 2,
+          modules: true,
+          localIdentName: '[path][name]-[local]',
+          minimize: false,
+        },
+      },
+      'resolve-url-loader',
+      'sass-loader',
+    ],
   });
-};
+
+  // Adding the `src` folder to the resolvers, this will
+  // allows to import js files using the `src` as root.
+  config.resolve.modules.push('src');
+
+}

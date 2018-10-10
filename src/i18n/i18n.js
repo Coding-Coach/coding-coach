@@ -13,7 +13,7 @@ i18n
     // we init with resources
     resources: {
       en: loadEn(),
-      fr: loadFr()
+      fr: loadFr(),
     },
     fallbackLng: 'en',
     debug: false,
@@ -26,12 +26,12 @@ i18n
 
     interpolation: {
       escapeValue: false, // not needed for react!!
-      formatSeparator: ','
+      formatSeparator: ',',
     },
 
     react: {
-      wait: true
-    }
+      wait: true,
+    },
   });
 
 export default i18n;
