@@ -29,6 +29,10 @@ or
 yarn start
 ```
 
+# Slack
+
+Coding Coach is on Slack! [Click here](https://coding-coach.slack.com/) to join.
+
 ### Coding Coach Board
 
 In order to organize all the work, we are using https://zenhub.com to keep track of all the epics and tasks. After you login to ZenHub search for the `Coding-Coach/coding-coach` repository, make sure you don't add someone else fork.
