@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the basic Panel component 1`] = `
+<button>
+  Open Panel
+</button>
+`;

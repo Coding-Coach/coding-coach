@@ -34,7 +34,7 @@ const cx = classNames.bind(styles);
 
 export default class Panel extends React.Component {
   static propTypes = {
-    trigger: PropTypes.node.isRequired,
+    trigger: PropTypes.node,
     onClose: PropTypes.func,
     closable: PropTypes.bool,
     open: PropTypes.bool,
