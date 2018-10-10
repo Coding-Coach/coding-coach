@@ -9,7 +9,34 @@
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <style type="text/css">
+      /* open-sans-regular - cyrillic-ext_vietnamese_cyrillic_greek_greek-ext_latin_latin-ext */
+      @font-face {
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: 400;
+          src: url('%PUBLIC_URL%/static/media/open-sans-v15-cyrillic-ext_vietnamese_cyrillic_greek_greek-ext_latin_latin-ext/open-sans-v15-cyrillic-ext_vietnamese_cyrillic_greek_greek-ext_latin_latin-ext-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+              url('%PUBLIC_URL%/static/media/open-sans-v15-cyrillic-ext_vietnamese_cyrillic_greek_greek-ext_latin_latin-ext/open-sans-v15-cyrillic-ext_vietnamese_cyrillic_greek_greek-ext_latin_latin-ext-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      }
+
+      /* lato-regular - latin_latin-ext */
+      @font-face {
+          font-family: 'Lato';
+          font-style: normal;
+          font-weight: 400;
+          src: url('%PUBLIC_URL%/static/media/lato-v14-latin_latin-ext/lato-v14-latin_latin-ext-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+              url('%PUBLIC_URL%/static/media/lato-v14-latin_latin-ext/lato-v14-latin_latin-ext-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      }
+
+      /* fjalla-one-regular - latin_latin-ext */
+      @font-face {
+          font-family: 'Fjalla One';
+          font-style: normal;
+          font-weight: 400;
+          src: url('%PUBLIC_URL%/static/media/fjalla-one-v5-latin_latin-ext/fjalla-one-v5-latin_latin-ext-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+              url('%PUBLIC_URL%/static/media/fjalla-one-v5-latin_latin-ext/fjalla-one-v5-latin_latin-ext-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      }
+    </style>
     <title>Coding Coach</title>
   </head>
   <body>
