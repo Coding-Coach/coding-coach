@@ -1,5 +1,6 @@
-# coding-coach
+# Coding Coach
 [![Build Status](https://api.travis-ci.org/Coding-Coach/coding-coach.svg?branch=development)](https://travis-ci.org/Coding-Coach/coding-coach)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Coding-Coach/coding-coach/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
 
 Connecting developers with mentors worldwide.
 
@@ -29,7 +30,7 @@ or
 yarn start
 ```
 
-# Slack
+### Slack
 
 Coding Coach is on Slack! [Click here](https://coding-coach.slack.com/) to join.
 
