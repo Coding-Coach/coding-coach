@@ -14,19 +14,25 @@ const cx = classNames.bind(styles);
  *
  * const classes = {
  *    root: styles.classNameForRootElement,
- *    title: styles.classForTheTitle,
  *    body: styles.classForTheBodyContainer,
- *    footer: 'custom-class-for-the-footer-container',
  * };
+ * const headerClasses = {
+ *    title: styles.classForTheTitle
+ * };
+ *
+ * const footerClasses = {
+ *    footer: 'custom-class-for-the-footer-container'
+ * };
+ *
  *   <Panel trigger={<Button>Open Me</Button>} closable={false} onClose={onClose} classes={classes}>
- *     <Panel.Header>Some title here</Panel.Header>
+ *     <Panel.Header classes={headerClasses}>Some title here</Panel.Header>
  *     <Panel.Content>
  *       <img src="something.png" />
  *       <div>
  *         <p>We should be able to add anything as the content<.p>
  *       </div>
  *     </Panel.Content>
- *     <Panel.Footer>
+ *     <Panel.Footer classes={footerClasses}>
  *       <CustomFooterComponent />
  *     </Panel.Footer>
  *   </Panel>
