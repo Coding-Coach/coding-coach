@@ -2,13 +2,13 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import Panel from './Panel';
-import styles from './assets/panel.scss';
+import styles from './assets/panelstories.scss';
 
 const Button = ({ onClick, text }) => <button onClick={onClick}>{text}</button>;
 
-storiesOf('Panel Component', module).add('Panel', () => {
+storiesOf('Panel Component', module).add('Basic Panel', () => {
   const onClose = () => {
-    alert('closed');
+    alert('onClose callback is called');
   };
 
   const closeModal = () => {
@@ -30,7 +30,14 @@ storiesOf('Panel Component', module).add('Panel', () => {
       open={open}
     >
       <Panel.Header>Hello World!</Panel.Header>
-      <Panel.Content>Some random content</Panel.Content>
+      <Panel.Content>
+        <p>Click close icon on top right-hand side to close the modal window</p>
+        <p>No event handler is attached to Deny and Close buttons</p>
+        <p>
+          The default width of the panel-wrapper is 40%. The width can be changed via css. Its set
+          to 80% in thsi case.
+        </p>
+      </Panel.Content>
       <Panel.Footer>
         <Button text="Deny" onClick={closeModal} />
         <Button text="Accept" onClick={closeModal} />
@@ -39,36 +46,41 @@ storiesOf('Panel Component', module).add('Panel', () => {
   );
 });
 
-storiesOf('Panel Component with external close control', module).add('Panel', () => {
-  class DummyComponent extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = { open: false };
-      this.closeModalHandler = this.closeModalHandler.bind(this);
+storiesOf('Panel Component with external close control', module).add(
+  'Panel with functional Footer',
+  () => {
+    class DummyComponent extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = { open: false };
+        this.closeModalHandler = this.closeModalHandler.bind(this);
+      }
+
+      closeModalHandler() {
+        this.setState({ open: false });
+      }
+
+      render() {
+        return (
+          <Panel
+            trigger={<Button text="Open Modal" />}
+            closable={true}
+            modal={true}
+            open={this.state.open}
+          >
+            <Panel.Header>Hello World!</Panel.Header>
+            <Panel.Content>
+              <p>To close the modal, use any of the buttons/actions</p>
+            </Panel.Content>
+            <Panel.Footer>
+              <Button text="Deny" onClick={this.closeModalHandler} />
+              <Button text="Accept" onClick={this.closeModalHandler} />
+            </Panel.Footer>
+          </Panel>
+        );
+      }
     }
 
-    closeModalHandler() {
-      this.setState({ open: false });
-    }
-
-    render() {
-      return (
-        <Panel
-          trigger={<Button text="Open Modal" />}
-          closable={true}
-          modal={true}
-          open={this.state.open}
-        >
-          <Panel.Header>Hello World!</Panel.Header>
-          <Panel.Content>Some random content</Panel.Content>
-          <Panel.Footer>
-            <Button text="Deny" onClick={this.closeModalHandler} />
-            <Button text="Accept" onClick={this.closeModalHandler} />
-          </Panel.Footer>
-        </Panel>
-      );
-    }
-  }
-
-  return <DummyComponent />;
-});
+    return <DummyComponent />;
+  },
+);
