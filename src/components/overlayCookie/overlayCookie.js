@@ -16,17 +16,17 @@ class OverlayCookie extends Component {
 
   render() {
     const { cookiesAccepted } = this.state;
+    const { t } = this.props;
+    
     if(cookiesAccepted === true) return null;
 
     return (
       <section id={styles.cookieWrapper}>
         <div className={styles.cookieContent}>
           <p className={styles.cookieText}>
-            To help personalize content, tailor and measure ads, and provide a safer experience, we use cookies. By clicking or navigating the site, you agree to allow our collecion of information on and off Coding Coach through cookies. Learn more, including about available controls:
-            {" "}
-            {/*t('cookie-notification') + " "*/}
+            {t('cookie-notification') + " "}
             <span>
-              <a href="#cookies">{/*t('cookie-link')*/}Cookies Policy</a>
+              <a href="#cookies">{t('cookie-link')}</a>
             </span>
           </p>
           <p className={styles.cookieIcon}>
