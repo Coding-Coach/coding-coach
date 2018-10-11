@@ -1,12 +1,12 @@
 import React, { cloneElement } from 'react';
-import PropTypes from 'prop-types';
+import { node, func, bool, object } from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './assets/panel.scss';
 import Header from './PanelHeader';
 import Content from './PanelContent';
 import Footer from './PanelFooter';
+import { noop } from 'utils/noop';
 
-const noop = () => {};
 const cx = classNames.bind(styles);
 
 /**
@@ -40,12 +40,12 @@ const cx = classNames.bind(styles);
 
 export default class Panel extends React.Component {
   static propTypes = {
-    trigger: PropTypes.node,
-    onClose: PropTypes.func,
-    closable: PropTypes.bool,
-    open: PropTypes.bool,
-    modal: PropTypes.bool,
-    classes: PropTypes.object,
+    trigger: node,
+    onClose: func,
+    closable: bool,
+    open: bool,
+    modal: bool,
+    classes: object,
   };
 
   static defaultProps = {
@@ -102,9 +102,7 @@ export default class Panel extends React.Component {
 
   close(event) {
     const { onClose } = this.props;
-    if (onClose) {
-      onClose(event);
-    }
+    onClose(event);
 
     this.setState({ open: false });
   }
@@ -115,10 +113,8 @@ export default class Panel extends React.Component {
   }
 
   render() {
-    const { trigger, children, closable, modal } = this.props;
+    const { trigger, children, closable, modal, classes } = this.props;
     const { open } = this.state;
-    const classes = this.props.classes || Panel.defaultProps.classes;
-
     const rootClasses = cx({
       modal: modal,
       popup: !modal,

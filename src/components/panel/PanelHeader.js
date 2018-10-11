@@ -1,13 +1,11 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import PropTypes from 'prop-types';
+import { object } from 'prop-types';
 import styles from './assets/panelheader.scss';
 
 const cx = classNames.bind(styles);
 
-const Header = ({ children, ...restProps }) => {
-  const classes = restProps.classes || {};
-
+const Header = ({ children, classes }) => {
   const headingClasses = cx({
     heading: true,
     [classes.title]: classes.title,
@@ -16,7 +14,11 @@ const Header = ({ children, ...restProps }) => {
 };
 
 Header.propTypes = {
-  classes: PropTypes.object,
+  classes: object,
+};
+
+Header.defaultProps = {
+  classes: {},
 };
 
 export default Header;
