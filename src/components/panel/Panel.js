@@ -90,6 +90,9 @@ export default class Panel extends React.Component {
   }
 
   handleEscape(e) {
+    if (!this.props.modal) {
+      return;
+    }
     const ESCAPE_KEY = 27;
     if (e.keyCode === ESCAPE_KEY) {
       this.close(e);
@@ -128,14 +131,21 @@ export default class Panel extends React.Component {
     });
 
     return [
-      trigger ? cloneElement(trigger, { onClick: this.handleTriggerClick, key: 'trigger' }) : null,
-      open ? (
-        <div className={rootClasses} key="root">
+      modal && trigger
+        ? cloneElement(trigger, { onClick: this.handleTriggerClick, key: 'trigger' })
+        : null,
+      modal && open ? (
+        <div className={rootClasses} key="modal">
           <section className={mainSectionClasses}>
             {this.renderCloseIcon()}
             {children}
           </section>
         </div>
+      ) : null,
+      !modal ? (
+        <section className={mainSectionClasses} key="panel">
+          {children}
+        </section>
       ) : null,
     ];
   }

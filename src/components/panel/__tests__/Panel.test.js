@@ -5,7 +5,7 @@ import Panel from '../Panel';
 test('renders the basic Panel component', async () => {
   const handleClick = jest.fn();
   const { container, queryByText, debug } = render(
-    <Panel onClose={handleClick} trigger={<button>Open Panel</button>} closable={true}>
+    <Panel onClose={handleClick} trigger={<button>Open Panel</button>} closable={true} modal={true}>
       A basic Panel
     </Panel>,
   );

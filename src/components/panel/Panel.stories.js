@@ -36,7 +36,7 @@ storiesOf('Components/Panel', module)
           <p>No event handler is attached to Deny and Close buttons</p>
           <p>
             The default width of the panel-wrapper is 40%. The width can be changed via css. Its set
-            to 80% in thsi case.
+            to 80% in this case.
           </p>
         </Panel.Content>
         <Panel.Footer>
@@ -116,4 +116,22 @@ storiesOf('Components/Panel', module)
     }
 
     return <DummyComponent />;
+  })
+  .add('Basic Panel without modal functionality', () => {
+    const classes = {
+      root: 'dummyRoot',
+      body: styles.panelDummyBody,
+    };
+    return (
+      <Panel modal={false} classes={classes}>
+        <Panel.Header>Hello World!</Panel.Header>
+        <Panel.Content>
+          <p>This is a simple panel without the backdrop</p>
+          <p>
+            The default width of the panel-wrapper is 40%. The width can be changed via css. Its set
+            to 50% in this case.
+          </p>
+        </Panel.Content>
+      </Panel>
+    );
   });
