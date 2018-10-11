@@ -1,27 +1,72 @@
-@import '../../styles/scss/base/variables.scss';
-@import '../../styles/scss/base/elements.scss';
+@import '~theme/base/variables';
+@import '~theme/base/mediaqueries';
+@import '~theme/base/utils';
 .root {
    display: flex;
+   flex-direction: column;
 }
 .inputStyle {
-    background: #FFF;
-    height: 38px;
-    width: 227px;
-    border: 1px Solid gray;
-    box-shadow: 1px 2px #D3D3D3;;
-    border-radius: 4px;
+    background: $color-white;
+    height: 50px;
+    color: $color-grey-medium;
+    width: 400px;
+    border: 4px Solid $color-grey-light;
+    border-radius: $border-radius-rounded;
     padding-left: 5px;
 }
 
 .labelStyle {
-    padding-right: 10px;
+    color: $color-grey-medium;
+    padding-bottom: 10px;
+    font-family: $font-primary;
+    font-weight: $font-medium;
+    font-size: $font-m;
+
+}
+
+.inputStyleFocus {
+    background: $color-white;
+    height: 50px;
+    color: $color-green-dark;
+    width: 400px;
+    border: 4px Solid $color-green-dark;
+    border-radius: $border-radius-rounded;
+    padding-left: 5px;
+}
+
+.labelStyleFocus {
+    color: $color-green-dark;
+    padding-bottom: 10px;
+    font-family: $font-primary;
+    font-weight: $font-medium;
+    font-size: $font-m;
+
+}
+
+.inputStyleError {
+    background: $color-white;
+    height: 50px;
+    color: $color-red-dark;
+    width: 400px;
+    border: 4px Solid $color-red-dark;
+    border-radius: $border-radius-rounded;
+    padding-left: 5px;
+}
+
+.labelStyleError {
+    color: $color-red-dark;
+    padding-bottom: 10px;
+    font-family: $font-primary;
+    font-weight: $font-medium;
+    font-size: $font-m;
+
 }
 .textAreaStyle {
-    background: #FFF;
+    background: $color-white;
     height: 200px;
+    color: $color-grey-medium;
     width: 400px;
-    border: 1px Solid gray;
-    box-shadow: 1px 2px #FFF;
-    border-radius: 4px;
+    border: 4px Solid $color-grey-light;
+    border-radius: $border-radius-rounded;
     padding-left: 5px;
 }

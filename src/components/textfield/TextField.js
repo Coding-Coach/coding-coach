@@ -1,58 +1,49 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { bool, string, func,oneOf } from 'prop-types';
 import styles from './textfield.scss';
 
-class TextField extends React.Component {
-  render() {
-    const { value, onChange, onFocus, onBlur, label, placeholder, type, multiline } = this.props;
+const TextField = ({value, onChange, onFocus, onBlur, label, placeholder, type="text", multiline })=>{
 
-    const _renderTextInput = () => {
-      if (!multiline) {
-        return (
-          <div className={styles.root}>
-            <label className={styles.labelStyle}>{label}</label>
-            <input
-              className={styles.inputStyle}
-              label={label}
-              onChange={onChange}
-              onBlur={onBlur}
-              onFocus={onFocus}
-              type={type}
-              value={value}
-              placeholder={placeholder}
-            />
-          </div>
-        );
-      } else {
-        return (
-          <div className={styles.root}>
-            <label className={styles.labelStyle}>{label}</label>
-            <textarea
-              className={styles.textAreaStyle}
-              label={label}
-              onChange={onChange}
-              onBlur={onBlur}
-              onFocus={onFocus}
-              type={type}
-              value={value}
-              placeholder={placeholder}
-            />
-          </div>
-        );
-      }
-    };
-    return _renderTextInput();
-  }
-}
+   if(!multiline){
+     return(
+      <div className={styles.root}>
+        <label className={styles.labelStyle}>{label}</label>
+        <input
+          className={styles.inputStyle}
+          label={label}
+          onChange={onChange}
+          onBlur={onBlur}
+          onFocus={onFocus}
+          type={type}
+          value={value}
+          placeholder={placeholder}
+        />
+      </div>
+    );
+    }else{
+      return (<div className={styles.root}>
+        <label className={styles.labelStyle}>{label}</label>
+        <textarea
+          className={styles.textAreaStyle}
+          label={label}
+          onChange={onChange}
+          onBlur={onBlur}
+          onFocus={onFocus}
+          value={value}
+          placeholder={placeholder}
+        />
+      </div>);
+    }
 
+  };
 TextField.propTypes = {
-  onChange: PropTypes.func,
-  value: PropTypes.string,
-  onBlur: PropTypes.func,
-  onFocus: PropTypes.func,
-  placeholder: PropTypes.string,
-  type: PropTypes.string,
-  multiline: PropTypes.bool
-};
+    onChange:func,
+    value:string,
+    onBlur:func,
+    onFocus:func,
+    placeholder:string,
+    type:oneOf(['text','password','email']),
+    multiline:bool,
+  };
 
 export default TextField;
