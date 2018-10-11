@@ -53,10 +53,8 @@
   }
 
   p {
-    width: 60%;
     margin-left: auto;
     color: $color-grey-medium;
-    width: auto;
 
     @include respond-to(tablet) {
       text-align: right;
