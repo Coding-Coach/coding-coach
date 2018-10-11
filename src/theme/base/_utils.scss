@@ -1,3 +1,4 @@
+@import '~theme/base/mediaqueries';
 // This class makes the elements have a max-width in certain resolutions
 // Use this to create a visual grid in a page. 
 // So, all the elements will be contained in 992px, 1200px, ...
@@ -8,12 +9,16 @@
     padding-left: 2rem;
     padding-right: 2rem;
     
-    @media screen and (min-width: 768px) {
-        max-width: 992px;
+    @include respond-to(tablet) {
+        max-width: 800px;
     }
 
-    @media screen and (min-width: 1400px) {
+    @include respond-to(desktop) {
         max-width: 1200px;
+    }
+
+    @include respond-to(ultrawide) {
+        max-width: 1400px;
         padding-left: 3rem;
         padding-right: 3rem;
     }
