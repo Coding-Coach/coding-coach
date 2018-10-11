@@ -17,7 +17,7 @@ class OverlayCookie extends Component {
   render() {
     const { cookiesAccepted } = this.state;
     const { t } = this.props;
-    
+
     if(cookiesAccepted === true) return null;
 
     return (
@@ -41,7 +41,7 @@ class OverlayCookie extends Component {
   }
 
   acceptCookies = () => {
-    if(!localStorage.hasOwnProperty('codingCoachCookies')) {
+    if(!localStorage.getItem('codingCoachCookies')) {
       localStorage.setItem('codingCoachCookies', true);
     }
     this.setState({ cookiesAccepted: true });
