@@ -9,6 +9,10 @@ import ImageAbout from './assets/images/about.svg';
 import ImageMission from './assets/images/mission.svg';
 import Contact from 'components/contact/Contact';
 import Footer from 'components/footer/Footer';
+<<<<<<< HEAD
+=======
+import TextField from '../../components/textfield/TextField';
+>>>>>>> feature/fix_textfield
 
 const heroImage = require('./assets/images/meeting.svg');
 
@@ -36,6 +40,11 @@ function Home({ t }) {
           text={t('home-about-text')}
           media={<img src={ImageAbout} alt={t('home-about-media-alt')} />}
         />
+<<<<<<< HEAD
+=======
+        <TextField label="LABEL" />
+
+>>>>>>> feature/fix_textfield
         <HomeSection
           id="mission"
           title={t('home-mission-title')}
