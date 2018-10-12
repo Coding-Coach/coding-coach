@@ -19,7 +19,7 @@ const HomeSection = ({ id, title, text, media, children }) => (
 
 HomeSection.propTypes = {
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   media: PropTypes.node.isRequired,
   children: PropTypes.node,
 };

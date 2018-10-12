@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { translate, Interpolate } from 'react-i18next';
 import 'i18n/i18n';
 
@@ -28,7 +28,7 @@ function Home({ t }) {
   );
 
   return (
-    <React.Fragment>
+    <Fragment>
       <Navbar />
       <section className={styles.hero}>
         <div className={styles.heroInner}>
@@ -59,14 +59,16 @@ function Home({ t }) {
         <HomeSection
           id="contact"
           title={t('home-contact-title')}
-          text={<Interpolate i18nKey="home-contact-text" slackOrg={slackOrg} email={emailLink} />}
           media={<img src={ImageContact} alt={t('home-contact-media-alt')} />}
         >
+          <p>
+            <Interpolate i18nKey="home-contact-text" slackOrg={slackOrg} email={emailLink} />
+          </p>
           <SocialMedia />
         </HomeSection>
       </main>
       <Footer />
-    </React.Fragment>
+    </Fragment>
   );
 }
 
