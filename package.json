@@ -4,30 +4,24 @@
   "private": true,
   "homepage": "https://codingcoach.io/",
   "dependencies": {
-<<<<<<< HEAD
-=======
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
     "@fortawesome/free-brands-svg-icons": "^5.3.1",
     "@fortawesome/react-fontawesome": "^0.1.3",
     "@reach/router": "^1.1.1",
->>>>>>> 13ee5aa31858c9256fd3043053c23eeb3366cb26
     "classnames": "^2.2.6",
     "i18next": "^11.7.0",
     "i18next-browser-languagedetector": "^2.2.3",
     "prop-types": "^15.6.2",
-<<<<<<< HEAD
     "proxyquire": "^2.1.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-i18next": "^7.12.0",
     "react-scripts": "1.1.5",
-    "rewire": "^4.0.1"
-=======
+    "rewire": "^4.0.1",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-i18next": "^7.12.0",
     "react-scripts": "1.1.5"
->>>>>>> 13ee5aa31858c9256fd3043053c23eeb3366cb26
   },
   "scripts": {
     "start": "node scripts/custom-config start",
