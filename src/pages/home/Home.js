@@ -18,7 +18,7 @@ function Home({ t }) {
       <Navbar />
       <section className={styles.hero}>
         <div className={styles.heroInner}>
-          <header>
+          <header className={styles.heroTextWrapper}>
             <h1 className={styles.heroTitle}>
               <span>{t('home-header-title')}</span>
             </h1>
