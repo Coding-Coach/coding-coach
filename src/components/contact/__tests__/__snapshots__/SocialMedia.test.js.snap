@@ -27,7 +27,7 @@ exports[`renders the contact page 1`] = `
   <div>
     <a
       target="_blank"
-      href="https://www.instagram.com/codingcoach_io/"
+      href="#"
       rel="noreferrer noopener"
     >
       <svg
