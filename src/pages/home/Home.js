@@ -9,7 +9,7 @@ import ImageAbout from './assets/images/about.svg';
 import ImageMission from './assets/images/mission.svg';
 import Contact from 'components/contact/Contact';
 import Footer from 'components/footer/Footer';
-import TextField from '../../components/textfield/TextField';
+
 
 const heroImage = require('./assets/images/meeting.svg');
 
@@ -37,7 +37,6 @@ function Home({ t }) {
           text={t('home-about-text')}
           media={<img src={ImageAbout} alt={t('home-about-media-alt')} />}
         />
-        <TextField label="LABEL" />
 
         <HomeSection
           id="mission"

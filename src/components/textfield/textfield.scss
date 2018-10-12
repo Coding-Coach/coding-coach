@@ -1,11 +1,11 @@
 @import '~theme/base/variables';
 @import '~theme/base/mediaqueries';
 @import '~theme/base/utils';
-.root {
+.defaultRoot {
    display: flex;
    flex-direction: column;
 }
-.inputStyle {
+.defaultInputStyle {
     background: $color-white;
     height: 50px;
     color: $color-grey-medium;
@@ -15,7 +15,7 @@
     padding-left: 5px;
 }
 
-.labelStyle {
+.defaultLabelStyle {
     color: $color-grey-medium;
     padding-bottom: 10px;
     font-family: $font-primary;
@@ -61,10 +61,30 @@
     font-size: $font-m;
 
 }
-.textAreaStyle {
+.defaultTextAreaStyle {
     background: $color-white;
     height: 200px;
     color: $color-grey-medium;
+    width: 400px;
+    border: 4px Solid $color-grey-light;
+    border-radius: $border-radius-rounded;
+    padding-left: 5px;
+}
+
+.textAreaStyleFocus {
+    background: $color-white;
+    height: 200px;
+    color: $color-green-dark;
+    width: 400px;
+    border: 4px Solid $color-green-dark;
+    border-radius: $border-radius-rounded;
+    padding-left: 5px;
+}
+
+.textAreaStyleError {
+    background: $color-white;
+    height: 200px;
+    color: $color-red-dark;
     width: 400px;
     border: 4px Solid $color-grey-light;
     border-radius: $border-radius-rounded;

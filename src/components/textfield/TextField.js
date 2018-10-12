@@ -1,15 +1,17 @@
 import React from 'react';
-import { bool, string, func,oneOf } from 'prop-types';
+import { bool, string, func,oneOf,object } from 'prop-types';
 import styles from './textfield.scss';
+import classNames from 'classnames';
 
-const TextField = ({value, onChange, onFocus, onBlur, label, placeholder, type="text", multiline })=>{
+
+const TextField = ({value, onChange, onFocus, onBlur, label, placeholder, type="text", multiline, } )=>{
 
    if(!multiline){
      return(
-      <div className={styles.root}>
-        <label className={styles.labelStyle}>{label}</label>
+      <div className={classNames(styles.defaultRoot)}>
+        <label className={classNames(styles.defaultLabelStyle)}>{label}</label>
         <input
-          className={styles.inputStyle}
+          className={classNames(styles.defaultInputStyle)}
           label={label}
           onChange={onChange}
           onBlur={onBlur}
@@ -21,10 +23,10 @@ const TextField = ({value, onChange, onFocus, onBlur, label, placeholder, type="
       </div>
     );
     }else{
-      return (<div className={styles.root}>
-        <label className={styles.labelStyle}>{label}</label>
+      return (<div className={classNames(styles.defaultRoot)}>
+        <label className={classNames(styles.defaultLabelStyle)}>{label}</label>
         <textarea
-          className={styles.textAreaStyle}
+          className={classNames(styles.defaultTextAreaStyle)}
           label={label}
           onChange={onChange}
           onBlur={onBlur}
@@ -42,7 +44,7 @@ TextField.propTypes = {
     onBlur:func,
     onFocus:func,
     placeholder:string,
-    type:oneOf(['text','password','email']),
+    type:oneOf(['text','password','email','color','date','datetime-local','month','number','range','search','tel','time','url','week']),
     multiline:bool,
   };
 
