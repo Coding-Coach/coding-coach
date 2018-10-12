@@ -40,7 +40,6 @@
       "prettier --write",
       "eslint --fix",
       "npm run test:staged",
-      "yarn run test:staged",
       "git add"
     ]
   },
