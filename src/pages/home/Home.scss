@@ -149,12 +149,15 @@ $distance-height-variation-after: 40px;
         }
     }
 
-    > section:nth-child(3) {
-      p {
-        font-size: $font-s;
-        color: $color-grey-medium;
-        margin-bottom: 30px;
-      }
+    > section:last-child {
+      //margin and padding adjustements are needed to render background color diagonally
+        margin-top: 160px;
+        padding-top: 0;
+        p {
+          font-size: $font-s;
+          color: $color-grey-medium;
+          margin-bottom: 80px;
+        }
     }
 }
 
