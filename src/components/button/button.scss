@@ -3,7 +3,7 @@
 .button {
   display: inline-block;
   min-height: $default-button;
-  line-height: $default-button;
+  line-height: inherit;
   min-width: 96px;
   box-sizing: border-box;
   text-transform: uppercase;
@@ -12,80 +12,83 @@
   outline: none;
   border: none;
   border-radius: 3px;
-  transition: all 0.15s;
+  transition-property: all;
+  transition-duration: 0.15s;
   font-size: $font-xs;
 
   &.primary {
     background: $color-primary;
-    box-shadow: 0px 3px 0px 0px $color-primary-shadow;
+    box-shadow: 0px 0px 0px 0px inset $color-primary-darker,
+      0px 0px 20px 3px $color-primary-blur;
     color: $color-white;
-    text-shadow: 0 1px $color-grey-dark;
+
     &:hover {
-      background: $color-primary-lighter;
-      box-shadow: 0px 4px 0px 0px $color-primary-shadow;
+      box-shadow: 0px -5px 0px 0px inset $color-primary-darker,
+        0px 0px 20px 3px $color-primary-blur;
     }
+
     &:active {
       background: $color-primary-darker;
-      box-shadow: 0px 1px 0px 0px $color-primary-shadow;
-      color: $color-primary-active;
+    }
+  }
+
+
+  &.secondary {
+    background: transparent;
+    box-shadow: 0px 0px 0px 0px inset $color-primary,
+    0px 0px 20px 0px inset $color-primary-blur;
+    color: $color-primary;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 2px solid $color-primary;
+
+    &:hover {
+      box-shadow: 0px -3px 0px 0px inset $color-primary,
+        0px 0px 20px 0px inset $color-primary-blur;
+    }
+
+    &:active {
+      background: $color-primary;
+      box-shadow: none;
+      color: $color-white;
     }
   }
 
   &.danger {
     background: $color-danger;
-    box-shadow: 0px 3px 0px 0px $color-danger-shadow;
+    box-shadow: 0px 0px 0px 0px inset $color-danger-darker,
+    0px 0px 20px 3px $color-danger-blur;
     color: $color-white;
-    text-shadow: 0 1px $color-danger-shadow;
 
     &:hover {
-      box-shadow: 0px 4px 0px 0px $color-danger-shadow;
-      background: $color-danger-lighter;
+      box-shadow: 0px -5px 0px 0px inset $color-danger-darker,
+        0px 0px 20px 3px $color-danger-blur;
     }
+
     &:active {
-      box-shadow: 0px 1px 0px 0px $color-danger-shadow;
       background: $color-danger-darker;
-      color: $color-danger-active;
-    }
-  }
-
-  &.secondary {
-    background: $color-secondary-lime;
-    box-shadow: 0px 3px 0px 0px $color-secondary-lime-shadow;
-    color: $color-secondary-lime-shadow;
-    text-shadow: 0 1px $color-white;
-    &:hover {
-      box-shadow: 0px 4px 0px 0px $color-secondary-lime-shadow;
-      background: $color-secondary-lime-lighter;
-      
-    }
-    &:active {
-      box-shadow: 0px 1px 0px 0px $color-secondary-lime-shadow;
-      background: $color-secondary-lime-darker;
-      color: $color-secondary-lime-active;
-      
     }
   }
 
   &:disabled {
     background: $color-grey-light;
-    box-shadow: 0px 1px 0px 0px $color-grey;
-    text-shadow: none;
+    box-shadow: 0px 0px 20px 3px $color-grey-light;
     color: $color-grey;
 
     &:hover, &:active {
       transform: none;
-      box-shadow: 0px 1px 0px 0px $color-grey;
+      box-shadow: 0px 0px 20px 3px $color-grey-light;
       background: $color-grey-light;
+      cursor: not-allowed;
     }
   }
 
   /* Common Hover and Active styles for all Buttons*/
   &:hover {
-    transform: translateY(-0.5px);
+    cursor: pointer;
   }
 
   &:active {
-    transform: translateY(0.5px);
     text-shadow: none;
   }
 
