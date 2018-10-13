@@ -10,7 +10,7 @@ $space-between-text-image: 50px;
     padding: 75px 30px;
     position: relative;
 
-    @media screen and (min-width: 768px) {
+    @include respond-to(tablet) {
         padding: 100px 0;
     }
 }
@@ -30,7 +30,7 @@ $space-between-text-image: 50px;
         max-width: 100%;
     }
 
-    @media screen and (min-width: 768px) {
+    @include respond-to(tablet) {
         @include generalAlignment();
         margin: 0 auto;
         flex-direction: row;
@@ -62,7 +62,7 @@ $space-between-text-image: 50px;
 }
 
 .title {
-    color: $color-grey-medium;
+    color: $color-grey-dark;
     text-transform: uppercase;
     font-family: $font-secondary;
     font-size: $font-xxl;
@@ -73,13 +73,13 @@ $space-between-text-image: 50px;
 }
 
 .description {
-    color: $color-grey-medium;
+    color: $color-grey-dark;
     font-size: $font-s;
     font-family: $font-primary;
     line-height: 1.5;
     margin: 0;
 
-    @media screen and (min-width: 1024px) {
+    @include respond-to(desktop) {
         font-size: $font-m;
     }
 }
