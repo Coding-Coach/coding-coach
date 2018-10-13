@@ -12,6 +12,7 @@ storiesOf('Buttons', module).add('Button Types', () => (
     <Button type="danger">Danger Button</Button>
     <Button>Primary Button</Button>
     <Button type="secondary">Secondary Button</Button>
+    <Button type="tertiary">Tertiary Button</Button>
   </Container>
 ));
 

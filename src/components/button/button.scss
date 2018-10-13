@@ -54,6 +54,18 @@
     }
   }
 
+  &.tertiary {
+    background: transparent;
+    color: $color-primary-darker;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+  }
+
   &.danger {
     background: $color-danger;
     box-shadow: 0px 0px 0px 0px inset $color-danger-darker,
