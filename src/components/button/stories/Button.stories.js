@@ -34,6 +34,16 @@ storiesOf('Buttons', module).add('Button Sizes', () => (
       </Button>
     </Container>
 
+    <Container title="Primary Button Sizes">
+      <Button type="tertiary">Default Size</Button>
+      <Button type="tertiary" size="large">
+        Large Button
+      </Button>
+      <Button type="tertiary" size="small">
+        Small Button
+      </Button>
+    </Container>
+
     <Container title="Danger Button Sizes">
       <Button type="danger">Default Size</Button>
       <Button type="danger" size="large">
