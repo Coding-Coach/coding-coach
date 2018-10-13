@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import Container from './container-story';
 
-import Button from './../';
+import Button from './../Button';
 import styles from './styles.scss';
 storiesOf('Buttons', module).add('Button Types', () => (
   <Container title="Button Types">
