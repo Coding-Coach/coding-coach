@@ -1,5 +1,6 @@
 {
   "home.coding": {
+    "defaults": "Coding",
     "origin": [
       [
         "src/pages/home/Home.js",
@@ -8,6 +9,7 @@
     ]
   },
   "home.coach": {
+    "defaults": "Coach",
     "origin": [
       [
         "src/pages/home/Home.js",
@@ -16,6 +18,7 @@
     ]
   },
   "home.mission": {
+    "defaults": "Connecting Developers with mentors worldwide",
     "origin": [
       [
         "src/pages/home/Home.js",
@@ -24,6 +27,7 @@
     ]
   },
   "home.learn": {
+    "defaults": "Learn more",
     "origin": [
       [
         "src/pages/home/Home.js",

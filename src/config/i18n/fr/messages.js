@@ -6,15 +6,22 @@
     },
   },
   messages: {
-    'about.title': 'about.title',
-    'contact.header': 'contact.header',
-    'contact.message': 'contact.message',
-    'contact.slack': 'contact.slack',
-    'contact.title': 'contact.title',
-    'home.coach': 'home.coach',
-    'home.coding': 'home.coding',
-    'home.learn': 'home.learn',
-    'home.mission': 'home.mission',
-    'mission.title': 'mission.title',
+    'about.title': 'About',
+    'contact.header': 'Contact',
+    'contact.message': function(a) {
+      return [
+        'We want to hear your thoughts! Feel free to join our ',
+        a('slackOrg'),
+        ' or send us an email at ',
+        a('email'),
+      ];
+    },
+    'contact.slack': 'Slack Organization',
+    'contact.title': 'Contact',
+    'home.coach': 'Coach',
+    'home.coding': 'Coding',
+    'home.learn': 'Learn more',
+    'home.mission': 'Connecting Developers with mentors worldwide',
+    'mission.title': 'Mission',
   },
 };

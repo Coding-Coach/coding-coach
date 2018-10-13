@@ -1,5 +1,6 @@
 {
   "about.title": {
+    "defaults": "About",
     "origin": [
       [
         "src/components/navbar/Navbar.js",
@@ -8,6 +9,7 @@
     ]
   },
   "mission.title": {
+    "defaults": "Mission",
     "origin": [
       [
         "src/components/navbar/Navbar.js",
@@ -16,6 +18,7 @@
     ]
   },
   "contact.title": {
+    "defaults": "Contact",
     "origin": [
       [
         "src/components/navbar/Navbar.js",

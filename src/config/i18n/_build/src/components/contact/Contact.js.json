@@ -1,5 +1,6 @@
 {
   "contact.slack": {
+    "defaults": "Slack Organization",
     "origin": [
       [
         "src/components/contact/Contact.js",
@@ -8,6 +9,7 @@
     ]
   },
   "contact.header": {
+    "defaults": "Contact",
     "origin": [
       [
         "src/components/contact/Contact.js",
@@ -16,6 +18,7 @@
     ]
   },
   "contact.message": {
+    "defaults": "We want to hear your thoughts! Feel free to join our {slackOrg} or send us an email at {email}",
     "origin": [
       [
         "src/components/contact/Contact.js",
