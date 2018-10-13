@@ -28,10 +28,10 @@ const Button = (props) => {
 Button.propTypes = {
   size: PropTypes.string,
   type: PropTypes.string,
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   fullWidth: PropTypes.bool,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
   id: PropTypes.string,
 };
 

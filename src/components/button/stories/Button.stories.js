@@ -3,18 +3,23 @@ import { storiesOf } from '@storybook/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import Container from './container-story';
+import { withDocs } from 'storybook-readme';
+import ButtonReadme from './button.README.md';
 
 import Button from './../Button';
 import styles from './styles.scss';
-storiesOf('Buttons', module).add('Button Types', () => (
-  <Container title="Button Types">
-    <Button disabled>Disabled Button</Button>
-    <Button type="danger">Danger Button</Button>
-    <Button>Primary Button</Button>
-    <Button type="secondary">Secondary Button</Button>
-    <Button type="tertiary">Tertiary Button</Button>
-  </Container>
-));
+storiesOf('Buttons', module).add(
+  'Button Types',
+  withDocs(ButtonReadme, () => (
+    <Container title="Button Types">
+      <Button disabled>Disabled Button</Button>
+      <Button type="danger">Danger Button</Button>
+      <Button>Primary Button</Button>
+      <Button type="secondary">Secondary Button</Button>
+      <Button type="tertiary">Tertiary Button</Button>
+    </Container>
+  )),
+);
 
 storiesOf('Buttons', module).add('Button Sizes', () => (
   <div>
