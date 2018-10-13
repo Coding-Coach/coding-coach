@@ -34,7 +34,7 @@ storiesOf('Buttons', module).add('Button Sizes', () => (
       </Button>
     </Container>
 
-    <Container title="Primary Button Sizes">
+    <Container title="Tertiary Button Sizes">
       <Button type="tertiary">Default Size</Button>
       <Button type="tertiary" size="large">
         Large Button
