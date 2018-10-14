@@ -7,12 +7,6 @@ $color-primary: #00bc89;
 $color-primary-darker: #009d6c;
 $color-primary-blur: #d5fff4;
 
-$color-secondary-lime: #B6EA94;
-$color-secondary-lime-lighter: #C5F4A7;
-$color-secondary-lime-darker: #97CC74;
-$color-secondary-lime-shadow: #76AC53;
-$color-secondary-lime-active: #466034;
-
 $color-secondary: #69D5B1;
 $color-tertiary: #E6F5F0;
 
@@ -46,9 +40,9 @@ $font-medium:500;
 $font-bold:700;
 
 // Button Heights:
-$default-button: 46px;
-$large-button: 60px;
-$small-button: 30px;
+$button-default: 46px;
+$button-large: 60px;
+$button-small: 30px;
 
 $border-radius-rounded: 3px;
 

@@ -2,7 +2,7 @@
 
 .button {
   display: inline-block;
-  min-height: $default-button;
+  min-height: $button-default;
   line-height: inherit;
   min-width: 96px;
   box-sizing: border-box;
@@ -111,15 +111,15 @@
 
   &.large {
     padding: 0px $font-l;
-    min-height: $large-button;
-    line-height: $large-button;
+    min-height: $button-large;
+    line-height: $button-large;
     font-size: $font-l;
   }
 
   &.small {
     padding: 0px $font-xs;
-    min-height: $small-button;
-    line-height: $small-button;
+    min-height: $button-small;
+    line-height: $button-small;
     font-size: $font-xxs
   }
   &.fullWidth {
