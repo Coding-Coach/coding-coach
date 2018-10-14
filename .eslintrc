@@ -14,7 +14,18 @@
   },
   "extends": ["prettier/react", "prettier"],
   "rules": {
-    "react/jsx-filename-extension": "off"
+    "react/jsx-filename-extension": "off",
+    "lines-between-class-members": 2,
+    "block-spacing": 2,
+    "no-trailing-spaces": 2,
+    "space-before-blocks": 2,
+    "space-before-function-paren": [
+      "error",
+      "never"
+    ]
   },
-  "plugins": ["prettier"]
+  "plugins": [
+    "babel",
+    "prettier"
+  ]
 }
