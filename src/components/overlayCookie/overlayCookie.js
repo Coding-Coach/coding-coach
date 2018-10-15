@@ -7,50 +7,55 @@ import styles from './overlayCookie.scss';
 
 class OverlayCookie extends Component {
   state = {
-    cookiesAccepted: 'false'
+    cookiesAccepted: 'false',
   };
 
-  componentDidMount(){
-    this.checkCookiePermission();
+  acceptCookies = () => {
+    if (!localStorage.getItem('codingCoachCookies')) {
+      localStorage.setItem('codingCoachCookies', true);
+    }
+    this.setState({ cookiesAccepted: true });
+  };
+
+  checkCookiePermission = () => {
+    const hasCookiePermission = localStorage.getItem('codingCoachCookies');
+    if (hasCookiePermission) this.acceptCookies();
+  };
+
+  //this is needed to avoid a server-side error about localStorage not being
+  //defined (localStorage only exists in the browser)
+  checkLocalStorage = () => {
+    if (!typeof window.localStorage === 'undefined') return window.localStorage;
+    else if (!typeof localStorage === 'undefined') return localStorage;
+    else return false;
+  };
+
+  componentDidMount() {
+    this.checkLocalStorage() && this.checkCookiePermission();
   }
 
   render() {
     const { cookiesAccepted } = this.state;
     const { t } = this.props;
 
-    if(cookiesAccepted === true) return null;
+    if (cookiesAccepted === true) return null;
 
     return (
-      <section id={styles.cookieWrapper}>
+      <section className={styles.cookieWrapper}>
         <div className={styles.cookieContent}>
           <p className={styles.cookieText}>
-            {t('cookie-notification') + " "}
+            {t('cookie-notification') + ' '}
             <span>
               <a href="#cookies">{t('cookie-link')}</a>
             </span>
           </p>
           <p className={styles.cookieIcon}>
-            <FontAwesomeIcon
-              icon={faTimes}
-              onClick={this.acceptCookies}
-              />
+            <FontAwesomeIcon icon={faTimes} onClick={this.acceptCookies} />
           </p>
         </div>
       </section>
     );
   }
-
-  acceptCookies = () => {
-    if(!localStorage.getItem('codingCoachCookies')) {
-      localStorage.setItem('codingCoachCookies', true);
-    }
-    this.setState({ cookiesAccepted: true });
-  }
-
-  checkCookiePermission = () => {
-    const hasCookiePermission = localStorage.getItem('codingCoachCookies')
-    if(hasCookiePermission) this.acceptCookies()
-  }
-};
+}
 
 export default translate('translations')(OverlayCookie);
