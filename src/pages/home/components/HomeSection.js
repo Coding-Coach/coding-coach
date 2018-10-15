@@ -9,7 +9,7 @@ const HomeSection = ({ id, title, text, media, children }) => (
         <header className={styles.header}>
           <h1 className={styles.title}>{title}</h1>
         </header>
-        <p className={styles.description}>{text}</p>
+        {styles.description && <p className={styles.description}>{text}</p>}
         {children}
       </div>
       {media}

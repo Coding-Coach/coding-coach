@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-testing-library';
-import SocialMedia from '../SocialMedia';
+import SocialMedia from '../components/SocialMedia';
 import config from 'config/constants';
 
 test('renders the contact page', () => {
