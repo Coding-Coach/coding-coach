@@ -3,7 +3,7 @@ import { render } from 'react-testing-library';
 import SocialMedia from '../components/SocialMedia';
 import config from 'config/constants';
 
-test('renders the contact page', () => {
+test('renders the social media icons', () => {
   const { container } = render(<SocialMedia />);
 
   expect(container.firstChild).toMatchSnapshot();
