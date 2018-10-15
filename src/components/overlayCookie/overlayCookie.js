@@ -25,8 +25,8 @@ class OverlayCookie extends Component {
   //this is needed to avoid a server-side error about localStorage not being
   //defined (localStorage only exists in the browser)
   checkLocalStorage = () => {
-    if (!typeof window.localStorage === 'undefined') return window.localStorage;
-    else if (!typeof localStorage === 'undefined') return localStorage;
+    if (typeof window.localStorage !== 'undefined') return window.localStorage;
+    else if (typeof localStorage !== 'undefined') return localStorage;
     else return false;
   };
 

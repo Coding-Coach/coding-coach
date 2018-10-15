@@ -1,13 +1,13 @@
 @import '~theme/base/variables';
 @import '~theme/base/utils';
 
-#cookieWrapper {
+.cookieWrapper {
   width: 100%;
   position: fixed;
   bottom: 0;
   background-color: $color-tertiary;
   opacity: 0.9;
-  z-index: 99;
+  z-index: index(alert);
 }
 
 .cookieContent {

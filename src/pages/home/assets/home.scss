@@ -1,4 +1,5 @@
 @import "~theme/base/variables";
+@import '~theme/base/utils';
 
 .homeContainer {
   height: 100%;
@@ -10,7 +11,7 @@
   width: 100%;
   background-size: cover;
   position: absolute;
-  z-index: -1; 
+  z-index: index(background);
 }
 
 .mainHeaderContent {
