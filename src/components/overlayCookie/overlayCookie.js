@@ -51,7 +51,6 @@ class OverlayCookie extends Component {
           </p>
           <p className={styles.cookieIcon}>
             <FontAwesomeIcon icon={faTimes} onClick={this.acceptCookies} />
-            <FontAwesomeIcon icon={faTimes} onClick={this.acceptCookies} />
           </p>
         </div>
       </section>
