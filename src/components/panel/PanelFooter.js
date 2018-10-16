@@ -13,7 +13,7 @@ const Footer = ({ children, classes, pullRight }) => {
 
   return (
     <section className={footerClasses}>
-      <div className={pullRight && styles.pullRight}>{children}</div>
+      <div className={pullRight ? styles.pullRight : undefined}>{children}</div>
     </section>
   );
 };

@@ -57,7 +57,9 @@ export default class Panel extends React.Component {
   };
 
   static Header = Header;
+
   static Content = Content;
+
   static Footer = Footer;
 
   constructor(props) {

@@ -23,7 +23,7 @@ test('Rendered Panel with trigger prop should have trigger element', () => {
   expect(triggerBtn).toBeInTheDocument();
 });
 
-test('Rendered modal Panel should open the modal when trigger element is clicked ', async () => {
+test('Rendered modal Panel should open the modal when trigger element is clicked ', async() => {
   const { queryByText } = render(
     <Panel trigger={<button>Open Panel</button>} closable={true} modal={true}>
       A basic Panel
@@ -36,7 +36,7 @@ test('Rendered modal Panel should open the modal when trigger element is clicked
   expect(panel).toBeInTheDocument();
 });
 
-test('Rendered modal should close when x icon is clicked', async () => {
+test('Rendered modal should close when x icon is clicked', async() => {
   const handleClick = jest.fn();
   const { queryByText, container } = render(
     <Panel onClose={handleClick} trigger={<button>Open Panel</button>} closable={true} modal={true}>
@@ -56,7 +56,7 @@ test('Rendered modal should close when x icon is clicked', async () => {
   expect(queryByText('A basic Panel')).not.toBeInTheDocument();
 });
 
-test('Rendered modal should close when ESC is pressed', async () => {
+test('Rendered modal should close when ESC is pressed', async() => {
   const handleClick = jest.fn();
   const { queryByText, container } = render(
     <Panel onClose={handleClick} trigger={<button>Open Panel</button>} closable={true} modal={true}>
