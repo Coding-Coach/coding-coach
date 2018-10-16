@@ -32,7 +32,6 @@ class OverlayCookie extends Component {
 
   componentDidMount() {
     this.checkLocalStorage() && this.checkCookiePermission();
-    cookiesAccepted: 'false';
   }
 
   render() {
