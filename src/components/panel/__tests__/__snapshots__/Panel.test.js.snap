@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders basic panel without modal functionality 1`] = `
+<section
+  class="PanelMain"
+>
+  A basic Panel
+</section>
+`;
+
+exports[`renders the basic Panel component 1`] = `
+<button>
+  Open Panel
+</button>
+`;
