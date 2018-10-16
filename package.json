@@ -49,9 +49,11 @@
     "ajv": "^6.5.3",
     "babel-core": "^6.26.3",
     "cross-env": "^5.2.0",
+    "babel-eslint": "^10.0.1",
     "css-loader": "^1.0.0",
     "eslint": "^5.5.0",
     "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-babel": "^5.2.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.11.1",
@@ -68,6 +70,7 @@
     "rewire": "^4.0.1",
     "sass": "^1.13.2",
     "sass-loader": "^7.1.0",
+    "storybook-readme": "^4.0.0-beta1",
     "style-loader": "^0.23.0",
     "webpack-bundle-analyzer": "^3.0.2"
   }
