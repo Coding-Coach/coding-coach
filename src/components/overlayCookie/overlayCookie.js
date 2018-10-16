@@ -32,6 +32,7 @@ class OverlayCookie extends Component {
 
   componentDidMount() {
     this.checkLocalStorage() && this.checkCookiePermission();
+    cookiesAccepted: 'false';
   }
 
   render() {
@@ -50,6 +51,7 @@ class OverlayCookie extends Component {
             </span>
           </p>
           <p className={styles.cookieIcon}>
+            <FontAwesomeIcon icon={faTimes} onClick={this.acceptCookies} />
             <FontAwesomeIcon icon={faTimes} onClick={this.acceptCookies} />
           </p>
         </div>

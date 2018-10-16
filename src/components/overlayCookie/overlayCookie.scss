@@ -1,13 +1,21 @@
 @import '~theme/base/variables';
 @import '~theme/base/utils';
 
+<<<<<<< HEAD
 .cookieWrapper {
+=======
+#cookieWrapper {
+>>>>>>> c9fa41ff9dacb7ef70b4bc421eb77c784d191382
   width: 100%;
   position: fixed;
   bottom: 0;
   background-color: $color-tertiary;
   opacity: 0.9;
+<<<<<<< HEAD
   z-index: index(alert);
+=======
+  z-index: 99;
+>>>>>>> c9fa41ff9dacb7ef70b4bc421eb77c784d191382
 }
 
 .cookieContent {
