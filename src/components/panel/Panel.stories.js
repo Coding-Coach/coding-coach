@@ -105,7 +105,7 @@ storiesOf('Components/Panel', module)
                   modal/popup, then handle it seperately and then set open to `true`
                 </p>
               </Panel.Content>
-              <Panel.Footer>
+              <Panel.Footer pullRight={true}>
                 <Button text="Deny" onClick={this.closeModalHandler} />
                 <Button text="Accept" onClick={this.closeModalHandler} />
               </Panel.Footer>

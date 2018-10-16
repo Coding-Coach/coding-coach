@@ -62,13 +62,12 @@ export default class Panel extends React.Component {
 
   constructor(props) {
     super(props);
-    // this.state = { open: this.props.open !== undefined ? this.props.open : Panel.defaultProps.open };
     this.state = { ...Panel.defaultProps };
 
     // event handlers hard bound to this
-    this.handleTriggerClick = this.handleTriggerClick.bind(this);
-    this.handleCloseIconClick = this.handleCloseIconClick.bind(this);
-    this.handleEscape = this.handleEscape.bind(this);
+    // this.handleTriggerClick = this.handleTriggerClick.bind(this);
+    // this.handleCloseIconClick = this.handleCloseIconClick.bind(this);
+    // this.handleEscape = this.handleEscape.bind(this);
   }
 
   componentWillReceiveProps({ open }) {
@@ -85,11 +84,11 @@ export default class Panel extends React.Component {
     document.removeEventListener('keydown', this.handleEscape);
   }
 
-  handleTriggerClick() {
+  handleTriggerClick = () => {
     this.setState({ open: true });
-  }
+  };
 
-  handleEscape(e) {
+  handleEscape = (e) => {
     if (!this.props.modal) {
       return;
     }
@@ -97,11 +96,11 @@ export default class Panel extends React.Component {
     if (e.keyCode === ESCAPE_KEY) {
       this.close(e);
     }
-  }
+  };
 
-  handleCloseIconClick(e) {
+  handleCloseIconClick = (e) => {
     this.close(e);
-  }
+  };
 
   close(event) {
     const { onClose } = this.props;
