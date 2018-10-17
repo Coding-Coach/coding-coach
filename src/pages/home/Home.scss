@@ -41,7 +41,7 @@ $distance-height-variation-after: 40px;
       top: 0;
       height: 100%;
       width: 100%;
-      z-index: index(behind_background);
+      z-index: index(background) - 1;
     }
 
     &:after {

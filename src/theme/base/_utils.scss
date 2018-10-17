@@ -26,7 +26,6 @@
 
 //Used for adding a pre-defined z-index, ex {z-index: index(alert)}:
 $z-layers: (
-  "behind_background": -10,
   "background": -1,
   "modal":   100,
   "tooltip": 200,
