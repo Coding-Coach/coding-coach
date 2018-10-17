@@ -58,7 +58,7 @@ In order to update your local environment to the latest version on `development`
 
 #### Features/Bugs
 
-When working on a new feature, create a new branch `feature/something` from the `development` branch, for example `feature/login-form`. Commit your work agains this new branch and push everything to your forked project. Once everything is completed, you should create a PR to the original project. Make sure to add a description about your work and a link to the trello task.
+When working on a new feature, create a new branch `feature/something` from the `development` branch, for example `feature/login-form`. Commit your work against this new branch and push everything to your forked project. Once everything is completed, you should create a PR to the original project. Make sure to add a description about your work and a link to the trello task.
 
 When fixing a bug, create a new branch `fix/something` from the `development` branch, for example `fix/css-btn-issues`. When completed, push your commits to your forked repository and create a PR from there. Please make sure to describe what was the problem and how did you fix it.
 

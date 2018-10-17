@@ -5,9 +5,12 @@
 .contact {
   display: flex;
   margin: 8rem 4rem 4rem;
+  flex-flow: column;
+  align-content: center;
   @include generalAlignment();
-  @include respond-to(landscape){
-    flex-flow: column;
+  @include respond-to(tablet) {
+    flex-direction: row;
+    align-items: center;
   }
 }
 
@@ -22,10 +25,17 @@
   display: flex;
   flex-flow: column;
   margin-left: auto;
-  h1 {
+
+  @include respond-to(tablet) {
     width: 50%;
-    margin-left: auto;
-    text-align: right;
+    align-items: flex-end;
+  }
+
+  h1, p {
+    text-align: center;
+  }
+
+  h1 {
     font-size: $font-xxl;
     color: $color-secondary;
     font-weight: $font-thin;
@@ -33,20 +43,21 @@
     border-bottom: 1px solid $color-grey-light;
     font-family: $font-secondary;
     margin-bottom: 0;
-    @include respond-to(landscape){
-      width: auto;
-      margin-left: initial;
-      text-align: center;
+    margin-left: initial;
+
+    @include respond-to(tablet) {
+      margin-top: 0;
+      width: 70%;
+      text-align: right;
     }
   }
+
   p {
-    text-align: right;
-    width: 60%;
     margin-left: auto;
-    color: $color-grey-dark;
-    @include respond-to(landscape){
-      width: auto;
-      text-align: center;
+    color: $color-grey-medium;
+
+    @include respond-to(tablet) {
+      text-align: right;
     }
   }
 }

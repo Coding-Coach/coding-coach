@@ -1,4 +1,5 @@
 @import '~theme/base/variables';
+@import '~theme/base/mediaqueries';
 @import '~theme/base/utils';
 
 $distance-height-variation-before: 20px;
@@ -14,7 +15,7 @@ $distance-height-variation-after: 40px;
         }
     }
 
-    @media screen and (min-width: 768px) {
+    @include respond-to(tablet) {
         > div {
             flex-direction: row-reverse;
         }
@@ -24,11 +25,13 @@ $distance-height-variation-after: 40px;
 .hero {
     position: relative;
     min-height: 50vh;
-    padding-top: 6rem;
-    padding-bottom: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 
-    @media screen and (min-width: 768px) {
+    @include respond-to(tablet) {
         min-height: 550px;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
     }
 
     &:before {
@@ -59,6 +62,12 @@ $distance-height-variation-after: 40px;
     align-items: center;
 }
 
+.heroTextWrapper {
+    @include respond-to(tablet) {
+        width: 50%;
+    }
+}
+
 .heroTitle {
     color: $color-white;
     font-family: $font-secondary;
@@ -75,7 +84,7 @@ $distance-height-variation-after: 40px;
     font-family: $font-primary;
     font-size: $font-l;
     font-weight: $font-thin;
-    margin: 1rem 0 1.25rem 0;
+    margin: 0 0 1.25rem 0;
 }
 
 .callToAction {
@@ -100,9 +109,9 @@ $distance-height-variation-after: 40px;
     display: none;
     width: 350px;
 
-    @media screen and (min-width: 768px) {
+    @include respond-to(tablet) {
         display: block;
-        width: 400px;
+        width: 45%;
     }
 }
 
