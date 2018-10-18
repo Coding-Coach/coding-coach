@@ -12,7 +12,10 @@
     "browser": true,
     "jest": true
   },
-  "extends": ["prettier/react", "prettier"],
+  "extends": [
+    "prettier/react",
+    "prettier"
+  ],
   "rules": {
     "react/jsx-filename-extension": "off",
     "lines-between-class-members": 2,

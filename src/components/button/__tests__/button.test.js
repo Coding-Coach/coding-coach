@@ -3,7 +3,7 @@ import { render, fireEvent } from 'react-testing-library';
 import Button from './../Button';
 
 test('renders the button component', () => {
-  const { container } = render(<Button>CLICK ME</Button>);
+  const { container } = render(<Button onClick={() => {}}>CLICK ME</Button>);
   expect(container).toMatchSnapshot();
 });
 

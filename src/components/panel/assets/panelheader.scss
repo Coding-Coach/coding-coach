@@ -1,0 +1,10 @@
+@import '~theme/base/variables';
+
+.heading {
+  margin: 0 auto 10px;
+  text-transform: uppercase;
+  color: $color-primary;
+  font-family: $font-secondary;
+  font-weight: $font-regular;
+  font-size: $font-xl;
+}
