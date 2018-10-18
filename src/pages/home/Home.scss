@@ -41,7 +41,7 @@ $distance-height-variation-after: 40px;
       top: 0;
       height: 100%;
       width: 100%;
-      z-index: -2;
+      z-index: index(background) - 1;
     }
 
     &:after {
@@ -51,7 +51,7 @@ $distance-height-variation-after: 40px;
         background-image: linear-gradient(to bottom right, $color-secondary 50%, $color-white 50%);
         height: 20%;
         width: 100%;
-        z-index: -1;
+        z-index: index(background);
     }
 }
 
