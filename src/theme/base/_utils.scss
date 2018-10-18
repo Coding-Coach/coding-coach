@@ -1,5 +1,6 @@
+@import '~theme/base/mediaqueries';
 // This class makes the elements have a max-width in certain resolutions
-// Use this to create a visual grid in a page. 
+// Use this to create a visual grid in a page.
 // So, all the elements will be contained in 992px, 1200px, ...
 // Giving them then a perfect alignment with the rest of the page
 @mixin generalAlignment() {
@@ -7,14 +8,36 @@
     margin-right: auto;
     padding-left: 2rem;
     padding-right: 2rem;
-    
-    @media screen and (min-width: 768px) {
-        max-width: 992px;
+
+    @include respond-to(tablet) {
+        max-width: 800px;
     }
 
-    @media screen and (min-width: 1400px) {
+    @include respond-to(desktop) {
         max-width: 1200px;
+    }
+
+    @include respond-to(ultrawide) {
+        max-width: 1400px;
         padding-left: 3rem;
         padding-right: 3rem;
     }
+}
+
+//Used for adding a pre-defined z-index, ex {z-index: index(alert)}:
+$z-layers: (
+  "background": -1,
+  "modal":   100,
+  "tooltip": 200,
+  "menu":    300,
+  "alert":   400,
+  "loading": 500,
+);
+
+@function index($layer) {
+  @return map-get($z-layers, $layer);
+}
+
+@mixin z-index($layer) {
+  z-index: z-index($layer);
 }

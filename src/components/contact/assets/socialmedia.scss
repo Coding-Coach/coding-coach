@@ -3,10 +3,11 @@
 
 .socialMedia {
   display: flex;
-  margin-top: 20px;
   flex-flow: row-reverse;
-  @include respond-to(landscape){
-    align-self: center;
+  align-self: center;
+
+  @include respond-to(tablet) {
+    align-self: initial;
   }
 }
 
@@ -17,6 +18,14 @@
   border-radius: 50%;
   cursor: pointer;
   transition: all .15s linear;
+
+  &:first-child {
+    margin-right: 0;
+  }
+
+  &:last-child {
+    margin-left: 0;
+  }
 
   &:hover {
     background: $color-secondary;  

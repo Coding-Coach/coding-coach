@@ -1,25 +1,17 @@
-@import '~theme/base/variables';
+@import "~theme/base/variables";
 @import '~theme/base/utils';
-@import '~theme/base/mediaqueries';
 
 $distance-height-variation-before: 20px;
 $distance-height-variation-after: 40px;
 
-// Sections with the text at the right
-@mixin isReverseSection() {
-    text-align: right;
 
-    header {
-        &:after {
-            right: 0;
-        }
-    }
-
-    @include respond-to(pc) {
-        > div {
-            flex-direction: row-reverse;
-        }
-    }
+.mainHeaderBackground {
+  background: url('./main-header-background.png') no-repeat;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+  z-index: index(background);
 }
 
 .hero {
@@ -102,48 +94,14 @@ $distance-height-variation-after: 40px;
     }
 }
 
-.heroImage {
-    display: none;
-    width: 350px;
-
-    @include respond-to(pc) {
-        display: block;
-        width: 400px;
-    }
-}
-
-.content {
-    > section:nth-child(1) {
-        background-color: $color-white;
-        h1 {
-            color: $color-secondary;
-        }
-        @include isReverseSection();
-
-    }
-
-    > section:nth-child(2) {
-        background-color: $color-tertiary;
-
-        &:before,
-        &:after {
-            content: "";
-            background: $color-tertiary;
-            width: 100%;
-            position: absolute;
-            left: 0;
-        }
-
-        &:before {
-            height: $distance-height-variation-before;
-            top: -$distance-height-variation-before;
-            background: linear-gradient(to top right, $color-tertiary, $color-tertiary 50%, white 50%, white);
-        }
-
-        &:after {
-            height: $distance-height-variation-after;
-            bottom: -$distance-height-variation-after;
-            background: linear-gradient(to bottom left, $color-tertiary, $color-tertiary 50%, white 50%, white);
-        }
-    }
+.learnMore {
+  border-radius: 3px;
+  padding: 10px 30px;
+  font-family: $font-primary;
+  font-size: 1rem;
+  border: 0px;
+  text-transform: uppercase;
+  color: $color-white;
+  background-color: $green300;
+  cursor: pointer;
 }
