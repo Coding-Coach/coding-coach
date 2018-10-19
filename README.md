@@ -32,7 +32,7 @@ yarn start
 
 ### Slack
 
-Coding Coach is on Slack! [Click here](https://coding-coach.slack.com/) to join.
+Coding Coach is on Slack! [Click here](https://coding-coach.slack.com/) to sign in.
 
 ### Coding Coach Board
 
