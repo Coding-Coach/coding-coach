@@ -10,4 +10,7 @@ export default {
     INSTA_URL: process.env.REACT_APP_INSTA_URL || 'https://www.instagram.com/codingcoach_io/',
     TWITTER_URL: process.env.REACT_APP_TWITTER_URL || 'https://twitter.com/codingcoach_io',
   },
+  payments: {
+    paypal: process.env.REACT_APP_PAYPAL_DONATE_BUTTON_ID || '123abc',
+  },
 };
