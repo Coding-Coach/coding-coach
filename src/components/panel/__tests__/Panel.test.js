@@ -38,7 +38,7 @@ test('Rendered modal Panel should open the modal when trigger element is clicked
 
 test('Rendered modal should close when x icon is clicked', async() => {
   const handleClick = jest.fn();
-  const { queryByText, container } = render(
+  const { queryByText, container, debug } = render(
     <Panel onClose={handleClick} trigger={<button>Open Panel</button>} closable={true} modal={true}>
       A basic Panel
     </Panel>,
@@ -49,7 +49,7 @@ test('Rendered modal should close when x icon is clicked', async() => {
   fireEvent.click(triggerBtn);
   const panel = await waitForElement(() => queryByText('A basic Panel'));
 
-  const closeIcon = container.querySelector('i');
+  const closeIcon = document.querySelector('i');
   fireEvent.click(closeIcon);
   expect(handleClick).toHaveBeenCalledTimes(1);
   await wait(() => expect(queryByText(/A basic Panel/i)).not.toBeInTheDocument());
