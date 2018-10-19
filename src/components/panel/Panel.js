@@ -46,6 +46,7 @@ export default class Panel extends React.Component {
     open: bool,
     modal: bool,
     classes: object,
+    closeAction: node,
   };
 
   static defaultProps = {
@@ -86,7 +87,8 @@ export default class Panel extends React.Component {
     document.removeEventListener('keydown', this.handleEscape);
   }
 
-  handleTriggerClick = () => {
+  handleTriggerClick = (e) => {
+    e.preventDefault();
     this.setState({ open: true });
   };
 
@@ -117,7 +119,7 @@ export default class Panel extends React.Component {
   }
 
   render() {
-    const { trigger, children, closable, modal, classes } = this.props;
+    const { trigger, children, closable, modal, classes, closeAction } = this.props;
     const { open } = this.state;
     const rootClasses = cx({
       modal: modal,
@@ -140,6 +142,11 @@ export default class Panel extends React.Component {
           <section className={mainSectionClasses}>
             {this.renderCloseIcon()}
             {children}
+            {closeAction ? (
+              <Footer pullRight={true}>
+                {cloneElement(closeAction, { onClick: this.handleCloseIconClick })}
+              </Footer>
+            ) : null}
           </section>
         </div>
       ) : null,

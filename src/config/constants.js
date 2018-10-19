@@ -10,4 +10,9 @@ export default {
     INSTA_URL: process.env.REACT_APP_INSTA_URL || 'https://www.instagram.com/codingcoach_io/',
     TWITTER_URL: process.env.REACT_APP_TWITTER_URL || 'https://twitter.com/codingcoach_io',
   },
+  privacyPolicy: {
+    PRIVACY_POLICY_URL:
+      process.env.REACT_APP_PRIVACY_POLICY_URL ||
+      'https://www.freeprivacypolicy.com/free-privacy-policy-generator.php',
+  },
 };

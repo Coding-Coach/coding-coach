@@ -33,3 +33,20 @@
     color:$color-grey-dark;
   }
 }
+
+.bodyBorder {
+  border: 2px solid $color-grey-medium;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid #000000;
+    transition: background 0.15s ease-out, color 0.15s ease-out;
+    cursor: pointer;
+
+    &:hover{
+      background: #69D5B1;
+      color: #FFFFFF;
+    }
+  }
+}

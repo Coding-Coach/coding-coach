@@ -1,3 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the PanelContent component 1`] = `<section />`;
+exports[`renders the PanelContent component 1`] = `
+<section
+  id="content-section"
+  class="mainContent"
+/>
+`;
