@@ -17,7 +17,7 @@ You can also upload and edit design files directly in your forked branch with th
 **Process:**
 Use [draw.io](https://www.draw.io/) for creating diagrams, save them to your Google Drive and set the sharing to 'Anyone with the link can comment'. Save your diagram locally as `.jpg` and move it to `jpg` folder in this branch.
 
-Submit your designs in the UX folder as a `.md` files with a descriptive title (ex. `SignIn.md`), a link to your original diagram, and the `.jpg` image of your diagram.
+Add your design to `UX/README.md` with a descriptive title (ex. SignIn), a link to your original diagram, and the `.jpg` image of your diagram.
 
 Cheatsheet for `.md` syntax [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
