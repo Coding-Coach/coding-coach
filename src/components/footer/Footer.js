@@ -46,7 +46,6 @@ const Footer = ({ t }) => {
           <Panel.Header>{t('footer-privacy')}</Panel.Header>
           <Panel.Content classes={classes}>
             <p>
-              {' '}
               <Interpolate
                 i18nKey="privacy-policy"
                 lineBreak={doubleLineBreak}
