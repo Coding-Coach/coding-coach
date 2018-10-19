@@ -8,6 +8,7 @@
 =======
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
     "@fortawesome/free-brands-svg-icons": "^5.3.1",
+    "@fortawesome/free-solid-svg-icons": "^5.4.0",
     "@fortawesome/react-fontawesome": "^0.1.3",
     "@reach/router": "^1.1.1",
 >>>>>>> 13ee5aa31858c9256fd3043053c23eeb3366cb26
@@ -60,8 +61,8 @@
     "@storybook/react": "^3.4.10",
     "ajv": "^6.5.3",
     "babel-core": "^6.26.3",
-    "cross-env": "^5.2.0",
     "babel-eslint": "^10.0.1",
+    "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "eslint": "^5.5.0",
     "eslint-config-prettier": "^3.0.1",
