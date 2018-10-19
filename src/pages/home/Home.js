@@ -2,7 +2,7 @@ import React from 'react';
 import { translate } from 'react-i18next';
 import 'i18n/i18n';
 
-import styles from './Home.scss';
+import styles from './assets/home.scss';
 import Navbar from 'components/navbar/Navbar';
 import Image from 'components/image/Image';
 import HomeSection from './components/HomeSection';
