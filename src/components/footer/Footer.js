@@ -3,7 +3,6 @@ import { translate, Interpolate } from 'react-i18next';
 import 'i18n/i18n';
 import Panel from 'components/panel/Panel';
 import Button from 'components/button/Button';
-import { noop } from 'utils/noop';
 import styles from './footer.scss';
 import constant from 'config/constants';
 

@@ -66,11 +66,6 @@ export default class Panel extends React.Component {
   constructor(props) {
     super(props);
     this.state = { ...Panel.defaultProps };
-
-    // event handlers hard bound to this
-    // this.handleTriggerClick = this.handleTriggerClick.bind(this);
-    // this.handleCloseIconClick = this.handleCloseIconClick.bind(this);
-    // this.handleEscape = this.handleEscape.bind(this);
   }
 
   componentWillReceiveProps({ open }) {
@@ -119,7 +114,7 @@ export default class Panel extends React.Component {
   }
 
   render() {
-    const { trigger, children, closable, modal, classes, closeAction } = this.props;
+    const { trigger, children, modal, classes, closeAction } = this.props;
     const { open } = this.state;
     const rootClasses = cx({
       modal: modal,
