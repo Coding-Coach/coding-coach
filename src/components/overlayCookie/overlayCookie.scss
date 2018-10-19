@@ -14,7 +14,7 @@
 
 .cookieContent {
   display: flex;
-  @include generalAlignment()
+  @include generalAlignment();
   color: $color-grey-dark;
   font-size: $font-xxs;
   justify-content: space-between;
