@@ -1,0 +1,53 @@
+$typeList: (
+  'M': 'margin',
+  'P': 'padding',
+);
+
+$directionListVertical: (
+  'T': ('top'),
+  'B': ('bottom'),
+  'V': ('top', 'bottom'),
+);
+
+$directionListHorizontal: (
+  'L': ('left'),
+  'R': ('right'),
+  'H': ('left', 'right'),
+);
+
+// Size list description:
+// Z - zero
+// T - tiny
+// E - extra small
+// S - small
+// M - medium
+// L - large
+// XL - Extra large
+$sizeList: (
+  'a': 'auto',
+  'Z': 0,
+  'T': 1px,
+  'E': 4px,
+  'S': 8px,
+  'M': 16px,
+  'L': 32px,
+  'XL': 64px,
+);
+
+
+@mixin spacing($types, $directions, $sizes) {
+  @each $typeKey, $type in $types {
+    @each $directionKey, $direction in $directions {
+      @each $sizeKey, $size in $sizes {
+        .#{$typeKey}#{$directionKey}#{$sizeKey} {
+          @each $dir in $direction {
+            #{$type + '-' + $dir}: #{$size};
+          }
+        }
+      }
+    }
+  }
+}
+
+@include spacing($typeList, $directionListVertical, $sizeList);
+@include spacing($typeList, $directionListHorizontal, $sizeList);
