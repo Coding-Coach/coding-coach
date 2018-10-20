@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Panel from './Panel';
-import styles from './assets/panelstories.scss';
+import Panel from '../Panel';
+import styles from './panelstories.scss';
 
 const Button = ({ onClick, text }) => <button onClick={onClick}>{text}</button>;
 

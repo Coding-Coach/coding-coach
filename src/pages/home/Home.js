@@ -2,17 +2,12 @@ import React from 'react';
 import { translate } from 'react-i18next';
 import 'i18n/i18n';
 
-import styles from './assets/home.scss';
-import Navbar from 'components/navbar/Navbar';
-import Image from 'components/image/Image';
+import { Navbar, Image, Contact, Footer, OverlayCookie } from 'components';
 import HomeSection from './components/HomeSection';
 import ImageAbout from './assets/images/about.svg';
 import ImageMission from './assets/images/mission.svg';
-import Contact from 'components/contact/Contact';
-import Footer from 'components/footer/Footer';
-import OverlayCookie from 'components/overlayCookie/OverlayCookie';
-
-const heroImage = require('./assets/images/meeting.svg');
+import heroImage from './assets/images/meeting.svg';
+import styles from './home.scss';
 
 function Home({ t }) {
   return (

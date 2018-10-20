@@ -6,8 +6,9 @@ import Container from './container-story';
 import { withDocs } from 'storybook-readme';
 import ButtonReadme from './button.README.md';
 
-import Button from './../Button';
+import Button from '../Button';
 import styles from './styles.scss';
+
 storiesOf('Buttons', module).add(
   'Button Types',
   withDocs(ButtonReadme, () => (

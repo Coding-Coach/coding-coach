@@ -2,10 +2,8 @@ import React, { cloneElement } from 'react';
 import ReactDOM from 'react-dom';
 import { node, func, bool, object } from 'prop-types';
 import classNames from 'classnames/bind';
-import styles from './assets/panel.scss';
-import Header from './PanelHeader';
-import Content from './PanelContent';
-import Footer from './PanelFooter';
+import styles from './panel.scss';
+import { Header, Footer, Content } from './components';
 import { noop } from 'utils/noop';
 
 const cx = classNames.bind(styles);

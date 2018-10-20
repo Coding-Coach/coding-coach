@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import { object, bool } from 'prop-types';
-import styles from './assets/panelfooter.scss';
+import styles from './panelfooter.scss';
 
 const cx = classNames.bind(styles);
 

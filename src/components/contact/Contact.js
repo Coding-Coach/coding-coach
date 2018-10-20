@@ -4,10 +4,10 @@ import config from 'config/constants';
 
 import 'i18n/i18n';
 
-import Image from 'components/image/Image';
-import styles from './assets/contact.scss';
-import peopleSearch from './assets/people-search.svg';
-import SocialMedia from './SocialMedia';
+import { Image } from 'components';
+import { SocialMedia } from './components';
+import peopleSearch from './assets/images/people-search.svg';
+import styles from './contact.scss';
 
 const Contact = ({ t }) => {
   const emailLink = (

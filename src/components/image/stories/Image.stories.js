@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Image from './Image';
+import Image from '../Image';
 
 storiesOf('Components/Image', module).add('Basic Image', () => {
   return (
