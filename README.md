@@ -25,4 +25,4 @@ Cheatsheet for `.md` syntax [here](https://github.com/adam-p/markdown-here/wiki/
 Create pull requests from your local repository directly with `design` branch, not with `dev` branch. Pull requests in this branch should not be merged with development.
 
 #### Example of a task flow diagram
-![task_flow_example](./jpg/a-leading-game-app-ux-case-study-13-638.jpg)
+![task_flow_example](./UX/jpg/a-leading-game-app-ux-case-study-13-638.jpg)
