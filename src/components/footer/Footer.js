@@ -17,7 +17,8 @@ const Footer = ({ t }) => {
 
   const doubleLineBreak = (
     <React.Fragment>
-      <br /> <br />{' '}
+      <br />
+      <br />
     </React.Fragment>
   );
   const closeBtn = <Button>{t('close')}</Button>;
@@ -37,12 +38,7 @@ const Footer = ({ t }) => {
         <a href="#cookies" className={styles.footerLink}>
           {t('footer-cookies')}
         </a>
-        <Panel
-          trigger={createTrigger('privacy')}
-          modal={true}
-          closable={true}
-          closeAction={closeBtn}
-        >
+        <Panel trigger={createTrigger('privacy')} modal closable closeAction={closeBtn}>
           <Panel.Header>{t('footer-privacy')}</Panel.Header>
           <Panel.Content classes={classes}>
             <p>

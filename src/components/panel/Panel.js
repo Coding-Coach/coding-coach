@@ -1,4 +1,5 @@
 import React, { cloneElement } from 'react';
+import ReactDOM from 'react-dom';
 import { node, func, bool, object } from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './assets/panel.scss';
@@ -8,6 +9,7 @@ import Footer from './PanelFooter';
 import { noop } from 'utils/noop';
 
 const cx = classNames.bind(styles);
+const body = document.querySelector('body');
 
 /**
  * Usage:
@@ -66,6 +68,7 @@ export default class Panel extends React.Component {
   constructor(props) {
     super(props);
     this.state = { ...Panel.defaultProps };
+    this.el = document.createElement('div');
   }
 
   componentWillReceiveProps({ open }) {
@@ -85,6 +88,7 @@ export default class Panel extends React.Component {
   handleTriggerClick = (e) => {
     e.preventDefault();
     this.setState({ open: true });
+    body.appendChild(this.el);
   };
 
   handleEscape = (e) => {
@@ -106,6 +110,7 @@ export default class Panel extends React.Component {
     onClose(event);
 
     this.setState({ open: false });
+    body.removeChild(this.el);
   }
 
   renderCloseIcon() {
@@ -132,19 +137,22 @@ export default class Panel extends React.Component {
       modal && trigger
         ? cloneElement(trigger, { onClick: this.handleTriggerClick, key: 'trigger' })
         : null,
-      modal && open ? (
-        <div className={rootClasses} key="modal">
-          <section className={mainSectionClasses}>
-            {this.renderCloseIcon()}
-            {children}
-            {closeAction ? (
-              <Footer pullRight={true}>
-                {cloneElement(closeAction, { onClick: this.handleCloseIconClick })}
-              </Footer>
-            ) : null}
-          </section>
-        </div>
-      ) : null,
+      modal && open
+        ? ReactDOM.createPortal(
+            <div className={rootClasses} key="modal">
+              <section className={mainSectionClasses}>
+                {this.renderCloseIcon()}
+                {children}
+                {closeAction ? (
+                  <Footer pullRight={true}>
+                    {cloneElement(closeAction, { onClick: this.handleCloseIconClick })}
+                  </Footer>
+                ) : null}
+              </section>
+            </div>,
+            this.el,
+          )
+        : null,
       !modal ? (
         <section className={mainSectionClasses} key="panel">
           {children}
