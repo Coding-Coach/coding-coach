@@ -1,0 +1,15 @@
+@import '~theme/base/variables';
+.container {
+  padding: 20px;
+
+  .title {
+    font-size: $font-m;
+    color: $color-grey-medium
+  }
+
+  .childrenContainer {
+    & > * {
+      margin: 0px 5px
+    }
+  }
+}

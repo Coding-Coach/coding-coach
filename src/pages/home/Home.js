@@ -2,8 +2,9 @@ import React, { Fragment } from 'react';
 import { translate, Interpolate } from 'react-i18next';
 import 'i18n/i18n';
 
-import styles from './Home.scss';
-import { Navbar } from 'components';
+import styles from './assets/home.scss';
+import Navbar from 'components/navbar/Navbar';
+import Image from 'components/image/Image';
 import HomeSection from './components/HomeSection';
 import SocialMedia from './components/SocialMedia';
 import Footer from 'components/footer/Footer';
@@ -39,7 +40,7 @@ function Home({ t }) {
             <h2 className={styles.heroSubtitle}>{t('home-header-subtitle')}</h2>
             <button className={styles.callToAction}>{t('home-header-cta')}</button>
           </header>
-          <img className={styles.heroImage} alt={t('home-header-media-alt')} src={heroImage} />
+          <Image className={styles.heroImage} alt={t('home-header-media-alt')} src={heroImage} />
         </div>
       </section>
 
@@ -48,13 +49,13 @@ function Home({ t }) {
           id="about"
           title={t('home-about-title')}
           text={t('home-about-text')}
-          media={<img src={ImageAbout} alt={t('home-about-media-alt')} />}
+          media={<Image src={ImageAbout} alt={t('home-about-media-alt')} />}
         />
         <HomeSection
           id="mission"
           title={t('home-mission-title')}
           text={t('home-mission-text')}
-          media={<img src={ImageMission} alt={t('home-mission-media-alt')} />}
+          media={<Image src={ImageMission} alt={t('home-mission-media-alt')} />}
         />
         <HomeSection
           id="contact"

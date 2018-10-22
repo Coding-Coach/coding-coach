@@ -47,8 +47,8 @@ $desktop-large-and-wider: 1440px; // Large desktops
         @content;
     }
   }
-  @else if $media == ultrawide {
-    @media screen and (min-width: $desktop-and-wider) {
+  @else if $media==ultrawide {
+    @media (min-width: $desktop-and-wider) {
         @content;
     }
   }
