@@ -15,19 +15,42 @@ const Footer = ({ t }) => {
     );
   };
 
+  const createPanel = (type, detail) => (
+    <Panel trigger={createTrigger(type)} modal closable closeAction={closeBtn} key={type}>
+      <Panel.Header>{t(`footer-${type}`)}</Panel.Header>
+      <Panel.Content classes={classes}>
+        <p>
+          <Interpolate
+            i18nKey={detail}
+            lineBreak={doubleLineBreak}
+            freePrivacyPolicy={freePrivacyPolicyLink}
+          />
+        </p>
+      </Panel.Content>
+    </Panel>
+  );
+
   const doubleLineBreak = (
     <React.Fragment>
       <br />
       <br />
     </React.Fragment>
   );
+
   const closeBtn = <Button>{t('close')}</Button>;
+
   const freePrivacyPolicyLink = (
     <a target="_blank" href={constant.privacyPolicy.PRIVACY_POLICY_URL} rel="noopener noreferrer">
       {t('free-privacy-policy')}
     </a>
   );
+
   const classes = { content: styles.bodyBorder };
+
+  const footerItems = [
+    { type: 'cookies', detail: 'cookies-policy' },
+    { type: 'privacy', detail: 'privacy-policy' },
+  ];
 
   return (
     <footer className={styles.footerMain}>
@@ -35,21 +58,7 @@ const Footer = ({ t }) => {
         <a href="#terms" className={styles.footerLink}>
           {t('footer-terms')}
         </a>
-        <a href="#cookies" className={styles.footerLink}>
-          {t('footer-cookies')}
-        </a>
-        <Panel trigger={createTrigger('privacy')} modal closable closeAction={closeBtn}>
-          <Panel.Header>{t('footer-privacy')}</Panel.Header>
-          <Panel.Content classes={classes}>
-            <p>
-              <Interpolate
-                i18nKey="privacy-policy"
-                lineBreak={doubleLineBreak}
-                freePrivacyPolicy={freePrivacyPolicyLink}
-              />
-            </p>
-          </Panel.Content>
-        </Panel>
+        {footerItems.map((item) => createPanel(item.type, item.detail))}
       </div>
     </footer>
   );
