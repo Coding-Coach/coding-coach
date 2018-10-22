@@ -1,0 +1,42 @@
+@import '~theme/base/variables';
+@import '~theme/base/mediaqueries';
+
+.socialMedia {
+  display: flex;
+  flex-flow: row-reverse;
+  align-self: center;
+
+  @include respond-to(tablet) {
+    align-self: initial;
+  }
+}
+
+.iconWrapper {
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid rgba($color-secondary, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .15s linear;
+
+  &:first-child {
+    margin-right: 0;
+  }
+
+  &:last-child {
+    margin-left: 0;
+  }
+
+  &:hover {
+    background: $color-secondary;  
+    .greenIcons {
+      color: $color-white;
+      fill: $color-white;
+    }
+  }
+}
+
+.greenIcons {
+  color: $color-secondary;
+  transition: all .15s linear;
+}
