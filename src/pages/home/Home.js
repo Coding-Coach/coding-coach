@@ -1,23 +1,35 @@
-import React from 'react';
-import { translate } from 'react-i18next';
+import React, { Fragment } from 'react';
+import { translate, Interpolate } from 'react-i18next';
 import 'i18n/i18n';
 
 import styles from './assets/home.scss';
 import Navbar from 'components/navbar/Navbar';
 import Image from 'components/image/Image';
 import HomeSection from './components/HomeSection';
+import SocialMedia from './components/SocialMedia';
+import Footer from 'components/footer/Footer';
 import ImageAbout from './assets/images/about.svg';
 import ImageMission from './assets/images/mission.svg';
-import Contact from 'components/contact/Contact';
-import Footer from 'components/footer/Footer';
-import OverlayCookie from 'components/overlayCookie/OverlayCookie';
+import ImageContact from './assets/images/contact.svg';
+
+import config from 'config/constants';
 
 const heroImage = require('./assets/images/meeting.svg');
 
 function Home({ t }) {
+  const emailLink = (
+    <a target="_blank" href={`mailto:${config.contact.EMAIL}`} className={styles.email}>
+      {config.contact.EMAIL}
+    </a>
+  );
+  const slackOrg = (
+    <a href={config.contact.SLACK_URL} className={styles.slackOrg}>
+      {t('slack-org')}
+    </a>
+  );
+
   return (
-    <React.Fragment>
-      <OverlayCookie />
+    <Fragment>
       <Navbar />
       <section className={styles.hero}>
         <div className={styles.heroInner}>
@@ -45,10 +57,19 @@ function Home({ t }) {
           text={t('home-mission-text')}
           media={<Image src={ImageMission} alt={t('home-mission-media-alt')} />}
         />
-        <Contact />
+        <HomeSection
+          id="contact"
+          title={t('home-contact-title')}
+          media={<img src={ImageContact} alt={t('home-contact-media-alt')} />}
+        >
+          <p>
+            <Interpolate i18nKey="home-contact-text" slackOrg={slackOrg} email={emailLink} />
+          </p>
+          <SocialMedia />
+        </HomeSection>
       </main>
       <Footer />
-    </React.Fragment>
+    </Fragment>
   );
 }
 
