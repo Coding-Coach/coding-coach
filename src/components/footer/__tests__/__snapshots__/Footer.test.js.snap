@@ -17,7 +17,7 @@ exports[`renders the footer element 1`] = `
         <input
           type="hidden"
           name="hosted_button_id"
-          value="3LA9RLHEXNZV6"
+          value="123abc"
         />
         <input
           type="image"
