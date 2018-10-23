@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/footer/DonateButton should render the donate button 1`] = `undefined`;
