@@ -4,7 +4,7 @@ import DonateButton from '../DonateButton';
 
 describe('components/footer/DonateButton', () => {
   it('should render the donate button', () => {
-    const container = render(<DonateButton />);
+    const { container } = render(<DonateButton />);
 
     expect(container.firstChild).toMatchSnapshot();
   });
