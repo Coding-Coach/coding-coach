@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 import config from 'config/constants';
-import styles from './assets/socialmedia.scss';
+import styles from '../assets/socialmedia.scss';
 
 const SocialMedia = () => {
   return (

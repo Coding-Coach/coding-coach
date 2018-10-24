@@ -121,7 +121,7 @@ $distance-height-variation-after: 40px;
 }
 
 .content {
-    > section:nth-child(1) {
+    > section:nth-child(odd) {
         background-color: $color-white;
         h1 {
             color: $color-secondary;
@@ -154,4 +154,32 @@ $distance-height-variation-after: 40px;
             background: linear-gradient(to bottom left, $color-tertiary, $color-tertiary 50%, white 50%, white);
         }
     }
+
+    > section:last-child {
+      //margin and padding adjustements are needed to render background color diagonally
+        margin-top: 160px;
+        padding-top: 0;
+        p {
+          font-size: $font-s;
+          color: $color-grey-medium;
+        }
+    }
+}
+
+.email {
+  text-decoration: none;
+  color: $color-secondary;
+}
+
+.slackOrg {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid $color-black;
+  transition: background 0.15s ease-out, color 0.15s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-secondary;
+    color:$color-white;
+  }
 }

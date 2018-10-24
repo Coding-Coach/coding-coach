@@ -9,7 +9,7 @@ const HomeSection = ({ id, title, text, media, children }) => (
         <header className={styles.header}>
           <h1 className={styles.title}>{title}</h1>
         </header>
-        <p className={styles.description}>{text}</p>
+        {styles.description && <p className={styles.description}>{text}</p>}
         {children}
       </div>
       {media}
@@ -18,8 +18,9 @@ const HomeSection = ({ id, title, text, media, children }) => (
 );
 
 HomeSection.propTypes = {
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   media: PropTypes.node.isRequired,
   children: PropTypes.node,
 };
