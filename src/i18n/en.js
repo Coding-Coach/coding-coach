@@ -7,6 +7,8 @@ export default function loadEn() {
       'footer-terms': 'Terms & Conditions',
       'footer-cookies': 'Cookies',
       'footer-privacy': 'Privacy Policy',
+      'footer-donate': 'Donate!',
+      'footer-donate-paypal': 'PayPal - The safer, easier way to pay online!',
       'home-header-title': 'Coding Coach',
       'home-header-subtitle': 'Connecting developers with mentor worldwide',
       'home-header-cta': 'Learn More',
