@@ -6,6 +6,21 @@ import Button from 'components/button/Button';
 import styles from './footer.scss';
 import constant from 'config/constants';
 
+const classes = { content: styles.bodyBorder };
+
+const footerItems = [
+  { type: 'terms', detail: 'terms-policy' },
+  { type: 'cookies', detail: 'cookies-policy' },
+  { type: 'privacy', detail: 'privacy-policy' },
+];
+
+const doubleLineBreak = (
+  <React.Fragment>
+    <br />
+    <br />
+  </React.Fragment>
+);
+
 const Footer = ({ t }) => {
   const createTrigger = (type) => {
     return (
@@ -30,34 +45,17 @@ const Footer = ({ t }) => {
     </Panel>
   );
 
-  const doubleLineBreak = (
-    <React.Fragment>
-      <br />
-      <br />
-    </React.Fragment>
-  );
-
   const closeBtn = <Button>{t('close')}</Button>;
 
   const freePrivacyPolicyLink = (
-    <a target="_blank" href={constant.privacyPolicy.PRIVACY_POLICY_URL} rel="noopener noreferrer">
+    <a target="_blank" href={constant.legal.PRIVACY_POLICY_URL} rel="noopener noreferrer">
       {t('free-privacy-policy')}
     </a>
   );
 
-  const classes = { content: styles.bodyBorder };
-
-  const footerItems = [
-    { type: 'cookies', detail: 'cookies-policy' },
-    { type: 'privacy', detail: 'privacy-policy' },
-  ];
-
   return (
     <footer className={styles.footerMain}>
       <div className={styles.footerInner}>
-        <a href="#terms" className={styles.footerLink}>
-          {t('footer-terms')}
-        </a>
         {footerItems.map((item) => createPanel(item.type, item.detail))}
       </div>
     </footer>
