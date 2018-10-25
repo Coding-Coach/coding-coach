@@ -33,6 +33,18 @@ export default function loadEn() {
         We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions.`,
       'free-privacy-policy': 'Free Privacy Policy',
       'cookies-policy': 'Some cookie policy',
+      "<0>What Are Cookies<0><1/><2/>As is common practice with almost all professional websites this site uses cookies, which are tiny files that are downloaded to your computer, to improve your experience. This page describes what information they gather, how we use it and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored however this may downgrade or 'break' certain elements of the sites functionality.<3/><4/>For more general information on cookies see the Wikipedia article on HTTP Cookies.<5/><6/><7>How We Use Cookies</7>": `
+      <0>What Are Cookies<0>
+      </1>
+      <2/>
+      As is common practice with almost all professional websites this site uses cookies, which are tiny files that are downloaded to your computer, to improve your experience. This page describes what information they gather, how we use it and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored however this may downgrade or 'break' certain elements of the sites functionality.
+      <3/>
+      <4/>
+      For more general information on cookies see the Wikipedia article on HTTP Cookies.
+      <5/>
+      <6/>
+      <7>How We Use Cookies</7>
+      `,
     },
   };
 }
