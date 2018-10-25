@@ -3,6 +3,7 @@ import { translate, Interpolate, Trans } from 'react-i18next';
 import 'i18n/i18n';
 import Panel from 'components/panel/Panel';
 import Button from 'components/button/Button';
+import DonateButton from './DonateButton';
 import styles from './footer.scss';
 import constant from 'config/constants';
 
@@ -77,6 +78,9 @@ const Footer = ({ t }) => {
   return (
     <footer className={styles.footerMain}>
       <div className={styles.footerInner}>
+        <div className={styles.column}>
+          <DonateButton />
+        </div>
         {footerItems.map((item) => createPanel(item.type, item.detail, t))}
       </div>
     </footer>

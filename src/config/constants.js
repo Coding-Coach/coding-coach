@@ -15,4 +15,7 @@ export default {
       process.env.REACT_APP_PRIVACY_POLICY_URL ||
       'https://www.freeprivacypolicy.com/free-privacy-policy-generator.php',
   },
+  payments: {
+    paypal: process.env.REACT_APP_PAYPAL_DONATE_BUTTON_ID || '123abc',
+  },
 };
