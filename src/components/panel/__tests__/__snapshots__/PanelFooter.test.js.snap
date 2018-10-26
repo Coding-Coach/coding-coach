@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders the PanelFooter component 1`] = `
-<section
+<footer
   class="footer"
->
-  <div />
-</section>
+/>
 `;

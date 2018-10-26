@@ -5,17 +5,13 @@ import styles from './assets/panelfooter.scss';
 
 const cx = classNames.bind(styles);
 
-const Footer = ({ children, classes, pullRight }) => {
+const Footer = ({ children, classes }) => {
   const footerClasses = cx({
     footer: true,
     [classes.footer]: classes.footer,
   });
 
-  return (
-    <section className={footerClasses}>
-      <div className={pullRight ? styles.pullRight : undefined}>{children}</div>
-    </section>
-  );
+  return <footer className={footerClasses}>{children}</footer>;
 };
 
 Footer.propTypes = {
@@ -25,7 +21,6 @@ Footer.propTypes = {
 
 Footer.defaultProps = {
   classes: {},
-  pullRight: false,
 };
 
 export default Footer;

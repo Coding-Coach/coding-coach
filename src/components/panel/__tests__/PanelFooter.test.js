@@ -7,6 +7,6 @@ test('renders the PanelFooter component', () => {
 
   expect(container.firstChild).toMatchSnapshot();
 
-  const section = container.querySelectorAll('section');
-  expect(section.length).toEqual(1);
+  const footer = container.querySelectorAll('footer');
+  expect(footer.length).toEqual(1);
 });

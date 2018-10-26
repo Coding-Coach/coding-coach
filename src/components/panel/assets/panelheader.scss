@@ -1,10 +1,15 @@
 @import '~theme/base/variables';
 
+.header {
+  padding: 0 0 10px 0;
+}
+
 .heading {
-  margin: 0 auto 10px;
+  margin: 0;
   text-transform: uppercase;
   color: $color-primary;
   font-family: $font-secondary;
   font-weight: $font-regular;
   font-size: $font-xl;
+  letter-spacing: 1px;
 }

@@ -1,12 +1,10 @@
 
 .footer {
   display: flex;
+  justify-content: flex-end;
 
-  &::first-child {
-    margin-left: auto;
+  button:not(:first-child) {
+    margin-left: 5px;
   }
-}
 
-.pullRight {
-  margin-left: auto;
 }
