@@ -4,7 +4,6 @@ import { object } from 'prop-types';
 import styles from './assets/panelheader.scss';
 
 const cx = classNames.bind(styles);
-console.log(styles);
 
 const Header = ({ children, classes }) => (
   <header className={styles.header}>

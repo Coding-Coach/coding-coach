@@ -46,10 +46,9 @@
 }
 
 .bodyBorder {
-  border: 1px solid $color-grey-light;
 
   a {
-    color: inherit;
+    color: $color-primary;
     text-decoration: none;
     border-bottom: 1px solid $color-black;
     transition: background 0.15s ease-out, color 0.15s ease-out;

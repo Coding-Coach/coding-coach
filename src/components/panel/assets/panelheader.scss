@@ -1,7 +1,8 @@
 @import '~theme/base/variables';
 
 .header {
-  padding: 0 0 10px 0;
+  padding: 24px 24px 10px 24px;
+  border-bottom: 1px solid $color-grey-light;
 }
 
 .heading {

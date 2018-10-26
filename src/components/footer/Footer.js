@@ -7,8 +7,6 @@ import DonateButton from './DonateButton';
 import styles from './footer.scss';
 import constant from 'config/constants';
 
-const classes = { content: styles.bodyBorder };
-
 const footerItems = [
   { type: 'terms', detail: 'terms-policy' },
   { type: 'cookies', detail: 'cookies-policy' },
@@ -41,7 +39,7 @@ const createPanel = (type, detail, t) => {
   return (
     <Panel trigger={createTrigger(type, t)} modal closable closeAction={closeBtn} key={type}>
       <Panel.Header>{t(`footer-${type}`)}</Panel.Header>
-      <Panel.Content classes={classes}>
+      <Panel.Content>
         <p>
           {type === 'privacy' ? (
             <Interpolate

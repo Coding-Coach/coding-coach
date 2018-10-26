@@ -51,6 +51,8 @@ export default class Panel extends React.Component {
     closeAction: node,
   };
 
+  static ESCAPE_KEY = 27;
+
   static defaultProps = {
     closable: false,
     modal: false,
@@ -95,8 +97,7 @@ export default class Panel extends React.Component {
     if (!this.props.modal) {
       return;
     }
-    const ESCAPE_KEY = 27;
-    if (e.keyCode === ESCAPE_KEY) {
+    if (e.keyCode === Panel.ESCAPE_KEY) {
       this.close(e);
     }
   };
@@ -106,11 +107,11 @@ export default class Panel extends React.Component {
   };
 
   close(event) {
-    const { onClose } = this.props;
-    onClose(event);
+    this.props.onClose(event);
+    console.log(event);
 
     this.setState({ open: false });
-    body.removeChild(this.el);
+    this.el.parentElement.removeChild(this.el);
   }
 
   renderCloseIcon() {

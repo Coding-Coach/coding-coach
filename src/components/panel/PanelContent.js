@@ -5,17 +5,17 @@ import styles from './assets/panelcontent.scss';
 
 const cx = classNames.bind(styles);
 
-const Content = ({ children, classes }) => {
-  const contentClasses = cx({
-    mainContent: true,
-    [classes.content]: classes.content,
-  });
-  return (
-    <section id="content-section" className={contentClasses}>
-      {children}
-    </section>
-  );
-};
+const Content = ({ children, classes }) => (
+  <div
+    id="content-section"
+    className={cx({
+      mainContent: true,
+      [classes.content]: classes.content,
+    })}
+  >
+    {children}
+  </div>
+);
 
 Content.propTypes = {
   classes: object,

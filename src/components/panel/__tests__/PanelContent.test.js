@@ -7,6 +7,6 @@ test('renders the PanelContent component', () => {
 
   expect(container.firstChild).toMatchSnapshot();
 
-  const section = container.querySelectorAll('section');
-  expect(section.length).toEqual(1);
+  const div = container.querySelectorAll('div');
+  expect(div.length).toEqual(1);
 });
