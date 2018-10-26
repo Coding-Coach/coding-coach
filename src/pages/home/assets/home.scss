@@ -1,169 +1,149 @@
 @import '~theme/base/variables';
 @import '~theme/base/mediaqueries';
 @import '~theme/base/utils';
+@import '~theme/base/spacing';
 
 $distance-height-variation-before: 20px;
 $distance-height-variation-after: 40px;
 
 // Sections with the text at the right
 @mixin isReverseSection() {
-    text-align: right;
+  text-align: right;
 
-    header {
-        &:after {
-            right: 0;
-        }
+  header {
+    &:after {
+      right: 0;
     }
+  }
 
-    @include respond-to(tablet) {
-        > div {
-            flex-direction: row-reverse;
-        }
+  @include respond-to(tablet) {
+    > div {
+      flex-direction: row-reverse;
     }
+  }
 }
 
 .hero {
-    position: relative;
-    min-height: 50vh;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+  composes: PVXL;
+  position: relative;
+  min-height: 50vh;
 
-    @include respond-to(tablet) {
-        min-height: 550px;
-        padding-top: 6rem;
-        padding-bottom: 6rem;
-    }
+  @include respond-to(tablet) {
+    min-height: 550px;
+  }
 
-    &:before {
-      content: '';
-      position: absolute;
-      background: $color-secondary;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      z-index: index(background) - 1;
-    }
+  &:before {
+    content: '';
+    position: absolute;
+    background: $color-secondary;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: index(background) - 1;
+  }
 
-    &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        background-image: linear-gradient(to bottom right, $color-secondary 50%, $color-white 50%);
-        height: 20%;
-        width: 100%;
-        z-index: index(background);
-    }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(to bottom right, $color-secondary 50%, $color-white 50%);
+    height: 20%;
+    width: 100%;
+    z-index: index(background);
+  }
 }
 
 .heroInner {
-    @include generalAlignment();
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  @include generalAlignment();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .heroTextWrapper {
-    @include respond-to(tablet) {
-        width: 50%;
-    }
+  @include respond-to(tablet) {
+    width: 50%;
+  }
 }
 
 .heroTitle {
-    color: $color-white;
-    font-family: $font-secondary;
-    font-size: $font-xxxl;
-    font-weight: $font-bold;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    line-height: 1.125;
-    margin: 0;
+  color: $color-white;
+  font-family: $font-secondary;
+  font-size: $font-xxxl;
+  font-weight: $font-bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.125;
+  margin: 0;
 
-    width: min-intrinsic;
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
+  width: min-intrinsic;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 
 .heroSubtitle {
-    color: $color-white;
-    font-family: $font-primary;
-    font-size: $font-l;
-    font-weight: $font-thin;
-    margin: 0 0 1.25rem 0;
-}
-
-.callToAction {
-    text-decoration: none;
-    border-radius: $border-radius-rounded;
-    padding: 0.75rem 2rem;
-    font-family: $font-primary;
-    font-size: $font-s;
-    border: 0px;
-    text-transform: uppercase;
-    color: $color-white;
-    background-color: $color-primary;
-    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
-
-    &:hover, &:focus {
-        background-color: $color-primary-darker;
-        transition: 0.25s ease all;
-    }
+  composes: MTZ;
+  composes: MBM;
+  color: $color-white;
+  font-family: $font-primary;
+  font-size: $font-l;
+  font-weight: $font-thin;
 }
 
 .heroImage {
-    display: none;
-    width: 350px;
+  display: none;
+  width: 350px;
 
-    @include respond-to(tablet) {
-        display: block;
-        width: 45%;
-    }
+  @include respond-to(tablet) {
+    display: block;
+    width: 45%;
+  }
 }
 
 .content {
-    > section:nth-child(odd) {
-        background-color: $color-white;
-        h1 {
-            color: $color-secondary;
-        }
-        @include isReverseSection();
+  > section:nth-child(odd) {
+    background-color: $color-white;
+    h1 {
+      color: $color-secondary;
+    }
+    @include isReverseSection();
+  }
 
+  > section:nth-child(2) {
+    background-color: $color-tertiary;
+
+    &:before,
+    &:after {
+      content: "";
+      background: $color-tertiary;
+      width: 100%;
+      position: absolute;
+      left: 0;
     }
 
-    > section:nth-child(2) {
-        background-color: $color-tertiary;
-
-        &:before,
-        &:after {
-            content: "";
-            background: $color-tertiary;
-            width: 100%;
-            position: absolute;
-            left: 0;
-        }
-
-        &:before {
-            height: $distance-height-variation-before;
-            top: -$distance-height-variation-before;
-            background: linear-gradient(to top right, $color-tertiary, $color-tertiary 50%, white 50%, white);
-        }
-
-        &:after {
-            height: $distance-height-variation-after;
-            bottom: -$distance-height-variation-after;
-            background: linear-gradient(to bottom left, $color-tertiary, $color-tertiary 50%, white 50%, white);
-        }
+    &:before {
+      height: $distance-height-variation-before;
+      top: -$distance-height-variation-before;
+      background: linear-gradient(to top right, $color-tertiary, $color-tertiary 50%, white 50%, white);
     }
 
-    > section:last-child {
-      //margin and padding adjustements are needed to render background color diagonally
-        margin-top: 160px;
-        padding-top: 0;
-        p {
-          font-size: $font-s;
-          color: $color-grey-medium;
-        }
+    &:after {
+      height: $distance-height-variation-after;
+      bottom: -$distance-height-variation-after;
+      background: linear-gradient(to bottom left, $color-tertiary, $color-tertiary 50%, white 50%, white);
     }
+  }
+
+  > section:last-child {
+    //margin and padding adjustements are needed to render background color diagonally
+    margin-top: 160px;
+    padding-top: 0;
+    p {
+      font-size: $font-s;
+      color: $color-grey-medium;
+    }
+  }
 }
 
 .email {

@@ -1,17 +1,10 @@
 @import "~theme/base/variables";
 @import '~theme/base/utils';
+@import '~theme/base/spacing';
 
 .navigationBar {
-  padding: 1em 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: index(menu);
-
-  @include respond-to(tablet) {
-    padding: 1.25em 0;
-  }
+  composes: PVM;
+  background-color: $color-secondary;
 }
 
 .inner {
