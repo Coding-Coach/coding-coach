@@ -53,6 +53,8 @@ export default class Panel extends React.Component {
 
   static ESCAPE_KEY = 27;
 
+  static CLASS_OVERFLOW_HIDDEN = 'u-overflowHidden';
+
   static defaultProps = {
     closable: false,
     modal: false,
@@ -108,9 +110,11 @@ export default class Panel extends React.Component {
 
   close(event) {
     this.props.onClose(event);
-    console.log(event);
 
     this.setState({ open: false });
+    {
+      document.body.classList.add(Panel.CLASS_OVERFLOW_HIDDEN);
+    }
     this.el.parentElement.removeChild(this.el);
   }
 
@@ -141,6 +145,7 @@ export default class Panel extends React.Component {
       modal && open
         ? ReactDOM.createPortal(
             <div className={rootClasses} key="modal">
+              {document.body.classList.add(Panel.CLASS_OVERFLOW_HIDDEN)}
               <section className={mainSectionClasses}>
                 {this.renderCloseIcon()}
                 {children}
