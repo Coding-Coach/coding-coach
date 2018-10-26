@@ -11,7 +11,12 @@ import SocialMedia from './SocialMedia';
 
 const Contact = ({ t }) => {
   const emailLink = (
-    <a target="_blank" href={`mailto:${config.contact.EMAIL}`} className={styles.email}>
+    <a
+      target="_blank"
+      href={`mailto:${config.contact.EMAIL}`}
+      className={styles.email}
+      rel="noopener noreferrer"
+    >
       {config.contact.EMAIL}
     </a>
   );
