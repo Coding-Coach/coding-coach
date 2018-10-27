@@ -4,6 +4,10 @@ node_js:
   - "8"
   - "10"
   - "stable"
+os:
+  - windows
+  - linux
+  - osx
 cache:
   yarn: true
   directories:
