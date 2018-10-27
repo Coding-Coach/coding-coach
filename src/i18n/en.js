@@ -12,8 +12,7 @@ export default function loadEn() {
       'home-header-title': 'Coding Coach',
       'home-header-subtitle': 'Connecting developers with mentor worldwide',
       'home-header-cta': 'Learn More',
-      'home-header-media-alt':
-        'A woman and a bear are co-working and sharing knowledge. She is taking notes and the bear is reading them',
+      'home-header-media-alt': 'This is the logo for Coding Coach',
       'home-about-title': 'About',
       'home-about-text':
         'Coding Coach is a free, open-source platform which aims to connect software developers and mentors all over the world.  It is built by a group of talented and passionate developers, designers, engineers, and humans who want to make the engineering world a better place to collaborate.  This project was born out of a desire to provide a platform to connect mentors and mentees throughout the world at no cost.  Coding Coach is created by the people, for the people.',
