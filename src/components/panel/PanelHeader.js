@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import { object } from 'prop-types';
-import styles from './assets/panelheader.scss';
+import styles from './assets/panelHeader.scss';
 
 const cx = classNames.bind(styles);
 

@@ -31,16 +31,9 @@ const createTrigger = (type, t) => {
   );
 };
 
-const freePrivacyPolicyLink = (t) => (
-  <a target="_blank" href={constant.legal.PRIVACY_POLICY_URL} rel="noopener noreferrer">
-    {t('free-privacy-policy')}
-  </a>
-);
-
-const createPanel = (type, detail, t) => {
-  const closeBtn = <Button onClick={() => null}>{t('close')}</Button>;
+const createPanel = ({ type, detail, t }) => {
   return (
-    <Panel trigger={createTrigger(type, t)} modal closable closeAction={closeBtn} key={type}>
+    <Panel trigger={createTrigger(type, t)} modal closable key={type}>
       <Panel.Header>{t(`footer-${type}`)}</Panel.Header>
       <Panel.Content>
         <p>
@@ -48,7 +41,15 @@ const createPanel = (type, detail, t) => {
             <Interpolate
               i18nKey={detail}
               lineBreak={doubleLineBreak}
-              freePrivacyPolicy={freePrivacyPolicyLink(t)}
+              freePrivacyPolicy={
+                <a
+                  target="_blank"
+                  href={constant.legal.PRIVACY_POLICY_URL}
+                  rel="noopener noreferrer"
+                >
+                  {t('free-privacy-policy')}
+                </a>
+              }
             />
           ) : (
             <Markdown options={{ forceBlock: true }}>
@@ -63,6 +64,9 @@ const createPanel = (type, detail, t) => {
           )}
         </p>
       </Panel.Content>
+      <Panel.Footer>
+        <Button onClick={() => null}>{t('close')}</Button>
+      </Panel.Footer>
     </Panel>
   );
 };
@@ -74,7 +78,7 @@ const Footer = ({ t }) => {
         <div className={styles.column}>
           <DonateButton />
         </div>
-        {footerItems.map((item) => createPanel(item.type, item.detail, t))}
+        {footerItems.map((item) => createPanel({ type: item.type, detail: item.detail, t }))}
       </div>
     </footer>
   );

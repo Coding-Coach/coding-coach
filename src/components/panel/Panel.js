@@ -6,7 +6,6 @@ import styles from './assets/panel.scss';
 import Header from './PanelHeader';
 import Content from './PanelContent';
 import Footer from './PanelFooter';
-import { noop } from 'utils/noop';
 
 const cx = classNames.bind(styles);
 
@@ -57,7 +56,6 @@ export default class Panel extends React.Component {
   static defaultProps = {
     closable: false,
     modal: false,
-    onClose: noop,
     classes: {},
     open: false,
   };
@@ -108,7 +106,8 @@ export default class Panel extends React.Component {
   };
 
   close(event) {
-    this.props.onClose(event);
+    const { onClose } = this.props;
+    onClose && onClose(event);
     this.setState({ open: false });
     document.body.classList.remove(Panel.CLASS_OVERFLOW_HIDDEN);
 
@@ -135,14 +134,17 @@ export default class Panel extends React.Component {
       [classes.body]: classes.body,
     });
 
+    // Class to make the body not scrollable
+    modal && open && document.body.classList.add(Panel.CLASS_OVERFLOW_HIDDEN);
+
     return [
       modal && trigger
         ? cloneElement(trigger, { onClick: this.handleTriggerClick, key: 'trigger' })
         : null,
+
       modal && open
         ? ReactDOM.createPortal(
             <div className={rootClasses} key="modal">
-              {document.body.classList.add(Panel.CLASS_OVERFLOW_HIDDEN)}
               <section className={mainSectionClasses}>
                 {this.renderCloseIcon()}
                 {children}
@@ -156,6 +158,7 @@ export default class Panel extends React.Component {
             this.el,
           )
         : null,
+
       !modal ? (
         <section className={mainSectionClasses} key="panel">
           {children}
