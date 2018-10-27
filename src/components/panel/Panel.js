@@ -39,26 +39,9 @@ const cx = classNames.bind(styles);
  */
 
 export default class Panel extends React.Component {
-  static propTypes = {
-    trigger: node,
-    onClose: func,
-    closable: bool,
-    open: bool,
-    modal: bool,
-    classes: object,
-    closeAction: node,
-  };
-
   static ESCAPE_KEY = 27;
 
   static CLASS_OVERFLOW_HIDDEN = 'u-overflowHidden';
-
-  static defaultProps = {
-    closable: false,
-    modal: false,
-    classes: {},
-    open: false,
-  };
 
   static Header = Header;
 
@@ -114,13 +97,8 @@ export default class Panel extends React.Component {
     this.el.parentElement.removeChild(this.el);
   }
 
-  renderCloseIcon() {
-    const { closable } = this.props;
-    return closable ? <i className={styles.closeIcon} onClick={this.handleCloseIconClick} /> : null;
-  }
-
   render() {
-    const { trigger, children, modal, classes, closeAction } = this.props;
+    const { trigger, children, modal, classes, closable } = this.props;
     const { open } = this.state;
     const rootClasses = cx({
       modal: modal,
@@ -146,24 +124,36 @@ export default class Panel extends React.Component {
         ? ReactDOM.createPortal(
             <div className={rootClasses} key="modal">
               <section className={mainSectionClasses}>
-                {this.renderCloseIcon()}
+                {closable && <i className={styles.closeIcon} onClick={this.handleCloseIconClick} />}
                 {children}
-                {closeAction ? (
-                  <Footer pullRight={true}>
-                    {cloneElement(closeAction, { onClick: this.handleCloseIconClick })}
-                  </Footer>
-                ) : null}
               </section>
             </div>,
             this.el,
           )
         : null,
 
-      !modal ? (
+      !modal && (
         <section className={mainSectionClasses} key="panel">
           {children}
         </section>
-      ) : null,
+      ),
     ];
   }
 }
+
+Panel.propTypes = {
+  trigger: node,
+  onClose: func,
+  closable: bool,
+  open: bool,
+  modal: bool,
+  classes: object,
+  closeAction: node,
+};
+
+Panel.defaultProps = {
+  closable: false,
+  modal: false,
+  classes: {},
+  open: false,
+};
