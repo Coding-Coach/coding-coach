@@ -2,6 +2,10 @@ dist: trusty
 language: node_js
 node_js:
   - "10.10.0"
+os:
+  - windows
+  - linux
+  - osx
 cache:
   yarn: true
   directories:
