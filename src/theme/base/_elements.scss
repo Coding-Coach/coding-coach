@@ -9,10 +9,15 @@
   }
 
   #root {
-    height: 100%;
+    min-height: 100%;
 
     & > div {
       height: 100%;
     }
+  }
+  
+  .u-overflowHidden {
+    height: 100vh;
+    overflow: hidden;
   }
 }

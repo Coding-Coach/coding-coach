@@ -6,33 +6,43 @@ import PropTypes from 'prop-types';
  *
  * @param {children} props
  * @param {type} props  primary, danger, secondary
- * @param {size} props  default, large, small,
+ * @param {size} props  small, medium, large,
  * @param {disabled} props  true, false
  * @param {fullWidth} props Button width is 100% of parent
  */
 const Button = (props) => {
   const { children, type, size, disabled, fullWidth, id, onClick } = props;
-  const classes = classNames(
-    styles.button,
-    styles[type] || styles.primary,
-    styles[size] || styles.default,
-    fullWidth && styles.fullWidth,
-  );
+
   return (
-    <button id={id} disabled={disabled} onClick={onClick} className={classes}>
+    <button
+      id={id}
+      disabled={disabled}
+      onClick={onClick}
+      className={classNames(
+        styles.button,
+        styles[type] || styles.primary,
+        styles[size] || styles.default,
+        fullWidth && styles.fullWidth,
+      )}
+    >
       {children}
     </button>
   );
 };
 
 Button.propTypes = {
-  size: PropTypes.string,
-  type: PropTypes.string,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  type: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'disabled', 'danger']),
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   fullWidth: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
   id: PropTypes.string,
+};
+
+Button.defaultProps = {
+  size: 'medium',
+  type: 'primary',
 };
 
 export default Button;
