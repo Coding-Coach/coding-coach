@@ -9,7 +9,6 @@ import Footer from './PanelFooter';
 import { noop } from 'utils/noop';
 
 const cx = classNames.bind(styles);
-const body = document.querySelector('body');
 
 /**
  * Usage:
@@ -92,7 +91,7 @@ export default class Panel extends React.Component {
   handleTriggerClick = (e) => {
     e.preventDefault();
     this.setState({ open: true });
-    body.appendChild(this.el);
+    document.body.appendChild(this.el);
   };
 
   handleEscape = (e) => {
@@ -110,11 +109,9 @@ export default class Panel extends React.Component {
 
   close(event) {
     this.props.onClose(event);
-
     this.setState({ open: false });
-    {
-      document.body.classList.add(Panel.CLASS_OVERFLOW_HIDDEN);
-    }
+    document.body.classList.remove(Panel.CLASS_OVERFLOW_HIDDEN);
+
     this.el.parentElement.removeChild(this.el);
   }
 

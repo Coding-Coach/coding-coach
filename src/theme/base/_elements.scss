@@ -15,28 +15,4 @@
       height: 100%;
     }
   }
-
-  .button {
-    border-radius: 25px;
-    padding: 10px 30px;
-    font-size: $font-s;
-    transition: all .1s linear;
-
-    &__white--fill {
-      background-color: $color-white;
-      color: $color-primary;
-      border: 2px solid $color-white;
-
-      &:hover {
-        background-color: $color-primary;
-        cursor: pointer;
-        color: $color-white;
-      }
-    }
-
-    &__link {
-      color: $color-primary;
-      text-decoration: none;
-    }
-  }
 }
