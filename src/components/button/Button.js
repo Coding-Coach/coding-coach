@@ -31,7 +31,7 @@ Button.propTypes = {
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   fullWidth: PropTypes.bool,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
   id: PropTypes.string,
 };
 

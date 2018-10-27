@@ -1,11 +1,14 @@
 import React from 'react';
 import { translate, Interpolate, Trans } from 'react-i18next';
 import 'i18n/i18n';
+
+import Markdown from 'markdown-to-jsx';
 import Panel from 'components/panel/Panel';
 import Button from 'components/button/Button';
 import DonateButton from './DonateButton';
 import styles from './footer.scss';
 import constant from 'config/constants';
+import CookiesPolicy from 'markdown/CookiesPolicy.md';
 
 const footerItems = [
   { type: 'terms', detail: 'terms-policy' },
@@ -35,7 +38,7 @@ const freePrivacyPolicyLink = (t) => (
 );
 
 const createPanel = (type, detail, t) => {
-  const closeBtn = <Button>{t('close')}</Button>;
+  const closeBtn = <Button onClick={() => null}>{t('close')}</Button>;
   return (
     <Panel trigger={createTrigger(type, t)} modal closable closeAction={closeBtn} key={type}>
       <Panel.Header>{t(`footer-${type}`)}</Panel.Header>
@@ -48,23 +51,15 @@ const createPanel = (type, detail, t) => {
               freePrivacyPolicy={freePrivacyPolicyLink(t)}
             />
           ) : (
-            <Trans>
-              <strong>What Are Cookies</strong>
-              <br />
-              <br />
-              As is common practice with almost all professional websites this site uses cookies,
-              which are tiny files that are downloaded to your computer, to improve your experience.
-              This page describes what information they gather, how we use it and why we sometimes
-              need to store these cookies. We will also share how you can prevent these cookies from
-              being stored however this may downgrade or 'break' certain elements of the sites
-              functionality.
-              <br />
-              <br />
-              For more general information on cookies see the Wikipedia article on HTTP Cookies.
-              <br />
-              <br />
-              <strong>How We Use Cookies</strong>
-            </Trans>
+            <Markdown options={{ forceBlock: true }}>
+              ## The Cookies We Set - Account related cookies - If you create an account with us
+              then we will use cookies for the management of the signup process and general
+              administration. These cookies will usually be deleted when you log out however in some
+              cases they may remain afterwards to remember your site preferences when logged out. -
+              Login related cookies - We use cookies when you are logged in so that we can remember
+              this fact. This prevents you from having to log in every single time you visit a new
+              page. These cookies are typically removed or c
+            </Markdown>
           )}
         </p>
       </Panel.Content>
