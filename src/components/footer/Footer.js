@@ -1,5 +1,5 @@
 import React from 'react';
-import { translate, Interpolate, Trans } from 'react-i18next';
+import { translate, Interpolate } from 'react-i18next';
 import 'i18n/i18n';
 
 import Button from 'components/button/Button';
