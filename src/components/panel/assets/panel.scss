@@ -5,6 +5,18 @@
   background: $color-white;
   width: 100%;
   border-radius: $border-radius-rounded;
+
+  a {
+    color: $color-primary;
+    text-decoration: none;
+    transition: background 0.15s ease-out, color 0.15s ease-out;
+    cursor: pointer;
+
+    &:hover {
+      background: $color-secondary;
+      color: $color-white;
+    }
+  }
 }
 
 .header {
@@ -18,7 +30,7 @@
   color: $color-primary;
   font-family: $font-secondary;
   font-weight: $font-regular;
-  font-size: $font-xl;
+  font-size: $font-l;
   letter-spacing: 1px;
 }
 
@@ -27,22 +39,8 @@
 }
 
 .footer {
+  display: flex;
+  justify-content: flex-end;
   padding: 16px 24px;
   border-top: 1px solid $color-grey-light;
 }
-
-/*
-  .modal {
-    a {
-      color: $color-primary;
-      text-decoration: none;
-      transition: background 0.15s ease-out, color 0.15s ease-out;
-      cursor: pointer;
-
-      &:hover {
-        background: $color-secondary;
-        color: $color-white;
-      }
-    }
-  }
-*/
