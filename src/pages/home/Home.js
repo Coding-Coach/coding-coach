@@ -15,7 +15,7 @@ import ImageContact from './assets/images/contact.svg';
 
 import config from 'config/constants';
 
-const heroImage = require('./assets/images/meeting.svg');
+const heroImage = require('./assets/images/coding-coach-logo.svg');
 
 class Home extends React.Component {
   render() {
