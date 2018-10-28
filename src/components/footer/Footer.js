@@ -8,12 +8,6 @@ import Modal from 'components/modal/Modal';
 import DonateButton from './DonateButton';
 import styles from './footer.scss';
 
-function handleOnFooterLinkClick(option) {
-  if (option === '' || option === undefined || option === null) return;
-
-  alert(option);
-}
-
 class Footer extends React.Component {
   state = {
     modal: {
