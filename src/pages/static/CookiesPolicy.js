@@ -1,6 +1,7 @@
 import React from 'react';
+import config from 'config/constants';
 
-const CookiesPolicy = () => {
+function CookiesPolicy() {
   return (
     <div>
       <h2>What Are Cookies</h2>
@@ -67,17 +68,19 @@ const CookiesPolicy = () => {
       </ul>
 
       <h2>More Information</h2>
-
       <p>
         Hopefully that has clarified things for you and as was previously mentioned if there is
         something that you aren't sure whether you need or not it's usually safer to leave cookies
         enabled in case it does interact with one of the features you use on our site. This Cookies
         Policy was created with the help of the GDPR Cookies Policy Generator However if you are
         still looking for more information then you can contact us through one of our preferred
-        contact methods: Email: codingcoachio@gmail.com
+        contact methods:
+        <a target="_blank" href={`mailto:${config.contact.EMAIL}`} rel="noopener noreferrer">
+          {config.contact.EMAIL}
+        </a>
       </p>
     </div>
   );
-};
+}
 
-export default CookiesPolicy;
+export { CookiesPolicy };
