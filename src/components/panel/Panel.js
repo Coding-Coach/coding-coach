@@ -13,11 +13,11 @@ import styles from './assets/panel.scss';
  *       </div>
  *     </PanelContent>
  *     <PanelFooter>
+ *        <small>you have x seconds to accept</small>
  *        <button>Click me!</button>
  *     </PanelFooter>
  *   </Panel>
  */
-
 export function Panel({ children }) {
   return <div className={styles.panel}>{children}</div>;
 }
@@ -31,7 +31,7 @@ export function PanelHeader({ children }) {
 }
 
 export function PanelContent({ children }) {
-  return <footer className={styles.content}>{children}</footer>;
+  return <div className={styles.content}>{children}</div>;
 }
 
 export function PanelFooter({ children }) {

@@ -6,45 +6,23 @@ import styles from './assets/home.scss';
 import Button from 'components/button/Button';
 import Navbar from 'components/navbar/Navbar';
 import Image from 'components/image/Image';
-import Modal from 'components/modal/Modal';
 import HomeSection from './components/HomeSection';
 import SocialMedia from './components/SocialMedia';
 import Footer from 'components/footer/Footer';
 import ImageAbout from './assets/images/about.svg';
 import ImageMission from './assets/images/mission.svg';
 import ImageContact from './assets/images/contact.svg';
-import { Panel, PanelHeader, PanelContent, PanelFooter } from 'components/panel/Panel';
 
 import config from 'config/constants';
 
 const heroImage = require('./assets/images/meeting.svg');
 
 class Home extends React.Component {
-  state = {
-    showModal: false,
-  };
-
-  toggleModal = () => this.setState({ showModal: !this.state.showModal });
-
   render() {
     const { t } = this.props;
 
     return (
       <Fragment>
-        <button onClick={this.toggleModal}>toggle portal</button>
-
-        {this.state.showModal && (
-          <Modal onClose={this.toggleModal}>
-            <Panel>
-              <PanelHeader>this is a title</PanelHeader>
-              <PanelContent>Hello world</PanelContent>
-              <PanelFooter>
-                <button onClick={this.toggleModal}>can toggle too</button>
-              </PanelFooter>
-            </Panel>
-          </Modal>
-        )}
-
         <Navbar />
         <section className={styles.hero}>
           <div className={styles.heroInner}>
