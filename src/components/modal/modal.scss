@@ -25,6 +25,7 @@
         width: auto;
         max-width: 80%;
         height: auto;
+        max-height: 90vh;
     }
 
     @include respond-to(desktop) {
