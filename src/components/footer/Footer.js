@@ -1,5 +1,5 @@
 import React from 'react';
-import { translate } from 'react-i18next';
+import { translate, Interpolate, Trans } from 'react-i18next';
 import 'i18n/i18n';
 
 import Button from 'components/button/Button';
@@ -35,7 +35,24 @@ class Footer extends React.Component {
       <Modal onClose={this.toggleModal}>
         <Panel>
           <PanelHeader>{t(`footer-${option}`)}</PanelHeader>
-          <PanelContent>{t(option)}</PanelContent>
+          <PanelContent>
+            <Interpolate
+              i18nKey={option}
+              lineBreak={
+                <React.Fragment>
+                  <br />
+                </React.Fragment>
+              }
+            />
+            doubleLineBreak=
+            {
+              <React.Fragment>
+                <br />
+                <br />
+              </React.Fragment>
+            }
+            />
+          </PanelContent>
           <PanelFooter>
             <Button size="small" onClick={this.toggleModal}>
               {t('close')}
