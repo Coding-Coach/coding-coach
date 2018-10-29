@@ -35,6 +35,15 @@ class Home extends React.Component {
               <Button onClick={noop} className={styles.callToAction}>
                 {t('home-header-cta')}
               </Button>
+              <Button type="secondary" onClick={noop} className={styles.callToAction}>
+                {t('home-header-cta')}
+              </Button>
+              <Button type="tertiary" onClick={noop} className={styles.callToAction}>
+                {t('home-header-cta')}
+              </Button>
+              <Button type="danger" onClick={noop} className={styles.callToAction}>
+                {t('home-header-cta')}
+              </Button>
             </header>
             <Image className={styles.heroImage} alt={t('home-header-media-alt')} src={heroImage} />
           </div>

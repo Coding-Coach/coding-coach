@@ -23,8 +23,7 @@
     box-shadow: 0px 7px 10px rgba($color-primary-darker, 0.5);
     color: $color-white;
 
-    &:hover,
-    &:focus {
+    &:hover, &:focus {
       box-shadow: 0px 4px 5px rgba($color-primary-darker, 0.6);
     }
 
@@ -41,7 +40,7 @@
     box-sizing: border-box;
     border: 2px solid $color-primary;
 
-    &:hover {
+    &:hover, &:focus {
       box-shadow: 0px 4px 5px rgba($color-primary-darker, 0.6);
     }
 
@@ -57,7 +56,7 @@
     color: $color-primary-darker;
     box-sizing: border-box;
 
-    &:hover {
+    &:hover, &:focus {
       text-decoration: underline;
     }
 
@@ -68,7 +67,7 @@
     box-shadow: 0px 7px 10px rgba($color-danger-darker, 0.5);
     color: $color-white;
 
-    &:hover {
+    &:hover, &:focus {
       box-shadow: 0px 4px 5px rgba($color-danger-darker, 0.6);
     }
 
