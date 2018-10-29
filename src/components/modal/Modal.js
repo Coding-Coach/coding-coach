@@ -29,9 +29,9 @@ class Modal extends React.Component {
     const { onClose } = this.props;
 
     return (
-      <div className={classNames(styles.modal)} onClick={onClose}>
-        <div onClick={(e) => e.preventDefault()} className={classNames(styles.innerModal)}>
-          <button onClick={onClose} className={classNames(styles.closeButton)}>
+      <div className={styles.modal} onClick={onClose}>
+        <div onClick={(e) => e.preventDefault()} className={styles.innerModal}>
+          <button onClick={onClose} className={styles.closeButton}>
             x
           </button>
           {this.props.children}
