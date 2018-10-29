@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import { translate, Interpolate } from 'react-i18next';
 import 'i18n/i18n';
 
-import { noop } from 'utils/noop';
 import styles from './assets/home.scss';
 import Button from 'components/button/Button';
 import Navbar from 'components/navbar/Navbar';
