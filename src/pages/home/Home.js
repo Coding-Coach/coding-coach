@@ -19,6 +19,12 @@ import config from 'config/constants';
 const heroImage = require('./assets/images/coding-coach-logo.svg');
 
 class Home extends React.Component {
+  handleOnClickCTA = () => {
+    document.getElementById('about').scrollIntoView({
+      behavior: 'smooth',
+    });
+  };
+
   render() {
     const { t } = this.props;
 
@@ -32,7 +38,7 @@ class Home extends React.Component {
                 <span>{t('home-header-title')}</span>
               </h1>
               <h2 className={styles.heroSubtitle}>{t('home-header-subtitle')}</h2>
-              <Button onClick={noop} className={styles.callToAction}>
+              <Button onClick={this.handleOnClickCTA} className={styles.callToAction}>
                 {t('home-header-cta')}
               </Button>
             </header>
