@@ -35,7 +35,7 @@ class Footer extends React.Component {
   renderModalByOption = (option, t) => {
     return (
       <Modal onClose={this.toggleModal}>
-        <Panel className={classesPanel}>
+        <Panel classes={classesPanel}>
           <PanelHeader>{t(`footer-${option}`)}</PanelHeader>
           <PanelContent>{this.getContentByOption(option)}</PanelContent>
           <PanelFooter>

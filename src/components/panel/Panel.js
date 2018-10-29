@@ -19,11 +19,9 @@ import styles from './assets/panel.scss';
  *     </PanelFooter>
  *   </Panel>
  */
-export function Panel({ className, children }) {
+export function Panel({ classes, children }) {
   return (
-    <div className={classNames(className ? className.panelRoot : null, styles.panel)}>
-      {children}
-    </div>
+    <div className={classNames(classes ? classes.panelRoot : null, styles.panel)}>{children}</div>
   );
 }
 
