@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { translate, Interpolate } from 'react-i18next';
 import 'i18n/i18n';
 
+import { noop } from 'utils/noop';
 import styles from './assets/home.scss';
 import Button from 'components/button/Button';
 import Navbar from 'components/navbar/Navbar';
@@ -31,7 +32,7 @@ class Home extends React.Component {
                 <span>{t('home-header-title')}</span>
               </h1>
               <h2 className={styles.heroSubtitle}>{t('home-header-subtitle')}</h2>
-              <Button onClick={() => null} className={styles.callToAction}>
+              <Button onClick={noop} className={styles.callToAction}>
                 {t('home-header-cta')}
               </Button>
             </header>
