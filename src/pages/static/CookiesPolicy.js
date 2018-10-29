@@ -1,6 +1,7 @@
 import React from 'react';
 import config from 'config/constants';
 
+// @todo Create this content via Markdown
 function CookiesPolicy() {
   return (
     <div>

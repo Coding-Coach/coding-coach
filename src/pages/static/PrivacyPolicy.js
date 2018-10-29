@@ -1,5 +1,6 @@
 import React from 'react';
 
+// @todo Create this content via Markdown
 function PrivacyPolicy() {
   return (
     <div>
