@@ -17,7 +17,7 @@ class Modal extends React.Component {
   }
 
   componentWillUnmount() {
-    document.body.classList.add(Modal.CLASS_OVERFLOW_HIDDEN);
+    document.body.classList.remove(Modal.CLASS_OVERFLOW_HIDDEN);
     document.body.removeChild(this.modal);
   }
 
