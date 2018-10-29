@@ -61,14 +61,7 @@ class Home extends React.Component {
               <Interpolate
                 i18nKey="home-contact-text"
                 slackOrg={
-                  <a
-                    href={config.contact.SLACK_URL}
-                    className={styles.slackOrg}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      this.setState({ showModal: true });
-                    }}
-                  >
+                  <a href={config.contact.SLACK_URL} className={styles.slackOrg}>
                     {t('slack-org')}
                   </a>
                 }
