@@ -28,10 +28,7 @@ class Footer extends React.Component {
     });
   };
 
-  toggleModal = () => {
-    const { show } = this.state.modal;
-    this.setState({ modal: { show: !show } });
-  };
+  toggleModal = () => this.setState({ modal: { show: !this.state.modal.show } });
 
   renderModalByOption = (option, t) => {
     return (
