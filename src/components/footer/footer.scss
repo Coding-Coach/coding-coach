@@ -47,7 +47,6 @@
 }
 
 .bodyBorder {
-
   a {
     color: $color-primary;
     text-decoration: none;
@@ -60,4 +59,8 @@
       color: $color-white;
     }
   }
+}
+
+.panelRoot {
+  height: 100%;
 }

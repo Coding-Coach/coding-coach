@@ -11,6 +11,8 @@ import Button from 'components/button/Button';
 import DonateButton from './DonateButton';
 import styles from './footer.scss';
 
+const classesPanel = { panelRoot: styles.panelRoot };
+
 class Footer extends React.Component {
   state = {
     modal: {
@@ -33,7 +35,7 @@ class Footer extends React.Component {
   renderModalByOption = (option, t) => {
     return (
       <Modal onClose={this.toggleModal}>
-        <Panel>
+        <Panel className={classesPanel}>
           <PanelHeader>{t(`footer-${option}`)}</PanelHeader>
           <PanelContent>{this.getContentByOption(option)}</PanelContent>
           <PanelFooter>

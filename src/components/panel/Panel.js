@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import styles from './assets/panel.scss';
 
 /**
@@ -18,8 +19,12 @@ import styles from './assets/panel.scss';
  *     </PanelFooter>
  *   </Panel>
  */
-export function Panel({ children }) {
-  return <div className={styles.panel}>{children}</div>;
+export function Panel({ className, children }) {
+  return (
+    <div className={classNames(className ? className.panelRoot : null, styles.panel)}>
+      {children}
+    </div>
+  );
 }
 
 export function PanelHeader({ children }) {
