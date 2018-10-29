@@ -4,9 +4,9 @@ export default function loadEn() {
       'cookie-notification':
         'To help personalize content, tailor and measure ads, and provide a safer experience, we use cookies. By clicking or navigating the site, you agree to allow our collecion of information on and off Coding Coach through cookies. Learn more, including about available controls:',
       'cookie-link': 'Cookies Policy',
-      'footer-terms': 'Terms & Conditions',
+      'footer-terms-and-conditions': 'Terms & Conditions',
       'footer-cookies': 'Cookies',
-      'footer-privacy': 'Privacy Policy',
+      'footer-privacy-policy': 'Privacy Policy',
       'footer-donate': 'Donate!',
       'footer-donate-paypal': 'PayPal - The safer, easier way to pay online!',
       'home-header-title': 'Coding Coach',
@@ -27,6 +27,7 @@ export default function loadEn() {
         'We believe that mentorship should be accessible to all people regardless of location or financial standing. In pursuit of this goal we will provide a free and open source platform to facilitate mentorship connections. Our mission is to foster a greater sense of collaboration and inclusiveness in the technical industry by providing a platform to aid the mentorship process.',
       'home-mission-media-alt': 'Group of people',
       'slack-org': 'Slack Organization',
+      close: 'Close',
     },
   };
 }

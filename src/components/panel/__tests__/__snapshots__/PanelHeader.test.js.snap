@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`renders the PanelHeader component 1`] = `
-<h2
-  class="heading"
-/>
-`;

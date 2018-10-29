@@ -32,23 +32,21 @@ exports[`renders the footer element 1`] = `
         />
       </form>
     </div>
-    <div>
-      <a
-        href="#terms"
-      >
-        Terms & Conditions
-      </a>
-      <a
-        href="#cookies"
-      >
-        Cookies
-      </a>
-      <a
-        href="#privacy"
-      >
-        Privacy Policy
-      </a>
-    </div>
+    <a
+      href="#terms"
+    >
+      Terms & Conditions
+    </a>
+    <a
+      href="#cookies"
+    >
+      Cookies
+    </a>
+    <a
+      href="#privacy"
+    >
+      Privacy Policy
+    </a>
   </div>
 </footer>
 `;
