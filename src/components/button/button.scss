@@ -14,18 +14,18 @@
   border: none;
   border-radius: 3px;
   transition-property: all;
-  transition-duration: 0.15s;
+  transition-duration: 0.25s;
   font-size: $font-xs;
+  cursor: pointer;
 
   &.primary {
     background: $color-primary;
-    box-shadow: 0px 0px 0px 0px inset $color-primary-darker,
-      0px 0px 20px 3px $color-primary-blur;
+    box-shadow: 0px 7px 10px rgba($color-primary-darker, 0.5);
     color: $color-white;
 
-    &:hover {
-      box-shadow: 0px -5px 0px 0px inset $color-primary-darker,
-        0px 0px 20px 3px $color-primary-blur;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 4px 5px rgba($color-primary-darker, 0.6);
     }
 
     &:active {
@@ -36,16 +36,13 @@
 
   &.secondary {
     background: transparent;
-    box-shadow: 0px 0px 0px 0px inset $color-primary,
-    0px 0px 20px 0px inset $color-primary-blur;
+    box-shadow: 0px 7px 10px rgba($color-primary-darker, 0.5);
     color: $color-primary;
     box-sizing: border-box;
-    cursor: pointer;
     border: 2px solid $color-primary;
 
     &:hover {
-      box-shadow: 0px -3px 0px 0px inset $color-primary,
-        0px 0px 20px 0px inset $color-primary-blur;
+      box-shadow: 0px 4px 5px rgba($color-primary-darker, 0.6);
     }
 
     &:active {
@@ -59,7 +56,6 @@
     background: transparent;
     color: $color-primary-darker;
     box-sizing: border-box;
-    cursor: pointer;
 
     &:hover {
       text-decoration: underline;
@@ -69,13 +65,11 @@
 
   &.danger {
     background: $color-danger;
-    box-shadow: 0px 0px 0px 0px inset $color-danger-darker,
-    0px 0px 20px 3px $color-danger-blur;
+    box-shadow: 0px 7px 10px rgba($color-danger-darker, 0.5);
     color: $color-white;
 
     &:hover {
-      box-shadow: 0px -5px 0px 0px inset $color-danger-darker,
-        0px 0px 20px 3px $color-danger-blur;
+      box-shadow: 0px 4px 5px rgba($color-danger-darker, 0.6);
     }
 
     &:active {
@@ -94,11 +88,6 @@
       background: $color-grey-light;
       cursor: not-allowed;
     }
-  }
-
-  /* Common Hover and Active styles for all Buttons*/
-  &:hover {
-    cursor: pointer;
   }
 
   &:active {
