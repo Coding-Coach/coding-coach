@@ -21,7 +21,7 @@ const Button = (props) => {
       className={classNames(
         styles.button,
         styles[type] || styles.primary,
-        styles[size] || styles.default,
+        styles[size] || styles.mmedium,
         fullWidth && styles.fullWidth,
       )}
     >
