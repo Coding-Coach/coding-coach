@@ -29,7 +29,8 @@
     "sass": "sass --watch src/styles/scss:src/styles/css",
     "precommit": "lint-staged",
     "analyze": "source-map-explorer build/static/js/main.*",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "postbuild": "react-snap"
   },
   "husky": {
     "hooks": {
@@ -66,6 +67,7 @@
     "node-sass": "^4.9.3",
     "prettier": "^1.14.2",
     "proxyquire": "^2.1.0",
+    "react-snap": "^1.19.0",
     "react-testing-library": "^5.0.1",
     "resolve-url-loader": "^3.0.0",
     "rewire": "^4.0.1",
