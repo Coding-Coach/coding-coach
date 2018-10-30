@@ -21,6 +21,7 @@
   "scripts": {
     "start": "node scripts/custom-config start",
     "build": "node scripts/custom-config build",
+    "build:prod": "node scripts/custom-config build && react-snap",
     "deploy": "gh-pages -d build",
     "lint": "eslint src/",
     "test": "node scripts/custom-config test --env=jsdom",
@@ -29,8 +30,7 @@
     "sass": "sass --watch src/styles/scss:src/styles/css",
     "precommit": "lint-staged",
     "analyze": "source-map-explorer build/static/js/main.*",
-    "storybook": "start-storybook -p 9001 -c .storybook",
-    "postbuild": "react-snap"
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "husky": {
     "hooks": {
