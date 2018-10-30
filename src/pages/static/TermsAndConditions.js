@@ -56,21 +56,23 @@ function TermsAndConditions() {
         agree that Coding Coach shall not be responsible or liable, directly or indirectly, for any
         damage or loss caused or alleged to be caused by or in connection with use of or reliance on
         any such content, goods or services available on or through any such web sites or services.
-        <p>
-          We strongly advise you to read the terms and conditions and privacy policies of any
-          third-party web sites or services that you visit.
-        </p>
-        <h2>Termination</h2>
-        <p>
-          We may terminate or suspend your account immediately, without prior notice or liability,
-          for any reason whatsoever, including without limitation if you breach the Terms. Upon
-          termination, your right to use the Service will immediately cease. If you wish to
-          terminate your account, you may simply discontinue using the Service. Governing Law
-        </p>
-        <p>
-          These Terms shall be governed and construed in accordance with the laws of
-          Baden-Württemberg, Germany, without regard to its conflict of law provisions.
-        </p>
+      </p>
+      <p>
+        We strongly advise you to read the terms and conditions and privacy policies of any
+        third-party web sites or services that you visit.
+      </p>
+      <h2>Termination</h2>
+      <p>
+        We may terminate or suspend your account immediately, without prior notice or liability, for
+        any reason whatsoever, including without limitation if you breach the Terms. Upon
+        termination, your right to use the Service will immediately cease. If you wish to terminate
+        your account, you may simply discontinue using the Service. Governing Law
+      </p>
+      <p>
+        These Terms shall be governed and construed in accordance with the laws of
+        Baden-Württemberg, Germany, without regard to its conflict of law provisions.
+      </p>
+      <p>
         Our failure to enforce any right or provision of these Terms will not be considered a waiver
         of those rights. If any provision of these Terms is held to be invalid or unenforceable by a
         court, the remaining provisions of these Terms will remain in effect. These Terms constitute
