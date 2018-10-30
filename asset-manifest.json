@@ -1,7 +1,14 @@
 {
-  "main.css": "static/css/main.6aa72df0.css",
-  "main.css.map": "static/css/main.6aa72df0.css.map",
-  "main.js": "static/js/main.b4eeee65.js",
-  "main.js.map": "static/js/main.b4eeee65.js.map",
-  "static/media/mentor.jpg": "static/media/mentor.4119745f.jpg"
+  "main.js": "static/js/main.59b9f4b0.js",
+  "main.js.map": "static/js/main.59b9f4b0.js.map",
+  "static/media/about.svg": "static/media/about.f00fc8de.svg",
+  "static/media/coding-coach-logo.svg": "static/media/coding-coach-logo.b6509b13.svg",
+  "static/media/contact.svg": "static/media/contact.052cb3b0.svg",
+  "static/media/fjalla-one-v5-latin_latin-ext-regular.woff": "static/media/fjalla-one-v5-latin_latin-ext-regular.96a1ada5.woff",
+  "static/media/fjalla-one-v5-latin_latin-ext-regular.woff2": "static/media/fjalla-one-v5-latin_latin-ext-regular.e10d0661.woff2",
+  "static/media/lato-v14-latin_latin-ext-regular.woff": "static/media/lato-v14-latin_latin-ext-regular.f18cac26.woff",
+  "static/media/lato-v14-latin_latin-ext-regular.woff2": "static/media/lato-v14-latin_latin-ext-regular.b9277906.woff2",
+  "static/media/mission.svg": "static/media/mission.2681c6b2.svg",
+  "static/media/open-sans-v15-cyrillic-ext_vietnamese_cyrillic_greek_greek-ext_latin_latin-ext-regular.woff": "static/media/open-sans-v15-cyrillic-ext_vietnamese_cyrillic_greek_greek-ext_latin_latin-ext-regular.86f83cc5.woff",
+  "static/media/open-sans-v15-cyrillic-ext_vietnamese_cyrillic_greek_greek-ext_latin_latin-ext-regular.woff2": "static/media/open-sans-v15-cyrillic-ext_vietnamese_cyrillic_greek_greek-ext_latin_latin-ext-regular.e78dce53.woff2"
 }
