@@ -6,6 +6,7 @@ import styles from './assets/home.scss';
 import Button from 'components/button/Button';
 import Navbar from 'components/navbar/Navbar';
 import Image from 'components/image/Image';
+import OverlayCookie from 'components/overlayCookie/OverlayCookie';
 import HomeSection from './components/HomeSection';
 import SocialMedia from './components/SocialMedia';
 import Footer from 'components/footer/Footer';
@@ -86,6 +87,7 @@ class Home extends React.Component {
           </HomeSection>
         </main>
         <Footer />
+        <OverlayCookie />
       </Fragment>
     );
   }
