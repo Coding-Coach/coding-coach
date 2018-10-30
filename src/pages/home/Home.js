@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import { translate, Interpolate } from 'react-i18next';
 import 'i18n/i18n';
 
@@ -7,9 +7,10 @@ import Button from 'components/button/Button';
 import Navbar from 'components/navbar/Navbar';
 import Image from 'components/image/Image';
 import OverlayCookie from 'components/overlayCookie/OverlayCookie';
+import Footer from 'components/footer/Footer';
+import LegalModal from './components/LegalModal';
 import HomeSection from './components/HomeSection';
 import SocialMedia from './components/SocialMedia';
-import Footer from 'components/footer/Footer';
 import ImageAbout from './assets/images/about.svg';
 import ImageMission from './assets/images/mission.svg';
 import ImageContact from './assets/images/contact.svg';
@@ -18,15 +19,32 @@ import config from 'config/constants';
 
 const heroImage = require('./assets/images/coding-coach-logo.svg');
 
-class Home extends React.Component {
+class Home extends Component {
+  state = {
+    legal: {
+      page: undefined,
+      show: false,
+    },
+  };
+
   handleOnClickCTA = () => {
     document.getElementById('about').scrollIntoView({
       behavior: 'smooth',
     });
   };
 
+  toggleModal = (page) => {
+    this.setState({
+      legal: {
+        show: !this.state.legal.show,
+        page,
+      },
+    });
+  };
+
   render() {
     const { t } = this.props;
+    const { legal } = this.state;
 
     return (
       <Fragment>
@@ -86,8 +104,9 @@ class Home extends React.Component {
             <SocialMedia />
           </HomeSection>
         </main>
-        <Footer />
-        <OverlayCookie />
+        <Footer onClickLegal={this.toggleModal} />
+        <OverlayCookie onReadMore={this.toggleModal} />
+        {legal.show && <LegalModal page={legal.page} onClose={this.toggleModal} />}
       </Fragment>
     );
   }
