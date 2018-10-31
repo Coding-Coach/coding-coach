@@ -10,7 +10,7 @@ export default function loadEn() {
       'footer-donate': 'Donate!',
       'footer-donate-paypal': 'PayPal - The safer, easier way to pay online!',
       'home-header-title': 'Coding Coach',
-      'home-header-subtitle': 'Connecting developers with mentor worldwide',
+      'home-header-subtitle': 'Connecting developers with mentors worldwide',
       'home-header-cta': 'Learn More',
       'home-header-media-alt': 'This is the logo for Coding Coach',
       'home-about-title': 'About',
