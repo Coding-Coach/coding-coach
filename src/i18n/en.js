@@ -4,9 +4,9 @@ export default function loadEn() {
       'cookie-notification':
         'To help personalize content, tailor and measure ads, and provide a safer experience, we use cookies. By clicking or navigating the site, you agree to allow our collecion of information on and off Coding Coach through cookies. Learn more, including about available controls:',
       'cookie-link': 'Cookies Policy',
-      'footer-terms-and-conditions': 'Terms & Conditions',
-      'footer-cookies': 'Cookies',
-      'footer-privacy-policy': 'Privacy Policy',
+      'legal-terms-and-conditions': 'Terms & Conditions',
+      'legal-cookies': 'Cookies',
+      'legal-privacy-policy': 'Privacy Policy',
       'footer-donate': 'Donate!',
       'footer-donate-paypal': 'PayPal - The safer, easier way to pay online!',
       'home-header-title': 'Coding Coach',

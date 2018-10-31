@@ -29,10 +29,7 @@ class Modal extends React.Component {
 
     return (
       <div className={styles.modal} onClick={onClose}>
-        <div onClick={(e) => e.preventDefault()} className={styles.innerModal}>
-          <button onClick={onClose} className={styles.closeButton}>
-            x
-          </button>
+        <div onClick={(e) => e.stopPropagation()} className={styles.innerModal}>
           {this.props.children}
         </div>
       </div>

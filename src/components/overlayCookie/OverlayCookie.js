@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { func } from 'prop-types';
 import { translate } from 'react-i18next';
 import 'i18n/i18n';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,6 +9,10 @@ import styles from './overlayCookie.scss';
 class OverlayCookie extends Component {
   state = {
     cookiesAccepted: 'false',
+  };
+
+  static propTypes = {
+    onReadMore: func.isRequired,
   };
 
   acceptCookies = () => {
@@ -36,7 +41,7 @@ class OverlayCookie extends Component {
 
   render() {
     const { cookiesAccepted } = this.state;
-    const { t } = this.props;
+    const { onReadMore, t } = this.props;
 
     if (cookiesAccepted === true) return null;
 
@@ -46,7 +51,9 @@ class OverlayCookie extends Component {
           <p className={styles.cookieText}>
             {t('cookie-notification') + ' '}
             <span>
-              <a href="#cookies">{t('cookie-link')}</a>
+              <a href="#cookies" onClick={() => onReadMore('cookies')}>
+                {t('cookie-link')}
+              </a>
             </span>
           </p>
           <p className={styles.cookieIcon}>

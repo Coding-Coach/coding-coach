@@ -4,6 +4,11 @@ import 'i18n/i18n';
 import Config from 'config/constants';
 import Image from 'components/image/Image';
 
+/**
+ * @TODO: We are removing this component for now, there are some
+ * issues with the paypal account, once resolved we will put it back
+ * in the footer
+ */
 function DonateButton({ t }) {
   return (
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
