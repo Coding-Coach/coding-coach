@@ -3,20 +3,13 @@ import ReactDOM from 'react-dom';
 import styles from './modal.scss';
 
 class Modal extends React.Component {
-  static CLASS_OVERFLOW_HIDDEN = 'u-overflowHidden';
-
   constructor(props) {
     super(props);
     this.modal = document.createElement('div');
     document.body.appendChild(this.modal);
   }
 
-  componentDidMount() {
-    document.body.classList.add(Modal.CLASS_OVERFLOW_HIDDEN);
-  }
-
   componentWillUnmount() {
-    document.body.classList.remove(Modal.CLASS_OVERFLOW_HIDDEN);
     document.body.removeChild(this.modal);
   }
 
