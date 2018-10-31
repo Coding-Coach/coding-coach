@@ -43,6 +43,18 @@
   font-size: $font-xs;
   cursor: pointer;
 
+  &.square {
+    border-radius: 0;
+  }
+  
+  &.rounded {
+    border-radius: $border-radius-rounded;
+  }
+  
+  &.pill {
+    border-radius: 500px;
+  }
+
   &.primary {
     background: $color-primary;
     color: $color-white;
