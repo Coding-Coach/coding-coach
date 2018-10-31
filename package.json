@@ -21,6 +21,7 @@
   "scripts": {
     "start": "node scripts/custom-config start",
     "build": "node scripts/custom-config build",
+    "build:prod": "node scripts/custom-config build && react-snap",
     "deploy": "gh-pages -d build",
     "lint": "eslint src/",
     "test": "node scripts/custom-config test --env=jsdom",
@@ -66,6 +67,7 @@
     "node-sass": "^4.9.3",
     "prettier": "^1.14.2",
     "proxyquire": "^2.1.0",
+    "react-snap": "^1.19.0",
     "react-testing-library": "^5.0.1",
     "resolve-url-loader": "^3.0.0",
     "rewire": "^4.0.1",
