@@ -21,7 +21,7 @@ notifications:
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: 3fd0c2ac668b8a29e01d9e15f8c31814241cc32e
+  github-token: $GITHUB_TOKEN
   keep-history: true
   on:
     branch: feature/automate_deployment
