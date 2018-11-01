@@ -18,3 +18,10 @@ script:
 after_script: greenkeeper-lockfile-upload
 notifications:
   email: true
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: 3fd0c2ac668b8a29e01d9e15f8c31814241cc32e
+  keep-history: true
+  on:
+    branch: feature/automate_deployment
