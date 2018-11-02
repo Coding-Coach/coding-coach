@@ -21,9 +21,9 @@ const Button = (props) => {
       onClick={onClick}
       className={classNames(
         styles.button,
-        styles[type] || styles.primary,
-        styles[size] || styles.medium,
-        styles[shape] || styles.rounded,
+        styles[type],
+        styles[size],
+        styles[shape],
         fullWidth && styles.fullWidth,
       )}
     >
