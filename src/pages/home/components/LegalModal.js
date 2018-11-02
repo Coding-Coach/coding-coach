@@ -12,7 +12,6 @@ import { TermsAndConditions } from 'pages/static/TermsAndConditions';
 import styles from './LegalModal.scss';
 
 const classesPanel = { panelRoot: styles.panelRoot };
-const classesPanelPrivacy = { panelPrivacy: styles.panelPrivacy };
 
 function LegalModal({ onClose, page, t }) {
   let Content = CookiesPolicy;
@@ -27,7 +26,7 @@ function LegalModal({ onClose, page, t }) {
 
   return (
     <Modal onClose={onClose}>
-      <Panel classes={page === 'privacy-policy' ? classesPanelPrivacy : classesPanel}>
+      <Panel classes={classesPanel}>
         <PanelHeader>{t(`legal-${page}`)}</PanelHeader>
         <PanelContent>
           <Content />
