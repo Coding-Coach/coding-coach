@@ -86,7 +86,12 @@ class Home extends Component {
               <Interpolate
                 i18nKey="home-contact-text"
                 slackOrg={
-                  <a href={config.contact.SLACK_URL} className={styles.slackOrg}>
+                  <a
+                    href={config.contact.SLACK_URL}
+                    className={styles.slackOrg}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {t('slack-org')}
                   </a>
                 }
