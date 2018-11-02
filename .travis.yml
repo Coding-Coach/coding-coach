@@ -11,17 +11,22 @@ before_install:
 install: yarn
 before_script:
   - greenkeeper-lockfile-update
+  - git config --global user.name "Abhishek Prakash"
+  - git config --global user.email "abhishekabby@gmail.com"
+  - git remote rm origin
+  - git remote add origin https://linux-nerd:${GH_TOKEN}@github.com/linux-nerd/coding-coach.git
 script:
   - yarn lint
   - yarn test
   - yarn build
+  - yarn run deploy
 after_script: greenkeeper-lockfile-upload
 notifications:
   email: true
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  on:
-    branch: feature/automate_deployment
+# deploy:
+#   provider: pages
+#   skip-cleanup: true
+#   github-token: $GITHUB_TOKEN
+#   keep-history: true
+#   on:
+#     branch: feature/automate_deployment
