@@ -23,6 +23,7 @@
     "build": "node scripts/custom-config build",
     "build:prod": "node scripts/custom-config build && react-snap",
     "deploy": "gh-pages -d build",
+    "predeploy": "yarn build:prod",
     "lint": "eslint src/",
     "test": "node scripts/custom-config test --env=jsdom",
     "test:staged": "cross-env CI=true node scripts/custom-config test --env=jsdom --findRelatedTests",

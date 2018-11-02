@@ -11,18 +11,19 @@ before_install:
 install: yarn
 before_script:
   - greenkeeper-lockfile-update
-  - git config --global user.name "Abhishek Prakash"
-  - git config --global user.email "abhishekabby@gmail.com"
-  - git remote rm origin
-  - git remote add origin https://linux-nerd:${GITHUB_TOKEN}@github.com/linux-nerd/coding-coach.git
 script:
   - yarn lint
   - yarn test
   - yarn build
-  - yarn run deploy
 after_script: greenkeeper-lockfile-upload
 notifications:
   email: true
+after_success:
+  - git config --global user.name "Abhishek Prakash"
+  - git config --global user.email "abhishekabby@gmail.com"
+  - git remote rm origin
+  - git remote add origin https://linux-nerd:${GITHUB_TOKEN}@github.com/linux-nerd/coding-coach.git
+  - yarn run deploy
 # deploy:
 #   provider: pages
 #   skip-cleanup: true
