@@ -34,12 +34,12 @@ class Home extends Component {
   };
 
   toggleModal = (page) => {
-    this.setState({
+    this.setState((prevState) => ({
       legal: {
-        show: !this.state.legal.show,
+        show: !prevState.legal.show,
         page,
       },
-    });
+    }));
   };
 
   render() {
