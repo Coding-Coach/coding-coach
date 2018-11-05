@@ -29,11 +29,11 @@
   font-size: $font-s;
 
   &:not(:last-child) {
-    margin-right: 2em;
+    margin-right: 0.5em;
   }
-  @include respond-to(mobile) {
+  @include respond-to(tablet) {
     &:not(:last-child) {
-      margin-right: 0.5em;
+      margin-right: 2em;
     }
 }
 }
