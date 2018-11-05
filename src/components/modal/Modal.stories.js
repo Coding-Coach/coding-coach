@@ -6,9 +6,7 @@ class ModalExperiment extends React.Component {
   state = { showModal: false };
 
   toggleModal = () => {
-    this.setState({
-      showModal: !this.state.showModal,
-    });
+    this.setState((prevState) => ({ showModal: !prevState.showModal }));
   };
 
   render() {

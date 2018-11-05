@@ -12,7 +12,8 @@
 | disabled  | boolean  |              | no         | Disable button                                |
 | children  | node     |              | yes        | Content of button, can be text or icon        |
 | type      | string   | primary      | no         | primary, secondary, tertiary, danger          |
-| size      | string   | default      | no         | default, small, large                         |
+| size      | string   | medium       | no         | default, small, large                         |
+| shape     | string   | rounded      | no         | square, rounded, pill                         |
 
 
 ### Use Cases
@@ -46,6 +47,22 @@
 <Button type="tertiary" fullWidth>
   Full Width
 </Button>
+```
+
+#### Button Shapes
+```jsx
+<Button shape="square">
+  Large Button
+</Button>
+
+<Button shape="rounded">
+  Small Button
+</Button>
+
+<Button shape="pill">
+  Full Width
+</Button>
+
 ```
 
 
