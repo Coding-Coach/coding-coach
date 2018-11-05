@@ -9,13 +9,12 @@ cache:
 before_install:
   - yarn global add greenkeeper-lockfile@1
 install: yarn
-# before_script:
-#   - greenkeeper-lockfile-update
+before_script: greenkeeper-lockfile-update
 # script:
 #   - yarn lint
 #   - yarn test
 #   - yarn build
-# after_script: greenkeeper-lockfile-upload
+after_script: greenkeeper-lockfile-upload
 jobs:
   include:
     - stage: "lint"
