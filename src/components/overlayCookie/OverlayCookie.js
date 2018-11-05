@@ -52,7 +52,12 @@ class OverlayCookie extends Component {
           <p className={styles.cookieText}>
             {t('cookie-notification') + ' '}
             <span>
-              <Button size="small" type="tertiary" onClick={() => onReadMore('cookies')}>
+              <Button
+                size="small"
+                type="tertiary"
+                typography="capitalize"
+                onClick={() => onReadMore('cookies')}
+              >
                 {t('cookie-link')}
               </Button>
             </span>

@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
  * @param {size} props  small, medium, large,
  * @param {disabled} props  true, false
  * @param {fullWidth} props Button width is 100% of parent
+ * @param {typography} props capitalize, uppercase, lowercase
  */
 const Button = (props) => {
   const { children, type, size, typography, disabled, fullWidth, id, onClick } = props;
