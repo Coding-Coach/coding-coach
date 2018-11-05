@@ -39,7 +39,7 @@ stages:
   - test
   - build
   - name: deploy
-    if: branch = master
+    if: branch = feature/automate_deployment
 notifications:
   email: true
 # after_success:
