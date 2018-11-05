@@ -7,7 +7,6 @@
   line-height: inherit;
   min-width: 96px;
   box-sizing: border-box;
-  text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
   outline: none;
@@ -98,6 +97,18 @@
     vertical-align: middle;
     margin-right: 4px;
   }
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
 }
 
 .default {

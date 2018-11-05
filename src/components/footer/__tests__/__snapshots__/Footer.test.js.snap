@@ -4,21 +4,21 @@ exports[`renders the footer element 1`] = `
 <footer>
   <div>
     <div />
-    <a
-      href="#terms"
+    <button
+      class=""
     >
       Terms & Conditions
-    </a>
-    <a
-      href="#cookies"
+    </button>
+    <button
+      class=""
     >
       Cookies
-    </a>
-    <a
-      href="#privacy"
+    </button>
+    <button
+      class=""
     >
       Privacy Policy
-    </a>
+    </button>
   </div>
 </footer>
 `;

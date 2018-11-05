@@ -41,6 +41,7 @@
   font-size: $font-xxs;
   color: $color-grey-medium;
   text-decoration: none;
+  text-transform: none !important;
   &:hover {
     color:$color-grey-dark;
   }

@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
  * @param {fullWidth} props Button width is 100% of parent
  */
 const Button = (props) => {
-  const { children, type, size, disabled, fullWidth, id, onClick } = props;
+  const { children, type, size, typography, disabled, fullWidth, id, onClick } = props;
 
   return (
     <button
@@ -23,6 +23,7 @@ const Button = (props) => {
         styles[type] || styles.primary,
         styles[size] || styles.default,
         fullWidth && styles.fullWidth,
+        styles[typography] || styles.uppercase,
       )}
     >
       {children}
@@ -33,6 +34,7 @@ const Button = (props) => {
 Button.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   type: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'disabled', 'danger']),
+  typography: PropTypes.oneOf(['uppercase', 'capitalize', 'lowercase']),
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   fullWidth: PropTypes.bool,
@@ -43,6 +45,7 @@ Button.propTypes = {
 Button.defaultProps = {
   size: 'medium',
   type: 'primary',
+  typography: 'uppercase',
 };
 
 export default Button;
