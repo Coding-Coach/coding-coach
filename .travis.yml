@@ -9,21 +9,28 @@ cache:
 before_install:
   - yarn global add greenkeeper-lockfile@1
 install: yarn
-before_script:
-  - greenkeeper-lockfile-update
-script:
-  - yarn lint
-  - yarn test
-  - yarn build
-after_script: greenkeeper-lockfile-upload
+# before_script:
+#   - greenkeeper-lockfile-update
+# script:
+#   - yarn lint
+#   - yarn test
+#   - yarn build
+# after_script: greenkeeper-lockfile-upload
+jobs:
+  include:
+    - stage: "lint"
+      name: "Check for code smell"
+      script: yarn lint
+stages:
+  - lint
 notifications:
   email: true
-after_success:
-  - git config --global user.name "Abhishek Prakash"
-  - git config --global user.email "abhishekabby@gmail.com"
-  - git remote rm origin
-  - git remote add origin https://linux-nerd:${GITHUB_TOKEN}@github.com/linux-nerd/coding-coach.git
-  - yarn run deploy
+# after_success:
+#   - git config --global user.name "Abhishek Prakash"
+#   - git config --global user.email "abhishekabby@gmail.com"
+#   - git remote rm origin
+#   - git remote add origin https://linux-nerd:${GITHUB_TOKEN}@github.com/linux-nerd/coding-coach.git
+#   - yarn run deploy
 # deploy:
 #   provider: pages
 #   skip-cleanup: true
