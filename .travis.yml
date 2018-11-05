@@ -28,7 +28,7 @@ jobs:
         - git config --global user.name "Abhishek Prakash"
         - git config --global user.email "abhishekabby@gmail.com"
         - git remote rm origin
-        - git remote add origin https://linux-nerd:$GITHUB_TOKEN@github.com/linux-nerd/coding-coach.git
+        - git remote add origin "https://linux-nerd:${GITHUB_TOKEN}@github.com/linux-nerd/coding-coach.git"
         - yarn run deploy
 stages:
   # - lint
