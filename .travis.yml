@@ -38,8 +38,8 @@ stages:
   - lint
   - test
   - build
-  - name: deploy
-    if: branch = master
+  # - name: deploy
+  #   if: branch = master
 notifications:
   email: true
 # after_success:
