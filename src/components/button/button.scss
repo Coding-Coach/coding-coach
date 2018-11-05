@@ -1,6 +1,31 @@
 @import '~theme/base/variables';
 @import '~theme/base/spacing';
 
+
+@mixin btn-box-shadow ($color) {
+  box-shadow: 0px 7px 10px rgba($color, 0.5);
+
+  &:hover, &:focus {
+    box-shadow: 0px 4px 5px rgba($color, 0.6);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+@mixin btn-borders ($color, $color-darker) {
+  border: 3px solid $color;
+
+  &:hover, &:focus {
+    border-bottom-color: $color-darker;
+  }
+
+  &:active {
+    border-color: $color-darker;
+  }
+}
+
 .button {
   display: inline-block;
   min-height: $button-default;
@@ -18,14 +43,24 @@
   font-size: $font-xs;
   cursor: pointer;
 
+  &.square {
+    border-radius: 0;
+  }
+  
+  &.rounded {
+    border-radius: $border-radius-rounded;
+  }
+  
+  &.pill {
+    border-radius: 500px;
+  }
+
   &.primary {
     background: $color-primary;
-    box-shadow: 0px 7px 10px rgba($color-primary-darker, 0.5);
     color: $color-white;
+    @include btn-box-shadow($color-primary-darker);
+    @include btn-borders($color-primary, $color-primary-darker);
 
-    &:hover, &:focus {
-      box-shadow: 0px 4px 5px rgba($color-primary-darker, 0.6);
-    }
 
     &:active {
       background: $color-primary-darker;
@@ -35,18 +70,12 @@
 
   &.secondary {
     background: transparent;
-    box-shadow: 0px 7px 10px rgba($color-primary-darker, 0.5);
     color: $color-primary;
-    box-sizing: border-box;
-    border: 2px solid $color-primary;
-
-    &:hover, &:focus {
-      box-shadow: 0px 4px 5px rgba($color-primary-darker, 0.6);
-    }
+    @include btn-box-shadow($color-primary-darker);
+    @include btn-borders($color-primary, $color-primary);
 
     &:active {
       background: $color-primary;
-      box-shadow: none;
       color: $color-white;
     }
   }
@@ -54,22 +83,17 @@
   &.tertiary {
     background: transparent;
     color: $color-primary-darker;
-    box-sizing: border-box;
 
     &:hover, &:focus {
       text-decoration: underline;
     }
-
   }
 
   &.danger {
     background: $color-danger;
-    box-shadow: 0px 7px 10px rgba($color-danger-darker, 0.5);
     color: $color-white;
-
-    &:hover, &:focus {
-      box-shadow: 0px 4px 5px rgba($color-danger-darker, 0.6);
-    }
+    @include btn-box-shadow($color-danger-darker);
+    @include btn-borders($color-danger, $color-danger-darker);
 
     &:active {
       background: $color-danger-darker;
@@ -77,15 +101,15 @@
   }
 
   &:disabled {
+    cursor: not-allowed;
     background: $color-grey-light;
-    box-shadow: 0px 0px 20px 3px $color-grey-light;
     color: $color-grey;
+    border: none;
+    @include btn-box-shadow($color-grey-light);
 
     &:hover, &:active {
       transform: none;
-      box-shadow: 0px 0px 20px 3px $color-grey-light;
       background: $color-grey-light;
-      cursor: not-allowed;
     }
   }
 
@@ -93,14 +117,20 @@
     text-shadow: none;
   }
 
-  // For icons and svgs
   i, svg {
     vertical-align: middle;
     margin-right: 4px;
   }
 }
 
-.default {
+.small {
+  composes: PHS;
+  min-height: $button-small;
+  line-height: $button-small;
+  font-size: $font-xxs
+}
+
+.medium {
   composes: PHM;
 }
 
@@ -109,13 +139,6 @@
   min-height: $button-large;
   line-height: $button-large;
   font-size: $font-l;
-}
-
-.small {
-  composes: PHS;
-  min-height: $button-small;
-  line-height: $button-small;
-  font-size: $font-xxs
 }
 
 .fullWidth {
