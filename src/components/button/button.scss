@@ -111,6 +111,10 @@
   text-transform: lowercase;
 }
 
+.none{
+  text-transform: none;
+}
+
 .default {
   composes: PHM;
 }
