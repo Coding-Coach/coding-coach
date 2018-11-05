@@ -10,10 +10,11 @@
 
 .inner {
   @include generalAlignment();
-
-  @include respond-to(mobile) {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 1rem;
+  @include respond-to(tablet) {
+    justify-content:  flex-start;
     padding: 0 2rem;
   }
 }
@@ -30,10 +31,9 @@
   &:not(:last-child) {
     margin-right: 2em;
   }
-  
   @include respond-to(mobile) {
     &:not(:last-child) {
       margin-right: 0.5em;
     }
-  }
+}
 }

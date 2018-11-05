@@ -32,17 +32,11 @@
   }
 */
 
-$mobile-and-smallest: 320px; // iPhone SE & smaller
 $tablet-and-wider: 768px; // Tablet
 $desktop-and-wider: 1024px; // Desktop
 $desktop-large-and-wider: 1440px; // Large desktops
 
 @mixin respond-to($media) {
-  @if $media == mobile {
-    @media screen and (max-width: $mobile-and-smallest) {
-      @content;
-    }
-  }
   @if $media == tablet {
     @media screen and (min-width: $tablet-and-wider) {
         @content;
