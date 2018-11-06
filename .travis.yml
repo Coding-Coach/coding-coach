@@ -13,15 +13,15 @@ before_script: greenkeeper-lockfile-update
 after_script: greenkeeper-lockfile-upload
 jobs:
   include:
-    # - stage: "lint"
-    #   name: "Check for code smell"
-    #   script: yarn lint
-    # - stage: "test"
-    #   name: "Unit Test"
-    #   script: yarn test
-    # - stage: "build"
-    #   name: "Build app"
-    #   script: yarn build
+    - stage: "lint"
+      name: "Check for code smell"
+      script: yarn lint
+    - stage: "test"
+      name: "Unit Test"
+      script: yarn test
+    - stage: "build"
+      name: "Build app"
+      script: yarn build
     - stage: "deploy"
       name: "Deploy to GH Pages"
       script: 
@@ -29,14 +29,11 @@ jobs:
         - git config --global user.email "${Email}"
         - git remote rm origin
         - git remote add origin "https://linux-nerd:${GITHUB_TOKEN}@github.com/linux-nerd/coding-coach.git"
-        # - echo $GITHUB_TOKEN
-        # - echo https://linux-nerd:${GITHUB_TOKEN}@github.com/linux-nerd/coding-coach.git
-        # - echo https://linux-nerd:$GITHUB_TOKEN@github.com/linux-nerd/coding-coach.git
         - yarn run deploy
 stages:
-  # - lint
-  # - test
-  # - build
+  - lint
+  - test
+  - build
   - name: deploy
     if: branch = feature/automate_deployment
 notifications:
