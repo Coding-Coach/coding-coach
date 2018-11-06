@@ -5,6 +5,7 @@ import 'i18n/i18n';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import styles from './overlayCookie.scss';
+import Button from 'components/button/Button';
 
 class OverlayCookie extends Component {
   state = {
@@ -51,9 +52,14 @@ class OverlayCookie extends Component {
           <p className={styles.cookieText}>
             {t('cookie-notification') + ' '}
             <span>
-              <a href="#cookies" onClick={() => onReadMore('cookies')}>
+              <Button
+                size="small"
+                type="tertiary"
+                typography="capitalize"
+                onClick={() => onReadMore('cookies')}
+              >
                 {t('cookie-link')}
-              </a>
+              </Button>
             </span>
           </p>
           <p className={styles.cookieIcon}>
