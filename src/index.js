@@ -2,8 +2,8 @@ import React from 'react';
 import { hydrate, render } from 'react-dom';
 import App from 'containers/App/App';
 import registerServiceWorker from 'registerServiceWorker';
-// @TODO: Remove this after creating the `Button` component
-import 'theme/index.scss';
+
+import './theme/index.css';
 
 const rootElement = document.getElementById('root');
 if (rootElement.hasChildNodes()) {
