@@ -34,6 +34,11 @@ yarn start
 
 Coding Coach is on Slack! [Click here](https://coding-coach.slack.com/) to join.
 
+## Styling
+Initially we decided to use SASS to handle the CSS. However, over time we decided to use [tailwind](https://tailwindcss.com/docs/what-is-tailwind! We are currently migrating all our styles to tailwind.
+
+Please, every new PR *should be useing tailwind* for styling the components. Eventauly we want to remove SASS, but for now it will be still there to support legacy code.
+
 ### Coding Coach Board
 
 In order to organize all the work, we are using https://zenhub.com to keep track of all the epics and tasks. After you login to ZenHub search for the `Coding-Coach/coding-coach` repository, make sure you don't add someone else fork.
