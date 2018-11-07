@@ -9,9 +9,10 @@ import PropTypes from 'prop-types';
  * @param {size} props  small, medium, large,
  * @param {disabled} props  true, false
  * @param {fullWidth} props Button width is 100% of parent
+ * @param {typography} props capitalize, uppercase, lowercase, only
  */
 const Button = (props) => {
-  const { children, type, size, shape, disabled, fullWidth, id, onClick } = props;
+  const { children, type, size, shape, typography, disabled, fullWidth, id, onClick } = props;
 
   console.log(styles);
   return (
@@ -25,6 +26,7 @@ const Button = (props) => {
         styles[size],
         styles[shape],
         fullWidth && styles.fullWidth,
+        styles[typography] || styles.uppercase,
       )}
     >
       {children}{' '}
@@ -35,6 +37,7 @@ const Button = (props) => {
 Button.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   type: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'disabled', 'danger']),
+  typography: PropTypes.oneOf(['uppercase', 'capitalize', 'lowercase', 'none']),
   shape: PropTypes.oneOf(['square', 'rounded', 'pill']),
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
@@ -46,6 +49,7 @@ Button.propTypes = {
 Button.defaultProps = {
   size: 'medium',
   type: 'primary',
+  typography: 'uppercase',
   shape: 'rounded',
 };
 
