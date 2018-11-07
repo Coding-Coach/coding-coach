@@ -35,9 +35,9 @@ yarn start
 Coding Coach is on Slack! [Click here](https://coding-coach.slack.com/) to join.
 
 ## Styling
-Initially we decided to use SASS to handle the CSS. However, over time we decided to use [tailwind](https://tailwindcss.com/docs/what-is-tailwind! We are currently migrating all our styles to tailwind.
+Initially we decided to use SASS to handle the CSS. However, over time we decided to use [tailwind](https://tailwindcss.com/docs/what-is-tailwind)! We are currently migrating all our styles to tailwind.
 
-Please, every new PR *should be useing tailwind* for styling the components. Eventauly we want to remove SASS, but for now it will be still there to support legacy code.
+Please, every new PR *should be using tailwind* for styling the components. Eventually we want to remove SASS, but for now it will be still there to support legacy code.
 
 ### Coding Coach Board
 
