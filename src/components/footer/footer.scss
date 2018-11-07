@@ -45,3 +45,18 @@
     color:$color-grey-dark;
   }
 }
+
+.bodyBorder {
+  a {
+    color: $color-primary;
+    text-decoration: none;
+    border-bottom: 1px solid $color-black;
+    transition: background 0.15s ease-out, color 0.15s ease-out;
+    cursor: pointer;
+
+    &:hover{
+      background: $color-secondary;
+      color: $color-white;
+    }
+  }
+}
