@@ -6,7 +6,6 @@ import Button from 'components/button/Button';
 import Image from 'components/image/Image';
 
 import heroImage from '../assets/images/coding-coach-logo.svg';
-import styles from '../assets/home.scss';
 
 function Hero({ onClick, t }) {
   return (
