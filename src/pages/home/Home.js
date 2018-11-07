@@ -3,12 +3,12 @@ import { translate, Interpolate } from 'react-i18next';
 import 'i18n/i18n';
 
 import styles from './assets/home.scss';
-import Button from 'components/button/Button';
 import Navbar from 'components/navbar/Navbar';
 import Image from 'components/image/Image';
 import OverlayCookie from 'components/overlayCookie/OverlayCookie';
 import Footer from 'components/footer/Footer';
 import LegalModal from './components/LegalModal';
+import Hero from './components/Hero';
 import HomeSection from './components/HomeSection';
 import SocialMedia from './components/SocialMedia';
 import ImageAbout from './assets/images/about.svg';
@@ -16,8 +16,6 @@ import ImageMission from './assets/images/mission.svg';
 import ImageContact from './assets/images/contact.svg';
 
 import config from 'config/constants';
-
-const heroImage = require('./assets/images/coding-coach-logo.svg');
 
 class Home extends Component {
   state = {
@@ -49,20 +47,7 @@ class Home extends Component {
     return (
       <Fragment>
         <Navbar />
-        <section className={styles.hero}>
-          <div className={styles.heroInner}>
-            <header className={styles.heroTextWrapper}>
-              <h1 className={styles.heroTitle}>
-                <span>{t('home-header-title')}</span>
-              </h1>
-              <h2 className={styles.heroSubtitle}>{t('home-header-subtitle')}</h2>
-              <Button onClick={this.handleOnClickCTA} className={styles.callToAction}>
-                {t('home-header-cta')}
-              </Button>
-            </header>
-            <Image className={styles.heroImage} alt={t('home-header-media-alt')} src={heroImage} />
-          </div>
-        </section>
+        <Hero />
 
         <main className={styles.content}>
           <HomeSection

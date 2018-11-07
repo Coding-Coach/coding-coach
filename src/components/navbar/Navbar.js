@@ -14,7 +14,7 @@ const handleClickOnNavigation = (id) => {
 
 const Navbar = ({ t }) => (
   <nav className="bg-primary-light py-4">
-    <div className="container px-8 flex justify-between md:justify-start">
+    <div className="container flex justify-between md:justify-start">
       <NavLink to="about">{t('About')}</NavLink>
       <NavLink to="mission">{t('Mission')}</NavLink>
       <NavLink to="contact">{t('Contact')}</NavLink>

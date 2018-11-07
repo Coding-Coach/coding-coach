@@ -1531,12 +1531,12 @@ table {
   clear: both;
 }
 
-.font-sans {
-  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+.font-titles {
+  font-family: "Fjalla One", sans-serif;
 }
 
-.font-serif {
-  font-family: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+.font-content {
+  font-family: "Open Sans", sans-serif;
 }
 
 .font-hairline {
@@ -3696,6 +3696,10 @@ table {
   font-size: 3rem;
 }
 
+.text-6xl {
+  font-size: 5.25rem;
+}
+
 .italic {
   font-style: italic;
 }
@@ -4074,6 +4078,8 @@ table {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 @media (min-width: 576px) {
@@ -4101,6 +4107,24 @@ table {
 }
 
 /* Your custom CSS here */
+
+/* open-sans-regular - cyrillic-ext_vietnamese_cyrillic_greek_greek-ext_latin_latin-ext */
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/open-sans-v15-cyrillic-ext_vietnamese_cyrillic_greek_greek-ext_latin_latin-ext/open-sans-v15-cyrillic-ext_vietnamese_cyrillic_greek_greek-ext_latin_latin-ext-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('fonts/open-sans-v15-cyrillic-ext_vietnamese_cyrillic_greek_greek-ext_latin_latin-ext/open-sans-v15-cyrillic-ext_vietnamese_cyrillic_greek_greek-ext_latin_latin-ext-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* fjalla-one-regular - latin_latin-ext */
+
+@font-face {
+  font-family: 'Fjalla One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/fjalla-one-v5-latin_latin-ext/fjalla-one-v5-latin_latin-ext-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('fonts/fjalla-one-v5-latin_latin-ext/fjalla-one-v5-latin_latin-ext-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
 @media (min-width: 576px) {
   .sm\:list-reset {
@@ -5132,12 +5156,12 @@ table {
     clear: both;
   }
 
-  .sm\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  .sm\:font-titles {
+    font-family: "Fjalla One", sans-serif;
   }
 
-  .sm\:font-serif {
-    font-family: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+  .sm\:font-content {
+    font-family: "Open Sans", sans-serif;
   }
 
   .sm\:font-hairline {
@@ -7281,6 +7305,10 @@ table {
     font-size: 3rem;
   }
 
+  .sm\:text-6xl {
+    font-size: 5.25rem;
+  }
+
   .sm\:italic {
     font-style: italic;
   }
@@ -8686,12 +8714,12 @@ table {
     clear: both;
   }
 
-  .md\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  .md\:font-titles {
+    font-family: "Fjalla One", sans-serif;
   }
 
-  .md\:font-serif {
-    font-family: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+  .md\:font-content {
+    font-family: "Open Sans", sans-serif;
   }
 
   .md\:font-hairline {
@@ -10835,6 +10863,10 @@ table {
     font-size: 3rem;
   }
 
+  .md\:text-6xl {
+    font-size: 5.25rem;
+  }
+
   .md\:italic {
     font-style: italic;
   }
@@ -12240,12 +12272,12 @@ table {
     clear: both;
   }
 
-  .lg\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  .lg\:font-titles {
+    font-family: "Fjalla One", sans-serif;
   }
 
-  .lg\:font-serif {
-    font-family: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+  .lg\:font-content {
+    font-family: "Open Sans", sans-serif;
   }
 
   .lg\:font-hairline {
@@ -14389,6 +14421,10 @@ table {
     font-size: 3rem;
   }
 
+  .lg\:text-6xl {
+    font-size: 5.25rem;
+  }
+
   .lg\:italic {
     font-style: italic;
   }
@@ -15794,12 +15830,12 @@ table {
     clear: both;
   }
 
-  .xl\:font-sans {
-    font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  .xl\:font-titles {
+    font-family: "Fjalla One", sans-serif;
   }
 
-  .xl\:font-serif {
-    font-family: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+  .xl\:font-content {
+    font-family: "Open Sans", sans-serif;
   }
 
   .xl\:font-hairline {
@@ -17941,6 +17977,10 @@ table {
 
   .xl\:text-5xl {
     font-size: 3rem;
+  }
+
+  .xl\:text-6xl {
+    font-size: 5.25rem;
   }
 
   .xl\:italic {
