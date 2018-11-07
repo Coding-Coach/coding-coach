@@ -27,7 +27,7 @@ const Button = (props) => {
         fullWidth && styles.fullWidth,
       )}
     >
-      {children}
+      {children}{' '}
     </button>
   );
 };
