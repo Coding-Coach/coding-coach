@@ -47,7 +47,7 @@ class Home extends Component {
     return (
       <Fragment>
         <Navbar />
-        <Hero />
+        <Hero onClick={this.handleOnClickCTA} />
 
         <main className={styles.content}>
           <HomeSection
