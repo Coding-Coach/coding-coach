@@ -65,6 +65,7 @@
     "jest-dom": "^1.12.0",
     "lint-staged": "^7.2.2",
     "node-sass": "^4.9.3",
+    "postcss-cli": "^6.0.1",
     "prettier": "^1.14.2",
     "proxyquire": "^2.1.0",
     "react-snap": "^1.19.0",
@@ -75,6 +76,7 @@
     "sass-loader": "^7.1.0",
     "storybook-readme": "^4.0.0-beta1",
     "style-loader": "^0.23.0",
+    "tailwindcss": "^0.7.2",
     "webpack-bundle-analyzer": "^3.0.2"
   }
 }
