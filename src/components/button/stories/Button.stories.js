@@ -83,6 +83,46 @@ storiesOf('Buttons', module).add('Button Sizes', () => (
   </div>
 ));
 
+storiesOf('Buttons', module).add('Button Shapes', () => (
+  <div>
+    <Container title="Primary">
+      <Button type="primary" shape="square">
+        Square shape
+      </Button>
+      <Button type="primary" shape="rounded">
+        Rounded shape
+      </Button>
+      <Button type="primary" shape="pill">
+        Pill shape
+      </Button>
+    </Container>
+
+    <Container title="Secondary">
+      <Button type="secondary" shape="square">
+        Square shape
+      </Button>
+      <Button type="secondary" shape="rounded">
+        Rounded shape
+      </Button>
+      <Button type="secondary" shape="pill">
+        Pill shape
+      </Button>
+    </Container>
+
+    <Container title="Danger">
+      <Button type="danger" shape="square">
+        Square shape
+      </Button>
+      <Button type="danger" shape="rounded">
+        Rounded shape
+      </Button>
+      <Button type="danger" shape="pill">
+        Pill shape
+      </Button>
+    </Container>
+  </div>
+));
+
 storiesOf('Buttons', module).add('Button Composites', () => (
   <div>
     <Container title="Button Composites">
