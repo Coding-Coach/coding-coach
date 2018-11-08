@@ -5,7 +5,8 @@
 @mixin btn-box-shadow ($color) {
   box-shadow: 0px 7px 10px rgba($color, 0.5);
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     box-shadow: 0px 4px 5px rgba($color, 0.6);
   }
 
@@ -17,8 +18,11 @@
 @mixin btn-borders ($color, $color-darker) {
   border: 3px solid $color;
 
-  &:hover, &:focus {
-    border-bottom-color: $color-darker;
+  &:hover,
+  &:focus {
+    background-color: $color-darker;
+    border-color: $color-darker;
+    // border-bottom-color: $color-darker;
   }
 
   &:active {
@@ -38,20 +42,21 @@
   border: none;
   border-radius: 3px;
   transition-property: all;
-  transition-duration: 0.25s;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
   font-size: $font-xs;
   cursor: pointer;
 
   &.square {
     border-radius: 0;
   }
-  
+
   &.rounded {
     border-radius: $border-radius-rounded;
   }
-  
+
   &.pill {
-    border-radius: 500px;
+    border-radius: $border-radius-pill;
   }
 
   &.primary {
@@ -83,7 +88,8 @@
     background: transparent;
     color: $color-primary-darker;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       text-decoration: underline;
     }
   }
@@ -106,7 +112,8 @@
     border: none;
     @include btn-box-shadow($color-grey-light);
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       transform: none;
       background: $color-grey-light;
     }
@@ -116,7 +123,8 @@
     text-shadow: none;
   }
 
-  i, svg {
+  i,
+  svg {
     vertical-align: middle;
     margin-right: 4px;
   }
