@@ -1,6 +1,8 @@
 // Font Family
-$font-primary: 'Open Sans', sans-serif;
-$font-secondary: 'Fjalla One', sans-serif;
+$font-primary: 'Open Sans',
+sans-serif;
+$font-secondary: 'Fjalla One',
+sans-serif;
 
 // Palette
 $color-primary: #00bc89;
@@ -25,14 +27,14 @@ $color-danger-blur: #ffd5db;
 
 
 // Font Sizes
-$font-xxs: 0.75rem;     // 12px
-$font-xs: 0.875rem;     // 14px
-$font-s: 1rem;          // 16px
-$font-m: 1.125rem;      // 18px
-$font-l: 1.5rem;        // 24px
-$font-xl: 2rem;         // 32px
-$font-xxl: 4.25rem;     // 68px
-$font-xxxl: 5.25rem;    // 84px
+$font-xxs: 0.75rem; // 12px
+$font-xs: 0.875rem; // 14px
+$font-s: 1rem; // 16px
+$font-m: 1.125rem; // 18px
+$font-l: 1.5rem; // 24px
+$font-xl: 2rem; // 32px
+$font-xxl: 4.25rem; // 68px
+$font-xxxl: 5.25rem; // 84px
 
 $font-thin:100;
 $font-light:300;
@@ -46,4 +48,4 @@ $button-large: 60px;
 $button-small: 30px;
 
 $border-radius-rounded: 3px;
-
+$border-radius-pill: 500px;
