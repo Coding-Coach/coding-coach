@@ -29,7 +29,7 @@ const Button = (props) => {
         styles[typography] || styles.uppercase,
       )}
     >
-      {children}{' '}
+      {children}
     </button>
   );
 };
