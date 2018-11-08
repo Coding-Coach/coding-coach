@@ -25,12 +25,15 @@ jobs:
     - stage: "deploy"
       name: "Deploy to GH Pages"
       script: 
-        - git config --global user.name ${Name}
-        - git config --global user.email ${Email}
-        - git remote rm origin
-        - git remote add origin https://linux-nerd:${GITHUB_TOKEN}@github.com/linux-nerd/coding-coach.git
-        - echo https://linux-nerd:${GITHUB_TOKEN}@github.com/linux-nerd/coding-coach.git
+        # - git config --global user.name ${Name}
+        # - git config --global user.email ${Email}
+        # - git remote rm origin
+        # - git remote add origin https://linux-nerd:${GITHUB_TOKEN}@github.com/linux-nerd/coding-coach.git
+        # - echo https://linux-nerd:${GITHUB_TOKEN}@${GH_REF}
         # - yarn run deploy
+        - echo ${Email}
+        - echo $Email
+        - echo https://linux-nerd:${GITHUB_TOKEN}@${GH_REF}
 stages:
   - lint
   - test
