@@ -1,6 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import { translate, Interpolate } from 'react-i18next';
-import 'i18n/i18n';
 
 import Navbar from 'components/navbar/Navbar';
 import Image from 'components/image/Image';
@@ -41,7 +39,6 @@ class Home extends Component {
   };
 
   render() {
-    const { t } = this.props;
     const { legal } = this.state;
 
     return (
@@ -51,45 +48,39 @@ class Home extends Component {
         <main className={styles.content}>
           <HomeSection
             id="about"
-            title={t('home-about-title')}
-            text={t('home-about-text')}
-            media={<Image src={ImageAbout} alt={t('home-about-media-alt')} />}
+            title={'home-about-title'}
+            text={'home-about-text'}
+            media={<Image src={ImageAbout} alt={'home-about-media-alt'} />}
           />
           <HomeSection
             id="mission"
-            title={t('home-mission-title')}
-            text={t('home-mission-text')}
-            media={<Image src={ImageMission} alt={t('home-mission-media-alt')} />}
+            title={'home-mission-title'}
+            text={'home-mission-text'}
+            media={<Image src={ImageMission} alt={'home-mission-media-alt'} />}
           />
           <HomeSection
             id="contact"
-            title={t('home-contact-title')}
-            media={<img src={ImageContact} alt={t('home-contact-media-alt')} />}
+            title={'home-contact-title'}
+            media={<img src={ImageContact} alt={'home-contact-media-alt'} />}
           >
             <p>
-              <Interpolate
-                i18nKey="home-contact-text"
-                slackOrg={
-                  <a
-                    href={config.contact.SLACK_URL}
-                    className={styles.slackOrg}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {t('slack-org')}
-                  </a>
-                }
-                email={
-                  <a
-                    target="_blank"
-                    href={`mailto:${config.contact.EMAIL}`}
-                    className={styles.email}
-                    rel="noopener noreferrer"
-                  >
-                    {config.contact.EMAIL}
-                  </a>
-                }
-              />
+              home-contact-text
+              <a
+                href={config.contact.SLACK_URL}
+                className={styles.slackOrg}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {'slack-org'}
+              </a>
+              <a
+                target="_blank"
+                href={`mailto:${config.contact.EMAIL}`}
+                className={styles.email}
+                rel="noopener noreferrer"
+              >
+                {config.contact.EMAIL}
+              </a>
             </p>
             <SocialMedia />
           </HomeSection>
@@ -102,4 +93,4 @@ class Home extends Component {
   }
 }
 
-export default translate('translations')(Home);
+export default Home;

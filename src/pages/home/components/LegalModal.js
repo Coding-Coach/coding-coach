@@ -1,7 +1,5 @@
 import React from 'react';
 import { func, oneOf } from 'prop-types';
-import { translate } from 'react-i18next';
-import 'i18n/i18n';
 
 import Button from 'components/button/Button';
 import Modal from 'components/modal/Modal';
@@ -27,13 +25,13 @@ function LegalModal({ onClose, page, t }) {
   return (
     <Modal onClose={onClose}>
       <Panel classes={classesPanel}>
-        <PanelHeader>{t(`legal-${page}`)}</PanelHeader>
+        <PanelHeader>{`legal-${page}`}</PanelHeader>
         <PanelContent>
           <Content />
         </PanelContent>
         <PanelFooter>
           <Button size="small" onClick={onClose}>
-            {t('close')}
+            {'close'}
           </Button>
         </PanelFooter>
       </Panel>
@@ -46,4 +44,4 @@ LegalModal.propTypes = {
   page: oneOf(['cookies', 'terms-and-conditions', 'privacy-policy']).isRequired,
 };
 
-export default translate('translations')(LegalModal);
+export default LegalModal;

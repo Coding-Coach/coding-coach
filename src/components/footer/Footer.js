@@ -1,6 +1,4 @@
 import React from 'react';
-import { translate } from 'react-i18next';
-import 'i18n/i18n';
 import Button from 'components/button/Button';
 
 // @TODO: Bring it back when ready
@@ -20,7 +18,7 @@ function Footer({ onClickLegal, t }) {
           onClick={() => onClickLegal('terms-and-conditions')}
           className={styles.footerLink}
         >
-          {t('legal-terms-and-conditions')}
+          {'legal-terms-and-conditions'}
         </Button>
         <Button
           type="tertiary"
@@ -29,7 +27,7 @@ function Footer({ onClickLegal, t }) {
           onClick={() => onClickLegal('cookies')}
           className={styles.footerLink}
         >
-          {t('legal-cookies')}
+          {'legal-cookies'}
         </Button>
         <Button
           type="tertiary"
@@ -38,11 +36,11 @@ function Footer({ onClickLegal, t }) {
           onClick={() => onClickLegal('privacy-policy')}
           className={styles.footerLink}
         >
-          {t('legal-privacy-policy')}
+          {'legal-privacy-policy'}
         </Button>
       </div>
     </footer>
   );
 }
 
-export default translate('translations')(Footer);
+export default Footer;
