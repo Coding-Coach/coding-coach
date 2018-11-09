@@ -1,0 +1,32 @@
+{
+  "home.about.title": {
+    "translation": "",
+    "defaults": "About",
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        18
+      ]
+    ]
+  },
+  "home.contact.title": {
+    "translation": "",
+    "defaults": "Contact",
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        20
+      ]
+    ]
+  },
+  "home.mission.title": {
+    "translation": "",
+    "defaults": "Mission",
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        19
+      ]
+    ]
+  }
+}
