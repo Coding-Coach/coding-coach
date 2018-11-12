@@ -5,11 +5,11 @@
   "homepage": "https://codingcoach.io/",
   "scripts": {
     "start": "yarn build:css && react-scripts start",
-    "build": "yarn build:css && node scripts/custom-config build",
+    "build": "yarn build:css && react-scripts build",
     "build:prod": "yarn build && react-snap",
     "deploy": "gh-pages -d build",
     "lint": "eslint src/",
-    "test": "node scripts/custom-config test --env=jsdom",
+    "test": "react-scripts test --env=jsdom",
     "test:staged": "cross-env CI=true node scripts/custom-config test --env=jsdom --findRelatedTests",
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer build/static/js/main.*",
