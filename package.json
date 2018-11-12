@@ -4,9 +4,9 @@
   "private": true,
   "homepage": "https://codingcoach.io/",
   "scripts": {
-    "start": "yarn build:css && react-scripts start",
-    "build": "yarn build:css && react-scripts build",
-    "build:prod": "yarn build && react-snap",
+    "start": "npm build:css && react-scripts start",
+    "build": "npm build:css && react-scripts build",
+    "build:prod": "npm build && react-snap",
     "deploy": "gh-pages -d build",
     "lint": "eslint src/",
     "test": "react-scripts test --env=jsdom",
