@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './button.scss';
+import styles from './button.module.scss';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 /**
@@ -12,9 +12,8 @@ import PropTypes from 'prop-types';
  * @param {typography} props capitalize, uppercase, lowercase, only
  */
 const Button = (props) => {
-  const { children, type, size, shape, typography, disabled, fullWidth, id, onClick } = props;
+  const { children, type, size, shape, typography, disabled, fullWidth, id, onClick, className } = props;
 
-  console.log(styles);
   return (
     <button
       id={id}
@@ -27,6 +26,7 @@ const Button = (props) => {
         styles[shape],
         fullWidth && styles.fullWidth,
         styles[typography] || styles.uppercase,
+        className,
       )}
     >
       {children}
@@ -43,6 +43,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   fullWidth: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
+  className: PropTypes.string,
   id: PropTypes.string,
 };
 

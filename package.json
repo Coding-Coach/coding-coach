@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://codingcoach.io/",
   "scripts": {
-    "start": "yarn build:css && node scripts/custom-config start",
+    "start": "yarn build:css && react-scripts start",
     "build": "yarn build:css && node scripts/custom-config build",
     "build:prod": "yarn build && react-snap",
     "deploy": "gh-pages -d build",
@@ -12,7 +12,6 @@
     "test": "node scripts/custom-config test --env=jsdom",
     "test:staged": "cross-env CI=true node scripts/custom-config test --env=jsdom --findRelatedTests",
     "eject": "react-scripts eject",
-    "precommit": "lint-staged",
     "analyze": "source-map-explorer build/static/js/main.*",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build:css": "postcss src/theme/tailwind.css -o src/theme/index.css",
@@ -31,7 +30,7 @@
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-i18next": "^7.12.0",
-    "react-scripts": "1.1.5"
+    "react-scripts": "2.1.1"
   },
   "husky": {
     "hooks": {
@@ -51,34 +50,29 @@
     "@storybook/react": "^3.4.10",
     "ajv": "^6.5.3",
     "autoprefixer": "^9.3.1",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^10.0.1",
-    "cross-env": "^5.2.0",
-    "css-loader": "^1.0.0",
-    "eslint": "^5.5.0",
-    "eslint-config-prettier": "^3.0.1",
+    "css-loader": "^1.0.1",
+    "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-babel": "^5.2.1",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-prettier": "^2.6.2",
-    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-prettier": "^3.0.0",
     "file-loader": "^2.0.0",
     "gh-pages": "^1.2.0",
+    "html-webpack-plugin": "^3.2.0",
     "husky": "^0.14.3",
-    "jest-dom": "^1.12.0",
-    "lint-staged": "^7.2.2",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.10.0",
     "postcss-cli": "^6.0.1",
-    "prettier": "^1.14.2",
-    "proxyquire": "^2.1.0",
     "react-snap": "^1.19.0",
     "react-testing-library": "^5.0.1",
     "resolve-url-loader": "^3.0.0",
-    "rewire": "^4.0.1",
-    "sass": "^1.13.2",
     "sass-loader": "^7.1.0",
     "storybook-readme": "^4.0.0-beta1",
-    "style-loader": "^0.23.0",
+    "style-loader": "^0.23.1",
     "tailwindcss": "^0.7.2",
     "webpack-bundle-analyzer": "^3.0.2"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

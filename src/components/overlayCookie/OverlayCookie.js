@@ -4,7 +4,7 @@ import { translate } from 'react-i18next';
 import 'i18n/i18n';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import styles from './overlayCookie.scss';
+import styles from './overlayCookie.module.scss';
 import Button from 'components/button/Button';
 
 class OverlayCookie extends Component {

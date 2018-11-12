@@ -2,7 +2,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import { Panel, PanelHeader, PanelContent, PanelFooter } from './Panel';
-import styles from './assets/panelStories.scss';
 
 const onClickDismiss = () => alert('It can dismiss something');
 const onClickAccept = () => alert('It can dismiss something');

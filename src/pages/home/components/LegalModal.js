@@ -9,7 +9,7 @@ import { Panel, PanelHeader, PanelContent, PanelFooter } from 'components/panel/
 import { PrivacyPolicy } from 'pages/static/PrivacyPolicy';
 import { CookiesPolicy } from 'pages/static/CookiesPolicy';
 import { TermsAndConditions } from 'pages/static/TermsAndConditions';
-import styles from './LegalModal.scss';
+import styles from './LegalModal.module.scss';
 
 const classesPanel = { panelRoot: styles.panelRoot };
 

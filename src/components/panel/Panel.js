@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './assets/panel.scss';
+import styles from './assets/panel.module.scss';
 
 /**
  * Usage:

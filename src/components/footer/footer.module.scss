@@ -39,7 +39,10 @@
   display: inline-block;
   padding: 10px;
   font-size: $font-xxs;
-  color: $color-grey-medium;
+  // Migrating to CRA2 is messing up with the sass imports
+  // the `!important` here is a temporal fix, after all
+  // we will remove this styles once migrated to tailwind
+  color: $color-grey-medium !important;
   text-decoration: none;
   &:hover {
     color:$color-grey-dark;

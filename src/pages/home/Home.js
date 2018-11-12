@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import { translate, Interpolate } from 'react-i18next';
 import 'i18n/i18n';
 
-import styles from './assets/home.scss';
 import Navbar from 'components/navbar/Navbar';
 import Image from 'components/image/Image';
 import OverlayCookie from 'components/overlayCookie/OverlayCookie';
@@ -14,6 +13,7 @@ import SocialMedia from './components/SocialMedia';
 import ImageAbout from './assets/images/about.svg';
 import ImageMission from './assets/images/mission.svg';
 import ImageContact from './assets/images/contact.svg';
+import styles from './assets/home.module.scss';
 
 import config from 'config/constants';
 
