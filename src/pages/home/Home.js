@@ -84,6 +84,7 @@ class Home extends Component {
                     target="_blank"
                     href={`mailto:${config.contact.EMAIL}`}
                     className={styles.email}
+                    rel="noopener noreferrer"
                   >
                     {config.contact.EMAIL}
                   </a>
