@@ -38,7 +38,7 @@
     }
   },
   "lint-staged": {
-    "**/src/**/*.js": [
+    "src/**/*.js": [
       "prettier --write",
       "eslint --fix",
       "npm run test:staged",
