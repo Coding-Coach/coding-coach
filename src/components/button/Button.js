@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
  * @param {typography} props capitalize, uppercase, lowercase, only
  */
 const Button = (props) => {
-  const { children, type, size, shape, typography, disabled, fullWidth, id, onClick, className } = props;
+  const { children, type, size, shape, typography, disabled, fullWidth, id, onClick } = props;
 
   return (
     <button
@@ -26,7 +26,6 @@ const Button = (props) => {
         styles[shape],
         fullWidth && styles.fullWidth,
         styles[typography] || styles.uppercase,
-        className,
       )}
     >
       {children}
@@ -43,7 +42,6 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   fullWidth: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
-  className: PropTypes.string,
   id: PropTypes.string,
 };
 

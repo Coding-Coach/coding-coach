@@ -11,17 +11,17 @@ exports[`renders the footer element 1`] = `
       class="column"
     />
     <button
-      class="button tertiary small rounded capitalize footerLink"
+      class="button tertiary small rounded capitalize"
     >
       Terms & Conditions
     </button>
     <button
-      class="button tertiary small rounded capitalize footerLink"
+      class="button tertiary small rounded capitalize"
     >
       Cookies
     </button>
     <button
-      class="button tertiary small rounded capitalize footerLink"
+      class="button tertiary small rounded capitalize"
     >
       Privacy Policy
     </button>
