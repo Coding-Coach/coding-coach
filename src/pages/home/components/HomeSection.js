@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './HomeSection.scss';
+import styles from './HomeSection.module.scss';
 import PropTypes from 'prop-types';
 
 const HomeSection = ({ id, title, text, media, children }) => (

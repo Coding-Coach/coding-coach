@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = (storybookBaseConfig, configType) => {
   storybookBaseConfig.module.rules.push(
     {
-      test: /\.scss$/,
+      test: /\.(scss|css)$/,
       loaders: ['style-loader', 'css-loader?modules', 'resolve-url-loader', 'sass-loader'],
       include: path.resolve(__dirname, '..', 'src'),
     },
@@ -30,6 +30,7 @@ module.exports = (storybookBaseConfig, configType) => {
   );
 
   storybookBaseConfig.resolve.modules.push('src');
+  storybookBaseConfig.resolve.modules.push('src/theme');
 
   return storybookBaseConfig;
 };

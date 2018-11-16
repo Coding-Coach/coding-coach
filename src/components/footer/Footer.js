@@ -5,7 +5,7 @@ import Button from 'components/button/Button';
 
 // @TODO: Bring it back when ready
 // import DonateButton from './DonateButton';
-import styles from './footer.scss';
+import styles from './footer.module.scss';
 
 function Footer({ onClickLegal, t }) {
   return (

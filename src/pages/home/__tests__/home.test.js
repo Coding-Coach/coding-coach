@@ -5,7 +5,7 @@ import Home from '../Home';
 test('renders the Home page', () => {
   const { getByText } = render(<Home />);
 
-  expect(getByText('About')).toBeInTheDocument();
-  expect(getByText('Mission')).toBeInTheDocument();
-  expect(getByText('Contact')).toBeInTheDocument();
+  expect(getByText('About')).toBeDefined();
+  expect(getByText('Mission')).toBeDefined();
+  expect(getByText('Contact')).toBeDefined();
 });

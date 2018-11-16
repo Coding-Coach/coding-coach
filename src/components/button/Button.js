@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './button.scss';
+import styles from './button.module.scss';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 /**
@@ -14,7 +14,6 @@ import PropTypes from 'prop-types';
 const Button = (props) => {
   const { children, type, size, shape, typography, disabled, fullWidth, id, onClick } = props;
 
-  console.log(styles);
   return (
     <button
       id={id}

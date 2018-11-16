@@ -1,5 +1,6 @@
 @import '~theme/base/variables';
 @import '~theme/base/utils';
+@import '~theme/base/spacing';
 
 
 .cookieWrapper {
@@ -21,10 +22,13 @@
 }
 
 .cookieText {
+  composes: MVM;
+  line-height: 1.5;
   width: 95%;
 }
 
 .cookieIcon {
+  composes: MVM;
   width: 5%;
   text-align: right;
 }
