@@ -4603,6 +4603,10 @@ glamorous@^4.12.1:
     react-html-attributes "^1.4.2"
     svg-tag-names "^1.1.0"
 
+glhd-tailwindcss-transitions@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/glhd-tailwindcss-transitions/-/glhd-tailwindcss-transitions-0.3.0.tgz#9c32e35ba3a11a2d666caa559a1860e61674bcaf"
+
 glob-base@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/glob-base/-/glob-base-0.3.0.tgz#dbb164f6221b1c0b1ccf82aea328b497df0ea3c4"
