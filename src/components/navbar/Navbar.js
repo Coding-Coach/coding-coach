@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trans, withI18n } from '@lingui/macro';
+import { Trans } from '@lingui/macro';
 
 const handleClickOnNavigation = (id) => {
   return (event) => {
@@ -16,13 +16,13 @@ function Navbar() {
     <nav className="bg-primary-light py-4">
       <div className="container flex justify-between md:justify-start">
         <NavLink to="about">
-          <Trans id="home.about.title">About</Trans>
+          <Trans id="home.about.title" />
         </NavLink>
         <NavLink to="mission">
-          <Trans id="home.mission.title">Mission</Trans>
+          <Trans id="home.mission.title" />
         </NavLink>
         <NavLink to="contact">
-          <Trans id="home.contact.title">Contact</Trans>
+          <Trans id="home.contact.title" />
         </NavLink>
       </div>
     </nav>

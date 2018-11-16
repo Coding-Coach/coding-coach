@@ -1,15 +1,5 @@
 {
   "home.about.title": {
-    "defaults": "About",
-    "origin": [
-      [
-        "src/components/navbar/Navbar.js",
-        18
-      ]
-    ]
-  },
-  "home.mission.title": {
-    "defaults": "Mission",
     "origin": [
       [
         "src/components/navbar/Navbar.js",
@@ -17,12 +7,19 @@
       ]
     ]
   },
-  "home.contact.title": {
-    "defaults": "Contact",
+  "home.mission.title": {
     "origin": [
       [
         "src/components/navbar/Navbar.js",
-        20
+        22
+      ]
+    ]
+  },
+  "home.contact.title": {
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        25
       ]
     ]
   }

@@ -1,32 +1,20 @@
 {
-  "home.about.title": {
-    "translation": "",
-    "defaults": "About",
-    "origin": [
-      [
-        "src/components/navbar/Navbar.js",
-        18
-      ]
-    ]
-  },
-  "home.contact.title": {
-    "translation": "",
-    "defaults": "Contact",
-    "origin": [
-      [
-        "src/components/navbar/Navbar.js",
-        20
-      ]
-    ]
-  },
-  "home.mission.title": {
-    "translation": "",
-    "defaults": "Mission",
-    "origin": [
-      [
-        "src/components/navbar/Navbar.js",
-        19
-      ]
-    ]
-  }
+  "common.close": "",
+  "footer.legal.cookies": "",
+  "footer.legal.privacy": "",
+  "footer.legal.terms": "",
+  "home.about.description": "",
+  "home.about.img": "",
+  "home.about.title": "",
+  "home.contact.description": "",
+  "home.contact.img": "",
+  "home.contact.title": "",
+  "home.header.cta": "",
+  "home.header.logo": "",
+  "home.mission.description": "",
+  "home.mission.img": "",
+  "home.mission.title": "",
+  "legal.notification": "",
+  "site.slogan": "",
+  "site.title": ""
 }

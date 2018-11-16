@@ -9,9 +9,9 @@ export default function loadEn() {
       'legal-privacy-policy': 'Privacy Policy',
       'footer-donate': 'Donate!',
       'footer-donate-paypal': 'PayPal - The safer, easier way to pay online!',
-      'home-header-title': 'Coding Coach',
+      'home-header-title': 'Coding Coach', //site.title
       'home-header-subtitle': 'Connecting developers with mentors worldwide',
-      'home-header-cta': 'Learn More',
+      'home-header-cta': 'Learn More', //home-header-cta
       'home-header-media-alt': 'This is the logo for Coding Coach',
       'home-about-title': 'About',
       'home-about-text':

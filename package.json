@@ -47,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.1.6",
     "@lingui/cli": "^2.7.0",
     "@lingui/loader": "^2.7.0",
     "@lingui/macro": "^2.7.0",
@@ -54,6 +55,7 @@
     "@storybook/react": "^3.4.10",
     "ajv": "^6.5.3",
     "autoprefixer": "^9.3.1",
+    "babel-core": "^7.0.0-bridge.0",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
     "eslint-config-prettier": "^3.3.0",

@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from 'react';
+import { Trans, t } from '@lingui/macro';
+import { I18n } from '@lingui/react';
 
 import Navbar from 'components/navbar/Navbar';
 import Image from 'components/image/Image';
@@ -14,6 +16,8 @@ import ImageContact from './assets/images/contact.svg';
 import styles from './assets/home.module.scss';
 
 import config from 'config/constants';
+
+const { EMAIL } = config.contact;
 
 class Home extends Component {
   state = {
@@ -45,46 +49,51 @@ class Home extends Component {
       <Fragment>
         <Navbar />
         <Hero onClick={this.handleOnClickCTA} />
-        <main className={styles.content}>
-          <HomeSection
-            id="about"
-            title={'home-about-title'}
-            text={'home-about-text'}
-            media={<Image src={ImageAbout} alt={'home-about-media-alt'} />}
-          />
-          <HomeSection
-            id="mission"
-            title={'home-mission-title'}
-            text={'home-mission-text'}
-            media={<Image src={ImageMission} alt={'home-mission-media-alt'} />}
-          />
-          <HomeSection
-            id="contact"
-            title={'home-contact-title'}
-            media={<img src={ImageContact} alt={'home-contact-media-alt'} />}
-          >
-            <p>
-              home-contact-text
-              <a
-                href={config.contact.SLACK_URL}
-                className={styles.slackOrg}
-                target="_blank"
-                rel="noopener noreferrer"
+        <I18n>
+          {({ i18n }) => (
+            <main className={styles.content}>
+              <HomeSection
+                id="about"
+                title={i18n._(t`home.about.title`)}
+                text={i18n._(t`home.about.description`)}
+                media={<Image src={ImageAbout} alt={i18n._(t`home.about.img`)} />}
+              />
+              <HomeSection
+                id="mission"
+                title={i18n._(t`home.mission.title`)}
+                text={i18n._(t`home.mission.description`)}
+                media={<Image src={ImageMission} alt={i18n._(t`home.mission.img`)} />}
+              />
+              <HomeSection
+                id="contact"
+                title={i18n._(t`home.contact.title`)}
+                media={<img src={ImageContact} alt={i18n._(t`home.contact.img`)} />}
               >
-                {'slack-org'}
-              </a>
-              <a
-                target="_blank"
-                href={`mailto:${config.contact.EMAIL}`}
-                className={styles.email}
-                rel="noopener noreferrer"
-              >
-                {config.contact.EMAIL}
-              </a>
-            </p>
-            <SocialMedia />
-          </HomeSection>
-        </main>
+                <p>
+                  <Trans id="home.contact.description">
+                    <a
+                      href={config.contact.SLACK_URL}
+                      className={styles.slackOrg}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Slack Organization
+                    </a>
+                    <a
+                      target="_blank"
+                      href={`mailto:${EMAIL}`}
+                      className={styles.email}
+                      rel="noopener noreferrer"
+                    >
+                      {EMAIL}
+                    </a>
+                  </Trans>
+                </p>
+                <SocialMedia />
+              </HomeSection>
+            </main>
+          )}
+        </I18n>
         <Footer onClickLegal={this.toggleModal} />
         <OverlayCookie onReadMore={this.toggleModal} />
         {legal.show && <LegalModal page={legal.page} onClose={this.toggleModal} />}

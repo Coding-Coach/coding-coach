@@ -1,4 +1,6 @@
 import React from 'react';
+import { Trans } from '@lingui/macro';
+
 import Button from 'components/button/Button';
 
 // @TODO: Bring it back when ready
@@ -15,10 +17,10 @@ function Footer({ onClickLegal, t }) {
           type="tertiary"
           typography="capitalize"
           size="small"
-          onClick={() => onClickLegal('terms-and-conditions')}
+          onClick={() => onClickLegal('terms')}
           className={styles.footerLink}
         >
-          {'legal-terms-and-conditions'}
+          <Trans id="footer.legal.terms" />
         </Button>
         <Button
           type="tertiary"
@@ -27,16 +29,16 @@ function Footer({ onClickLegal, t }) {
           onClick={() => onClickLegal('cookies')}
           className={styles.footerLink}
         >
-          {'legal-cookies'}
+          <Trans id="footer.legal.cookies" />
         </Button>
         <Button
           type="tertiary"
           typography="capitalize"
           size="small"
-          onClick={() => onClickLegal('privacy-policy')}
+          onClick={() => onClickLegal('privacy')}
           className={styles.footerLink}
         >
-          {'legal-privacy-policy'}
+          <Trans id="footer.legal.privacy" />
         </Button>
       </div>
     </footer>
