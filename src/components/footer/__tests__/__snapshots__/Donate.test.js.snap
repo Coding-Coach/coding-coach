@@ -17,14 +17,14 @@ exports[`components/footer/DonateButton should render the donate button 1`] = `
     value="3LA9RLHEXNZV6"
   />
   <input
-    alt="PayPal - The safer, easier way to pay online!"
+    alt="footer-donate-paypal"
     border="0"
     name="submit"
     src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
     type="image"
   />
   <img
-    alt="Donate!"
+    alt="footer-donate"
     src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif"
   />
 </form>
