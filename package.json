@@ -43,6 +43,7 @@
     "src/**/*.js": [
       "prettier --write",
       "eslint --fix",
+      "yarn test:staged",
       "git add"
     ]
   },
