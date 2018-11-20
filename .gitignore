@@ -43,3 +43,4 @@ README.old.md
 .DS_Store
 
 src/config/i18n/_build
+src/config/i18n/**/messages.js
