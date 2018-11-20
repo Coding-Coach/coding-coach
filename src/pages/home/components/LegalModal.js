@@ -1,7 +1,6 @@
 import React from 'react';
 import { func, oneOf } from 'prop-types';
-import { translate } from 'react-i18next';
-import 'i18n/i18n';
+import { Trans, t } from '@lingui/macro';
 
 import Button from 'components/button/Button';
 import Modal from 'components/modal/Modal';
@@ -12,28 +11,35 @@ import { TermsAndConditions } from 'pages/static/TermsAndConditions';
 import styles from './LegalModal.module.scss';
 
 const classesPanel = { panelRoot: styles.panelRoot };
+const titles = {
+  terms: t`footer.legal.terms`,
+  privacy: t`footer.legal.privacy`,
+  cookies: t`footer.legal.cookies`,
+};
 
 function LegalModal({ onClose, page, t }) {
   let Content = CookiesPolicy;
 
-  if (page === 'terms-and-conditions') {
+  if (page === 'terms') {
     Content = TermsAndConditions;
   }
 
-  if (page === 'privacy-policy') {
+  if (page === 'privacy') {
     Content = PrivacyPolicy;
   }
 
   return (
     <Modal onClose={onClose}>
       <Panel classes={classesPanel}>
-        <PanelHeader>{t(`legal-${page}`)}</PanelHeader>
+        <PanelHeader>
+          <Trans id={titles[page]} />
+        </PanelHeader>
         <PanelContent>
           <Content />
         </PanelContent>
         <PanelFooter>
           <Button size="small" onClick={onClose}>
-            {t('close')}
+            <Trans id="common.close" />
           </Button>
         </PanelFooter>
       </Panel>
@@ -43,7 +49,7 @@ function LegalModal({ onClose, page, t }) {
 
 LegalModal.propTypes = {
   onClose: func,
-  page: oneOf(['cookies', 'terms-and-conditions', 'privacy-policy']).isRequired,
+  page: oneOf(['cookies', 'terms', 'privacy']).isRequired,
 };
 
-export default translate('translations')(LegalModal);
+export default LegalModal;

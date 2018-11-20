@@ -1,6 +1,5 @@
 import React from 'react';
-import { translate } from 'react-i18next';
-import 'i18n/i18n';
+import { Trans } from '@lingui/macro';
 
 const handleClickOnNavigation = (id) => {
   return (event) => {
@@ -12,15 +11,23 @@ const handleClickOnNavigation = (id) => {
   };
 };
 
-const Navbar = ({ t }) => (
-  <nav className="bg-primary-light py-4">
-    <div className="container flex justify-between md:justify-start">
-      <NavLink to="about">{t('About')}</NavLink>
-      <NavLink to="mission">{t('Mission')}</NavLink>
-      <NavLink to="contact">{t('Contact')}</NavLink>
-    </div>
-  </nav>
-);
+function Navbar() {
+  return (
+    <nav className="bg-primary-light py-4">
+      <div className="container flex justify-between md:justify-start">
+        <NavLink to="about">
+          <Trans id="home.about.title" />
+        </NavLink>
+        <NavLink to="mission">
+          <Trans id="home.mission.title" />
+        </NavLink>
+        <NavLink to="contact">
+          <Trans id="home.contact.title" />
+        </NavLink>
+      </div>
+    </nav>
+  );
+}
 
 function NavLink({ to, children }) {
   return (
@@ -34,4 +41,4 @@ function NavLink({ to, children }) {
   );
 }
 
-export default translate('translations')(Navbar);
+export default Navbar;

@@ -13,17 +13,17 @@ exports[`renders the footer element 1`] = `
     <button
       class="button tertiary small rounded capitalize"
     >
-      Terms & Conditions
+      footer.legal.terms
     </button>
     <button
       class="button tertiary small rounded capitalize"
     >
-      Cookies
+      footer.legal.cookies
     </button>
     <button
       class="button tertiary small rounded capitalize"
     >
-      Privacy Policy
+      footer.legal.privacy
     </button>
   </div>
 </footer>

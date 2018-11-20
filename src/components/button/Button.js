@@ -38,7 +38,7 @@ Button.propTypes = {
   type: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'disabled', 'danger']),
   typography: PropTypes.oneOf(['uppercase', 'capitalize', 'lowercase', 'none']),
   shape: PropTypes.oneOf(['square', 'rounded', 'pill']),
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   disabled: PropTypes.bool,
   fullWidth: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
