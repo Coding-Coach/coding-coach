@@ -39,6 +39,46 @@ Initially we decided to use SASS to handle the CSS. However, over time we decide
 
 Please, every new PR *should be using tailwind* for styling the components. Eventually we want to remove SASS, but for now it will be still there to support legacy code.
 
+## Internationalization
+One of the goals we have with this platform is to provide mentorship all over the world, therefore we want to support as many languages as possible.
+
+We are using [LinguiJS](https://lingui.js.org/tutorials/react.html) as the library to enable i18n support. Lingui provides a CLI tool to manage the keys and texts. When working on a new feature that requires you to add some text, we are going to use the CLI to insert that new text into the dictionaries. Follow these steps:
+
+First you need to define the key in the code:
+```
+  <p><Trans id="home.header.title" /></p>
+```
+
+Then in your terminal you need to extract all the keys running the following command:
+```
+$ yarn i18n-extract
+
+Catalog statistics:
+┌──────────┬─────────────┬─────────┐
+│ Language │ Total count │ Missing │
+├──────────┼─────────────┼─────────┤
+│ en       │     18      │    1    │
+│ es       │     18      │   18    │
+│ fr       │     18      │   18    │
+└──────────┴─────────────┴─────────┘
+
+(use "lingui add-locale <language>" to add more locales)
+(use "lingui extract" to update catalogs with new messages)
+(use "lingui compile" to compile catalogs for production)
+✨  Done in 2.95s.
+```
+
+At this point the key will be inserted into all dictionaries, and we will also see a nice count of the missing keys, in this example for english there's only one key missing for translation (The one we just defined in our code), but for the other languages we need to translate them all. This is a nice feature because we can easily know which translations are missing.
+
+Open the `src/config/i18n/en/messages.json` file (not the `.js` but the `.json` file) and add the translation to the new key, if you can speak other languages, please go ahead and add the translations as well, if not we can leverage in our community to add the missing translations later on.
+
+Finally we need to compile the dictionaries, just run the following command in your terminal:
+```
+$ yarn i18n-compile
+```
+
+This will generate the compiled dictionaries that our app will be using.
+
 ### Coding Coach Board
 
 In order to organize all the work, we are using https://zenhub.com to keep track of all the epics and tasks. After you login to ZenHub search for the `Coding-Coach/coding-coach` repository, make sure you don't add someone else fork.
