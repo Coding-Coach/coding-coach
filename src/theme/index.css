@@ -4183,6 +4183,9 @@ table {
 .bg-diagonal-danger-dark:after {
   background-image: -webkit-linear-gradient(top left, #d4574d 50%, #fff 50%);
   background-image: linear-gradient(to bottom right, #d4574d 50%, #fff 50%);
+.bg-gradient-primary {
+  background-image: -webkit-linear-gradient(60deg, #d5fff4, #69d5b1);
+  background-image: linear-gradient(30deg, #d5fff4, #69d5b1);
 }
 
 .container {
@@ -7818,6 +7821,11 @@ table {
   .sm\:z-auto {
     z-index: auto;
   }
+
+  .sm\:bg-gradient-primary {
+    background-image: -webkit-linear-gradient(60deg, #d5fff4, #69d5b1);
+    background-image: linear-gradient(30deg, #d5fff4, #69d5b1);
+  }
 }
 
 @media (min-width: 768px) {
@@ -11400,6 +11408,11 @@ table {
 
   .md\:z-auto {
     z-index: auto;
+  }
+
+  .md\:bg-gradient-primary {
+    background-image: -webkit-linear-gradient(60deg, #d5fff4, #69d5b1);
+    background-image: linear-gradient(30deg, #d5fff4, #69d5b1);
   }
 }
 
@@ -14984,6 +14997,11 @@ table {
   .lg\:z-auto {
     z-index: auto;
   }
+
+  .lg\:bg-gradient-primary {
+    background-image: -webkit-linear-gradient(60deg, #d5fff4, #69d5b1);
+    background-image: linear-gradient(30deg, #d5fff4, #69d5b1);
+  }
 }
 
 @media (min-width: 1200px) {
@@ -18566,5 +18584,10 @@ table {
 
   .xl\:z-auto {
     z-index: auto;
+  }
+
+  .xl\:bg-gradient-primary {
+    background-image: -webkit-linear-gradient(60deg, #d5fff4, #69d5b1);
+    background-image: linear-gradient(30deg, #d5fff4, #69d5b1);
   }
 }
