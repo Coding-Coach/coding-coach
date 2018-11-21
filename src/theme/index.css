@@ -4184,8 +4184,8 @@ table {
   background-image: -webkit-linear-gradient(top left, #d4574d 50%, #fff 50%);
   background-image: linear-gradient(to bottom right, #d4574d 50%, #fff 50%);
 .bg-gradient-primary {
-  background-image: -webkit-linear-gradient(60deg, #d5fff4, #69d5b1);
-  background-image: linear-gradient(30deg, #d5fff4, #69d5b1);
+  background-image: -webkit-linear-gradient(135deg, #d5fff4, #69d5b1);
+  background-image: linear-gradient(-45deg, #d5fff4, #69d5b1);
 }
 
 .container {
@@ -7823,8 +7823,8 @@ table {
   }
 
   .sm\:bg-gradient-primary {
-    background-image: -webkit-linear-gradient(60deg, #d5fff4, #69d5b1);
-    background-image: linear-gradient(30deg, #d5fff4, #69d5b1);
+    background-image: -webkit-linear-gradient(135deg, #d5fff4, #69d5b1);
+    background-image: linear-gradient(-45deg, #d5fff4, #69d5b1);
   }
 }
 
@@ -11411,8 +11411,8 @@ table {
   }
 
   .md\:bg-gradient-primary {
-    background-image: -webkit-linear-gradient(60deg, #d5fff4, #69d5b1);
-    background-image: linear-gradient(30deg, #d5fff4, #69d5b1);
+    background-image: -webkit-linear-gradient(135deg, #d5fff4, #69d5b1);
+    background-image: linear-gradient(-45deg, #d5fff4, #69d5b1);
   }
 }
 
@@ -14999,8 +14999,8 @@ table {
   }
 
   .lg\:bg-gradient-primary {
-    background-image: -webkit-linear-gradient(60deg, #d5fff4, #69d5b1);
-    background-image: linear-gradient(30deg, #d5fff4, #69d5b1);
+    background-image: -webkit-linear-gradient(135deg, #d5fff4, #69d5b1);
+    background-image: linear-gradient(-45deg, #d5fff4, #69d5b1);
   }
 }
 
@@ -18587,7 +18587,7 @@ table {
   }
 
   .xl\:bg-gradient-primary {
-    background-image: -webkit-linear-gradient(60deg, #d5fff4, #69d5b1);
-    background-image: linear-gradient(30deg, #d5fff4, #69d5b1);
+    background-image: -webkit-linear-gradient(135deg, #d5fff4, #69d5b1);
+    background-image: linear-gradient(-45deg, #d5fff4, #69d5b1);
   }
 }
