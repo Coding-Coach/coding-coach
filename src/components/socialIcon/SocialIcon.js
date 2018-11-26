@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './SocialIcon.css';
 
 /**
  *
@@ -12,7 +13,7 @@ const SocialIcon = (props) => {
   const { icon, href, size } = props;
 
   return (
-    <div className="group m-3 p-4 rounded-full border border-solid border-primary-light cursor-pointer  hover:bg-primary-light transition transition-fast transition-property-all transition-timing-linear">
+    <div className="icon-wrapper group m-3 p-4 rounded-full border border-solid border-primary-light cursor-pointer  hover:bg-primary-light transition transition-fast transition-property-all transition-timing-linear">
       <a target="_blank" href={href} rel="noreferrer noopener">
         <FontAwesomeIcon
           icon={icon}
