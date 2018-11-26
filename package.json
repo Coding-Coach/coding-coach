@@ -33,11 +33,8 @@
     "@reach/router": "^1.1.1",
     "classnames": "^2.2.6",
     "glhd-tailwindcss-transitions": "^0.3.0",
-<<<<<<< HEAD
-=======
     "i18next": "^11.7.0",
     "i18next-browser-languagedetector": "^2.2.3",
->>>>>>> Migrate Social Media component from Scss to tailwind
     "prop-types": "^15.6.2",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
