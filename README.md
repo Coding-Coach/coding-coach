@@ -4,33 +4,25 @@
 
 Connecting developers with mentors worldwide.
 
-## Installing
+## Getting started
 
-Installing the node modules
+Copy the `.env.example` file to `.env`.
 
-```bash
+Installing the node modules and starting the server:
+
+### npm
+```sh
 npm install
-```
-
-or
-
-```bash
-yarn
-```
-
-Starting the server
-
-```bash
 npm start
 ```
 
-or
-
-```bash
+### Yarn
+```sh
+yarn
 yarn start
 ```
 
-### Slack
+## Slack
 
 Coding Coach is on Slack! [Click here](https://coding-coach.slack.com/) to join.
 
