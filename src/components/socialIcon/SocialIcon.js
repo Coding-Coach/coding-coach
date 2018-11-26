@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-<<<<<<< HEAD
 import classNames from 'classnames';
-=======
->>>>>>> Added Github Icon to SocialMedia Component
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './SocialIcon.css';
 
 /**
  *
@@ -13,7 +11,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
  * @param {size} props
  */
 const SocialIcon = (props) => {
-<<<<<<< HEAD
   const { icon, href, size, className } = props;
 
   return (
@@ -23,12 +20,6 @@ const SocialIcon = (props) => {
         'group m-3 p-4 rounded-full border border-solid border-primary-light cursor-pointer  hover:bg-primary-light transition transition-fast transition-property-all transition-timing-linear',
       )}
     >
-=======
-  const { icon, href, size } = props;
-
-  return (
-    <div className="group m-3 p-4 rounded-full border border-solid border-primary-light cursor-pointer  hover:bg-primary-light transition transition-fast transition-property-all transition-timing-linear">
->>>>>>> Added Github Icon to SocialMedia Component
       <a target="_blank" href={href} rel="noreferrer noopener">
         <FontAwesomeIcon
           icon={icon}
