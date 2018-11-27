@@ -4,6 +4,7 @@ import { noop } from 'utils/noop';
 
 import Button from 'components/button/Button';
 import Image from 'components/image/Image';
+import TextField from 'components/textfield/TextField';
 import { Panel, PanelContent } from 'components/panel/Panel';
 
 import logo from '../home/assets/images/coding-coach-logo.svg';
@@ -26,7 +27,9 @@ export default function Login() {
         </p>
         <Panel>
           <PanelContent>
-            <h2 className="text-xl font-semibold text-primary">Sign In</h2>
+            <h2 className="text-xl font-semibold text-primary mb-4">Sign In</h2>
+            <TextField label="Email Address" name="email" />
+            <TextField label="Password" name="password" type="password" />
             <Button onClick={noop} size="small" typography="none" fullWidth>
               Let's go!
             </Button>
