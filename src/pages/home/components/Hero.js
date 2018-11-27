@@ -20,7 +20,7 @@ function Hero({ onClick }) {
           <h2 className="text-white text-sans text-2xl mb-4 font-content font-hairline leading-normal">
             <Trans id="site.slogan" defaults="Connecting developers with mentors worldwide" />
           </h2>
-          <Button onClick={onClick}>
+          <Button onClick={onClick} floating>
             <Trans id="home.header.cta" defaults="Learn More" />
           </Button>
         </header>
