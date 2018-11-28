@@ -4,7 +4,10 @@ import { noop } from 'utils/noop';
 import { I18n } from '@lingui/react';
 
 import Button from 'components/button/Button';
+import Facebook from 'components/icon/Facebook';
+import Instagram from 'components/icon/Instagram';
 import TextField from 'components/textfield/TextField';
+import Twitter from 'components/icon/Twitter';
 import { Panel, PanelContent } from 'components/panel/Panel';
 
 import { ReactComponent as Logo } from '../home/assets/images/coding-coach-logo.svg';
@@ -36,7 +39,7 @@ export default function Login() {
                   <h2 className="flex-1 text-2xl font-semibold text-primary">
                     <Trans id="auth.signin.title" defaults="Sign In" />
                   </h2>
-                  <a href="#" className="text-sm h-4 mt-1">
+                  <a href="#noop" className="text-sm h-4 mt-1">
                     Forgot Password?
                   </a>
                 </div>
@@ -55,6 +58,14 @@ export default function Login() {
                     </div>
                   )}
                 </I18n>
+                <p className="text-center text-secondary-lighter text-sm mb-4">
+                  Or sign in with social
+                </p>
+                <div className="flex justify-center mb-8">
+                  <Twitter width={31} height={25} color="#76A9EA" className="mx-2" />
+                  <Facebook width={25} height={25} color="#475993" className="mx-2" />
+                  <Instagram width={25} height={25} className="mx-2" />
+                </div>
                 <Button onClick={noop} size="small" typography="none" fullWidth>
                   <Trans id="auth.signin.go" defaults="Let's go!" />
                 </Button>
