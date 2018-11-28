@@ -4093,6 +4093,98 @@ table {
   z-index: auto;
 }
 
+.bg-diagonal:after {
+  content: '';
+  width: 100%;
+  height: 150px;
+  display: block;
+}
+
+.bg-diagonal-transparent:after {
+  background-image: -webkit-linear-gradient(top left, transparent 50%, #fff 50%);
+  background-image: linear-gradient(to bottom right, transparent 50%, #fff 50%);
+}
+
+.bg-diagonal-black:after {
+  background-image: -webkit-linear-gradient(top left, #202939 50%, #fff 50%);
+  background-image: linear-gradient(to bottom right, #202939 50%, #fff 50%);
+}
+
+.bg-diagonal-white:after {
+  background-image: -webkit-linear-gradient(top left, #fff 50%, #fff 50%);
+  background-image: linear-gradient(to bottom right, #fff 50%, #fff 50%);
+}
+
+.bg-diagonal-primary-lightest:after {
+  background-image: -webkit-linear-gradient(top left, #d5fff4 50%, #fff 50%);
+  background-image: linear-gradient(to bottom right, #d5fff4 50%, #fff 50%);
+}
+
+.bg-diagonal-primary-lighter:after {
+  background-image: -webkit-linear-gradient(top left, #e6f5f0 50%, #fff 50%);
+  background-image: linear-gradient(to bottom right, #e6f5f0 50%, #fff 50%);
+}
+
+.bg-diagonal-primary-light:after {
+  background-image: -webkit-linear-gradient(top left, #69d5b1 50%, #fff 50%);
+  background-image: linear-gradient(to bottom right, #69d5b1 50%, #fff 50%);
+}
+
+.bg-diagonal-primary:after {
+  background-image: -webkit-linear-gradient(top left, #00bc89 50%, #fff 50%);
+  background-image: linear-gradient(to bottom right, #00bc89 50%, #fff 50%);
+}
+
+.bg-diagonal-primary-dark:after {
+  background-image: -webkit-linear-gradient(top left, #009d6c 50%, #fff 50%);
+  background-image: linear-gradient(to bottom right, #009d6c 50%, #fff 50%);
+}
+
+.bg-diagonal-secondary-lightest:after {
+  background-image: -webkit-linear-gradient(top left, #e8e7e7 50%, #fff 50%);
+  background-image: linear-gradient(to bottom right, #e8e7e7 50%, #fff 50%);
+}
+
+.bg-diagonal-secondary-lighter:after {
+  background-image: -webkit-linear-gradient(top left, #a8a4a4 50%, #fff 50%);
+  background-image: linear-gradient(to bottom right, #a8a4a4 50%, #fff 50%);
+}
+
+.bg-diagonal-secondary-light:after {
+  background-image: -webkit-linear-gradient(top left, #979797 50%, #fff 50%);
+  background-image: linear-gradient(to bottom right, #979797 50%, #fff 50%);
+}
+
+.bg-diagonal-secondary:after {
+  background-image: -webkit-linear-gradient(top left, #929292 50%, #fff 50%);
+  background-image: linear-gradient(to bottom right, #929292 50%, #fff 50%);
+}
+
+.bg-diagonal-secondary-dark:after {
+  background-image: -webkit-linear-gradient(top left, #4a4a4a 50%, #fff 50%);
+  background-image: linear-gradient(to bottom right, #4a4a4a 50%, #fff 50%);
+}
+
+.bg-diagonal-danger-lighter:after {
+  background-image: -webkit-linear-gradient(top left, #ffd5db 50%, #fff 50%);
+  background-image: linear-gradient(to bottom right, #ffd5db 50%, #fff 50%);
+}
+
+.bg-diagonal-danger-light:after {
+  background-image: -webkit-linear-gradient(top left, #ea7a71 50%, #fff 50%);
+  background-image: linear-gradient(to bottom right, #ea7a71 50%, #fff 50%);
+}
+
+.bg-diagonal-danger:after {
+  background-image: -webkit-linear-gradient(top left, #eb6e64 50%, #fff 50%);
+  background-image: linear-gradient(to bottom right, #eb6e64 50%, #fff 50%);
+}
+
+.bg-diagonal-danger-dark:after {
+  background-image: -webkit-linear-gradient(top left, #d4574d 50%, #fff 50%);
+  background-image: linear-gradient(to bottom right, #d4574d 50%, #fff 50%);
+}
+
 .container {
   width: 100%;
   margin-right: auto;

@@ -9,8 +9,8 @@ import heroImage from '../assets/images/coding-coach-logo.svg';
 
 function Hero({ onClick }) {
   return (
-    <section className="bg-primary-light">
-      <div className="container flex pt-16 pb-20">
+    <section className="bg-primary-light bg-diagonal bg-diagonal-primary-light">
+      <div className="container flex pt-20 pb-10">
         <header className="flex-1">
           <h1 className="text-white text-6xl uppercase font-titles tracking-wide md:w-1/2">
             <span>
