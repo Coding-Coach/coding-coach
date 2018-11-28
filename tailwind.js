@@ -865,6 +865,13 @@ module.exports = {
       center: true,
       padding: '1rem',
     }),
+    require('tailwindcss-plugins/gradients')({
+      gradients: {
+        // Array definition (defaults to linear gradients).
+        'gradient-primary': ['-45deg', colors['primary-lightest'], colors['primary-light']],
+      },
+      variants: ['responsive']
+    })
   ],
 
 

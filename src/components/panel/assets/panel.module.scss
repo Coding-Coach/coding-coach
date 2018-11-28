@@ -21,6 +21,10 @@
       color: $color-white;
     }
   }
+
+  &.floating {
+    box-shadow: 0px 7px 10px rgba($color-primary-darker, 0.5);
+  }
 }
 
 .header {

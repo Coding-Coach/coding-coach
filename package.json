@@ -80,6 +80,7 @@
     "storybook-readme": "^4.0.0-beta1",
     "style-loader": "^0.23.1",
     "tailwindcss": "^0.7.2",
+    "tailwindcss-plugins": "^0.1.2",
     "webpack-bundle-analyzer": "^3.0.2"
   },
   "browserslist": [

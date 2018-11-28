@@ -1,4 +1,10 @@
 {
+  "auth.signin.description": "Sign in or create a new account to get started.",
+  "auth.signin.go": "Let's go!",
+  "auth.signin.title": "Sign In",
+  "auth.signup.email": "Email Address",
+  "auth.signup.password": "Password",
+  "auth.signup.title": "Sign Up",
   "common.close": "Close",
   "footer.legal.cookies": "Cookies",
   "footer.legal.privacy": "Privacy Policy",
