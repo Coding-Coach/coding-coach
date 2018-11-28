@@ -839,6 +839,28 @@ module.exports = {
   */
 
   plugins: [
+    ({ addComponents, config }) => {
+      const colors = config('colors');
+      const base = {
+        '.bg-diagonal:after' : {
+          content: "''",
+          width: '100%',
+          height: '150px',
+          display: 'block',
+        },
+      };
+
+      const variants = Object.keys(colors).map(name => ({
+        [`.bg-diagonal-${name}:after`] : {
+          backgroundImage: `linear-gradient(to bottom right, ${colors[name]} 50%, #ffffff 50%)`,
+        }
+      }));
+
+      addComponents([
+        base,
+        ...variants,
+      ]);
+    },
     require('tailwindcss/plugins/container')({
       center: true,
       padding: '1rem',
