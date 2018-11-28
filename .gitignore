@@ -42,5 +42,9 @@ nohup.out
 README.old.md
 .DS_Store
 
+## Ignoring i18n compiled files
 src/config/i18n/_build
 src/config/i18n/**/messages.js
+
+## Ignored compiled css
+src/theme/index.css
