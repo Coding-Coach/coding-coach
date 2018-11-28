@@ -1,6 +1,7 @@
 import React from 'react';
-import { Trans } from '@lingui/macro';
+import { Trans, t } from '@lingui/macro';
 import { noop } from 'utils/noop';
+import { I18n } from '@lingui/react';
 
 import Button from 'components/button/Button';
 import TextField from 'components/textfield/TextField';
@@ -15,7 +16,7 @@ export default function Login() {
         <div className="flex justify-between mb-12">
           <Logo className="w-12 h-8" />
           <Button onClick={noop} shape="pill" size="small" typography="none">
-            Sign up
+            <Trans id="auth.signup.title" defaults="Sign Up" />
           </Button>
         </div>
         <div className="md:flex md:flex-col md:items-center">
@@ -24,15 +25,33 @@ export default function Login() {
               <Trans id="site.title" defaults="Coding Coach" />
             </h1>
             <p className="text-white font-sm w-3/4 mb-8">
-              Sign in or create a new account to get started.
+              <Trans
+                id="auth.signin.description"
+                defaults="Sign in or create a new account to get started."
+              />
             </p>
             <Panel floating>
               <PanelContent>
-                <h2 className="text-xl font-semibold text-primary mb-4">Sign In</h2>
-                <TextField label="Email Address" name="email" />
-                <TextField label="Password" name="password" type="password" />
+                <h2 className="text-xl font-semibold text-primary mb-4">
+                  <Trans id="auth.signin.title" defaults="Sign In" />
+                </h2>
+                <I18n>
+                  {({ i18n }) => (
+                    <div>
+                      <TextField
+                        label={i18n._(t('auth.signup.email')`Email Address`)}
+                        name="email"
+                      />
+                      <TextField
+                        label={i18n._(t('auth.signup.password')`Password`)}
+                        name="password"
+                        type="password"
+                      />
+                    </div>
+                  )}
+                </I18n>
                 <Button onClick={noop} size="small" typography="none" fullWidth>
-                  Let's go!
+                  <Trans id="auth.signin.go" defaults="Let's go!" />
                 </Button>
               </PanelContent>
             </Panel>
