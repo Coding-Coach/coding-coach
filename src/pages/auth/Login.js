@@ -32,9 +32,14 @@ export default function Login() {
             </p>
             <Panel floating>
               <PanelContent>
-                <h2 className="text-xl font-semibold text-primary mb-4">
-                  <Trans id="auth.signin.title" defaults="Sign In" />
-                </h2>
+                <div className="flex mb-6">
+                  <h2 className="flex-1 text-2xl font-semibold text-primary">
+                    <Trans id="auth.signin.title" defaults="Sign In" />
+                  </h2>
+                  <a href="#" className="text-sm h-4 mt-1">
+                    Forgot Password?
+                  </a>
+                </div>
                 <I18n>
                   {({ i18n }) => (
                     <div>
