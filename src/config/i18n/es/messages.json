@@ -1,4 +1,10 @@
 {
+  "auth.signin.description": "",
+  "auth.signin.go": "",
+  "auth.signin.title": "",
+  "auth.signup.email": "",
+  "auth.signup.password": "",
+  "auth.signup.title": "",
   "common.close": "",
   "footer.legal.cookies": "",
   "footer.legal.privacy": "",

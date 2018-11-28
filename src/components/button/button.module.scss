@@ -62,9 +62,11 @@
   &.primary {
     background: $color-primary;
     color: $color-white;
-    @include btn-box-shadow($color-primary-darker);
     @include btn-borders($color-primary, $color-primary-darker);
 
+    &.shadow {
+      @include btn-box-shadow($color-primary-darker);
+    }
 
     &:active {
       background: $color-primary-darker;
@@ -75,8 +77,11 @@
   &.secondary {
     background: transparent;
     color: $color-primary;
-    @include btn-box-shadow($color-primary-darker);
     @include btn-borders($color-primary, $color-primary);
+
+    &.shadow {
+      @include btn-box-shadow($color-primary-darker);
+    }
 
     &:active {
       background: $color-primary;
@@ -97,8 +102,11 @@
   &.danger {
     background: $color-danger;
     color: $color-white;
-    @include btn-box-shadow($color-danger-darker);
     @include btn-borders($color-danger, $color-danger-darker);
+
+    &.shadow {
+      @include btn-box-shadow($color-danger-darker);
+    }
 
     &:active {
       background: $color-danger-darker;
@@ -110,8 +118,11 @@
     background: $color-grey-light;
     color: $color-grey;
     border: none;
-    @include btn-box-shadow($color-grey-light);
 
+    &.shadow {
+      @include btn-box-shadow($color-grey-light);
+    }
+    
     &:hover,
     &:active {
       transform: none;

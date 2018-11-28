@@ -1,4 +1,5 @@
 import React from 'react';
+import { bool, object } from 'prop-types';
 import classNames from 'classnames';
 import styles from './assets/panel.module.scss';
 
@@ -19,11 +20,23 @@ import styles from './assets/panel.module.scss';
  *     </PanelFooter>
  *   </Panel>
  */
-export function Panel({ classes, children }) {
-  return (
-    <div className={classNames(classes ? classes.panelRoot : null, styles.panel)}>{children}</div>
-  );
+export function Panel({ classes, children, floating }) {
+  const css = classNames(classes.panelRoot, styles.panel, {
+    [styles.floating]: floating,
+  });
+
+  return <div className={css}>{children}</div>;
 }
+
+Panel.propTypes = {
+  classes: object,
+  floating: bool,
+};
+
+Panel.defaultProps = {
+  classes: {},
+  floating: false,
+};
 
 export function PanelHeader({ children }) {
   return (

@@ -10,9 +10,21 @@ import PropTypes from 'prop-types';
  * @param {disabled} props  true, false
  * @param {fullWidth} props Button width is 100% of parent
  * @param {typography} props capitalize, uppercase, lowercase, only
+ * @param {floating} props Adds a shadow under the button
  */
 const Button = (props) => {
-  const { children, type, size, shape, typography, disabled, fullWidth, id, onClick } = props;
+  const {
+    children,
+    floating,
+    type,
+    size,
+    shape,
+    typography,
+    disabled,
+    fullWidth,
+    id,
+    onClick,
+  } = props;
 
   return (
     <button
@@ -25,6 +37,7 @@ const Button = (props) => {
         styles[size],
         styles[shape],
         fullWidth && styles.fullWidth,
+        floating && styles.shadow,
         styles[typography] || styles.uppercase,
       )}
     >
@@ -40,6 +53,7 @@ Button.propTypes = {
   shape: PropTypes.oneOf(['square', 'rounded', 'pill']),
   children: PropTypes.node,
   disabled: PropTypes.bool,
+  floating: PropTypes.bool,
   fullWidth: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
   id: PropTypes.string,
@@ -50,6 +64,7 @@ Button.defaultProps = {
   type: 'primary',
   typography: 'uppercase',
   shape: 'rounded',
+  floating: false,
 };
 
 export default Button;
