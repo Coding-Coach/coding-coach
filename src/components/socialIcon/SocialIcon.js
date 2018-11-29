@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './SocialIcon.css';
 
 /**
  *
@@ -10,10 +10,15 @@ import './SocialIcon.css';
  * @param {size} props
  */
 const SocialIcon = (props) => {
-  const { icon, href, size } = props;
+  const { icon, href, size, className } = props;
 
   return (
-    <div className="icon-wrapper group m-3 p-4 rounded-full border border-solid border-primary-light cursor-pointer  hover:bg-primary-light transition transition-fast transition-property-all transition-timing-linear">
+    <div
+      className={classNames(
+        className,
+        'group m-3 p-4 rounded-full border border-solid border-primary-light cursor-pointer  hover:bg-primary-light transition transition-fast transition-property-all transition-timing-linear',
+      )}
+    >
       <a target="_blank" href={href} rel="noreferrer noopener">
         <FontAwesomeIcon
           icon={icon}
