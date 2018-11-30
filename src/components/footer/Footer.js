@@ -1,11 +1,11 @@
 import React from 'react';
-import { translate } from 'react-i18next';
-import 'i18n/i18n';
+import { Trans } from '@lingui/macro';
+
 import Button from 'components/button/Button';
 
 // @TODO: Bring it back when ready
 // import DonateButton from './DonateButton';
-import styles from './footer.scss';
+import styles from './footer.module.scss';
 
 function Footer({ onClickLegal, t }) {
   return (
@@ -17,10 +17,10 @@ function Footer({ onClickLegal, t }) {
           type="tertiary"
           typography="capitalize"
           size="small"
-          onClick={() => onClickLegal('terms-and-conditions')}
+          onClick={() => onClickLegal('terms')}
           className={styles.footerLink}
         >
-          {t('legal-terms-and-conditions')}
+          <Trans id="footer.legal.terms" />
         </Button>
         <Button
           type="tertiary"
@@ -29,20 +29,20 @@ function Footer({ onClickLegal, t }) {
           onClick={() => onClickLegal('cookies')}
           className={styles.footerLink}
         >
-          {t('legal-cookies')}
+          <Trans id="footer.legal.cookies" />
         </Button>
         <Button
           type="tertiary"
           typography="capitalize"
           size="small"
-          onClick={() => onClickLegal('privacy-policy')}
+          onClick={() => onClickLegal('privacy')}
           className={styles.footerLink}
         >
-          {t('legal-privacy-policy')}
+          <Trans id="footer.legal.privacy" />
         </Button>
       </div>
     </footer>
   );
 }
 
-export default translate('translations')(Footer);
+export default Footer;
