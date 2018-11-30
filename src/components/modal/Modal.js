@@ -21,8 +21,16 @@ class Modal extends React.Component {
     const { onClose } = this.props;
 
     return (
-      <div className={styles.modal} onClick={onClose}>
-        <div onClick={(e) => e.stopPropagation()} className={styles.innerModal}>
+      <div
+        className={`${
+          styles.modal
+        } fixed pin w-full h-full flex items-center justify-center bg-grey-dark`}
+        onClick={onClose}
+      >
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className={`${styles.innerModal} relative w-full h-full pt-10 pb-10 pl-5 pr-5`}
+        >
           {this.props.children}
         </div>
       </div>
