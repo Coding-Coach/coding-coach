@@ -34,4 +34,4 @@ MarkdownReader.propTypes = {
   content: string, // a URL to a .md file
 };
 
-export { MarkdownReader };
+export default MarkdownReader;
