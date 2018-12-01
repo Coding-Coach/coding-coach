@@ -6,6 +6,7 @@
   height: auto;
   background: $color-white;
   border-radius: $border-radius-rounded;
+
   --header-height: 75px;
   --footer-height: 65px;
   --content-height: calc(100% - (var(--header-height) + var(--footer-height)));

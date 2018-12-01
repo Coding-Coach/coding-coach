@@ -235,6 +235,7 @@ module.exports = {
     'tight': '-0.05em',
     'normal': '0',
     'wide': '0.05em',
+    '1px': '1px'
   },
 
 
@@ -351,6 +352,7 @@ module.exports = {
   borderRadius: {
     'none': '0',
     'sm': '.125rem',
+    'round': '3px',
     default: '.25rem',
     'lg': '.5rem',
     'full': '9999px',
@@ -444,6 +446,8 @@ module.exports = {
     '64': '16rem',
     'full': '100%',
     'screen': '100vh',
+    '65px': '65px',
+    '140px': '140px',
   },
 
 
@@ -485,6 +489,7 @@ module.exports = {
     '0': '0',
     'full': '100%',
     'screen': '100vh',
+    '75px': '75px'
   },
 
 
@@ -662,6 +667,7 @@ module.exports = {
     'lg': '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
     'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
     'outline': '0 0 0 3px rgba(52,144,220,0.5)',
+    'panel': '0px 7px 10px rgba(0, 157, 108, 0.5)',
     'none': 'none',
   },
 
@@ -842,7 +848,7 @@ module.exports = {
     ({ addComponents, config }) => {
       const colors = config('colors');
       const base = {
-        '.bg-diagonal:after' : {
+        '.bg-diagonal:after': {
           content: "''",
           width: '100%',
           height: '150px',
@@ -851,7 +857,7 @@ module.exports = {
       };
 
       const variants = Object.keys(colors).map(name => ({
-        [`.bg-diagonal-${name}:after`] : {
+        [`.bg-diagonal-${name}:after`]: {
           backgroundImage: `linear-gradient(to bottom right, ${colors[name]} 50%, #ffffff 50%)`,
         }
       }));
@@ -859,6 +865,60 @@ module.exports = {
       addComponents([
         base,
         ...variants,
+      ]);
+    },
+    ({ addComponents, config }) => {
+      const heights = config('height');
+      const base = {
+        '.calcheight': {
+          height: '100%',
+        },
+      };
+
+      const variants = Object.keys(heights).map(height => ({
+        [`.calcheight-${height}`]: {
+          height: `calc(100% - ${height})`
+        },
+      }));
+
+      addComponents([
+        base,
+        ...variants,
+      ]);
+    },
+    ({ addComponents, config }) => {
+      const colors = config('colors');
+      const base = {
+        '.panel-content': {
+          lineHeight: 'normal',
+          h2: {
+            margin: '0.83em 0',
+          },
+          p: {
+            margin: '1em 0',
+          },
+          ul: {
+            margin: '1em 0',
+
+            li: {
+              fontSize: '16px',
+            },
+          },
+          a: {
+            color: colors.primary,
+            textDecoration: 'none',
+            transition: 'background 0.15s ease-out, color 0.15s ease-out',
+            cursor: 'pointer',
+            '&:hover': {
+              background: colors['primary-light'],
+              color: colors.white,
+            },
+          },
+        },
+      };
+
+      addComponents([
+        base,
       ]);
     },
     require('tailwindcss/plugins/container')({
