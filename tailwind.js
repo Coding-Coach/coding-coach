@@ -875,11 +875,13 @@ module.exports = {
         },
       };
 
-      const variants = Object.keys(heights).map(height => ({
-        [`.calcheight-${height}`]: {
-          height: `calc(100% - ${height})`
-        },
-      }));
+      const variants = Object.keys(heights).map(height => {
+        if (height !== 'auto') return ({
+          [`.calcheight-${height}`]: {
+            height: `calc(100% - ${heights[height]})`
+          },
+        })
+      });
 
       addComponents([
         base,
