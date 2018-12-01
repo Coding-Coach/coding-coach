@@ -22,14 +22,14 @@ class Modal extends React.Component {
 
     return (
       <div
-        className={`${
-          styles.modal
-        } fixed pin w-full h-full flex items-center justify-center bg-grey-dark`}
+        className={`
+          ${styles.bgColor}
+          fixed pin w-full h-full flex items-center justify-center bg-grey-dark`}
         onClick={onClose}
       >
         <div
           onClick={(e) => e.stopPropagation()}
-          className={`${styles.innerModal} relative w-full h-full pt-10 pb-10 pl-5 pr-5`}
+          className={`${styles.innerModal} relative w-full h-full pt-10 pb-10 pl-5 pr-5 md:w-auto`}
         >
           {this.props.children}
         </div>
