@@ -1,5 +1,5 @@
 import React from 'react';
-import MarkdownReader from '../../components/markdownReader/MarkdownReader';
+import MarkdownReader from 'components/markdownReader/MarkdownReader';
 import termsAndConditions from './TermsAndConditions.md';
 
 function TermsAndConditions() {
