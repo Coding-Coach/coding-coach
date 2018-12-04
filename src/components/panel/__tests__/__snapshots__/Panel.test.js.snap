@@ -2,16 +2,8 @@
 
 exports[`Renders basic panel 1`] = `
 <div
-  class="w-full h-full bg-white rounded-round"
+  class="w-full h-full bg-white rounded-sm"
 >
   A basic Panel
-</div>
-`;
-
-exports[`Renders panel with floating prop 1`] = `
-<div
-  class="w-full h-full bg-white rounded-default rounded-round shadow-panel"
->
-  A floating Panel
 </div>
 `;
