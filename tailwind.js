@@ -235,7 +235,6 @@ module.exports = {
     'tight': '-0.05em',
     'normal': '0',
     'wide': '0.05em',
-    '1px': '1px'
   },
 
 
@@ -352,7 +351,6 @@ module.exports = {
   borderRadius: {
     'none': '0',
     'sm': '.125rem',
-    'round': '3px',
     default: '.25rem',
     'lg': '.5rem',
     'full': '9999px',
@@ -442,12 +440,11 @@ module.exports = {
     '16': '4rem',
     '24': '6rem',
     '32': '8rem',
+    '40': '9rem',
     '48': '12rem',
     '64': '16rem',
     'full': '100%',
     'screen': '100vh',
-    '65px': '65px',
-    '140px': '140px',
   },
 
 
@@ -487,9 +484,9 @@ module.exports = {
 
   minHeight: {
     '0': '0',
+    '20': '5rem',
     'full': '100%',
     'screen': '100vh',
-    '75px': '75px'
   },
 
 
@@ -667,7 +664,7 @@ module.exports = {
     'lg': '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
     'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
     'outline': '0 0 0 3px rgba(52,144,220,0.5)',
-    'panel': '0px 7px 10px rgba(0, 157, 108, 0.5)',
+    'floating': '0px 7px 10px rgba(0, 157, 108, 0.5)',
     'none': 'none',
   },
 
@@ -890,20 +887,22 @@ module.exports = {
     },
     ({ addComponents, config }) => {
       const colors = config('colors');
+      const textSizes = config('textSizes');
+      const margin = config('margin');
       const base = {
         '.panel-content': {
           lineHeight: 'normal',
           h2: {
-            margin: '0.83em 0',
+            margin: `${margin[3]} 0`,
           },
           p: {
-            margin: '1em 0',
+            margin: `${margin[4]} 0`,
           },
           ul: {
-            margin: '1em 0',
+            margin: `${margin[4]} 0`,
 
             li: {
-              fontSize: '16px',
+              fontSize: textSizes.base,
             },
           },
           a: {

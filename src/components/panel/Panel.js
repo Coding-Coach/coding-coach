@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import { bool } from 'prop-types';
 
 /**
@@ -20,19 +21,11 @@ import { bool } from 'prop-types';
  */
 
 export function Panel({ children, floating }) {
-  let panel;
+  const css = classNames('w-full h-full bg-white rounded-sm', {
+    'shadow-floating': floating,
+  });
 
-  if (floating) {
-    panel = (
-      <div className="w-full h-full bg-white rounded-default rounded-round shadow-panel">
-        {children}
-      </div>
-    );
-  } else {
-    panel = <div className="w-full h-full bg-white rounded-round">{children}</div>;
-  }
-
-  return panel;
+  return <div className={css}>{children}</div>;
 }
 
 Panel.propTypes = {
@@ -45,8 +38,8 @@ Panel.defaultProps = {
 
 export function PanelHeader({ children }) {
   return (
-    <header className="px-6 pt-6 pb-5 border-b border-secondary-lightest min-h-75px">
-      <h2 className="text-primary text-2xl m-0 uppercase fjalla-one-regular font-titles font-normal tracking-1px">
+    <header className="px-6 pt-6 pb-5 border-b border-secondary-lightest min-h-20">
+      <h2 className="text-primary text-2xl m-0 uppercase fjalla-one-regular font-titles font-normal tracking-wide">
         {children}
       </h2>
     </header>
@@ -55,15 +48,13 @@ export function PanelHeader({ children }) {
 
 export function PanelContent({ children }) {
   return (
-    <div className="p-6 overflow-y-auto calcheight-140px panel-content font-content">
-      {children}
-    </div>
+    <div className="p-6 overflow-y-auto calcheight-40 panel-content font-content">{children}</div>
   );
 }
 
 export function PanelFooter({ children }) {
   return (
-    <footer className="py-4 px-6 flex justify-end border-t border-secondary-lightest h-65px">
+    <footer className="h-16 py-4 px-6 flex justify-end border-t border-secondary-lightest">
       {children}
     </footer>
   );
