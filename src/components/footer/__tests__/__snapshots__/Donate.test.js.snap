@@ -14,7 +14,7 @@ exports[`components/footer/DonateButton should render the donate button 1`] = `
   <input
     name="hosted_button_id"
     type="hidden"
-    value="3LA9RLHEXNZV6"
+    value="123abc"
   />
   <input
     alt="footer-donate-paypal"
