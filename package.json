@@ -32,10 +32,13 @@
     "@lingui/react": "^2.7.0",
     "@reach/router": "^1.1.1",
     "classnames": "^2.2.6",
+    "glhd-tailwindcss-transitions": "^0.3.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "remark": "^10.0.1",
+    "remark-react": "^5.0.0"
   },
   "husky": {
     "hooks": {

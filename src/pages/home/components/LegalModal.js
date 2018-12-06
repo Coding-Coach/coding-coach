@@ -5,9 +5,9 @@ import { Trans, t } from '@lingui/macro';
 import Button from 'components/button/Button';
 import Modal from 'components/modal/Modal';
 import { Panel, PanelHeader, PanelContent, PanelFooter } from 'components/panel/Panel';
-import { PrivacyPolicy } from 'pages/static/PrivacyPolicy';
-import { CookiesPolicy } from 'pages/static/CookiesPolicy';
-import { TermsAndConditions } from 'pages/static/TermsAndConditions';
+import PrivacyPolicy from 'pages/static/PrivacyPolicy';
+import CookiesPolicy from 'pages/static/CookiesPolicy';
+import TermsAndConditions from 'pages/static/TermsAndConditions';
 import styles from './LegalModal.module.scss';
 
 const classesPanel = { panelRoot: styles.panelRoot };
