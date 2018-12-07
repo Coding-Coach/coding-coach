@@ -16,10 +16,10 @@ const SocialIcon = (props) => {
     <div
       className={classNames(
         className,
-        'group m-3 p-4 rounded-full border border-solid border-primary-light cursor-pointer  hover:bg-primary-light transition transition-fast transition-property-all transition-timing-linear',
+        'group m-3 w-16 h-16 flex items-center rounded-full border border-solid border-primary-light cursor-pointer hover:bg-primary-light transition transition-fast transition-property-all transition-timing-linear',
       )}
     >
-      <a target="_blank" href={href} rel="noreferrer noopener">
+      <a target="_blank" href={href} rel="noreferrer noopener" className="mx-auto">
         <FontAwesomeIcon
           icon={icon}
           size={size}
