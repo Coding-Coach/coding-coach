@@ -440,7 +440,6 @@ module.exports = {
     '16': '4rem',
     '24': '6rem',
     '32': '8rem',
-    '40': '9rem',
     '48': '12rem',
     '64': '16rem',
     'full': '100%',
@@ -484,7 +483,7 @@ module.exports = {
 
   minHeight: {
     '0': '0',
-    '20': '5rem',
+    '16': '4rem',
     'full': '100%',
     'screen': '100vh',
   },
@@ -858,27 +857,6 @@ module.exports = {
           backgroundImage: `linear-gradient(to bottom right, ${colors[name]} 50%, #ffffff 50%)`,
         }
       }));
-
-      addComponents([
-        base,
-        ...variants,
-      ]);
-    },
-    ({ addComponents, config }) => {
-      const heights = config('height');
-      const base = {
-        '.calcheight': {
-          height: '100%',
-        },
-      };
-
-      const variants = Object.keys(heights).map(height => {
-        if (height !== 'auto') return ({
-          [`.calcheight-${height}`]: {
-            height: `calc(100% - ${heights[height]})`
-          },
-        })
-      });
 
       addComponents([
         base,
