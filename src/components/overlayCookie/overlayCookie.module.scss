@@ -4,28 +4,12 @@
 
 
 .cookieWrapper {
-  // width: 100%;
-  // position: fixed;
-  // bottom: 0;
   background-color: $color-tertiary;
   opacity: 0.9;
   z-index: index(alert);
 }
 
 .cookieContent {
-  // display: flex;
   @include generalAlignment();
   color: $color-grey-dark;
-  // font-size: $font-xxs;
-  // justify-content: space-between;
-}
-
-.cookieText {
-  // composes: MVM;
-  // line-height: 1.5;
-}
-
-.cookieIcon {
-  // composes: MVM;
-  // text-align: right;
 }
