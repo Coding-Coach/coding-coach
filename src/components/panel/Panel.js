@@ -21,7 +21,7 @@ import { bool } from 'prop-types';
  */
 
 export function Panel({ children, floating }) {
-  const css = classNames('w-full h-full bg-white rounded-sm', {
+  const css = classNames('max-h-full flex flex-col w-full bg-white rounded-sm', {
     'shadow-floating': floating,
   });
 
@@ -38,7 +38,7 @@ Panel.defaultProps = {
 
 export function PanelHeader({ children }) {
   return (
-    <header className="px-6 pt-6 pb-5 border-b border-secondary-lightest min-h-20">
+    <header className="px-6 pt-6 pb-5 border-b border-secondary-lightest h-24">
       <h2 className="text-primary text-2xl m-0 uppercase fjalla-one-regular font-titles font-normal tracking-wide">
         {children}
       </h2>
@@ -47,14 +47,12 @@ export function PanelHeader({ children }) {
 }
 
 export function PanelContent({ children }) {
-  return (
-    <div className="p-6 overflow-y-auto calcheight-40 panel-content font-content">{children}</div>
-  );
+  return <div className="p-6 h-auto overflow-y-auto panel-content font-content">{children}</div>;
 }
 
 export function PanelFooter({ children }) {
   return (
-    <footer className="h-16 py-4 px-6 flex justify-end border-t border-secondary-lightest">
+    <footer className="py-8 px-6 h-16 flex justify-end border-t border-secondary-lightest">
       {children}
     </footer>
   );
