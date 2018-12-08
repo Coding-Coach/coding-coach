@@ -46,9 +46,9 @@ class OverlayCookie extends Component {
     if (cookiesAccepted === true) return null;
 
     return (
-      <section className={styles.cookieWrapper}>
-        <div className={styles.cookieContent}>
-          <p className={styles.cookieText}>
+      <section className={`${styles.cookieWrapper} fixed w-full pin-b`}>
+        <div className={`${styles.cookieContent} flex justify-between text-xs`}>
+          <p className={`${styles.cookieText} leading-normal my-4 ml-1`}>
             <Trans id="legal.notification">
               <span>
                 <Button
@@ -62,7 +62,7 @@ class OverlayCookie extends Component {
               </span>
             </Trans>
           </p>
-          <p className={styles.cookieIcon}>
+          <p className={`${styles.cookieIcon} text-right my-4`}>
             <FontAwesomeIcon icon={faTimes} onClick={this.acceptCookies} />
           </p>
         </div>
