@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './HomeSection.scss';
-import PropTypes from 'prop-types';
+import { node, string } from 'prop-types';
+import styles from './HomeSection.module.scss';
 
 const HomeSection = ({ id, title, text, media, children }) => (
   <section id={id} className={styles.section}>
@@ -18,11 +18,11 @@ const HomeSection = ({ id, title, text, media, children }) => (
 );
 
 HomeSection.propTypes = {
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string,
-  media: PropTypes.node.isRequired,
-  children: PropTypes.node,
+  id: string.isRequired,
+  title: string.isRequired,
+  text: string,
+  media: node.isRequired,
+  children: node,
 };
 
 export default HomeSection;

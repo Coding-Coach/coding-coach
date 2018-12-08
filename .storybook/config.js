@@ -1,5 +1,5 @@
 import { configure, addDecorator } from '@storybook/react';
-import '../src/theme/index.scss';
+import 'theme/index.css';
 
 const req = require.context('../src', true, /\.stories\.js$/);
 

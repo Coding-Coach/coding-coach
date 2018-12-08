@@ -1,16 +1,16 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './assets/panel.scss';
+import { bool } from 'prop-types';
 
 /**
  * Usage:
  *
  *   <Panel>
- *     <PanelHeader>Some title here</Panel.Header>
+ *     <PanelHeader>Some title here</PanelHeader>
  *     <PanelContent>
  *       <img src="something.png" />
  *       <div>
- *         <p>We should be able to add anything as the content<.p>
+ *         <p>We should be able to add anything as the content</p>
  *       </div>
  *     </PanelContent>
  *     <PanelFooter>
@@ -19,24 +19,43 @@ import styles from './assets/panel.scss';
  *     </PanelFooter>
  *   </Panel>
  */
-export function Panel({ classes, children }) {
-  return (
-    <div className={classNames(classes ? classes.panelRoot : null, styles.panel)}>{children}</div>
-  );
+
+export function Panel({ children, floating }) {
+  const css = classNames('w-full h-full bg-white rounded-sm', {
+    'shadow-floating': floating,
+  });
+
+  return <div className={css}>{children}</div>;
 }
+
+Panel.propTypes = {
+  floating: bool,
+};
+
+Panel.defaultProps = {
+  floating: false,
+};
 
 export function PanelHeader({ children }) {
   return (
-    <header className={styles.header}>
-      <h2 className={styles.title}>{children}</h2>
+    <header className="px-6 pt-6 pb-5 border-b border-secondary-lightest min-h-20">
+      <h2 className="text-primary text-2xl m-0 uppercase fjalla-one-regular font-titles font-normal tracking-wide">
+        {children}
+      </h2>
     </header>
   );
 }
 
 export function PanelContent({ children }) {
-  return <div className={styles.content}>{children}</div>;
+  return (
+    <div className="p-6 overflow-y-auto calcheight-40 panel-content font-content">{children}</div>
+  );
 }
 
 export function PanelFooter({ children }) {
-  return <footer className={styles.footer}>{children}</footer>;
+  return (
+    <footer className="h-16 py-4 px-6 flex justify-end border-t border-secondary-lightest">
+      {children}
+    </footer>
+  );
 }

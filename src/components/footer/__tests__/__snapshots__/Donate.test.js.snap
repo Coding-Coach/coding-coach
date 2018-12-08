@@ -7,25 +7,25 @@ exports[`components/footer/DonateButton should render the donate button 1`] = `
   target="_top"
 >
   <input
-    type="hidden"
     name="cmd"
+    type="hidden"
     value="_s-xclick"
   />
   <input
-    type="hidden"
     name="hosted_button_id"
-    value="123abc"
+    type="hidden"
+    value="3LA9RLHEXNZV6"
   />
   <input
-    type="image"
-    src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+    alt="footer-donate-paypal"
     border="0"
     name="submit"
-    alt="PayPal - The safer, easier way to pay online!"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+    type="image"
   />
   <img
+    alt="footer-donate"
     src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif"
-    alt="Donate!"
   />
 </form>
 `;

@@ -13,6 +13,8 @@ before_script:
   - greenkeeper-lockfile-update
 script:
   - yarn lint
+  - yarn i18n-extract
+  - yarn i18n-compile
   - yarn test
   - yarn build
 after_script: greenkeeper-lockfile-upload

@@ -1,0 +1,88 @@
+@import '~theme/base/variables';
+@import '~theme/base/mediaqueries';
+@import '~theme/base/utils';
+@import '~theme/base/spacing';
+
+$distance-height-variation-before: 20px;
+$distance-height-variation-after: 40px;
+
+// Sections with the text at the right
+@mixin isReverseSection() {
+  text-align: right;
+
+  header {
+    &:after {
+      right: 0;
+    }
+  }
+
+  @include respond-to(tablet) {
+    > div {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.content {
+  > section:nth-child(odd) {
+    background-color: $color-white;
+    h1 {
+      color: $color-secondary;
+    }
+    @include isReverseSection();
+  }
+
+  > section:nth-child(2) {
+    background-color: $color-tertiary;
+
+    &:before,
+    &:after {
+      content: "";
+      background: $color-tertiary;
+      width: 100%;
+      position: absolute;
+      left: 0;
+    }
+
+    &:before {
+      height: $distance-height-variation-before;
+      top: -$distance-height-variation-before;
+      background: linear-gradient(to top right, $color-tertiary, $color-tertiary 50%, white 50%, white);
+    }
+
+    &:after {
+      height: $distance-height-variation-after;
+      bottom: -$distance-height-variation-after;
+      background: linear-gradient(to bottom left, $color-tertiary, $color-tertiary 50%, white 50%, white);
+    }
+  }
+
+  > section:last-child {
+    //margin and padding adjustements are needed to render background color diagonally
+    margin-top: 160px;
+    padding-top: 0;
+    p {
+      font-size: $font-s;
+      color: $color-grey-medium;
+      line-height: 1.5;
+    }
+  }
+}
+
+.email {
+  text-decoration: none;
+  color: $color-secondary;
+}
+
+.slackOrg {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid $color-black;
+  transition: background 0.15s ease-out, color 0.15s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-secondary;
+    color:$color-white;
+  }
+}

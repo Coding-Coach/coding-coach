@@ -18,6 +18,7 @@
   ],
   "rules": {
     "react/jsx-filename-extension": "off",
+    "react/jsx-no-target-blank": [2, { "enforceDynamicLinks": "always" }],
     "lines-between-class-members": 2,
     "block-spacing": 2,
     "no-trailing-spaces": 2,
@@ -28,6 +29,7 @@
     ]
   },
   "plugins": [
+    "react",
     "babel",
     "prettier"
   ]

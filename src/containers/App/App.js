@@ -1,20 +1,18 @@
 import React from 'react';
-import { func } from 'prop-types';
-import { translate } from 'react-i18next';
 import { Router } from '@reach/router';
-import { Home } from 'pages';
-import 'i18n/i18n';
+import { I18nProvider } from '@lingui/react';
+import { catalogs } from 'config/i18n';
+import { Home, Login } from 'pages';
 
-const App = ({ t }) => {
+const App = () => {
   return (
-    <Router>
-      <Home path="/" />
-    </Router>
+    <I18nProvider language="en" catalogs={catalogs}>
+      <Router>
+        <Home path="/" />
+        <Login path="/auth/login" />
+      </Router>
+    </I18nProvider>
   );
 };
 
-App.propTypes = {
-  t: func,
-};
-
-export default translate('translations')(App);
+export default App;
