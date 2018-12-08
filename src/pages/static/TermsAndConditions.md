@@ -1,4 +1,4 @@
-# Terms and Conditions
+## Terms and Conditions
 
 #### Last updated: October 03, 2018
 
