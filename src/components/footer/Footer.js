@@ -1,6 +1,7 @@
 import React from 'react';
 import { translate } from 'react-i18next';
 import 'i18n/i18n';
+import Button from 'components/button/Button';
 
 // @TODO: Bring it back when ready
 // import DonateButton from './DonateButton';
@@ -12,23 +13,33 @@ function Footer({ onClickLegal, t }) {
       <div className={styles.footerInner}>
         <div className={styles.column}>{/* <DonateButton /> */}</div>
 
-        <a
+        <Button
+          type="tertiary"
+          typography="capitalize"
+          size="small"
           onClick={() => onClickLegal('terms-and-conditions')}
-          href={'#terms'}
           className={styles.footerLink}
         >
           {t('legal-terms-and-conditions')}
-        </a>
-        <a onClick={() => onClickLegal('cookies')} href={'#cookies'} className={styles.footerLink}>
+        </Button>
+        <Button
+          type="tertiary"
+          typography="capitalize"
+          size="small"
+          onClick={() => onClickLegal('cookies')}
+          className={styles.footerLink}
+        >
           {t('legal-cookies')}
-        </a>
-        <a
+        </Button>
+        <Button
+          type="tertiary"
+          typography="capitalize"
+          size="small"
           onClick={() => onClickLegal('privacy-policy')}
-          href={'#privacy'}
           className={styles.footerLink}
         >
           {t('legal-privacy-policy')}
-        </a>
+        </Button>
       </div>
     </footer>
   );

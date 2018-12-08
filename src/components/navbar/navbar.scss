@@ -1,6 +1,7 @@
-@import "~theme/base/variables";
-@import '~theme/base/utils';
+@import '~theme/base/mediaqueries';
 @import '~theme/base/spacing';
+@import '~theme/base/utils';
+@import "~theme/base/variables";
 
 .navigationBar {
   composes: PVM;
@@ -9,6 +10,13 @@
 
 .inner {
   @include generalAlignment();
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 1rem;
+  @include respond-to(tablet) {
+    justify-content:  flex-start;
+    padding: 0 2rem;
+  }
 }
 
 .navLinks {
@@ -21,6 +29,11 @@
   font-size: $font-s;
 
   &:not(:last-child) {
-    margin-right: 2em;
+    margin-right: 0.5em;
   }
+  @include respond-to(tablet) {
+    &:not(:last-child) {
+      margin-right: 2em;
+    }
+}
 }
