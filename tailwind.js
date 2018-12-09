@@ -48,6 +48,7 @@ let colors = {
 
   'black': '#202939',
   'white': '#ffffff',
+  'blue': '#1f386e',
 
   // Green variations
   'primary-lightest': '#D5FFF4',
