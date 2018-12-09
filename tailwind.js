@@ -440,6 +440,7 @@ module.exports = {
     '16': '4rem',
     '24': '6rem',
     '32': '8rem',
+    '40': '9rem',
     '48': '12rem',
     '64': '16rem',
     'full': '100%',
@@ -483,6 +484,7 @@ module.exports = {
 
   minHeight: {
     '0': '0',
+    '20': '5rem',
     'full': '100%',
     'screen': '100vh',
   },
@@ -662,6 +664,7 @@ module.exports = {
     'lg': '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
     'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
     'outline': '0 0 0 3px rgba(52,144,220,0.5)',
+    'floating': '0px 7px 10px rgba(0, 157, 108, 0.5)',
     'none': 'none',
   },
 
@@ -773,7 +776,7 @@ module.exports = {
   modules: {
     appearance: ['responsive'],
     backgroundAttachment: ['responsive'],
-    backgroundColors: ['responsive', 'hover', 'focus'],
+    backgroundColors: ['responsive', 'hover', 'focus', 'group-hover'],
     backgroundPosition: ['responsive'],
     backgroundRepeat: ['responsive'],
     backgroundSize: ['responsive'],
@@ -811,9 +814,9 @@ module.exports = {
     svgStroke: [],
     tableLayout: ['responsive'],
     textAlign: ['responsive'],
-    textColors: ['responsive', 'hover', 'focus'],
+    textColors: ['responsive', 'hover', 'focus', 'group-hover'],
     textSizes: ['responsive'],
-    textStyle: ['responsive', 'hover', 'focus'],
+    textStyle: ['responsive', 'hover', 'focus', 'group-hover'],
     tracking: ['responsive'],
     userSelect: ['responsive'],
     verticalAlign: ['responsive'],
@@ -842,7 +845,7 @@ module.exports = {
     ({ addComponents, config }) => {
       const colors = config('colors');
       const base = {
-        '.bg-diagonal:after' : {
+        '.bg-diagonal:after': {
           content: "''",
           width: '100%',
           height: '150px',
@@ -851,7 +854,7 @@ module.exports = {
       };
 
       const variants = Object.keys(colors).map(name => ({
-        [`.bg-diagonal-${name}:after`] : {
+        [`.bg-diagonal-${name}:after`]: {
           backgroundImage: `linear-gradient(to bottom right, ${colors[name]} 50%, #ffffff 50%)`,
         }
       }));
@@ -859,6 +862,64 @@ module.exports = {
       addComponents([
         base,
         ...variants,
+      ]);
+    },
+    ({ addComponents, config }) => {
+      const heights = config('height');
+      const base = {
+        '.calcheight': {
+          height: '100%',
+        },
+      };
+
+      const variants = Object.keys(heights).map(height => {
+        if (height !== 'auto') return ({
+          [`.calcheight-${height}`]: {
+            height: `calc(100% - ${heights[height]})`
+          },
+        })
+      });
+
+      addComponents([
+        base,
+        ...variants,
+      ]);
+    },
+    ({ addComponents, config }) => {
+      const colors = config('colors');
+      const textSizes = config('textSizes');
+      const margin = config('margin');
+      const base = {
+        '.panel-content': {
+          lineHeight: 'normal',
+          h2: {
+            margin: `${margin[3]} 0`,
+          },
+          p: {
+            margin: `${margin[4]} 0`,
+          },
+          ul: {
+            margin: `${margin[4]} 0`,
+
+            li: {
+              fontSize: textSizes.base,
+            },
+          },
+          a: {
+            color: colors.primary,
+            textDecoration: 'none',
+            transition: 'background 0.15s ease-out, color 0.15s ease-out',
+            cursor: 'pointer',
+            '&:hover': {
+              background: colors['primary-light'],
+              color: colors.white,
+            },
+          },
+        },
+      };
+
+      addComponents([
+        base,
       ]);
     },
     require('tailwindcss/plugins/container')({
@@ -871,7 +932,8 @@ module.exports = {
         'gradient-primary': ['-45deg', colors['primary-lightest'], colors['primary-light']],
       },
       variants: ['responsive']
-    })
+    }),
+    require('glhd-tailwindcss-transitions')(),
   ],
 
 
