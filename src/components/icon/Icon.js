@@ -1,5 +1,5 @@
 import React from 'react';
-import { any, number, string, object } from 'prop-types';
+import { any, number, string, object, func } from 'prop-types';
 
 export default function Icon({
   children,
@@ -11,6 +11,7 @@ export default function Icon({
   width,
   vectors,
   viewBox,
+  onClick,
 }) {
   return (
     <svg
@@ -20,6 +21,7 @@ export default function Icon({
       aria-labelledby="title"
       className={className}
       style={style}
+      onClick={onClick}
     >
       <title id="title">{title}</title>
       {vectors && <path fill={color} d={vectors} />}
@@ -38,4 +40,5 @@ Icon.propTypes = {
   vectors: string,
   viewBox: string,
   width: number,
+  onClick: func,
 };
