@@ -92,7 +92,10 @@ class Notification extends React.Component {
           }}
           onKeyDown={this.onKeyDown(onClose)}
           onFocus={this.toggleActive('isCloseFocus')}
-          onBlur={this.toggleActive('isCloseFocus')}
+          onBlur={(e) => {
+            e.stopPropagation();
+            this.setState({ isFocus: false, isCloseFocus: false });
+          }}
         >
           <CloseIcon />
         </div>
