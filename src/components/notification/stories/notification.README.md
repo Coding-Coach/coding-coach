@@ -3,7 +3,7 @@
 #### Usage
 ```jsx
 <Notification
-  type="mentorship"
+  type={NOTIFICATION_TYPES.neutral}
   title="Emma wants to be your mentee!"
   message="Head over to invitations to check out your invite."
   time={new Date(2018, 12, 24, 22, 29, 0)}
@@ -25,7 +25,7 @@
 #### Notification Types
 ```jsx
 <Notification
-  type="mentorship"
+  type={NOTIFICATION_TYPES.neutral}
   title="Emma wants to be your mentee!"
   message="Head over to invitations to check out your invite."
   time={new Date(2018, 12, 24, 22, 29, 0)}
@@ -34,7 +34,7 @@
 />
 
 <Notification
-  type="account"
+  type={NOTIFICATION_TYPES.success}
   title="Update your profile"
   message="Update your profile to get better matches!"
   time={new Date(2018, 12, 24, 22, 29, 0)}
@@ -43,7 +43,7 @@
 />
 
 <Notification
-  type="error"
+  type={NOTIFICATION_TYPES.error}
   title="Error"
   message="You don't have the permission to perform this action!!"
   time={new Date(2018, 12, 24, 22, 29, 0)}

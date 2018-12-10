@@ -1,12 +1,12 @@
 import React from 'react';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import format from 'date-fns/format';
-import CloseIcon from '../icon/Close';
+import { string, func, oneOf, instanceOf } from 'prop-types';
+import CloseIcon from 'components/icon/Close';
 
-const NOTIFICATION_TYPES = {
-  mentorship: 'mentorship',
-  account: 'account',
+export const NOTIFICATION_TYPES = {
+  neutral: 'neutral',
+  success: 'success',
   error: 'error',
 };
 
@@ -19,13 +19,13 @@ class Notification extends React.Component {
 
   getColorType(type) {
     switch (type) {
-      case NOTIFICATION_TYPES.account:
+      case NOTIFICATION_TYPES.success:
         return 'primary-light';
       case NOTIFICATION_TYPES.error:
         return 'danger-light';
-      case NOTIFICATION_TYPES.mentorship:
+      case NOTIFICATION_TYPES.neutral:
       default:
-        return 'blue';
+        return 'neutral';
     }
   }
 
@@ -105,16 +105,16 @@ class Notification extends React.Component {
 }
 
 Notification.propTypes = {
-  type: PropTypes.oneOf(Object.values(NOTIFICATION_TYPES)),
-  title: PropTypes.string.isRequired,
-  message: PropTypes.string.isRequired,
-  time: PropTypes.instanceOf(Date).isRequired,
-  onClose: PropTypes.func.isRequired,
-  onClick: PropTypes.func,
+  type: oneOf(Object.values(NOTIFICATION_TYPES)),
+  title: string.isRequired,
+  message: string.isRequired,
+  time: instanceOf(Date).isRequired,
+  onClose: func.isRequired,
+  onClick: func,
 };
 
 Notification.defaultProps = {
-  type: 'primary',
+  type: NOTIFICATION_TYPES.neutral,
 };
 
 export default Notification;
