@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import format from 'date-fns/format';
 import CloseIcon from '../icon/Close';
 
 const NOTIFICATION_TYPES = {
@@ -71,7 +72,7 @@ class Notification extends React.Component {
         <h3 className="text-sm font-titles text-secondary-dark mb-2">{title}</h3>
         <p className="text-xs font-thin font-content text-black mb-2">{message}</p>
         <div className="text-right text-xs font-thin font-content text-secondary-lighter">
-          {time}
+          {format(time, 'hh:mm aa')}
         </div>
 
         <div
@@ -104,7 +105,7 @@ Notification.propTypes = {
   type: PropTypes.oneOf(Object.values(NOTIFICATION_TYPES)),
   title: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
-  time: PropTypes.string.isRequired,
+  time: PropTypes.instanceOf(Date).isRequired,
   onClose: PropTypes.func.isRequired,
   onClick: PropTypes.func,
 };
