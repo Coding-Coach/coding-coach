@@ -1,8 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import CloseIcon from '../icon/Close';
 
 const NOTIFICATION_TYPES = {
   mentorship: 'mentorship',
@@ -96,7 +95,7 @@ class Notification extends React.Component {
           onFocus={this.toggleActive('isCloseFocus')}
           onBlur={this.toggleActive('isCloseFocus')}
         >
-          <FontAwesomeIcon icon={faTimes} className="w-4 h-4 fill-current" />
+          <CloseIcon title="Close Button" />
         </div>
       </div>
     );
