@@ -97,7 +97,7 @@ class Notification extends React.Component {
             this.setState({ isFocus: false, isCloseFocus: false });
           }}
         >
-          <CloseIcon />
+          <CloseIcon title="Close Button" />
         </div>
       </div>
     );
