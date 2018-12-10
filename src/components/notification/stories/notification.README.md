@@ -11,11 +11,12 @@
 ```
 | propName | propType | defaultValue | isRequired | Description                |
 | -------- | -------- | ------------ | ---------- | -------------------------- |
-| onClick  | function |              | no         | Click Handler              |
+| type     | string   | primary      | no         | mentorship, account, error |
 | title    | string   |              | yes        | Notification title         |
 | message  | string   |              | yes        | Notification message       |
 | time     | string   |              | yes        | Notification time          |
-| type     | string   | primary      | no         | mentorship, account, error |
+| onClose  | function |              | yes        | Discard notification       |
+| onClick  | function |              | no         | Click handler              |
 
 
 ### Use Cases
@@ -39,5 +40,4 @@
   message="You don't have the permission to perform this action!!"
   time="10:29 p.m."
 />
-```
 ```

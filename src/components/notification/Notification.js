@@ -11,7 +11,11 @@ const NOTIFICATION_TYPES = {
 };
 
 class Notification extends React.Component {
-  state = { isActive: false };
+  state = {
+    isHover: false,
+    isFocus: false,
+    isCloseFocus: false,
+  };
 
   getColorType(type) {
     switch (type) {
@@ -25,29 +29,45 @@ class Notification extends React.Component {
     }
   }
 
-  toggleActive = () => {
-    this.setState((prev) => ({ isActive: !prev.isActive }));
+  toggleActive = (value) => () => {
+    this.setState((prev) => ({ [value]: !prev[value] }));
+  };
+
+  onKeyDown = (fn) => (e) => {
+    // space || enter
+    if (e.which === 13 || e.which === 32) {
+      e.preventDefault();
+      fn && fn(e);
+    }
   };
 
   render() {
     const { type, title, message, time, onClick, onClose } = this.props;
-    const { isActive } = this.state;
-    console.log(isActive);
+    const { isHover, isFocus, isCloseFocus } = this.state;
+
+    const isActive = isHover || isFocus;
 
     const colorType = this.getColorType(type);
 
     return (
       <div
-        onClick={onClick}
+        tabIndex="0"
         className={classNames(
-          'group',
-          'text-left bg-white p-3 border-solid border-l-4 cursor-pointer relative',
-          `border-${colorType}`,
+          'text-left bg-white p-3 cursor-pointer relative',
+          `border-solid border-l-4 border-${colorType}`,
           'transition-property-shadow transition-slow transition-timing-ease',
-          'hover:shadow-md focus:shadow-md',
+          'hover:shadow-md focus:shadow-md focus:outline-none',
         )}
-        onMouseEnter={this.toggleActive}
-        onMouseLeave={this.toggleActive}
+        onClick={onClick}
+        onKeyDown={this.onKeyDown(onClick)}
+        onMouseEnter={this.toggleActive('isHover')}
+        onMouseLeave={this.toggleActive('isHover')}
+        onFocus={this.toggleActive('isFocus')}
+        onBlur={(e) => {
+          if (!e.relatedTarget || !e.relatedTarget.getAttribute('aria-label') === 'Close') {
+            this.toggleActive('isFocus')(e);
+          }
+        }}
       >
         <h3 className="text-sm font-titles text-secondary-dark mb-2">{title}</h3>
         <p className="text-xs font-thin font-content text-black mb-2">{message}</p>
@@ -55,24 +75,29 @@ class Notification extends React.Component {
           {time}
         </div>
 
-        {isActive && (
-          <div
-            className={classNames(
-              'absolute w-8 h-8 pin-t pin-r',
-              'flex items-center justify-center',
-              'bg-danger-light text-white rounded-full',
-              'transition-property-shadow transition-slow transition-timing-ease',
-              'hover:shadow-md focus:shadow-md',
-            )}
-            style={{ transform: 'translate(50%, -50%)' }}
-            onClick={(e) => {
-              e.stopPropagation();
-              onClose && onClose(e);
-            }}
-          >
-            <FontAwesomeIcon icon={faTimes} className="w-4 h-4 fill-current" />
-          </div>
-        )}
+        <div
+          tabIndex="0"
+          role="button"
+          aria-label="Close"
+          className={classNames(
+            `${!isActive && !isCloseFocus ? 'hidden' : 'flex'}`,
+            'items-center justify-center',
+            'absolute w-8 h-8 pin-t pin-r',
+            'bg-danger-light text-white rounded-full',
+            'transition-property-shadow transition-slow transition-timing-ease',
+            'hover:shadow-md focus:shadow-md',
+          )}
+          style={{ transform: 'translate(50%, -50%)' }}
+          onClick={(e) => {
+            e.stopPropagation();
+            onClose && onClose(e);
+          }}
+          onKeyDown={this.onKeyDown(onClose)}
+          onFocus={this.toggleActive('isCloseFocus')}
+          onBlur={this.toggleActive('isCloseFocus')}
+        >
+          <FontAwesomeIcon icon={faTimes} className="w-4 h-4 fill-current" />
+        </div>
       </div>
     );
   }
