@@ -6,7 +6,13 @@ const HomeSection = ({ align, id, title, text, media, children }) => {
   const isRight = align === 'right';
 
   return (
-    <section id={id} className={classNames('py-32', { 'bg-primary-lighter': !isRight })}>
+    <section
+      id={id}
+      className={classNames('py-32', {
+        'bg-primary-lighter': !isRight,
+        'bg-band bg-band-primary-lighter': !isRight,
+      })}
+    >
       <div
         className={classNames('container md:flex', {
           'flex-row-reverse': isRight,
