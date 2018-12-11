@@ -75,7 +75,7 @@ class Home extends Component {
                   <Trans id="home.contact.description">
                     <a
                       href={config.contact.SLACK_URL}
-                      className=""
+                      className="no-underline text-secondary-dark border-b hover:bg-primary-light hover:text-white"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -84,7 +84,7 @@ class Home extends Component {
                     <a
                       target="_blank"
                       href={`mailto:${EMAIL}`}
-                      className=""
+                      className="text-primary-light no-underline hover:underline"
                       rel="noopener noreferrer"
                     >
                       {EMAIL}
