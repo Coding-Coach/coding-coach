@@ -6,14 +6,25 @@ const HomeSection = ({ align, id, title, text, media, children }) => {
   const isRight = align === 'right';
 
   return (
-    <section id={id} className="py-32">
-      <div className="container flex">
+    <section id={id} className={classNames('py-32', { 'bg-primary-lighter': !isRight })}>
+      <div
+        className={classNames('container flex', {
+          'flex-row-reverse': isRight,
+        })}
+      >
         <div
-          className={classNames('flex-1', { 'pl-8': isRight, 'pr-8': !isRight })}
-          style={{ order: isRight ? 2 : 1 }}
+          className={classNames('flex-1', {
+            'pl-8': isRight,
+            'pr-8': !isRight,
+          })}
         >
           <h2
-            className={`text-primary-light text-5xl font-titles font-normal uppercase leading-tight text-${align}`}
+            className={classNames(
+              `text-primary-light text-5xl font-titles font-normal uppercase leading-tight text-${align}`,
+              {
+                'text-secondary-dark': !isRight,
+              },
+            )}
           >
             {title}
           </h2>
@@ -22,9 +33,7 @@ const HomeSection = ({ align, id, title, text, media, children }) => {
           </p>
           {children}
         </div>
-        <div className="flex items-center w-2/5" style={{ order: isRight ? 1 : 2 }}>
-          {media}
-        </div>
+        <div className="flex items-center w-2/5">{media}</div>
       </div>
     </section>
   );
