@@ -8,23 +8,26 @@ const HomeSection = ({ align, id, title, text, media, children }) => {
   return (
     <section id={id} className={classNames('py-32', { 'bg-primary-lighter': !isRight })}>
       <div
-        className={classNames('container flex', {
+        className={classNames('container md:flex', {
           'flex-row-reverse': isRight,
         })}
       >
         <div
-          className={classNames('flex-1', {
+          className={classNames('md:flex-1 flex flex-col', {
             'pl-8': isRight,
             'pr-8': !isRight,
+            'items-end': isRight,
           })}
         >
           <h2
             className={classNames(
               `text-primary-light text-5xl font-titles font-normal uppercase leading-tight text-${align}`,
+              'mb-6 border-b border-secondary-lightest',
               {
                 'text-secondary-dark': !isRight,
               },
             )}
+            style={{ width: '250px' }}
           >
             {title}
           </h2>
@@ -33,7 +36,7 @@ const HomeSection = ({ align, id, title, text, media, children }) => {
           </p>
           {children}
         </div>
-        <div className="flex items-center w-2/5">{media}</div>
+        <div className="flex items-center mt-16 md:mt-0 md:w-2/5">{media}</div>
       </div>
     </section>
   );
