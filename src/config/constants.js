@@ -19,4 +19,7 @@ export default {
   payments: {
     paypal: process.env.REACT_APP_PAYPAL_DONATE_BUTTON_ID || '123abc',
   },
+  oAuth: {
+    FB_APP_ID: process.env.REACT_APP_FB_APP_ID || '2303959949890233',
+  },
 };

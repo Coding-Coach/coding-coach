@@ -1,6 +1,8 @@
 import React from 'react';
 import { func, string, bool } from 'prop-types';
 
+import withLogin from './withLogin';
+
 class FacebookLogin extends React.Component {
   static defaultProps = {
     language: 'en_US',
@@ -44,7 +46,6 @@ class FacebookLogin extends React.Component {
       js = d.createElement(s);
       js.id = id;
       js.src = `http://connect.facebook.net/${language}/sdk.js`;
-      // js.setAttribute('crossorigin', true);
       fjs.parentNode.insertBefore(js, fjs);
     })(document, 'script', 'fb-sdk');
   }
@@ -115,4 +116,4 @@ FacebookLogin.propTypes = {
   callback: func.isRequired,
 };
 
-export default FacebookLogin;
+export default withLogin(FacebookLogin);

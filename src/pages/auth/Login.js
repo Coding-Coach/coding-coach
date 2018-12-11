@@ -5,12 +5,12 @@ import { I18n } from '@lingui/react';
 
 import Button from 'components/button/Button';
 import Facebook from 'components/icon/Facebook';
-import FacebookLogin from 'components/facebookLogin/FacebookLogin';
+import FacebookLogin from 'components/oAuth/FacebookLogin';
 import Instagram from 'components/icon/Instagram';
 import TextField from 'components/textfield/TextField';
 import Twitter from 'components/icon/Twitter';
 import { Panel, PanelContent } from 'components/panel/Panel';
-
+import { default as config } from 'config/constants';
 import { ReactComponent as Logo } from '../home/assets/images/coding-coach-logo.svg';
 
 export default function Login() {
@@ -65,8 +65,7 @@ export default function Login() {
                 <div className="flex justify-center mb-8">
                   <Twitter width={31} height={25} color="#76A9EA" className="mx-2" />
                   <FacebookLogin
-                    appId="2303959949890233"
-                    callback={(data) => console.log(data)}
+                    appId={config.oAuth.FB_APP_ID}
                     render={(renderProps) => (
                       <Facebook
                         width={25}
