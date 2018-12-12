@@ -168,7 +168,7 @@ module.exports = {
     '2xl': '1.5rem',    // 24px
     '3xl': '1.875rem',  // 30px
     '4xl': '2.25rem',   // 36px
-    '5xl': '3rem',      // 48px
+    '5xl': '4.25rem',   // 68px
     '6xl': '5.25rem',   // 84px
   },
 
@@ -844,6 +844,8 @@ module.exports = {
 
   plugins: [
     ({ addComponents, config }) => {
+      // This plugins creates a single diagonal background
+      // at the bottom of the given element
       const colors = config('colors');
       const base = {
         '.bg-diagonal:after': {
@@ -858,6 +860,44 @@ module.exports = {
         [`.bg-diagonal-${name}:after`]: {
           backgroundImage: `linear-gradient(to bottom right, ${colors[name]} 50%, #ffffff 50%)`,
         }
+      }));
+
+      addComponents([
+        base,
+        ...variants,
+      ]);
+    },
+    ({ addComponents, config }) => {
+      // This plugin creates two diagonal brackgrounds, one at
+      // the top and one at the bottom.
+      const colors = config('colors');
+      const base = {
+        '.bg-band': {
+          position: 'relative',
+        },
+        '.bg-band:before, .bg-band:after': {
+          content: '""',
+          width: '100%',
+          position: 'absolute',
+          left: 0,
+        },
+        '.bg-band:before': {
+          height: '20px',
+          top: '-20px',
+        },
+        '.bg-band:after': {
+          height: '40px',
+          bottom: '-40px',
+        },
+      };
+
+      const variants = Object.keys(colors).map(name => ({
+        [`.bg-band-${name}:before`]: {
+          backgroundImage: `linear-gradient(to top right, ${colors[name]}, ${colors[name]} 50%, white 50%, white)`,
+        },
+        [`.bg-band-${name}:after`]: {
+          backgroundImage: `linear-gradient(to bottom left, ${colors[name]}, ${colors[name]} 50%, white 50%, white)`,
+        },
       }));
 
       addComponents([
