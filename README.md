@@ -10,13 +10,6 @@ Copy the `.env.example` file to `.env`.
 
 Installing the node modules and starting the server:
 
-### npm
-```sh
-npm install
-npm start
-```
-
-### Yarn
 ```sh
 yarn
 yarn start
