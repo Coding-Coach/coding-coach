@@ -13,7 +13,6 @@ import SocialMedia from './components/SocialMedia';
 import ImageAbout from './assets/images/about.svg';
 import ImageMission from './assets/images/mission.svg';
 import ImageContact from './assets/images/contact.svg';
-import styles from './assets/home.module.scss';
 
 import config from 'config/constants';
 
@@ -51,29 +50,32 @@ class Home extends Component {
         <Hero onClick={this.handleOnClickCTA} />
         <I18n>
           {({ i18n }) => (
-            <main className={styles.content}>
+            <main className="">
               <HomeSection
                 id="about"
+                align="right"
                 title={i18n._(t`home.about.title`)}
                 text={i18n._(t`home.about.description`)}
                 media={<Image src={ImageAbout} alt={i18n._(t`home.about.img`)} />}
               />
               <HomeSection
                 id="mission"
+                align="left"
                 title={i18n._(t`home.mission.title`)}
                 text={i18n._(t`home.mission.description`)}
                 media={<Image src={ImageMission} alt={i18n._(t`home.mission.img`)} />}
               />
               <HomeSection
                 id="contact"
+                align="right"
                 title={i18n._(t`home.contact.title`)}
                 media={<img src={ImageContact} alt={i18n._(t`home.contact.img`)} />}
               >
-                <p>
+                <p className="mb-4 text-lg text-secondary-dark leading-normal font-content text-right">
                   <Trans id="home.contact.description">
                     <a
                       href={config.contact.SLACK_URL}
-                      className={styles.slackOrg}
+                      className="no-underline text-secondary-dark border-b hover:bg-primary-light hover:text-white"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -82,7 +84,7 @@ class Home extends Component {
                     <a
                       target="_blank"
                       href={`mailto:${EMAIL}`}
-                      className={styles.email}
+                      className="text-primary-light no-underline hover:underline"
                       rel="noopener noreferrer"
                     >
                       {EMAIL}
