@@ -21,5 +21,8 @@ export default {
   },
   oAuth: {
     FB_APP_ID: process.env.REACT_APP_FB_APP_ID || '2303959949890233',
+    INSTA_APP_ID: process.env.REACT_APP_INSTA_APP_ID || 'd2f61b9e44f8475fb0dea74b386c8935',
+    INSTA_CLIENT_SECRET:
+      process.env.REACT_APP_INSTA_CLIENT_SECRET || '77e3ac11ffee44c998e47c5e0ef8ff31',
   },
 };

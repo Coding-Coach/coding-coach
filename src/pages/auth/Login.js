@@ -7,6 +7,7 @@ import Button from 'components/button/Button';
 import Facebook from 'components/icon/Facebook';
 import FacebookLogin from 'components/oAuth/FacebookLogin';
 import Instagram from 'components/icon/Instagram';
+import InstagramLogin from 'components/oAuth/InstagramLogin';
 import TextField from 'components/textfield/TextField';
 import Twitter from 'components/icon/Twitter';
 import { Panel, PanelContent } from 'components/panel/Panel';
@@ -76,7 +77,19 @@ export default function Login() {
                       />
                     )}
                   />
-                  <Instagram width={25} height={25} className="mx-2" />
+                  <InstagramLogin
+                    appId={config.oAuth.INSTA_APP_ID}
+                    clientSecret={config.oAuth.INSTA_CLIENT_SECRET}
+                    // implicitAuth
+                    render={(renderProps) => (
+                      <Instagram
+                        width={25}
+                        height={25}
+                        className="mx-2"
+                        onClick={renderProps.onClick}
+                      />
+                    )}
+                  />
                 </div>
                 <Button onClick={noop} size="small" typography="none" fullWidth>
                   <Trans id="auth.signin.go" defaults="Let's go!" />

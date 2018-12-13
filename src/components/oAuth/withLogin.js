@@ -7,8 +7,26 @@ export default function withLoginHOC(WrappedComponent) {
       console.log(data);
     }
 
+    // TODO: Call backend api with code returned from insta api, which in turn will get the access token and then the user details.
+    onInstaCallback(info) {
+      console.log(info);
+      // fetch(`https://api.instagram.com/oauth/access_token`, {
+      //   method: 'POST',
+      //   body: {
+      //     ...info,
+      //     grant_type: 'authorization_code'
+      //   }
+      // }).then(res => console.log(res));
+    }
+
     render() {
-      return <WrappedComponent {...this.props} callback={this.onSuccessCallback} />;
+      return (
+        <WrappedComponent
+          {...this.props}
+          callback={this.onSuccessCallback}
+          onInstaCallback={this.onInstaCallback}
+        />
+      );
     }
   };
 }
