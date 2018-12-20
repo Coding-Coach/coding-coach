@@ -32,13 +32,13 @@ const Button = (props) => {
       onClick={onClick}
       className={classNames({
         button: true,
-        [`${type}`]: !disabled,
+        [type]: !disabled,
         disabled: disabled,
-        floating: floating,
-        fullwidth: fullWidth,
-        [`${size}`]: true,
-        [`${shape}`]: true,
-        [`${typography}`]: true,
+        'shadow-floating hover:shadow': floating,
+        'w-full': fullWidth,
+        [size]: true,
+        [shape]: true,
+        [typography]: true,
       })}
     >
       {children}

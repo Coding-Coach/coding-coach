@@ -62,7 +62,6 @@ let colors = {
   'secondary-light': '#979797',
   'secondary': '#929292',
   'secondary-dark': '#4A4A4A',
-  'tertiary': '#E6F5F0',
 
   // Danger variations
   'danger-lighter': '#FFD5DB',
