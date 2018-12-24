@@ -16,6 +16,9 @@ yarn-error.log*
 # Node modules folder.
 node_modules/
 
+# Npm lock file
+package-lock.json
+
 # Build & dist folders.
 build/
 dist/
