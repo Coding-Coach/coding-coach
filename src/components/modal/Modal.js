@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styles from './modal.module.scss';
+import classNames from 'classnames';
 
 class Modal extends React.Component {
   constructor(props) {
@@ -22,14 +22,19 @@ class Modal extends React.Component {
 
     return (
       <div
-        className={`
-          ${styles.bgColor}
-          fixed pin w-full h-full flex items-center justify-center bg-grey-dark`}
+        className={classNames(
+          'fixed pin w-full h-full bg-modal',
+          'flex items-center justify-center',
+        )}
         onClick={onClose}
       >
         <div
           onClick={(e) => e.stopPropagation()}
-          className={`${styles.innerModal} relative w-full h-full pt-10 pb-10 pl-5 pr-5 md:w-auto`}
+          className={classNames(
+            'relative pt-10 pb-10 pl-5 pr-5',
+            `w-full h-full`,
+            'md:w-auto md:max-w-md lg:max-w-lg xl:max-w-xl',
+          )}
         >
           {this.props.children}
         </div>
