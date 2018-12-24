@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Trans, t } from '@lingui/macro';
+import { Trans } from '@lingui/macro';
 import { I18n } from '@lingui/react';
 import logoSrc from './assets/logo.svg';
 
@@ -17,6 +17,7 @@ function TopHeader() {
     </div>
   );
 }
+
 function Header({ banner }) {
   return (
     <header>

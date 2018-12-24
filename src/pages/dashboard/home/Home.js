@@ -1,23 +1,26 @@
-import React, { Component, Fragment } from 'react';
-import classNames from 'classnames';
-import { Trans, t } from '@lingui/macro';
-import { I18n } from '@lingui/react';
+import React, { Component } from 'react';
 import Header from './components/Header';
+import IllustratedMessage from './components/IllustratedMessage';
 import Button from 'components/button/Button';
-
-const Banner = () => (
-  <Fragment>
-    <button>image</button>
-    <span className="block">This is the message that says someting</span>
-    <Button onClick={() => console.log('click')} size="small" typography="none">
-      Click me
-    </Button>
-  </Fragment>
-);
+import LogoSrc from './components/assets/logo.svg';
 
 class Home extends Component {
   render() {
-    return <Header banner={<Banner />} />;
+    return (
+      <Header
+        banner={
+          <IllustratedMessage
+            imageSrc={LogoSrc}
+            message="You have 3 new mentorship messages!"
+            button={
+              <Button onClick={() => console.log('click')} size="small">
+                open
+              </Button>
+            }
+          />
+        }
+      />
+    );
   }
 }
 
