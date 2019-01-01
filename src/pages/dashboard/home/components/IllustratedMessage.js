@@ -7,7 +7,7 @@ function Banner({ imageSrc, message, button }) {
     <Fragment>
       <img className="w-6" src={imageSrc} />
 
-      <span className={classNames('block text-secondary-dark+ text-lg font-light my-4')}>
+      <span className={classNames('block text-secondary-dark text-lg font-light my-4')}>
         {message}
       </span>
 
