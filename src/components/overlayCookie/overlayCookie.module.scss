@@ -4,12 +4,10 @@
 
 
 .cookieWrapper {
-  background-color: $color-tertiary;
   opacity: 0.9;
   z-index: index(alert);
 }
 
 .cookieContent {
   @include generalAlignment();
-  color: $color-grey-dark;
 }
