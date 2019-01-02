@@ -28,7 +28,7 @@ function Header({ banner }) {
       {banner && (
         <div
           style={{ marginTop: '-6rem' }}
-          className={classNames('mx-auto w-5/6 p-8', 'bg-white shadow', 'md:w-3/5')}
+          className={classNames('mx-auto w-5/6 p-8', 'bg-white shadow', 'md:w-3/5 xl:w-2/5')}
         >
           {banner}
         </div>
