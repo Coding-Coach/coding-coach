@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Home from './Home';
+import Dashboard from './Dashboard';
 
 storiesOf('Dashboard', module).add('Header', () => {
-  return <Home />;
+  return <Dashboard />;
 });

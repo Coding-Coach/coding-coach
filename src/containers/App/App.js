@@ -2,7 +2,7 @@ import React from 'react';
 import { Router } from '@reach/router';
 import { I18nProvider } from '@lingui/react';
 import { catalogs } from 'config/i18n';
-import { Home, Login } from 'pages';
+import { Home, Login, Dashboard } from 'pages';
 
 const App = () => {
   return (
@@ -10,6 +10,7 @@ const App = () => {
       <Router>
         <Home path="/" />
         <Login path="/auth/login" />
+        <Dashboard path="/dashboard" />
       </Router>
     </I18nProvider>
   );
