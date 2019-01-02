@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Trans } from '@lingui/macro';
 import classNames from 'classnames';
-import styles from './overlayCookie.module.scss';
 import Button from 'components/button/Button';
 
 class OverlayCookie extends Component {
@@ -47,12 +46,11 @@ class OverlayCookie extends Component {
     if (cookiesAccepted === true) return null;
 
     return (
-      <section className={`${styles.cookieWrapper} fixed w-full pin-b bg-primary-lighter`}>
+      <section className="fixed w-full pin-b bg-primary-lighter z-40" style={{ opacity: 0.9 }}>
         <div
           className={classNames(
             'flex justify-between text-xs text-secondary-dark',
-            `${styles.cookieContent}`,
-            'mx-auto px-8 ',
+            'mx-auto px-8 container',
           )}
         >
           <p className="leading-normal my-4 ml-1">
