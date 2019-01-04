@@ -1,6 +1,6 @@
 import React from 'react';
-import Config from 'config/constants';
-import Image from 'components/image/Image';
+import Config from '../../config/constants';
+import Image from '../image/Image';
 
 /**
  * @TODO: We are removing this component for now, there are some
