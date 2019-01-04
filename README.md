@@ -6,9 +6,14 @@ Connecting developers with mentors worldwide.
 
 ## Getting started
 
-Copy the `.env.example` file to `.env`.
+1. Clone this repo
+```
+https://github.com/Coding-Coach/coding-coach.git
+```
 
-Installing the node modules and starting the server:
+2. Copy the `.env.example` file to `.env`.
+
+3. Install the node modules and starting the server:
 
 ```sh
 yarn
