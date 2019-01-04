@@ -2,7 +2,7 @@
  * @TODO: Remove this file when fully migrated to tailwind
  */
 
-@import '~theme/base/mediaqueries';
+@import '~./mediaqueries';
 // This class makes the elements have a max-width in certain resolutions
 // Use this to create a visual grid in a page.
 // So, all the elements will be contained in 992px, 1200px, ...

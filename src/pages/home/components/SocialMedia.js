@@ -1,8 +1,8 @@
 import React from 'react';
-import SocialIcon from 'components/socialIcon/SocialIcon';
+import SocialIcon from '../../../components/socialIcon/SocialIcon';
 import { faFacebook, faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 
-import config from 'config/constants';
+import config from '../../../config/constants';
 
 const SocialMedia = () => {
   return (

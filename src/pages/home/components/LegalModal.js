@@ -2,12 +2,12 @@ import React from 'react';
 import { func, oneOf } from 'prop-types';
 import { Trans, t } from '@lingui/macro';
 
-import Button from 'components/button/Button';
-import Modal from 'components/modal/Modal';
-import { Panel, PanelHeader, PanelContent, PanelFooter } from 'components/panel/Panel';
-import PrivacyPolicy from 'pages/static/PrivacyPolicy';
-import CookiesPolicy from 'pages/static/CookiesPolicy';
-import TermsAndConditions from 'pages/static/TermsAndConditions';
+import Button from '../../../components/button/Button';
+import Modal from '../../../components/modal/Modal';
+import { Panel, PanelHeader, PanelContent, PanelFooter } from '../../../components/panel/Panel';
+import PrivacyPolicy from '../../static/PrivacyPolicy';
+import CookiesPolicy from '../../static/CookiesPolicy';
+import TermsAndConditions from '../../static/TermsAndConditions';
 
 const titles = {
   terms: t`footer.legal.terms`,

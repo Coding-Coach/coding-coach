@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Trans } from '@lingui/macro';
 import styles from './overlayCookie.module.scss';
-import Button from 'components/button/Button';
+import Button from '../button/Button';
 
 class OverlayCookie extends Component {
   state = {

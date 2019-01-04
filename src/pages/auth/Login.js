@@ -1,14 +1,14 @@
 import React from 'react';
 import { Trans, t } from '@lingui/macro';
-import { noop } from 'utils/noop';
+import { noop } from '../../utils/noop';
 import { I18n } from '@lingui/react';
 
-import Button from 'components/button/Button';
-import Facebook from 'components/icon/Facebook';
-import Instagram from 'components/icon/Instagram';
-import TextField from 'components/textfield/TextField';
-import Twitter from 'components/icon/Twitter';
-import { Panel, PanelContent } from 'components/panel/Panel';
+import Button from '../../components/button/Button';
+import Facebook from '../../components/icon/Facebook';
+import Instagram from '../../components/icon/Instagram';
+import TextField from '../../components/textfield/TextField';
+import Twitter from '../../components/icon/Twitter';
+import { Panel, PanelContent } from '../../components/panel/Panel';
 
 import { ReactComponent as Logo } from '../home/assets/images/coding-coach-logo.svg';
 
