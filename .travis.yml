@@ -8,15 +8,15 @@ cache:
     - node_modules
 before_install:
   - yarn global add greenkeeper-lockfile@1 pnpm
-install: yarn
+install: pnpm install
 before_script:
   - greenkeeper-lockfile-update
 script:
-  - pnpm lint
-  - pnpm i18n-extract
-  - pnpm i18n-compile
-  - pnpm test
-  - pnpm build
+  - pnpm run lint
+  - pnpm run i18n-extract
+  - pnpm run i18n-compile
+  - pnpm run test
+  - pnpm run build
 after_script: greenkeeper-lockfile-upload
 notifications:
   email: true
