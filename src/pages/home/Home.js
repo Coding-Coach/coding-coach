@@ -2,10 +2,10 @@ import React, { Component, Fragment } from 'react';
 import { Trans, t } from '@lingui/macro';
 import { I18n } from '@lingui/react';
 
-import Navbar from 'components/navbar/Navbar';
-import Image from 'components/image/Image';
-import OverlayCookie from 'components/overlayCookie/OverlayCookie';
-import Footer from 'components/footer/Footer';
+import Navbar from '../../components/navbar/Navbar';
+import Image from '../../components/image/Image';
+import OverlayCookie from '../../components/overlayCookie/OverlayCookie';
+import Footer from '../../components/footer/Footer';
 import LegalModal from './components/LegalModal';
 import Hero from './components/Hero';
 import HomeSection from './components/HomeSection';
@@ -14,7 +14,7 @@ import ImageAbout from './assets/images/about.svg';
 import ImageMission from './assets/images/mission.svg';
 import ImageContact from './assets/images/contact.svg';
 
-import config from 'config/constants';
+import config from '../../config/constants';
 
 const { EMAIL } = config.contact;
 

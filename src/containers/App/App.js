@@ -1,8 +1,8 @@
 import React from 'react';
 import { Router } from '@reach/router';
 import { I18nProvider } from '@lingui/react';
-import { catalogs } from 'config/i18n';
-import { Home, Login } from 'pages';
+import { catalogs } from '../../config/i18n/index.js';
+import { Home, Login } from '../../pages/index.js';
 
 const App = () => {
   return (

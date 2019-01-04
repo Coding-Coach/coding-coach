@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
 
-import Button from 'components/button/Button';
+import Button from '../button/Button';
 
 // @TODO: Bring it back when ready
 // import DonateButton from './DonateButton';

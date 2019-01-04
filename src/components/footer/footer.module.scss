@@ -1,7 +1,7 @@
-@import '~theme/base/variables';
-@import '~theme/base/mediaqueries';
-@import '~theme/base/utils';
-@import '~theme/base/spacing';
+@import '~../../theme/base/variables';
+@import '~../../theme/base/mediaqueries';
+@import '~../../theme/base/utils';
+@import '~../../theme/base/spacing';
 
 .footerMain {
   width: 100%;
@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
   border-top: 1px solid $color-grey-light;
-  
+
   @include respond-to(tablet) {
     @include spacing('P', 'V', 'M');
     flex-direction: row;

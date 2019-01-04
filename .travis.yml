@@ -7,16 +7,16 @@ cache:
   directories:
     - node_modules
 before_install:
-  - yarn global add greenkeeper-lockfile@1
+  - yarn global add greenkeeper-lockfile@1 pnpm
 install: yarn
 before_script:
   - greenkeeper-lockfile-update
 script:
-  - yarn lint
-  - yarn i18n-extract
-  - yarn i18n-compile
-  - yarn test
-  - yarn build
+  - pnpm lint
+  - pnpm i18n-extract
+  - pnpm i18n-compile
+  - pnpm test
+  - pnpm build
 after_script: greenkeeper-lockfile-upload
 notifications:
   email: true
