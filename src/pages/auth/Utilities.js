@@ -20,7 +20,7 @@ const TitleMessage = ({ id, defaults }) => (
     <h1 className="text-white font-semibold mb-2">
       <Trans id="site.title" defaults="Coding Coach" />
     </h1>
-    <p className="text-white font-sm w-3/4 mb-8">
+    <p className="text-white font-sm w-full mb-8">
       <Trans id={id} defaults={defaults} />
     </p>
   </div>

@@ -15,6 +15,7 @@ class ForgotPassword extends React.Component {
     this.sendResetLink = this.sendResetLink.bind(this);
     this.clickHandler = this.clickHandler.bind(this);
     this.saveEmail = this.saveEmail.bind(this);
+    this.renderDisplaySuccess = this.renderDisplaySuccess.bind(this);
     this.state = { displaySuccess: false, email: '', noinfo: false };
   }
 
@@ -24,13 +25,13 @@ class ForgotPassword extends React.Component {
 
   clickHandler(e) {
     e.preventDefault();
-    this.state.email === ''
-      ? this.setState({ ...this.state, noinfo: true })
-      : this.setState({ ...this.state, displaySuccess: true });
+    this.state.email.trim() === ''
+      ? this.setState({ noinfo: true })
+      : this.setState({ displaySuccess: true });
   }
 
   saveEmail(e) {
-    this.setState({ ...this.state, email: e.target.value });
+    this.setState({ email: e.target.value });
   }
 
   sendResetLink() {
@@ -76,18 +77,22 @@ class ForgotPassword extends React.Component {
         {this.state.noinfo ? (
           <div className="text-sm text-danger mb-2">
             <Trans
-              id="auth.signin.recoveryerror"
+              id={this.state.noinfo ? 'auth.signin.recoveryerror' : ''}
               defaults="We need this information to find your account."
             />
           </div>
         ) : (
-          ''
+          <div className="h-6" />
         )}
         <Button onClick={this.clickHandler} size="small" typography="none" fullWidth>
           <Trans id="auth.signin.help" defaults="Send Help!" />
         </Button>
       </PanelContent>
     );
+  }
+
+  renderDisplaySuccess() {
+    return this.state.displaySuccess ? this.sendResetLink() : this.getAccountInfo();
   }
 
   render() {
@@ -101,9 +106,7 @@ class ForgotPassword extends React.Component {
               defaults="Oh no! Looks like you forgot your password! Enter your email to get a recovery link!"
             />
             <div className="px-2 md:w-3/5 lg:w-1/3">
-              <Panel floating>
-                {this.state.displaySuccess ? this.sendResetLink() : this.getAccountInfo()}
-              </Panel>
+              <Panel floating>{this.renderDisplaySuccess()}</Panel>
             </div>
           </div>
         </div>
