@@ -7,10 +7,6 @@
 // Use this to create a visual grid in a page.
 // So, all the elements will be contained in 992px, 1200px, ...
 // Giving them then a perfect alignment with the rest of the page
-/*
- * Tailwind code for generalAlignment() 
- * className={`ml-auto mr-auto pl-8 pr-8`}
-*/
 
 @mixin generalAlignment() {
     margin-left: auto;
