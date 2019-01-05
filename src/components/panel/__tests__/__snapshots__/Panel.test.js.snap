@@ -2,7 +2,7 @@
 
 exports[`Renders basic panel 1`] = `
 <div
-  class="panel"
+  class="w-full h-full bg-white rounded-sm"
 >
   A basic Panel
 </div>

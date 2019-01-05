@@ -48,6 +48,7 @@ let colors = {
 
   'black': '#202939',
   'white': '#ffffff',
+  'neutral': '#1f386e',
 
   // Green variations
   'primary-lightest': '#D5FFF4',
@@ -167,7 +168,7 @@ module.exports = {
     '2xl': '1.5rem',    // 24px
     '3xl': '1.875rem',  // 30px
     '4xl': '2.25rem',   // 36px
-    '5xl': '3rem',      // 48px
+    '5xl': '4.25rem',   // 68px
     '6xl': '5.25rem',   // 84px
   },
 
@@ -440,6 +441,7 @@ module.exports = {
     '16': '4rem',
     '24': '6rem',
     '32': '8rem',
+    '40': '9rem',
     '48': '12rem',
     '64': '16rem',
     'full': '100%',
@@ -483,6 +485,7 @@ module.exports = {
 
   minHeight: {
     '0': '0',
+    '20': '5rem',
     'full': '100%',
     'screen': '100vh',
   },
@@ -662,6 +665,7 @@ module.exports = {
     'lg': '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
     'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
     'outline': '0 0 0 3px rgba(52,144,220,0.5)',
+    'floating': '0px 7px 10px rgba(0, 157, 108, 0.5)',
     'none': 'none',
   },
 
@@ -840,9 +844,11 @@ module.exports = {
 
   plugins: [
     ({ addComponents, config }) => {
+      // This plugins creates a single diagonal background
+      // at the bottom of the given element
       const colors = config('colors');
       const base = {
-        '.bg-diagonal:after' : {
+        '.bg-diagonal:after': {
           content: "''",
           width: '100%',
           height: '150px',
@@ -851,7 +857,7 @@ module.exports = {
       };
 
       const variants = Object.keys(colors).map(name => ({
-        [`.bg-diagonal-${name}:after`] : {
+        [`.bg-diagonal-${name}:after`]: {
           backgroundImage: `linear-gradient(to bottom right, ${colors[name]} 50%, #ffffff 50%)`,
         }
       }));
@@ -859,6 +865,102 @@ module.exports = {
       addComponents([
         base,
         ...variants,
+      ]);
+    },
+    ({ addComponents, config }) => {
+      // This plugin creates two diagonal brackgrounds, one at
+      // the top and one at the bottom.
+      const colors = config('colors');
+      const base = {
+        '.bg-band': {
+          position: 'relative',
+        },
+        '.bg-band:before, .bg-band:after': {
+          content: '""',
+          width: '100%',
+          position: 'absolute',
+          left: 0,
+        },
+        '.bg-band:before': {
+          height: '20px',
+          top: '-20px',
+        },
+        '.bg-band:after': {
+          height: '40px',
+          bottom: '-40px',
+        },
+      };
+
+      const variants = Object.keys(colors).map(name => ({
+        [`.bg-band-${name}:before`]: {
+          backgroundImage: `linear-gradient(to top right, ${colors[name]}, ${colors[name]} 50%, white 50%, white)`,
+        },
+        [`.bg-band-${name}:after`]: {
+          backgroundImage: `linear-gradient(to bottom left, ${colors[name]}, ${colors[name]} 50%, white 50%, white)`,
+        },
+      }));
+
+      addComponents([
+        base,
+        ...variants,
+      ]);
+    },
+    ({ addComponents, config }) => {
+      const heights = config('height');
+      const base = {
+        '.calcheight': {
+          height: '100%',
+        },
+      };
+
+      const variants = Object.keys(heights).map(height => {
+        if (height !== 'auto') return ({
+          [`.calcheight-${height}`]: {
+            height: `calc(100% - ${heights[height]})`
+          },
+        })
+      });
+
+      addComponents([
+        base,
+        ...variants,
+      ]);
+    },
+    ({ addComponents, config }) => {
+      const colors = config('colors');
+      const textSizes = config('textSizes');
+      const margin = config('margin');
+      const base = {
+        '.panel-content': {
+          lineHeight: 'normal',
+          h2: {
+            margin: `${margin[3]} 0`,
+          },
+          p: {
+            margin: `${margin[4]} 0`,
+          },
+          ul: {
+            margin: `${margin[4]} 0`,
+
+            li: {
+              fontSize: textSizes.base,
+            },
+          },
+          a: {
+            color: colors.primary,
+            textDecoration: 'none',
+            transition: 'background 0.15s ease-out, color 0.15s ease-out',
+            cursor: 'pointer',
+            '&:hover': {
+              background: colors['primary-light'],
+              color: colors.white,
+            },
+          },
+        },
+      };
+
+      addComponents([
+        base,
       ]);
     },
     require('tailwindcss/plugins/container')({
