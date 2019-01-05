@@ -3,10 +3,6 @@
 @import '~theme/base/utils';
 @import '~theme/base/spacing';
 
-.footerMain {
-  width: 100%;
-}
-
 .footerInner {
   composes: PVS;
   @include generalAlignment();
@@ -36,14 +32,14 @@
 }
 
 .footerLink {
-  display: inline-block;
-  padding: 10px;
-  font-size: $font-xxs;
+  display: inline-block; //.inline-block
+  padding: 10px; // p-3
+  font-size: $font-xxs; //.75rem
   // Migrating to CRA2 is messing up with the sass imports
   // the `!important` here is a temporal fix, after all
   // we will remove this styles once migrated to tailwind
-  color: $color-grey-medium !important;
-  text-decoration: none;
+  color: $color-grey-medium !important; 
+  text-decoration: none; //no-underline
   &:hover {
     color:$color-grey-dark;
   }
