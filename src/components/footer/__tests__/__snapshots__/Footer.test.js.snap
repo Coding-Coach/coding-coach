@@ -2,26 +2,23 @@
 
 exports[`renders the footer element 1`] = `
 <footer
-  class="footerMain"
+  class="container"
 >
   <div
-    class="footerInner"
+    class="flex justify-end ml-auto mr-auto pl-8 pr-8 pt-4 pb-4 flex-col items-center border-t border-solid border-secondary-lightest md:flex-row md:ml-1.9375rem md:mr-1.9375rem"
   >
-    <div
-      class="column"
-    />
     <button
-      class="button tertiary small rounded capitalize"
+      class="button tertiary small rounded capitalize inline-block p-1 text-xs secondary-lighter no-underline hover:secondary-dark"
     >
       footer.legal.terms
     </button>
     <button
-      class="button tertiary small rounded capitalize"
+      class="button tertiary small rounded capitalize inline-block p-1 text-xs secondary-lighter no-underline hover:secondary-dark"
     >
       footer.legal.cookies
     </button>
     <button
-      class="button tertiary small rounded capitalize"
+      class="button tertiary small rounded capitalize inline-block p-1 text-xs secondary-lighter no-underline hover:secondary-dark"
     >
       footer.legal.privacy
     </button>

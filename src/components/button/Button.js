@@ -11,6 +11,7 @@ import PropTypes from 'prop-types';
  * @param {fullWidth} props Button width is 100% of parent
  * @param {typography} props capitalize, uppercase, lowercase, only
  * @param {floating} props Adds a shadow under the button
+ * @param {className} props Add custom classes to the button
  */
 const Button = (props) => {
   const {
@@ -24,6 +25,7 @@ const Button = (props) => {
     fullWidth,
     id,
     onClick,
+    className,
   } = props;
 
   return (
@@ -39,6 +41,7 @@ const Button = (props) => {
         fullWidth && styles.fullWidth,
         floating && styles.shadow,
         styles[typography] || styles.uppercase,
+        className,
       )}
     >
       {children}
@@ -57,6 +60,7 @@ Button.propTypes = {
   fullWidth: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
   id: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Button.defaultProps = {
