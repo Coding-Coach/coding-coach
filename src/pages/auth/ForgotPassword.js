@@ -69,7 +69,7 @@ class ForgotPassword extends React.Component {
               <TextField
                 label={i18n._(t('auth.signup.email')`Email Address`)}
                 name="email"
-                onChange={(event) => this.saveEmail(event)}
+                onChange={this.saveEmail}
               />
             </div>
           )}
