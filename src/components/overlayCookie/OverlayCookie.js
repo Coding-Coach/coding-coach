@@ -68,7 +68,11 @@ class OverlayCookie extends Component {
             </Trans>
           </p>
           <p className="text-right my-4">
-            <FontAwesomeIcon icon={faTimes} onClick={this.acceptCookies} />
+            <FontAwesomeIcon
+              className="cursor-pointer"
+              icon={faTimes}
+              onClick={this.acceptCookies}
+            />
           </p>
         </div>
       </section>
