@@ -12,7 +12,7 @@
   "home.about.description": "Coding Coach is a free, open-source platform which aims to connect software developers and mentors all over the world.  It is built by a group of talented and passionate developers, designers, engineers, and humans who want to make the engineering world a better place to collaborate.  This project was born out of a desire to provide a platform to connect mentors and mentees throughout the world at no cost.  Coding Coach is created by the people, for the people.",
   "home.about.img": "Man walking into a laptop",
   "home.about.title": "About",
-  "home.contact.description": "We want to hear your thoughts! Feel free to join our <0>Slack Organization</0> or send us an email at <1>{EMAIL}</1>",
+  "home.contact.description": "We want to hear your thoughts! Feel free to send us an email at <1>{EMAIL}</1>",
   "home.contact.img": "Person using a magnifying glass to see the details of another guy.",
   "home.contact.title": "Contact",
   "home.header.cta": "Learn More",
