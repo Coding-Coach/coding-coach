@@ -12,7 +12,7 @@ function Footer({ onClickLegal, t }) {
 
   return (
     <footer className="container">
-      <div className="flex justify-end ml-auto mr-auto pl-8 pr-8 pt-4 pb-4 flex-col items-center border-t border-solid border-secondary-lightest md:flex-row md:ml-1.9375rem md:mr-1.9375rem">
+      <div className="flex justify-end ml-auto mr-auto pl-8 pr-8 pt-4 pb-4 flex-col items-center border-t border-solid border-secondary-lightest">
         <Button
           type="tertiary"
           typography="capitalize"
