@@ -3,7 +3,7 @@
 exports[`renders the button component 1`] = `
 <div>
   <button
-    class=""
+    class="button primary medium rounded uppercase"
   >
     CLICK ME
   </button>

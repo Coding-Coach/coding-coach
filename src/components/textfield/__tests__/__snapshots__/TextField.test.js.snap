@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/textfield/TextField should render the textfield 1`] = `
+<div
+  class="mb-4"
+>
+  <input
+    class="block border border-secondary-lighter bg-white w-full p-2 rounded-sm focus:outline-none focus:border focus:border-primary"
+    type="text"
+    value=""
+  />
+</div>
+`;

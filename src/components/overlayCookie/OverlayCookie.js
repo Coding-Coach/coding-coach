@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
-import { translate } from 'react-i18next';
-import 'i18n/i18n';
+import { func } from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import styles from './overlayCookie.scss';
+import { Trans } from '@lingui/macro';
+import classNames from 'classnames';
+import Button from 'components/button/Button';
 
 class OverlayCookie extends Component {
   state = {
     cookiesAccepted: 'false',
+  };
+
+  static propTypes = {
+    onReadMore: func.isRequired,
   };
 
   acceptCookies = () => {
@@ -36,21 +41,38 @@ class OverlayCookie extends Component {
 
   render() {
     const { cookiesAccepted } = this.state;
-    const { t } = this.props;
+    const { onReadMore } = this.props;
 
     if (cookiesAccepted === true) return null;
 
     return (
-      <section className={styles.cookieWrapper}>
-        <div className={styles.cookieContent}>
-          <p className={styles.cookieText}>
-            {t('cookie-notification') + ' '}
-            <span>
-              <a href="#cookies">{t('cookie-link')}</a>
-            </span>
+      <section className="fixed w-full pin-b bg-primary-lighter z-40" style={{ opacity: 0.9 }}>
+        <div
+          className={classNames(
+            'flex justify-between text-xs text-secondary-dark',
+            'mx-auto px-8 container',
+          )}
+        >
+          <p className="leading-normal my-4 ml-1">
+            <Trans id="legal.notification">
+              <span>
+                <Button
+                  size="small"
+                  type="tertiary"
+                  typography="capitalize"
+                  onClick={() => onReadMore('cookies')}
+                >
+                  Cookies Policy
+                </Button>
+              </span>
+            </Trans>
           </p>
-          <p className={styles.cookieIcon}>
-            <FontAwesomeIcon icon={faTimes} onClick={this.acceptCookies} />
+          <p className="text-right my-4">
+            <FontAwesomeIcon
+              className="cursor-pointer"
+              icon={faTimes}
+              onClick={this.acceptCookies}
+            />
           </p>
         </div>
       </section>
@@ -58,4 +80,4 @@ class OverlayCookie extends Component {
   }
 }
 
-export default translate('translations')(OverlayCookie);
+export default OverlayCookie;

@@ -1,137 +1,63 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Panel from './Panel';
-import styles from './assets/panelstories.scss';
+import { Panel, PanelHeader, PanelContent, PanelFooter } from './Panel';
 
-const Button = ({ onClick, text }) => <button onClick={onClick}>{text}</button>;
+const onClickDismiss = () => alert('It can dismiss something');
+const onClickAccept = () => alert('It can dismiss something');
 
+const ButtonHardcoded = ({ onClick, children }) => <button onClick={onClick}>{children}</button>;
 storiesOf('Components/Panel', module)
-  .add('Basic Panel', () => {
-    const onClose = () => {
-      alert('onClose callback is called');
-    };
-
-    const closeModal = () => {
-      open = false;
-    };
-    let open = false;
-    const classes = {
-      root: 'dummyRoot',
-      body: styles.dummyBody,
-    };
-
+  .add('Complete Panel with actions', () => {
     return (
-      <Panel
-        trigger={<Button text="Open Modal" />}
-        closable={true}
-        modal={true}
-        onClose={onClose}
-        classes={classes}
-        open={open}
-      >
-        <Panel.Header>Hello World!</Panel.Header>
-        <Panel.Content>
-          <p>Click close icon on top right-hand side to close the modal window</p>
-          <p>No event handler is attached to Deny and Close buttons</p>
+      <Panel>
+        <PanelHeader>Complete Panel Example</PanelHeader>
+        <PanelContent>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <p>
-            The default width of the panel-wrapper is 40%. The width can be changed via css. Its set
-            to 80% in this case.
+            Donec tempor malesuada augue, eu blandit ipsum sagittis sed. Fusce ultricies justo et
+            massa mattis tincidunt. In lacinia ornare eros, quis tempus metus volutpat ut. Cras et
+            sapien lectus. Sed pulvinar nibh faucibus pretium tristique. Integer finibus nisi et
+            ipsum tincidunt, tristique semper nunc dictum. Cras fermentum vitae nulla vel auctor.
           </p>
-        </Panel.Content>
-        <Panel.Footer>
-          <Button text="Deny" onClick={closeModal} />
-          <Button text="Accept" onClick={closeModal} />
-        </Panel.Footer>
+          <p>Mauris vel lacus diam.</p>
+        </PanelContent>
+        <PanelFooter>
+          <ButtonHardcoded onClick={() => onClickDismiss()}>asdasdasd</ButtonHardcoded>
+          <ButtonHardcoded onClick={() => onClickAccept()}>Accept</ButtonHardcoded>
+        </PanelFooter>
       </Panel>
     );
   })
-  .add('Panel with functional Footer', () => {
-    class DummyComponent extends React.Component {
-      constructor(props) {
-        super(props);
-        this.state = { open: false };
-        this.closeModalHandler = this.closeModalHandler.bind(this);
-      }
-
-      closeModalHandler() {
-        this.setState({ open: false });
-      }
-
-      render() {
-        return (
-          <Panel
-            trigger={<Button text="Open Modal" />}
-            closable={true}
-            modal={true}
-            open={this.state.open}
-          >
-            <Panel.Header>Hello World!</Panel.Header>
-            <Panel.Content>
-              <p>To close the modal, use any of the buttons/actions</p>
-            </Panel.Content>
-            <Panel.Footer>
-              <Button text="Deny" onClick={this.closeModalHandler} />
-              <Button text="Accept" onClick={this.closeModalHandler} />
-            </Panel.Footer>
-          </Panel>
-        );
-      }
-    }
-
-    return <DummyComponent />;
-  })
-  .add('Panel without trigger prop', () => {
-    class DummyComponent extends React.Component {
-      constructor(props) {
-        super(props);
-        this.state = { open: false };
-        this.closeModalHandler = (e) => this.setState({ open: false });
-        this.triggerHandler = (e) => {
-          alert('onTrigger handler called before opening the modal');
-          this.setState({ open: true });
-        };
-      }
-
-      render() {
-        return (
-          <React.Fragment>
-            <Button text="Open Modal" onClick={this.triggerHandler} />
-            <Panel closable={true} modal={true} open={this.state.open}>
-              <Panel.Header>Hello World!</Panel.Header>
-              <Panel.Content>
-                <p>
-                  Trigger is not mandatory. If you have to do some processing before opening the
-                  modal/popup, then handle it seperately and then set open to `true`
-                </p>
-              </Panel.Content>
-              <Panel.Footer pullRight={true}>
-                <Button text="Deny" onClick={this.closeModalHandler} />
-                <Button text="Accept" onClick={this.closeModalHandler} />
-              </Panel.Footer>
-            </Panel>
-          </React.Fragment>
-        );
-      }
-    }
-
-    return <DummyComponent />;
-  })
-  .add('Basic Panel without modal functionality', () => {
-    const classes = {
-      root: 'dummyRoot',
-      body: styles.panelDummyBody,
-    };
+  .add('Complete Panel with quote', () => {
     return (
-      <Panel modal={false} classes={classes}>
-        <Panel.Header>Hello World!</Panel.Header>
-        <Panel.Content>
-          <p>This is a simple panel without the backdrop</p>
+      <Panel>
+        <PanelHeader>Complete Panel Example</PanelHeader>
+        <PanelContent>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>Mauris vel lacus diam.</p>
+        </PanelContent>
+        <PanelFooter>
+          <span>
+            <i>
+              <small>This could include a text for example</small>
+            </i>
+          </span>
+        </PanelFooter>
+      </Panel>
+    );
+  })
+  .add('Panel without footer', () => {
+    return (
+      <Panel>
+        <PanelHeader>Panel without footer</PanelHeader>
+        <PanelContent>
           <p>
-            The default width of the panel-wrapper is 40%. The width can be changed via css. Its set
-            to 50% in this case.
+            Donecmetus volutpat ut. Cras et sapien lectus. Sed pulvinar nibh faucibus pretium
+            tristique. Integer finibus nisi et ipsum tincidunt, tristique semper nunc dictum. Cras
+            fermentum vitae nulla vel auctor.
           </p>
-        </Panel.Content>
+        </PanelContent>
       </Panel>
     );
   });

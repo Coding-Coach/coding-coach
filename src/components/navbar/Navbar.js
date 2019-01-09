@@ -1,22 +1,44 @@
 import React from 'react';
-import { translate } from 'react-i18next';
-import 'i18n/i18n';
-import styles from './navbar.scss';
+import { Trans } from '@lingui/macro';
 
-const Navbar = ({ t }) => (
-  <nav className={styles.navigationBar}>
-    <div className={styles.inner}>
-      <a href="#about" className={styles.navLinks}>
-        {t('About')}
-      </a>
-      <a href="#mission" className={styles.navLinks}>
-        {t('Mission')}
-      </a>
-      <a href="#contact" className={styles.navLinks}>
-        {t('Contact')}
-      </a>
-    </div>
-  </nav>
-);
+const handleClickOnNavigation = (id) => {
+  return (event) => {
+    event.preventDefault();
+    document.getElementById(id).scrollIntoView({
+      behavior: 'smooth',
+    });
+    window.history.pushState({}, '', `/#${id}`);
+  };
+};
 
-export default translate('translations')(Navbar);
+function Navbar() {
+  return (
+    <nav className="bg-primary-light py-4">
+      <div className="container flex justify-between md:justify-start">
+        <NavLink to="about">
+          <Trans id="home.about.title" />
+        </NavLink>
+        <NavLink to="mission">
+          <Trans id="home.mission.title" />
+        </NavLink>
+        <NavLink to="contact">
+          <Trans id="home.contact.title" />
+        </NavLink>
+      </div>
+    </nav>
+  );
+}
+
+function NavLink({ to, children }) {
+  return (
+    <a
+      href={`#${to}`}
+      className="inline-block no-underline text-primary-dark uppercase text-base md:pr-8 font-sans"
+      onClick={handleClickOnNavigation(to)}
+    >
+      {children}
+    </a>
+  );
+}
+
+export default Navbar;

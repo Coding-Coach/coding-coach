@@ -1,3 +1,6 @@
+/**
+ * @TODO: Remove this file when fully migrated to tailwind
+ */
 /*
   MEDIAQUERIES
   
@@ -48,7 +51,7 @@ $desktop-large-and-wider: 1440px; // Large desktops
     }
   }
   @else if $media==ultrawide {
-    @media (min-width: $desktop-and-wider) {
+    @media (min-width: $desktop-large-and-wider) {
         @content;
     }
   }

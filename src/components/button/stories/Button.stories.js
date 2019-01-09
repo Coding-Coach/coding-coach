@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Container from './container-story';
 import { withDocs } from 'storybook-readme';
 import ButtonReadme from './button.README.md';
@@ -78,6 +78,46 @@ storiesOf('Buttons', module).add('Button Sizes', () => (
       </Button>
       <Button type="danger" fullWidth>
         Default Size
+      </Button>
+    </Container>
+  </div>
+));
+
+storiesOf('Buttons', module).add('Button Shapes', () => (
+  <div>
+    <Container title="Primary">
+      <Button type="primary" shape="square">
+        Square shape
+      </Button>
+      <Button type="primary" shape="rounded">
+        Rounded shape
+      </Button>
+      <Button type="primary" shape="pill">
+        Pill shape
+      </Button>
+    </Container>
+
+    <Container title="Secondary">
+      <Button type="secondary" shape="square">
+        Square shape
+      </Button>
+      <Button type="secondary" shape="rounded">
+        Rounded shape
+      </Button>
+      <Button type="secondary" shape="pill">
+        Pill shape
+      </Button>
+    </Container>
+
+    <Container title="Danger">
+      <Button type="danger" shape="square">
+        Square shape
+      </Button>
+      <Button type="danger" shape="rounded">
+        Rounded shape
+      </Button>
+      <Button type="danger" shape="pill">
+        Pill shape
       </Button>
     </Container>
   </div>

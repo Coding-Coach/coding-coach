@@ -1,15 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders basic panel without modal functionality 1`] = `
-<section
-  class="PanelMain"
+exports[`Renders basic panel 1`] = `
+<div
+  class="w-full h-full bg-white rounded-sm"
 >
   A basic Panel
-</section>
-`;
-
-exports[`renders the basic Panel component 1`] = `
-<button>
-  Open Panel
-</button>
+</div>
 `;
