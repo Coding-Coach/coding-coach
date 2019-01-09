@@ -5,7 +5,6 @@ import { I18n } from '@lingui/react';
 
 import Button from 'components/button/Button';
 import Facebook from 'components/icon/Facebook';
-import Instagram from 'components/icon/Instagram';
 import TextField from 'components/textfield/TextField';
 import Twitter from 'components/icon/Twitter';
 import { Panel, PanelContent } from 'components/panel/Panel';
@@ -64,7 +63,6 @@ export default function Login() {
                 <div className="flex justify-center mb-8">
                   <Twitter width={31} height={25} color="#76A9EA" className="mx-2" />
                   <Facebook width={25} height={25} color="#475993" className="mx-2" />
-                  <Instagram width={25} height={25} className="mx-2" />
                 </div>
                 <Button onClick={noop} size="small" typography="none" fullWidth>
                   <Trans id="auth.signin.go" defaults="Let's go!" />
