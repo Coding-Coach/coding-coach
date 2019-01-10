@@ -15,6 +15,7 @@ import ImageMission from './assets/images/mission.svg';
 import ImageContact from './assets/images/contact.svg';
 
 import config from 'config/constants';
+import auth0Client from 'components/auth/Auth';
 
 const { EMAIL } = config.contact;
 
@@ -39,6 +40,10 @@ class Home extends Component {
         page,
       },
     }));
+  };
+
+  signOut = () => {
+    auth0Client.signOut();
   };
 
   render() {

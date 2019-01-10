@@ -10,6 +10,7 @@ import Twitter from 'components/icon/Twitter';
 import { Panel, PanelContent } from 'components/panel/Panel';
 
 import { ReactComponent as Logo } from '../home/assets/images/coding-coach-logo.svg';
+import auth0Client from 'components/auth/Auth';
 
 export default function Login() {
   return (
@@ -17,7 +18,7 @@ export default function Login() {
       <div className="container">
         <div className="flex justify-between mb-12">
           <Logo className="w-12 h-8" />
-          <Button onClick={noop} shape="pill" size="small" typography="none">
+          <Button onClick={auth0Client.signIn} shape="pill" size="small" typography="none">
             <Trans id="auth.signup.title" defaults="Sign Up" />
           </Button>
         </div>

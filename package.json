@@ -31,6 +31,7 @@
     "@fortawesome/react-fontawesome": "^0.1.3",
     "@lingui/react": "^2.7.0",
     "@reach/router": "^1.1.1",
+    "auth0-js": "^9.9.0",
     "classnames": "^2.2.6",
     "date-fns": "^1.29.0",
     "glhd-tailwindcss-transitions": "^0.3.0",
