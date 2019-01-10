@@ -10,7 +10,7 @@ const App = () => {
       <Router>
         <Home path="/" />
         <Login path="/auth/login" />
-        <ForgotPassword path="/auth/recovery" />
+        <ForgotPassword path="/auth/login/recovery" />
       </Router>
     </I18nProvider>
   );

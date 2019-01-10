@@ -2,6 +2,7 @@ import React from 'react';
 import { Trans, t } from '@lingui/macro';
 import { noop } from 'utils/noop';
 import { I18n } from '@lingui/react';
+import { Link } from '@reach/router';
 
 import { SignUp, TitleMessage } from './Utilities';
 import Button from 'components/button/Button';
@@ -28,9 +29,9 @@ export default function Login() {
                   <h2 className="flex-1 text-2xl font-semibold text-primary">
                     <Trans id="auth.signin.title" defaults="Sign In" />
                   </h2>
-                  <a href="recovery" className="text-sm h-4 mt-1">
+                  <Link to="recovery" className="text-sm h-4 mt-1">
                     Forgot Password?
-                  </a>
+                  </Link>
                 </div>
                 <I18n>
                   {({ i18n }) => (
