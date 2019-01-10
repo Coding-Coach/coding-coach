@@ -53,7 +53,6 @@ let colors = {
   'primary-lightest': '#D5FFF4',
   'primary-lighter': '#E6F5F0',
   'primary-light': '#69D5B1',
-  'primary-blur': '#D5FFF4',
   'primary-dark': '#009d6c',
   'primary': '#00bc89',
   'primary-darker': '#009d6c',
