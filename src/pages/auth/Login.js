@@ -2,45 +2,35 @@ import React from 'react';
 import { Trans, t } from '@lingui/macro';
 import { noop } from 'utils/noop';
 import { I18n } from '@lingui/react';
+import { Link } from '@reach/router';
 
+import { SignUp, TitleMessage } from './Utilities';
 import Button from 'components/button/Button';
 import Facebook from 'components/icon/Facebook';
 import TextField from 'components/textfield/TextField';
 import Twitter from 'components/icon/Twitter';
 import { Panel, PanelContent } from 'components/panel/Panel';
 
-import { ReactComponent as Logo } from '../home/assets/images/coding-coach-logo.svg';
-
 export default function Login() {
   return (
     <div className="h-screen bg-gradient-primary py-3">
       <div className="container">
-        <div className="flex justify-between mb-12">
-          <Logo className="w-12 h-8" />
-          <Button onClick={noop} shape="pill" size="small" typography="none">
-            <Trans id="auth.signup.title" defaults="Sign Up" />
-          </Button>
-        </div>
+        <SignUp />
         <div className="md:flex md:flex-col md:items-center">
+          <TitleMessage
+            id="auth.signin.description"
+            defaults="Sign in or create a new account to get started."
+          />
           <div className="px-2 md:w-3/5 lg:w-1/3">
-            <h1 className="text-white font-semibold mb-2">
-              <Trans id="site.title" defaults="Coding Coach" />
-            </h1>
-            <p className="text-white font-sm w-3/4 mb-8">
-              <Trans
-                id="auth.signin.description"
-                defaults="Sign in or create a new account to get started."
-              />
-            </p>
             <Panel floating>
               <PanelContent>
                 <div className="flex mb-6">
                   <h2 className="flex-1 text-2xl font-semibold text-primary">
                     <Trans id="auth.signin.title" defaults="Sign In" />
                   </h2>
-                  <a href="#noop" className="text-sm h-4 mt-1">
+                  <Link to="recovery" className="text-sm h-4 mt-1">
                     Forgot Password?
-                  </a>
+                  </Link>
                 </div>
                 <I18n>
                   {({ i18n }) => (
