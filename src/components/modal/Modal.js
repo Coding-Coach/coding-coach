@@ -9,8 +9,15 @@ class Modal extends React.Component {
     document.body.appendChild(this.modal);
   }
 
+  componentDidMount() {
+    document.body.classList.add('overflow-hidden');
+  }
+
   componentWillUnmount() {
-    document.body.removeChild(this.modal);
+    const { body } = document;
+
+    body.removeChild(this.modal);
+    body.classList.remove('overflow-hidden');
   }
 
   render() {
