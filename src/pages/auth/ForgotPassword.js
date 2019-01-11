@@ -62,10 +62,11 @@ const GetAccountInfo = ({ noinfo, clickHandler, saveEmail }) => (
 );
 
 class ForgotPassword extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { displaySuccess: false, email: '', noinfo: false };
-  }
+  state = {
+    displaySuccess: false,
+    email: '',
+    noinfo: false,
+  };
 
   clickHandler = (e) => {
     e.preventDefault();
