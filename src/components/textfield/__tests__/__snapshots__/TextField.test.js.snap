@@ -5,7 +5,7 @@ exports[`components/textfield/TextField should render the textfield 1`] = `
   class="mb-4"
 >
   <input
-    class="block border border-secondary-lighter bg-white w-full p-2 rounded-sm focus:outline-none focus:border focus:border-primary"
+    class="block border leading-tight border-secondary-lighter bg-white w-full p-2 rounded-sm focus:outline-none focus:border focus:border-primary"
     type="text"
     value=""
   />
