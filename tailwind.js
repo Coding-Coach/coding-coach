@@ -66,7 +66,7 @@ let colors = {
   'danger-lighter': '#FFD5DB',
   'danger-light': '#EA7A71',
   'danger': '#EB6E64',
-  'danger-dark': '#D4574D',
+  'danger-darker': '#D4574D',
 
   // Backdrops
   'modal': 'rgba(0, 0, 0, 0.3)',
