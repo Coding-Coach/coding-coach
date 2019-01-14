@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Trans } from '@lingui/macro';
 import logoSrc from './assets/logo.svg';
-import Image from 'components/Image';
+import Image from 'components/image/Image';
 
 function TopHeader() {
   return (
