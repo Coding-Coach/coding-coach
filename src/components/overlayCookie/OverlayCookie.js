@@ -46,7 +46,7 @@ class OverlayCookie extends Component {
     if (cookiesAccepted === true) return null;
 
     return (
-      <section className="fixed w-full pin-b bg-primary-lighter z-40" style={{ opacity: 0.9 }}>
+      <section className="fixed w-full pin-b bg-primary-lighter" style={{ opacity: 0.9 }}>
         <div
           className={classNames(
             'flex justify-between text-xs text-secondary-dark',
