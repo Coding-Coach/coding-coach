@@ -11,7 +11,7 @@ export default function TextField({ label, name, onChange, type, value }) {
       )}
       <input
         type={type}
-        className="block border border-secondary-lighter bg-white w-full p-2 rounded-sm focus:outline-none focus:border focus:border-primary"
+        className="block border leading-tight border-secondary-lighter bg-white w-full p-2 rounded-sm focus:outline-none focus:border focus:border-primary"
         name={name}
         value={value}
         onChange={onChange}
