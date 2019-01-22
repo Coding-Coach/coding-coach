@@ -1,7 +1,9 @@
 dist: trusty
 language: node_js
 node_js:
-  - "10.10.0"
+  - "8"
+  - "10"
+  - "stable"
 cache:
   yarn: true
   directories:

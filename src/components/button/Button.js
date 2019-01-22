@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './button.module.scss';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 /**
@@ -31,15 +30,16 @@ const Button = (props) => {
       id={id}
       disabled={disabled}
       onClick={onClick}
-      className={classNames(
-        styles.button,
-        styles[type],
-        styles[size],
-        styles[shape],
-        fullWidth && styles.fullWidth,
-        floating && styles.shadow,
-        styles[typography] || styles.uppercase,
-      )}
+      className={classNames({
+        button: true,
+        [type]: !disabled,
+        disabled: disabled,
+        'shadow-floating hover:shadow': floating,
+        'w-full': fullWidth,
+        [size]: true,
+        [shape]: true,
+        [typography]: true,
+      })}
     >
       {children}
     </button>
