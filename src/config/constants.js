@@ -6,6 +6,7 @@ export default {
     FB_URL: process.env.REACT_APP_FACEBOOK_URL || 'https://www.facebook.com/codingcoachio/',
     TWITTER_URL: process.env.REACT_APP_TWITTER_URL || 'https://twitter.com/codingcoach_io',
     GITHUB_URL: process.env.REACT_APP_GITHUB_URL || 'https://github.com/Coding-Coach/coding-coach',
+    SLACK_URL: process.env.REACT_APP_SLACK_URL,
   },
   legal: {
     PRIVACY_POLICY_URL:
