@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/static/media/forgot-password.4f9ba239.svg"
   },
   {
-    "revision": "cb722b4b7b51a6b211bca678b04160ca",
+    "revision": "56967c4cfcba87fb6916fa9086609abc",
     "url": "/index.html"
   }
 ];
