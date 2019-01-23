@@ -12,15 +12,15 @@
 }
 
 .primary:hover {
-  @apply bg-primary-darker border-primary-darker
+  @apply bg-primary-dark border-primary-dark
 }
 
 .primary:active {
-  @apply border-primary-darker
+  @apply border-primary-dark
 }
 
 .primary:focus {
-  @apply bg-primary-darker border-primary-darker
+  @apply bg-primary-dark border-primary-dark
 }
 
 .secondary {
@@ -40,7 +40,7 @@
 }
 
 .tertiary {
-  @apply bg-transparent text-primary-darker
+  @apply bg-transparent text-primary-dark
 }
 
 .tertiary:hover {
