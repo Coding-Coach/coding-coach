@@ -1,11 +1,12 @@
 {
-  "main.css": "/static/css/main.32b3225b.chunk.css",
-  "main.js": "/static/js/main.3e87327b.chunk.js",
-  "main.js.map": "/static/js/main.3e87327b.chunk.js.map",
-  "static/js/1.c2b772bb.chunk.js": "/static/js/1.c2b772bb.chunk.js",
-  "static/js/1.c2b772bb.chunk.js.map": "/static/js/1.c2b772bb.chunk.js.map",
+  "main.css": "/static/css/main.ef144d6d.chunk.css",
+  "main.js": "/static/js/main.c6cfa048.chunk.js",
+  "main.js.map": "/static/js/main.c6cfa048.chunk.js.map",
+  "static/js/1.b648fc6c.chunk.js": "/static/js/1.b648fc6c.chunk.js",
+  "static/js/1.b648fc6c.chunk.js.map": "/static/js/1.b648fc6c.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
+  "static/media/forgot-password.4f9ba239.svg": "/static/media/forgot-password.4f9ba239.svg",
   "static/media/PrivacyPolicy.md": "/static/media/PrivacyPolicy.6c67e12d.md",
   "static/media/TermsAndConditions.md": "/static/media/TermsAndConditions.49f2cd99.md",
   "static/media/coding-coach-logo.svg": "/static/media/coding-coach-logo.b6509b13.svg",
@@ -14,8 +15,8 @@
   "static/media/contact.svg": "/static/media/contact.052cb3b0.svg",
   "static/media/index.css": "/static/media/open-sans-v15-cyrillic-ext_vietnamese_cyrillic_greek_greek-ext_latin_latin-ext-regular.86f83cc5.woff",
   "static/media/CookiesPolicy.md": "/static/media/CookiesPolicy.c8ebff2d.md",
-  "static/css/main.32b3225b.chunk.css.map": "/static/css/main.32b3225b.chunk.css.map",
+  "static/css/main.ef144d6d.chunk.css.map": "/static/css/main.ef144d6d.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.af6926db3cd1eae54b8b72ec69d5f087.js": "/precache-manifest.af6926db3cd1eae54b8b72ec69d5f087.js",
+  "precache-manifest.cb9cab40f15c51b11c23f477218a258e.js": "/precache-manifest.cb9cab40f15c51b11c23f477218a258e.js",
   "service-worker.js": "/service-worker.js"
 }
