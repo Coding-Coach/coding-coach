@@ -5,6 +5,26 @@ import { I18n } from '@lingui/react';
 import logoSrc from './assets/logo.svg';
 import Image from 'components/image/Image';
 
+function Header({ banner }) {
+  return (
+    <React.Fragment>
+      <header>
+        {/* This includes the Section name and the Logo of CodingCoach */}
+        <TopHeader />
+      </header>
+
+      {banner && (
+        <div
+          style={{ marginTop: '-6rem' }}
+          className="mx-auto w-5/6 p-8 bg-white shadow md:w-3/5 xl:w-2/5"
+        >
+          {banner}
+        </div>
+      )}
+    </React.Fragment>
+  );
+}
+
 function TopHeader() {
   return (
     <div className="bg-gradient-primary h-48 py-5 md:py-6 md:h-64 lg:py-8">
@@ -23,26 +43,6 @@ function TopHeader() {
         </I18n>
       </div>
     </div>
-  );
-}
-
-function Header({ banner }) {
-  return (
-    <React.Fragment>
-      <header>
-        {/* This includes the Section name and the Logo of CodingCoach */}
-        <TopHeader />
-      </header>
-
-      {banner && (
-        <div
-          style={{ marginTop: '-6rem' }}
-          className="mx-auto w-5/6 p-8 bg-white shadow md:w-3/5 xl:w-2/5"
-        >
-          {banner}
-        </div>
-      )}
-    </React.Fragment>
   );
 }
 

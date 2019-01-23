@@ -4,15 +4,15 @@ import classNames from 'classnames';
 
 function Banner({ imageSrc, message, button }) {
   return (
-    <Fragment>
-      <img className="w-6" src={imageSrc} />
+    <div className="text-center">
+      <img className="w-32" src={imageSrc} />
 
       <span className={classNames('block text-secondary-dark text-lg font-light my-4')}>
         {message}
       </span>
 
       {button}
-    </Fragment>
+    </div>
   );
 }
 
