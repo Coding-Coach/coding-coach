@@ -45,7 +45,6 @@ let defaultConfig = require('tailwindcss/defaultConfig')()
 
 let colors = {
   'transparent': 'transparent',
-
   'black': '#202939',
   'white': '#ffffff',
   'neutral': '#1f386e',
@@ -54,21 +53,19 @@ let colors = {
   'primary-lightest': '#D5FFF4',
   'primary-lighter': '#E6F5F0',
   'primary-light': '#69D5B1',
+  'primary-dark': '#126D4F',
   'primary': '#00bc89',
-  'primary-dark': '#009d6c',
-
-  // Grey variations
   'secondary-lightest': '#E8E7E7',
   'secondary-lighter': '#A8A4A4',
   'secondary-light': '#979797',
   'secondary': '#929292',
   'secondary-dark': '#4A4A4A',
 
-  // Red variations
+  // Danger variations
   'danger-lighter': '#FFD5DB',
   'danger-light': '#EA7A71',
   'danger': '#EB6E64',
-  'danger-dark': '#D4574D',
+  'danger-darker': '#D4574D',
 
   // Backdrops
   'modal': 'rgba(0, 0, 0, 0.3)',
@@ -468,6 +465,7 @@ module.exports = {
 
   minWidth: {
     '0': '0',
+    'medium': '50%',
     'full': '100%',
   },
 

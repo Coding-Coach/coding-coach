@@ -22,7 +22,7 @@ yarn start
 
 ## Slack
 
-Coding Coach is on Slack! [Click here](https://coding-coach.slack.com/) to join.
+Coding Coach is on Slack! [Click here](https://join.slack.com/t/coding-coach/shared_invite/enQtNTE2NDY4NTczNzE0LTMyOTAyZTFiYjE4OTUzYjgwYzk5MzlmYjgwNjUyNDZlZGY3NGVhYmU1NjdmZDQ3MmQ3YjRhYjJkMjM4OTYwNDA) to join.
 
 ## Styling
 Initially we decided to use SASS to handle the CSS. However, over time we decided to use [tailwind](https://tailwindcss.com/docs/what-is-tailwind)! We are currently migrating all our styles to tailwind.

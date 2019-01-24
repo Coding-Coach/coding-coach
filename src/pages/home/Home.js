@@ -74,9 +74,9 @@ class Home extends Component {
                 <p className="mb-4 text-lg text-secondary-dark leading-normal font-content text-right">
                   <Trans id="home.contact.description">
                     <a
-                      href={config.contact.SLACK_URL}
-                      className="no-underline text-secondary-dark border-b hover:bg-primary-light hover:text-white"
                       target="_blank"
+                      href={config.social.SLACK_URL}
+                      className="text-black border-b border-black no-underline hover:bg-primary-light hover:text-white hover:border-primary-light"
                       rel="noopener noreferrer"
                     >
                       Slack Organization
