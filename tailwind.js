@@ -933,6 +933,7 @@ module.exports = {
       const margin = config('margin');
       const base = {
         '.panel-content': {
+          maxHeight: 'calc(90vh - 9rem)',
           lineHeight: 'normal',
           h2: {
             margin: `${margin[3]} 0`,
