@@ -1,15 +1,12 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 
 function Banner({ imageSrc, message, button }) {
   return (
     <div className="text-center">
       <img className="w-32" src={imageSrc} />
 
-      <span className={classNames('block text-secondary-dark text-lg font-light my-4')}>
-        {message}
-      </span>
+      <span className={'block text-secondary-dark text-lg font-light my-4'}>{message}</span>
 
       {button}
     </div>
