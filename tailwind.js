@@ -843,140 +843,140 @@ module.exports = {
   |
   */
 
-  // plugins: [
-  //   ({ addComponents, config }) => {
-  //     // This plugins creates a single diagonal background
-  //     // at the bottom of the given element
-  //     const colors = config('colors');
-  //     const base = {
-  //       '.bg-diagonal:after': {
-  //         content: "''",
-  //         width: '100%',
-  //         height: '150px',
-  //         display: 'block',
-  //       },
-  //     };
+  plugins: [
+    ({ addComponents, config }) => {
+      // This plugins creates a single diagonal background
+      // at the bottom of the given element
+      const colors = config('colors');
+      const base = {
+        '.bg-diagonal:after': {
+          content: "''",
+          width: '100%',
+          height: '150px',
+          display: 'block',
+        },
+      };
 
-  //     const variants = Object.keys(colors).map(name => ({
-  //       [`.bg-diagonal-${name}:after`]: {
-  //         backgroundImage: `linear-gradient(to bottom right, ${colors[name]} 50%, #ffffff 50%)`,
-  //       }
-  //     }));
+      const variants = Object.keys(colors).map(name => ({
+        [`.bg-diagonal-${name}:after`]: {
+          backgroundImage: `linear-gradient(to bottom right, ${colors[name]} 50%, #ffffff 50%)`,
+        }
+      }));
 
-  //     addComponents([
-  //       base,
-  //       ...variants,
-  //     ]);
-  //   },
-  //   ({ addComponents, config }) => {
-  //     // This plugin creates two diagonal brackgrounds, one at
-  //     // the top and one at the bottom.
-  //     const colors = config('colors');
-  //     const base = {
-  //       '.bg-band': {
-  //         position: 'relative',
-  //       },
-  //       '.bg-band:before, .bg-band:after': {
-  //         content: '""',
-  //         width: '100%',
-  //         position: 'absolute',
-  //         left: 0,
-  //       },
-  //       '.bg-band:before': {
-  //         height: '20px',
-  //         top: '-20px',
-  //       },
-  //       '.bg-band:after': {
-  //         height: '40px',
-  //         bottom: '-40px',
-  //       },
-  //     };
+      addComponents([
+        base,
+        ...variants,
+      ]);
+    },
+    ({ addComponents, config }) => {
+      // This plugin creates two diagonal brackgrounds, one at
+      // the top and one at the bottom.
+      const colors = config('colors');
+      const base = {
+        '.bg-band': {
+          position: 'relative',
+        },
+        '.bg-band:before, .bg-band:after': {
+          content: '""',
+          width: '100%',
+          position: 'absolute',
+          left: 0,
+        },
+        '.bg-band:before': {
+          height: '20px',
+          top: '-20px',
+        },
+        '.bg-band:after': {
+          height: '40px',
+          bottom: '-40px',
+        },
+      };
 
-  //     const variants = Object.keys(colors).map(name => ({
-  //       [`.bg-band-${name}:before`]: {
-  //         backgroundImage: `linear-gradient(to top right, ${colors[name]}, ${colors[name]} 50%, white 50%, white)`,
-  //       },
-  //       [`.bg-band-${name}:after`]: {
-  //         backgroundImage: `linear-gradient(to bottom left, ${colors[name]}, ${colors[name]} 50%, white 50%, white)`,
-  //       },
-  //     }));
+      const variants = Object.keys(colors).map(name => ({
+        [`.bg-band-${name}:before`]: {
+          backgroundImage: `linear-gradient(to top right, ${colors[name]}, ${colors[name]} 50%, white 50%, white)`,
+        },
+        [`.bg-band-${name}:after`]: {
+          backgroundImage: `linear-gradient(to bottom left, ${colors[name]}, ${colors[name]} 50%, white 50%, white)`,
+        },
+      }));
 
-  //     addComponents([
-  //       base,
-  //       ...variants,
-  //     ]);
-  //   },
-  //   ({ addComponents, config }) => {
-  //     const heights = config('height');
-  //     const base = {
-  //       '.calcheight': {
-  //         height: '100%',
-  //       },
-  //     };
+      addComponents([
+        base,
+        ...variants,
+      ]);
+    },
+    ({ addComponents, config }) => {
+      const heights = config('height');
+      const base = {
+        '.calcheight': {
+          height: '100%',
+        },
+      };
 
-  //     const variants = Object.keys(heights).map(height => {
-  //       if (height !== 'auto') return ({
-  //         [`.calcheight-${height}`]: {
-  //           height: `calc(100% - ${heights[height]})`
-  //         },
-  //       })
-  //     });
+      const variants = Object.keys(heights).map(height => {
+        if (height !== 'auto') return ({
+          [`.calcheight-${height}`]: {
+            height: `calc(100% - ${heights[height]})`
+          },
+        })
+      });
 
-  //     addComponents([
-  //       base,
-  //       ...variants,
-  //     ]);
-  //   },
-  //   ({ addComponents, config }) => {
-  //     const colors = config('colors');
-  //     const textSizes = config('textSizes');
-  //     const margin = config('margin');
-  //     const base = {
-  //       '.panel-content': {
-  //         lineHeight: 'normal',
-  //         h2: {
-  //           margin: `${margin[3]} 0`,
-  //         },
-  //         p: {
-  //           margin: `${margin[4]} 0`,
-  //         },
-  //         ul: {
-  //           margin: `${margin[4]} 0`,
+      addComponents([
+        base,
+        ...variants,
+      ]);
+    },
+    ({ addComponents, config }) => {
+      const colors = config('colors');
+      const textSizes = config('textSizes');
+      const margin = config('margin');
+      const base = {
+        '.panel-content': {
+          lineHeight: 'normal',
+          h2: {
+            margin: `${margin[3]} 0`,
+          },
+          p: {
+            margin: `${margin[4]} 0`,
+          },
+          ul: {
+            margin: `${margin[4]} 0`,
 
-  //           li: {
-  //             fontSize: textSizes.base,
-  //           },
-  //         },
-  //         a: {
-  //           color: colors.primary,
-  //           textDecoration: 'none',
-  //           transition: 'background 0.15s ease-out, color 0.15s ease-out',
-  //           cursor: 'pointer',
-  //           '&:hover': {
-  //             background: colors['primary-light'],
-  //             color: colors.white,
-  //           },
-  //         },
-  //       },
-  //     };
+            li: {
+              fontSize: textSizes.base,
+            },
+          },
+          a: {
+            color: colors.primary,
+            textDecoration: 'none',
+            transition: 'background 0.15s ease-out, color 0.15s ease-out',
+            cursor: 'pointer',
+            '&:hover': {
+              background: colors['primary-light'],
+              color: colors.white,
+            },
+          },
+        },
+      };
 
-  //     addComponents([
-  //       base,
-  //     ]);
-  //   },
-  //   require('tailwindcss/plugins/container')({
-  //     center: true,
-  //     padding: '1rem',
-  //   }),
-  //   require('tailwindcss-plugins/gradients')({
-  //     gradients: {
-  //       // Array definition (defaults to linear gradients).
-  //       'gradient-primary': ['-45deg', colors['primary-lightest'], colors['primary-light']],
-  //     },
-  //     variants: ['responsive']
-  //   }),
-  //   require('glhd-tailwindcss-transitions')(),
-  // ],
+      addComponents([
+        base,
+      ]);
+    },
+    require('tailwindcss/plugins/container')({
+      center: true,
+      padding: '1rem',
+    }),
+    require('tailwindcss-plugins/gradients')({
+      gradients: {
+        // Array definition (defaults to linear gradients).
+        'gradient-primary': ['-45deg', colors['primary-lightest'], colors['primary-light']],
+      },
+      variants: ['responsive']
+    }),
+    require('glhd-tailwindcss-transitions')(),
+  ],
 
 
   /*
