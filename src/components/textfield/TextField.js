@@ -13,14 +13,14 @@ export default function TextField({ label, name, onChange, type, value, error })
       focus:outline-none focus:border-primary focus:text-primary
     `,
     {
-      ['border-danger']: !!error,
+      'border-danger': !!error,
     },
   );
 
   return (
     <div className="mb-4 text-secondary-light focus-within:text-primary">
       {label && (
-        <label className={classnames('block mb-1', { ['text-danger']: !!error })} htmlFor={name}>
+        <label className={classnames('block mb-1', { 'text-danger': !!error })} htmlFor={name}>
           {label}
         </label>
       )}
