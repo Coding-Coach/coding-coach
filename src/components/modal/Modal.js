@@ -39,7 +39,7 @@ class Modal extends React.Component {
           onClick={(e) => e.stopPropagation()}
           className={classNames(
             'relative pt-10 pb-10 pl-5 pr-5',
-            `w-full h-full`,
+            `w-full`,
             'md:w-auto md:max-w-md lg:max-w-lg xl:max-w-xl',
           )}
         >

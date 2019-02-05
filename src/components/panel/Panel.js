@@ -47,9 +47,7 @@ export function PanelHeader({ children }) {
 }
 
 export function PanelContent({ children }) {
-  return (
-    <div className="p-6 overflow-y-auto calcheight-40 panel-content font-content">{children}</div>
-  );
+  return <div className="p-6 overflow-y-auto panel-content font-content">{children}</div>;
 }
 
 export function PanelFooter({ children }) {

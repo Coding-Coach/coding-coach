@@ -2,10 +2,17 @@
 
 exports[`components/textfield/TextField should render the textfield 1`] = `
 <div
-  class="mb-4"
+  class="mb-4 text-secondary-light focus-within:text-primary"
 >
   <input
-    class="block border leading-tight border-secondary-lighter bg-white w-full p-2 rounded-sm focus:outline-none focus:border focus:border-primary"
+    class="
+      block
+      border rounded-sm
+      leading-tight
+      border-secondary-lighter bg-white
+      w-full p-2
+      focus:outline-none focus:border-primary focus:text-primary
+    "
     type="text"
     value=""
   />
