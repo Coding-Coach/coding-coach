@@ -8,6 +8,9 @@ export default {
     GITHUB_URL: process.env.REACT_APP_GITHUB_URL || 'https://github.com/Coding-Coach/coding-coach',
     SLACK_URL: process.env.REACT_APP_SLACK_URL,
   },
+  ga: {
+    id: process.env.REACT_APP_GA,
+  },
   legal: {
     PRIVACY_POLICY_URL:
       process.env.REACT_APP_PRIVACY_POLICY_URL ||
