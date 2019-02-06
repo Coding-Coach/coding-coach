@@ -36,7 +36,6 @@ keys/
 
 # Environment files.
 .env.dev
-.env
 
 # Nohup bullshit logs.
 nohup.out
