@@ -43,7 +43,7 @@ class ScrollTopButton extends React.Component {
       <div
         aria-label="Scroll to top of page"
         tabIndex={scrollToTopClass ? 0 : -1}
-        className={`transition-slow fixed cursor-pointer opacity-0 z-50 ${scrollToTopClass}`}
+        className={`transition-slow fixed cursor-pointer opacity-0 z-10 ${scrollToTopClass}`}
         style={{
           ...styles.hide,
           ...(scrollToTopClass && styles.show),

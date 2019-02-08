@@ -31,7 +31,7 @@ class Modal extends React.Component {
       <div
         className={classNames(
           'fixed pin w-full h-full bg-modal',
-          'flex items-center justify-center',
+          'flex items-center justify-center z-20',
         )}
         onClick={onClose}
       >
