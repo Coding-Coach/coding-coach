@@ -4,6 +4,7 @@ import { Trans, t } from '@lingui/macro';
 import { I18n } from '@lingui/react';
 import logoSrc from './assets/logo.svg';
 import Image from 'components/image/Image';
+import IconLogo from 'components/icon/CCLogo';
 
 function Header({ banner }) {
   return (
@@ -29,14 +30,13 @@ function TopHeader() {
   return (
     <div className="bg-gradient-primary h-48 py-5 md:py-6 md:h-64 lg:py-8">
       <div className="flex justify-between items-center w-5/6 m-auto">
-        <span className="text-white text-2xl font-bold md:text-3xl">
+        <span className="text-white text-2xl font-bold md:text-4xl">
           <Trans id="dashboard.header.title" />
         </span>
         <I18n>
           {({ i18n }) => (
-            <Image
-              src={logoSrc}
-              className="w-12 md:w-16"
+            <IconLogo
+              className="w-16 md:w-24"
               alt={i18n._(t('home.header.logo')`This is the logo for Coding Coach`)}
             />
           )}
