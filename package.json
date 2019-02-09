@@ -37,6 +37,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
+    "react-ga": "^2.5.7",
     "react-scripts": "2.1.1",
     "remark": "^10.0.1",
     "remark-react": "^5.0.0"

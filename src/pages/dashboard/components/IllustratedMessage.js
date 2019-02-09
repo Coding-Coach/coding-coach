@@ -1,20 +1,18 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-function Banner({ imageSrc, message, button }) {
+function Banner({ icon, message, button }) {
   return (
     <div className="text-center">
-      <img className="w-32" src={imageSrc} />
-
-      <span className={'block text-secondary-dark text-lg font-light my-4'}>{message}</span>
-
+      {icon}
+      <span className={'block text-secondary-dark text-lg font-light mb-4'}>{message}</span>
       {button}
     </div>
   );
 }
 
 Banner.propTypes = {
-  imageSrc: PropTypes.string.isRequired,
+  icon: PropTypes.node.isRequired,
   message: PropTypes.string.isRequired,
   button: PropTypes.node,
 };

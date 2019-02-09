@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import IllustratedMessage from './components/IllustratedMessage';
 import Button from 'components/button/Button';
-//import LogoSrc from './components/assets/logo.svg';
-import IllustrationSrc from 'pages/home/assets/images/about.svg';
+import IconMessages from 'components/icon/Messages';
 
 class Dashboard extends Component {
   getBanner = () => (
     <IllustratedMessage
-      imageSrc={IllustrationSrc}
+      icon={<IconMessages active className={'w-32 md:w-48'} />}
       message="You have 3 new mentorship messages!"
       button={
         <Button onClick={() => console.log('click')} size="small">

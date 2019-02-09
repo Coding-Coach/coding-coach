@@ -816,7 +816,7 @@ module.exports = {
     svgStroke: [],
     tableLayout: ['responsive'],
     textAlign: ['responsive'],
-    textColors: ['responsive', 'hover', 'focus', 'group-hover'],
+    textColors: ['responsive', 'hover', 'focus', 'focus-within', 'group-hover'],
     textSizes: ['responsive'],
     textStyle: ['responsive', 'hover', 'focus', 'group-hover'],
     tracking: ['responsive'],
@@ -933,6 +933,7 @@ module.exports = {
       const margin = config('margin');
       const base = {
         '.panel-content': {
+          maxHeight: 'calc(90vh - 9rem)',
           lineHeight: 'normal',
           h2: {
             margin: `${margin[3]} 0`,
