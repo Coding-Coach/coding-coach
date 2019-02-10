@@ -2,6 +2,8 @@ import React from 'react';
 import Button from 'components/button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { t } from '@lingui/macro';
+import { I18n } from '@lingui/react';
 
 class ScrollTopButton extends React.Component {
   state = { scrollTopClass: '' };
@@ -40,19 +42,23 @@ class ScrollTopButton extends React.Component {
     };
     const { scrollToTopClass } = this.state;
     return (
-      <div
-        aria-label="Scroll to top of page"
-        tabIndex={scrollToTopClass ? 0 : -1}
-        className={`transition-slow fixed cursor-pointer opacity-0 z-10 ${scrollToTopClass}`}
-        style={{
-          ...styles.hide,
-          ...(scrollToTopClass && styles.show),
-        }}
-      >
-        <Button onClick={this.clickHandler} onKeyPress={this.clickHandler}>
-          <FontAwesomeIcon icon={faArrowUp} size="2x" />
-        </Button>
-      </div>
+      <I18n>
+        {({ i18n }) => (
+          <div
+            aria-label={i18n._(t`common.scrollToTop`)}
+            tabIndex={scrollToTopClass ? 0 : -1}
+            className={`transition-slow fixed cursor-pointer opacity-0 z-10 ${scrollToTopClass}`}
+            style={{
+              ...styles.hide,
+              ...(scrollToTopClass && styles.show),
+            }}
+          >
+            <Button onClick={this.clickHandler} onKeyPress={this.clickHandler}>
+              <FontAwesomeIcon icon={faArrowUp} size="2x" />
+            </Button>
+          </div>
+        )}
+      </I18n>
     );
   }
 }
