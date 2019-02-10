@@ -5,6 +5,16 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { t } from '@lingui/macro';
 import { I18n } from '@lingui/react';
 
+const styles = {
+  hide: {
+    bottom: 20,
+    right: -65,
+  },
+  show: {
+    right: 20,
+  },
+};
+
 class ScrollTopButton extends React.Component {
   state = { scrollTopClass: '' };
 
@@ -31,15 +41,6 @@ class ScrollTopButton extends React.Component {
   };
 
   render() {
-    const styles = {
-      hide: {
-        bottom: 20,
-        right: -65,
-      },
-      show: {
-        right: 20,
-      },
-    };
     const { scrollToTopClass } = this.state;
     return (
       <I18n>
