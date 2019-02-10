@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import classNames from 'classnames';
 
 class Modal extends React.Component {
   constructor(props) {
@@ -29,19 +28,12 @@ class Modal extends React.Component {
 
     return (
       <div
-        className={classNames(
-          'fixed pin w-full h-full bg-modal',
-          'flex items-center justify-center z-20',
-        )}
+        className="fixed pin w-full h-full bg-modal flex items-center justify-center z-20"
         onClick={onClose}
       >
         <div
           onClick={(e) => e.stopPropagation()}
-          className={classNames(
-            'relative pt-10 pb-10 pl-5 pr-5',
-            `w-full`,
-            'md:w-auto md:max-w-md lg:max-w-lg xl:max-w-xl',
-          )}
+          className="relative pt-10 pb-10 pl-5 pr-5 w-full md:w-auto md:max-w-md lg:max-w-lg xl:max-w-xl"
         >
           {this.props.children}
         </div>
