@@ -2,8 +2,8 @@ import React from 'react';
 
 function NavBar({ configuration }) {
   return (
-    <nav className="fixed pin-b pin-l pin-r bg-white">
-      <ul role="tablist" className="list-reset flex px-0">
+    <nav className="fixed pin-b pin-x bg-white md:pin-y ">
+      <ul role="tablist" className="list-reset flex px-0 md:px-5">
         {configuration.tabs.map((tabConfig) => {
           return (
             <Tab

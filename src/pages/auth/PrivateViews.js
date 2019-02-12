@@ -37,7 +37,7 @@ const NavConfiguration = {
   tabs: [
     {
       name: routes.dashboard.name,
-      label: 'Dashboard', // This will be a i18 Translation, now hardcoded
+      label: 'Home', // This will be a i18 Translation, now hardcoded
       path: routes.dashboard.path,
       icon: IconDashboard,
       selected: true,
