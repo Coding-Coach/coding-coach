@@ -7,7 +7,7 @@ import IconMessages from 'components/icon/Messages';
 class Dashboard extends Component {
   getBanner = () => (
     <IllustratedMessage
-      icon={<IconMessages active className={'w-32 md:w-48'} />}
+      icon={<IconMessages active className={'w-32'} />}
       message="You have 3 new mentorship messages!"
       button={
         <Button onClick={() => console.log('click')} size="small">
