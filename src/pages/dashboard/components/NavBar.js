@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function NavBar({ configuration, ...rest }) {
   return (
@@ -18,6 +19,17 @@ function NavBar({ configuration, ...rest }) {
     </nav>
   );
 }
+NavBar.propTypes = {
+  configuration: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      path: PropTypes.string.isRequired,
+      icon: PropTypes.node.isRequired,
+      selected: PropTypes.bool.isRequired,
+    }),
+  ),
+};
 
 function Tab({ name, to, icon, label, isSelected }) {
   return (
