@@ -19,7 +19,7 @@ function NavBar({ configuration, ...rest }) {
   );
 }
 
-function Tab({ name, to, isSelected, icon, label }) {
+function Tab({ name, to, icon, label, isSelected }) {
   return (
     <li key={name} role="presentation" className="flex-1">
       <a
