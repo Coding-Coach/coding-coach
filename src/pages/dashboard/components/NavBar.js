@@ -3,7 +3,7 @@ import React from 'react';
 function NavBar({ configuration }) {
   return (
     <nav className="fixed pin-b pin-l pin-r bg-white">
-      <ol role="tablist" className="list-reset flex px-0">
+      <ul role="tablist" className="list-reset flex px-0">
         {configuration.tabs.map((tabConfig) => {
           return (
             <Tab
@@ -15,7 +15,7 @@ function NavBar({ configuration }) {
             />
           );
         })}
-      </ol>
+      </ul>
     </nav>
   );
 }
@@ -27,7 +27,9 @@ function Tab({ name, path, isSelected, icon, label }) {
         href={path}
         role="tab"
         aria-selected={isSelected}
-        className="block text-center py-1 no-underline no-decoration text-grey"
+        className={`block text-center py-1 no-underline no-decoration ${
+          isSelected ? 'text-primary' : 'text-secondary-dark'
+        }`}
       >
         {icon}
         <span className="block text-xs">{label}</span>

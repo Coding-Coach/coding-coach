@@ -47,21 +47,21 @@ const NavConfiguration = {
       label: 'Messages', // This will be a i18 Translation, now hardcoded
       path: routes.messages.path,
       icon: IconMessages,
-      selected: true,
+      selected: false,
     },
     {
       name: routes.mentorships.name,
       label: 'Mentorships', // This will be a i18 Translation, now hardcoded
       path: routes.mentorships.path,
       icon: IconMentorships,
-      selected: true,
+      selected: false,
     },
     {
       name: routes.settings.name,
       label: 'Settings', // This will be a i18 Translation, now hardcoded
       path: routes.settings.path,
       icon: IconSettings,
-      selected: true,
+      selected: false,
     },
   ],
 };
