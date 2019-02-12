@@ -1,67 +1,12 @@
 import React, { Fragment } from 'react';
 import NavBar from 'pages/dashboard/components/NavBar';
-import IconDashboard from 'components/icon/Dashboard';
-import IconMessages from 'components/icon/Messages';
-import IconMentorships from 'components/icon/Mentorships';
-import IconSettings from 'components/icon/Settings';
+import { navConfiguration } from 'config/navigation';
 
-export default function PrivateViews({ children }) {
+export default function PrivateViews({ children, ...rest }) {
   return (
     <Fragment>
-      <NavBar configuration={NavConfiguration} />
+      <NavBar configuration={navConfiguration} {...rest} />
       {children}
     </Fragment>
   );
 }
-
-const routes = {
-  dashboard: {
-    name: 'dashboard',
-    path: '/app/dashboard',
-  },
-  messages: {
-    name: 'messages',
-    path: '/app/messages',
-  },
-  mentorships: {
-    name: 'mentorships',
-    path: '/app/mentorships',
-  },
-  settings: {
-    name: 'settings',
-    path: '/app/settings',
-  },
-};
-
-const NavConfiguration = {
-  tabs: [
-    {
-      name: routes.dashboard.name,
-      label: 'Home', // This will be a i18 Translation, now hardcoded
-      path: routes.dashboard.path,
-      icon: IconDashboard,
-      selected: true,
-    },
-    {
-      name: routes.messages.name,
-      label: 'Messages', // This will be a i18 Translation, now hardcoded
-      path: routes.messages.path,
-      icon: IconMessages,
-      selected: false,
-    },
-    {
-      name: routes.mentorships.name,
-      label: 'Mentorships', // This will be a i18 Translation, now hardcoded
-      path: routes.mentorships.path,
-      icon: IconMentorships,
-      selected: false,
-    },
-    {
-      name: routes.settings.name,
-      label: 'Settings', // This will be a i18 Translation, now hardcoded
-      path: routes.settings.path,
-      icon: IconSettings,
-      selected: false,
-    },
-  ],
-};

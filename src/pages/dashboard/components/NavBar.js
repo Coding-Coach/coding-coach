@@ -1,12 +1,14 @@
 import React from 'react';
 
-function NavBar({ configuration }) {
+function NavBar({ configuration, ...rest }) {
   return (
     <nav className="fixed pin-b pin-x bg-white md:pin-y ">
+      {console.log(rest)}
       <ul role="tablist" className="list-reset flex px-0 md:px-5">
         {configuration.tabs.map((tabConfig) => {
           return (
             <Tab
+              key={tabConfig.name}
               name={tabConfig.name}
               to={tabConfig.path}
               isSelected={tabConfig.selected}
