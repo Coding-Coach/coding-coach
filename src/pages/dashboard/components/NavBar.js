@@ -41,12 +41,12 @@ function Tab({ name, to, icon, label, isSelected }) {
         href={to}
         role="tab"
         aria-selected={isSelected}
-        className={`block text-center py-1 no-underline no-decoration ${
+        className={`block cursor-pointer text-center py-1 no-underline no-decoration ${
           isSelected ? 'text-primary' : 'text-secondary-dark'
         }`}
       >
         {icon}
-        <span className="block text-xs">{label}</span>
+        <span className="block text-xs tracking-wide">{label}</span>
       </a>
     </li>
   );
