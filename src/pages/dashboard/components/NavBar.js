@@ -13,6 +13,7 @@ function NavBar({ configuration, ...rest }) {
             isSelected={tabConfig.selected}
             label={tabConfig.label}
             icon={<tabConfig.icon className="w-12" active={tabConfig.selected} />}
+            {...rest}
           />
         ))}
       </ul>
@@ -31,6 +32,8 @@ NavBar.propTypes = {
   ),
 };
 
+export default NavBar;
+
 function Tab({ name, to, icon, label, isSelected }) {
   return (
     <li key={name} role="presentation" className="flex-1">
@@ -48,4 +51,3 @@ function Tab({ name, to, icon, label, isSelected }) {
     </li>
   );
 }
-export default NavBar;
