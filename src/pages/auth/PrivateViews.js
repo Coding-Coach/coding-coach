@@ -6,7 +6,7 @@ export default function PrivateViews({ children, ...rest }) {
   return (
     <Fragment>
       <NavBar configuration={navConfiguration} {...rest} />
-      {children}
+      <main className="min-h-screen bg-secondary-lightest">{children}</main>
     </Fragment>
   );
 }
