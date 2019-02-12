@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Trans, t } from '@lingui/macro';
 import { I18n } from '@lingui/react';
-import logoSrc from './assets/logo.svg';
-import Image from 'components/image/Image';
 import IconLogo from 'components/icon/CCLogo';
 
 function Header({ banner }) {
