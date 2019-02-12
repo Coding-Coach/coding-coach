@@ -37,24 +37,28 @@ const NavConfiguration = {
   tabs: [
     {
       name: routes.dashboard.name,
+      label: 'Dashboard', // This will be a i18 Translation, now hardcoded
       path: routes.dashboard.path,
       icon: IconDashboard,
       selected: true,
     },
     {
       name: routes.messages.name,
+      label: 'Messages', // This will be a i18 Translation, now hardcoded
       path: routes.messages.path,
       icon: IconMessages,
       selected: true,
     },
     {
       name: routes.mentorships.name,
+      label: 'Mentorships', // This will be a i18 Translation, now hardcoded
       path: routes.mentorships.path,
       icon: IconMentorships,
       selected: true,
     },
     {
       name: routes.settings.name,
+      label: 'Settings', // This will be a i18 Translation, now hardcoded
       path: routes.settings.path,
       icon: IconSettings,
       selected: true,
