@@ -8,7 +8,7 @@ function NavBar({ configuration }) {
           return (
             <Tab
               name={tabConfig.name}
-              path={tabConfig.path}
+              to={tabConfig.path}
               isSelected={tabConfig.selected}
               label={tabConfig.label}
               icon={<tabConfig.icon className="w-12" active={tabConfig.selected} />}
@@ -20,11 +20,11 @@ function NavBar({ configuration }) {
   );
 }
 
-function Tab({ name, path, isSelected, icon, label }) {
+function Tab({ name, to, isSelected, icon, label }) {
   return (
     <li key={name} role="presentation" className="flex-1">
       <a
-        href={path}
+        href={to}
         role="tab"
         aria-selected={isSelected}
         className={`block text-center py-1 no-underline no-decoration ${
