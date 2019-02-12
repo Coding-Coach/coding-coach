@@ -3,7 +3,6 @@ import React from 'react';
 function NavBar({ configuration, ...rest }) {
   return (
     <nav className="fixed pin-b pin-x bg-white md:pin-y ">
-      {console.log(rest)}
       <ul role="tablist" className="list-reset flex px-0 md:px-5">
         {configuration.tabs.map((tabConfig) => {
           return (
