@@ -20,6 +20,7 @@ function NavBar({ configuration, ...rest }) {
     </nav>
   );
 }
+
 NavBar.propTypes = {
   configuration: PropTypes.shape({
     tabs: PropTypes.arrayOf(
