@@ -21,15 +21,17 @@ function NavBar({ configuration, ...rest }) {
   );
 }
 NavBar.propTypes = {
-  configuration: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-      path: PropTypes.string.isRequired,
-      icon: PropTypes.node.isRequired,
-      selected: PropTypes.bool.isRequired,
-    }),
-  ),
+  configuration: PropTypes.shape({
+    tabs: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        path: PropTypes.string.isRequired,
+        icon: PropTypes.func.isRequired,
+        selected: PropTypes.bool.isRequired,
+      }),
+    ),
+  }),
 };
 
 export default NavBar;
