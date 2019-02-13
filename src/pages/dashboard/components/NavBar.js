@@ -12,7 +12,7 @@ function NavBar({ configuration, ...rest }) {
             to={tabConfig.path}
             isSelected={tabConfig.selected}
             label={tabConfig.label}
-            icon={<tabConfig.icon className="w-12" active={tabConfig.selected} />}
+            icon={<tabConfig.icon className="w-10" active={tabConfig.selected} />}
             {...rest}
           />
         ))}
@@ -41,7 +41,7 @@ function Tab({ name, to, icon, label, isSelected }) {
         href={to}
         role="tab"
         aria-selected={isSelected}
-        className={`block cursor-pointer text-center py-1 no-underline no-decoration ${
+        className={`flex flex-col items-center cursor-pointer text-center py-2 no-underline no-decoration ${
           isSelected ? 'text-primary' : 'text-secondary-dark'
         }`}
       >
