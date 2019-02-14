@@ -25,7 +25,6 @@ const singleTabConfiguration = {
     label: `Label for ${element}`,
     path: '/fake_path',
     icon: IconDashboard,
-    selected: true,
   })),
 };
 
@@ -35,6 +34,5 @@ const multipleTabConfiguration = {
     label: `Label for ${element}`,
     path: '/fake_path',
     icon: IconDashboard,
-    selected: true,
   })),
 };

@@ -5,17 +5,26 @@ function NavBar({ configuration, ...rest }) {
   return (
     <nav className="fixed pin-b pin-x bg-white md:pin-none md:pin-y md:pin-l ">
       <ul role="tablist" className="list-reset flex px-0 md:px-3 md:flex-col lg:px-4">
-        {configuration.tabs.map((tabConfig) => (
-          <Tab
-            key={tabConfig.name}
-            name={tabConfig.name}
-            to={tabConfig.path}
-            isSelected={tabConfig.selected}
-            label={tabConfig.label}
-            icon={<tabConfig.icon className="w-10" active={tabConfig.selected} />}
-            {...rest}
-          />
-        ))}
+        {configuration.tabs.map((tabConfig) => {
+          //const isSelected = rest
+          return (
+            <Tab
+              key={tabConfig.name}
+              name={tabConfig.name}
+              to={tabConfig.path}
+              isSelected={tabConfig.selected}
+              label={tabConfig.label}
+              icon={
+                <tabConfig.icon
+                  className="w-10"
+                  active={tabConfig.selected}
+                  data-testid={tabConfig.label}
+                />
+              }
+              {...rest}
+            />
+          );
+        })}
       </ul>
     </nav>
   );
@@ -29,7 +38,6 @@ NavBar.propTypes = {
         label: PropTypes.string.isRequired,
         path: PropTypes.string.isRequired,
         icon: PropTypes.func.isRequired,
-        selected: PropTypes.bool.isRequired,
       }),
     ),
   }),
