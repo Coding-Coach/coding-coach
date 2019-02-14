@@ -8,31 +8,31 @@ const navConfiguration = {
   tabs: [
     {
       name: routesConfiguration.dashboard.name,
-      label: 'Home', // trans key => dashboard.navigation.tab.home
       path: routesConfiguration.dashboard.path,
+      group: routesConfiguration.dashboard.group,
+      label: 'Home', // trans key => dashboard.navigation.tab.home
       icon: IconDashboard,
-      selected: true,
     },
     {
       name: routesConfiguration.messages.name,
-      label: 'Messages', // trans key => dashboard.navigation.tab.messages
       path: routesConfiguration.messages.path,
+      group: routesConfiguration.messages.group,
+      label: 'Messages', // trans key => dashboard.navigation.tab.messages
       icon: IconMessages,
-      selected: false,
     },
     {
       name: routesConfiguration.mentorships.name,
-      label: 'Mentorships', // trans key => dashboard.navigation.tab.mentorshipps
       path: routesConfiguration.mentorships.path,
+      group: routesConfiguration.mentorships.group,
+      label: 'Mentorships', // trans key => dashboard.navigation.tab.mentorshipps
       icon: IconMentorships,
-      selected: false,
     },
     {
       name: routesConfiguration.settings.name,
-      label: 'Settings', // trans key => dashboard.navigation.tab.settings
       path: routesConfiguration.settings.path,
+      group: routesConfiguration.settings.group,
+      label: 'Settings', // trans key => dashboard.navigation.tab.settings
       icon: IconSettings,
-      selected: false,
     },
   ],
 };

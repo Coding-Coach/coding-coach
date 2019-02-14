@@ -24,7 +24,9 @@ test('renders the NavBar according the configuration', () => {
     })),
   };
 
-  const { getByText } = render(<NavBar configuration={navbarConfiguration} />);
+  const { getByText } = render(
+    <NavBar configuration={navbarConfiguration} currentPath="dashboard" />,
+  );
   tabsConfig.map((el, index) => {
     getByText(el.label);
   });

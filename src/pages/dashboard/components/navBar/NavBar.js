@@ -1,27 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function NavBar({ configuration, ...rest }) {
+function NavBar({ configuration, currentPath }) {
   return (
     <nav className="fixed pin-b pin-x bg-white md:pin-none md:pin-y md:pin-l ">
       <ul role="tablist" className="list-reset flex px-0 md:px-3 md:flex-col lg:px-4">
         {configuration.tabs.map((tabConfig) => {
-          //const isSelected = rest
+          const isSelected = currentPath.indexOf(tabConfig.group) !== -1;
+
           return (
             <Tab
               key={tabConfig.name}
               name={tabConfig.name}
               to={tabConfig.path}
-              isSelected={tabConfig.selected}
+              isSelected={isSelected}
               label={tabConfig.label}
-              icon={
-                <tabConfig.icon
-                  className="w-10"
-                  active={tabConfig.selected}
-                  data-testid={tabConfig.label}
-                />
-              }
-              {...rest}
+              icon={<tabConfig.icon className="w-10" active={isSelected} />}
             />
           );
         })}
@@ -31,6 +25,7 @@ function NavBar({ configuration, ...rest }) {
 }
 
 NavBar.propTypes = {
+  currentPath: PropTypes.string.isRequired,
   configuration: PropTypes.shape({
     tabs: PropTypes.arrayOf(
       PropTypes.shape({
