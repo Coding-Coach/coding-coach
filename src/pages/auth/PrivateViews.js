@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import NavBar from 'pages/dashboard/components/NavBar';
+import NavBar from 'pages/dashboard/components/navBar/NavBar';
 import { navConfiguration } from 'config/navigation';
 
 export default function PrivateViews({ children, ...rest }) {
