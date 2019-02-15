@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from '@reach/router';
+import { Trans } from '@lingui/macro';
+import { I18n } from '@lingui/react';
 
 function NavBar({ configuration, currentPath }) {
   return (
@@ -15,7 +17,7 @@ function NavBar({ configuration, currentPath }) {
               name={tabConfig.name}
               to={tabConfig.path}
               isSelected={isSelected}
-              label={tabConfig.label}
+              label={<Trans id={tabConfig.label} />}
               icon={<tabConfig.icon className="w-10" active={isSelected} />}
             />
           );
