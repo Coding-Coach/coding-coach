@@ -1,9 +1,8 @@
 import React from 'react';
 import Button from 'components/button/Button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { t } from '@lingui/macro';
 import { I18n } from '@lingui/react';
+import ArrowUp from 'components/icon/ArrowUp';
 
 const styles = {
   hide: {
@@ -55,7 +54,7 @@ class ScrollTopButton extends React.Component {
             }}
           >
             <Button onClick={this.clickHandler} onKeyPress={this.clickHandler}>
-              <FontAwesomeIcon icon={faArrowUp} size="2x" />
+              <ArrowUp width={27} height={28} color="currentColor" />
             </Button>
           </div>
         )}
