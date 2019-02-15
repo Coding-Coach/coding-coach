@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from '@reach/router';
 
 function NavBar({ configuration, currentPath }) {
   return (
@@ -43,8 +44,8 @@ export default NavBar;
 function Tab({ name, to, icon, label, isSelected }) {
   return (
     <li key={name} role="presentation" className="flex-1">
-      <a
-        href={to}
+      <Link
+        to={to}
         role="tab"
         aria-selected={isSelected}
         className={`flex flex-col items-center cursor-pointer text-center py-2 no-underline no-decoration ${
@@ -53,7 +54,7 @@ function Tab({ name, to, icon, label, isSelected }) {
       >
         {icon}
         <span className="block text-xs tracking-wide">{label}</span>
-      </a>
+      </Link>
     </li>
   );
 }
