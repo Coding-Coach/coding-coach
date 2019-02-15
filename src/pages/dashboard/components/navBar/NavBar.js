@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from '@reach/router';
 import { Trans } from '@lingui/macro';
-import { I18n } from '@lingui/react';
 
 function NavBar({ configuration, currentPath }) {
   return (
