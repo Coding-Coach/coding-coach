@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { Link } from '@reach/router';
 import { Trans } from '@lingui/macro';
 
@@ -49,9 +50,14 @@ function Tab({ name, to, icon, label, isSelected }) {
         to={to}
         role="tab"
         aria-selected={isSelected}
-        className={`flex flex-col items-center cursor-pointer text-center py-2 no-underline no-decoration ${
-          isSelected ? 'text-primary' : 'text-secondary-dark'
-        }`}
+        className={classNames(
+          'flex flex-col items-center py-2',
+          'text-center py-2 no-underline no-decoration cursor-pointer',
+          {
+            'text-primary': isSelected,
+            'text-secondary-dark': !isSelected,
+          },
+        )}
       >
         {icon}
         <span className="block text-xs tracking-wide">{label}</span>
