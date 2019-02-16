@@ -3,65 +3,77 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from '@reach/router';
 import { Trans } from '@lingui/macro';
+import IconDashboard from 'components/icon/Dashboard';
+import IconMessages from 'components/icon/Messages';
+import IconMentorships from 'components/icon/Mentorships';
+import IconSettings from 'components/icon/Settings';
+import { routesConfiguration } from 'config/routes';
 
-function NavBar({ configuration, currentPath }) {
+function NavBar() {
   return (
     <nav className="fixed pin-b pin-x bg-white md:pin-none md:pin-y md:pin-l ">
       <ul role="tablist" className="list-reset flex px-0 md:px-3 md:flex-col lg:px-4">
-        {configuration.tabs.map((tabConfig) => {
-          const isSelected = currentPath.indexOf(tabConfig.group) !== -1;
+        <li role="presentation" className="flex-1">
+          <Link getProps={getLinkClasses} to={routesConfiguration.dashboard.path} role="tab">
+            {/* How can I give to the prop active... true or false?*/}
+            {/*<IconDashboard className="w-10" active={isSelected}/>*/}
+            <IconDashboard className="w-10" />
+            <span className="block text-xs tracking-wide">
+              <Trans id="dashboard.navigation.tab.home" />
+            </span>
+          </Link>
+        </li>
 
-          return (
-            <Tab
-              key={tabConfig.name}
-              name={tabConfig.name}
-              to={tabConfig.path}
-              isSelected={isSelected}
-              label={<Trans id={tabConfig.label} />}
-              icon={<tabConfig.icon className="w-10" active={isSelected} />}
-            />
-          );
-        })}
+        <li role="presentation" className="flex-1">
+          <Link getProps={getLinkClasses} to={routesConfiguration.messages.path} role="tab">
+            {/* How can I give to the prop active... true or false?*/}
+            {/*<IconDashboard className="w-10" active={isSelected}/>*/}
+            <IconMessages className="w-10" />
+            <span className="block text-xs tracking-wide">
+              <Trans id="dashboard.navigation.tab.messages" />
+            </span>
+          </Link>
+        </li>
+
+        <li role="presentation" className="flex-1">
+          <Link getProps={getLinkClasses} to={routesConfiguration.mentorships.path} role="tab">
+            {/* How can I give to the prop active... true or false?*/}
+            {/*<IconDashboard className="w-10" active={isSelected}/>*/}
+            <IconMentorships className="w-10" />
+            <span className="block text-xs tracking-wide">
+              <Trans id="dashboard.navigation.tab.mentorships" />
+            </span>
+          </Link>
+        </li>
+
+        <li role="presentation" className="flex-1">
+          <Link getProps={getLinkClasses} to={routesConfiguration.settings.path} role="tab">
+            {/* How can I give to the prop active... true or false?*/}
+            {/*<IconDashboard className="w-10" active={isSelected}/>*/}
+            <IconSettings className="w-10" />
+            <span className="block text-xs tracking-wide">
+              <Trans id="dashboard.navigation.tab.settings" />
+            </span>
+          </Link>
+        </li>
       </ul>
     </nav>
   );
 }
 
-NavBar.propTypes = {
-  currentPath: PropTypes.string.isRequired,
-  configuration: PropTypes.shape({
-    tabs: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        label: PropTypes.string.isRequired,
-        path: PropTypes.string.isRequired,
-        icon: PropTypes.func.isRequired,
-      }),
-    ),
-  }),
-};
+NavBar.propTypes = {};
 
 export default NavBar;
 
-function Tab({ name, to, icon, label, isSelected }) {
-  return (
-    <li key={name} role="presentation" className="flex-1">
-      <Link
-        to={to}
-        role="tab"
-        aria-selected={isSelected}
-        className={classNames(
-          'flex flex-col items-center py-2',
-          'text-center py-2 no-underline no-decoration cursor-pointer',
-          {
-            'text-primary': isSelected,
-            'text-secondary-dark': !isSelected,
-          },
-        )}
-      >
-        {icon}
-        <span className="block text-xs tracking-wide">{label}</span>
-      </Link>
-    </li>
-  );
-}
+const getLinkClasses = ({ isCurrent }) => {
+  return {
+    className: classNames(
+      'flex flex-col items-center py-2',
+      'text-center py-2 no-underline no-decoration cursor-pointer',
+      {
+        'text-primary': isCurrent,
+        'text-secondary-dark': !isCurrent,
+      },
+    ),
+  };
+};
