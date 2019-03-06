@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import Header from './Header';
-import IllustratedMessage from './IllustratedMessage';
+import IllustratedMessage from '../illustratedMessage/IllustratedMessage';
 import LogoSrc from './assets/logo.svg';
 import Button from 'components/button/Button';
 

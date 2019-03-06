@@ -4,7 +4,7 @@ import Icon from './Icon.js';
 export default function Dashboard({ active, ...props }) {
   return (
     <Icon viewBox="0 0 80 80" {...props}>
-      <g id="mentorships" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g id="mentorships" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g transform="translate(19.000000, 19.000000)">
           <polygon
             id="Path"

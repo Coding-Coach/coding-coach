@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
-import IllustratedMessage from './components/IllustratedMessage';
+import Header from './components/header/Header';
+import IllustratedMessage from './components/illustratedMessage/IllustratedMessage';
 import Button from 'components/button/Button';
 import IconMessages from 'components/icon/Messages';
 
