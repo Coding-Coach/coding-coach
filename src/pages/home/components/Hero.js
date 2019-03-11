@@ -2,7 +2,6 @@ import React from 'react';
 import { Trans, t } from '@lingui/macro';
 import { I18n } from '@lingui/react';
 
-import Button from 'components/button/Button';
 import Image from 'components/image/Image';
 
 import heroImage from '../assets/images/coding-coach-logo.svg';
