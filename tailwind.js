@@ -869,7 +869,7 @@ module.exports = {
       ]);
     },
     ({ addComponents, config }) => {
-      // This plugin creates two diagonal brackgrounds, one at
+      // This plugin creates two diagonal backgrounds, one at
       // the top and one at the bottom.
       const colors = config('colors');
       const base = {

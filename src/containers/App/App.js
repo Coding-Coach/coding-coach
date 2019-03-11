@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { createHistory, LocationProvider, Router } from '@reach/router';
 import { I18nProvider } from '@lingui/react';
 import { catalogs } from 'config/i18n';
-import { Home, Login, ForgotPassword } from 'pages';
+import { Home, Login, ForgotPassword, PrivateViews, Dashboard } from 'pages';
 import GA from 'utils/ga';
 
 const history = createHistory(window);
@@ -22,6 +22,9 @@ export default class App extends Component {
             <Home path="/" />
             <Login path="/auth/login" />
             <ForgotPassword path="/auth/login/recovery" />
+            <PrivateViews path="/app">
+              <Dashboard path="/dashboard" />
+            </PrivateViews>
           </Router>
         </LocationProvider>
       </I18nProvider>

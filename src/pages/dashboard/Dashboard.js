@@ -1,0 +1,25 @@
+import React, { Component } from 'react';
+import Header from './components/header/Header';
+import IllustratedMessage from './components/illustratedMessage/IllustratedMessage';
+import Button from 'components/button/Button';
+import IconMessages from 'components/icon/Messages';
+
+class Dashboard extends Component {
+  getBanner = () => (
+    <IllustratedMessage
+      icon={<IconMessages active className={'w-32'} />}
+      message="You have 3 new mentorship messages!"
+      button={
+        <Button onClick={() => console.log('click')} size="small">
+          open
+        </Button>
+      }
+    />
+  );
+
+  render() {
+    return <Header banner={this.getBanner()} />;
+  }
+}
+
+export default Dashboard;

@@ -10,6 +10,7 @@ import LegalModal from './components/LegalModal';
 import Hero from './components/Hero';
 import HomeSection from './components/HomeSection';
 import SocialMedia from './components/SocialMedia';
+import ScrollTopButton from 'components/scrollTopButton/ScrollTopButton';
 import ImageAbout from './assets/images/about.svg';
 import ImageMission from './assets/images/mission.svg';
 import ImageContact from './assets/images/contact.svg';
@@ -99,6 +100,7 @@ class Home extends Component {
         <Footer onClickLegal={this.toggleModal} />
         <OverlayCookie onReadMore={this.toggleModal} />
         {legal.show && <LegalModal page={legal.page} onClose={this.toggleModal} />}
+        <ScrollTopButton />
       </Fragment>
     );
   }
