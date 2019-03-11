@@ -3,11 +3,15 @@ import { Trans } from '@lingui/macro';
 
 const handleClickOnNavigation = (id) => {
   return (event) => {
-    event.preventDefault();
-    document.getElementById(id).scrollIntoView({
-      behavior: 'smooth',
-    });
-    window.history.pushState({}, '', `/#${id}`);
+    const el = document.getElementById(id);
+
+    if (el) {
+      event.preventDefault();
+      el.scrollIntoView({
+        behavior: 'smooth',
+      });
+      window.history.pushState({}, '', `/#${id}`);
+    }
   };
 };
 
@@ -15,13 +19,16 @@ function Navbar() {
   return (
     <nav className="bg-primary-light py-4">
       <div className="container flex justify-between md:justify-start">
-        <NavLink to="about">
+        <NavLink to="https://mentors.codingcoach.io">
+          <Trans id="home.mentors.title" />
+        </NavLink>
+        <NavLink to="#about">
           <Trans id="home.about.title" />
         </NavLink>
-        <NavLink to="mission">
+        <NavLink to="#mission">
           <Trans id="home.mission.title" />
         </NavLink>
-        <NavLink to="contact">
+        <NavLink to="#contact">
           <Trans id="home.contact.title" />
         </NavLink>
       </div>
@@ -32,7 +39,7 @@ function Navbar() {
 function NavLink({ to, children }) {
   return (
     <a
-      href={`#${to}`}
+      href={to}
       className="inline-block no-underline text-primary-dark uppercase text-base md:pr-8 font-sans"
       onClick={handleClickOnNavigation(to)}
     >

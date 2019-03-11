@@ -27,12 +27,6 @@ class Home extends Component {
     },
   };
 
-  handleOnClickCTA = () => {
-    document.getElementById('about').scrollIntoView({
-      behavior: 'smooth',
-    });
-  };
-
   toggleModal = (page) => {
     this.setState((prevState) => ({
       legal: {
@@ -48,7 +42,7 @@ class Home extends Component {
     return (
       <Fragment>
         <Navbar />
-        <Hero onClick={this.handleOnClickCTA} />
+        <Hero />
         <I18n>
           {({ i18n }) => (
             <main className="">
