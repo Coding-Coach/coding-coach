@@ -2,12 +2,11 @@ import React from 'react';
 import { Trans, t } from '@lingui/macro';
 import { I18n } from '@lingui/react';
 
-import Button from 'components/button/Button';
 import Image from 'components/image/Image';
 
 import heroImage from '../assets/images/coding-coach-logo.svg';
 
-function Hero({ onClick }) {
+function Hero() {
   return (
     <section className="bg-primary-light bg-diagonal bg-diagonal-primary-light">
       <div className="container flex pt-20 pb-10">
@@ -20,9 +19,16 @@ function Hero({ onClick }) {
           <h2 className="text-white text-sans text-2xl mb-4 font-content font-hairline leading-normal">
             <Trans id="site.slogan" defaults="Connecting developers with mentors worldwide" />
           </h2>
-          <Button onClick={onClick} floating>
-            <Trans id="home.header.cta" defaults="Learn More" />
-          </Button>
+          <a
+            href="https://mentors.codingcoach.io"
+            className={`
+                inline-block bg-primary text-white shadows border-4 border-primary shadow-floating rounded
+                text-center whitespace-no-wrap no-underline medium uppercase
+                hover:shadow hover:bg-primary-dark hover:border-primary-dark
+              `}
+          >
+            <Trans id="home.header.cta" defaults="Find a Mentor" />
+          </a>
         </header>
         <div className="flex-1 hidden md:block">
           <I18n>
