@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "f00fc8ded3f31746dd242d6fce29fd07",
-    "url": "/static/media/about.f00fc8de.svg"
+    "revision": "01142835027ed21d551128444ff6d5a0",
+    "url": "/static/media/about.01142835.svg"
   },
   {
-    "revision": "c6cfa0481da3acf94c12",
-    "url": "/static/css/main.ef144d6d.chunk.css"
+    "revision": "a8a1712c7a6fa6eb6ae3",
+    "url": "/static/css/main.b1ebd1e6.chunk.css"
   },
   {
-    "revision": "b648fc6cec6605a5b720",
-    "url": "/static/js/1.b648fc6c.chunk.js"
+    "revision": "5b403fa084221c697cdd",
+    "url": "/static/js/1.5b403fa0.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -28,28 +28,28 @@ self.__precacheManifest = [
     "url": "/static/media/TermsAndConditions.49f2cd99.md"
   },
   {
-    "revision": "b6509b130a2cea995f1157617c4b807c",
-    "url": "/static/media/coding-coach-logo.b6509b13.svg"
+    "revision": "fe5c486fbabec76e63d0793bd8362c7a",
+    "url": "/static/media/coding-coach-logo.fe5c486f.svg"
   },
   {
-    "revision": "c6cfa0481da3acf94c12",
-    "url": "/static/js/main.c6cfa048.chunk.js"
+    "revision": "a8a1712c7a6fa6eb6ae3",
+    "url": "/static/js/main.a8a1712c.chunk.js"
   },
   {
-    "revision": "2681c6b26439191b80fe490994861555",
-    "url": "/static/media/mission.2681c6b2.svg"
+    "revision": "3c72b01c43a10d34c2d828b13c14bfd0",
+    "url": "/static/media/mission.3c72b01c.svg"
   },
   {
-    "revision": "052cb3b0c9df522f3b0fa1952d45a08c",
-    "url": "/static/media/contact.052cb3b0.svg"
-  },
-  {
-    "revision": "e10d0661a19f4b3fe8f5552d5759df00",
-    "url": "/static/media/fjalla-one-v5-latin_latin-ext-regular.e10d0661.woff2"
+    "revision": "ba7a97dc3f4b9e2ec032e0374192c668",
+    "url": "/static/media/contact.ba7a97dc.svg"
   },
   {
     "revision": "96a1ada5a2657ab821d1111afafc8bac",
     "url": "/static/media/fjalla-one-v5-latin_latin-ext-regular.96a1ada5.woff"
+  },
+  {
+    "revision": "e10d0661a19f4b3fe8f5552d5759df00",
+    "url": "/static/media/fjalla-one-v5-latin_latin-ext-regular.e10d0661.woff2"
   },
   {
     "revision": "e78dce533ecee30c5efd812bb23c248d",
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/static/media/forgot-password.4f9ba239.svg"
   },
   {
-    "revision": "56967c4cfcba87fb6916fa9086609abc",
+    "revision": "0754edf627c11445784052b65c3c92ba",
     "url": "/index.html"
   }
 ];
