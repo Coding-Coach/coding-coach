@@ -1,4 +1,9 @@
 export default {
+  auth: {
+    DOMAIN: 'codingcoach.eu.auth0.com',
+    CLIENT_ID: 'v6QIkx65SRzIUN91JuTRQ0nC4t1veOLQ',
+    CALLBACK_URL: 'http://localhost:3000/app/dashboard',
+  },
   contact: {
     EMAIL: process.env.REACT_APP_EMAIL || 'codingcoachio@gmail.com',
   },
