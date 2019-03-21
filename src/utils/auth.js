@@ -1,6 +1,8 @@
 import auth0 from 'auth0-js';
 import Constants from 'config/constants';
 
+const storageKey = 'auth-data';
+
 export default class Auth {
   accessToken;
 
@@ -48,7 +50,7 @@ export default class Auth {
 
     // Set isLoggedIn flag in localStorage
     localStorage.setItem(
-      'auth-data',
+      storageKey,
       JSON.stringify({
         accessToken: authResult.accessToken,
         idToken: authResult.idToken,
@@ -63,7 +65,7 @@ export default class Auth {
   }
 
   loadSession() {
-    const json = localStorage.getItem('auth-data');
+    const json = localStorage.getItem(storageKey);
 
     if (json) {
       const session = JSON.parse(json);
@@ -85,17 +87,15 @@ export default class Auth {
     });
   }
 
-  logout() {
-    // Remove tokens and expiry time
+  logout = () => {
+    // Remove tokens and expiry time from memory
     this.accessToken = null;
     this.idToken = null;
     this.expiresAt = 0;
 
-    // Remove isLoggedIn flag from localStorage
-    localStorage.removeItem('isLoggedIn');
-
-    // @TODO: navigate to the home route
-  }
+    // Remove token from localStorage
+    localStorage.removeItem(storageKey);
+  };
 
   isAuthenticated() {
     // Check whether the current time is past the

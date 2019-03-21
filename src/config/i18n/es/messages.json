@@ -14,6 +14,7 @@
   "common.scrollToTop": "Ir al inicio de la página",
   "dashboard.header.title": "Panel de administración",
   "dashboard.navigation.tab.home": "Inicio",
+  "dashboard.navigation.tab.logout": "Salir",
   "dashboard.navigation.tab.mentorships": "Mentores",
   "dashboard.navigation.tab.messages": "Mensajes",
   "dashboard.navigation.tab.settings": "Ajustes",

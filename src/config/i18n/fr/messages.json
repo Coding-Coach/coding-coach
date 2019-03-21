@@ -14,6 +14,7 @@
   "common.scrollToTop": "",
   "dashboard.header.title": "",
   "dashboard.navigation.tab.home": "",
+  "dashboard.navigation.tab.logout": "",
   "dashboard.navigation.tab.mentorships": "",
   "dashboard.navigation.tab.messages": "",
   "dashboard.navigation.tab.settings": "",

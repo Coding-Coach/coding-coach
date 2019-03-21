@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import { object } from 'prop-types';
 import NavBar from 'pages/dashboard/components/navBar/NavBar';
 import Button from 'components/button/Button';
-import { navConfiguration } from 'config/navigation';
 
 export default class PrivateViews extends Component {
   static propTypes = {
@@ -30,8 +29,8 @@ export default class PrivateViews extends Component {
     if (isAuthenticated) {
       return (
         <Fragment>
-          <NavBar configuration={navConfiguration} currentPath={rest.location.pathname} />
-          <main className="min-h-screen bg-secondary-lightest">{children}</main>
+          <NavBar currentPath={rest.location.pathname} logout={auth.logout} />
+          <main className="min-h-screen bg-white-dark">{children}</main>
         </Fragment>
       );
     }

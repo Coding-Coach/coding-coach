@@ -14,6 +14,7 @@
   "common.scrollToTop": "Scroll to top of the page",
   "dashboard.header.title": "Dashboard",
   "dashboard.navigation.tab.home": "Home",
+  "dashboard.navigation.tab.logout": "Logout",
   "dashboard.navigation.tab.mentorships": "Mentorships",
   "dashboard.navigation.tab.messages": "Messages",
   "dashboard.navigation.tab.settings": "Settings",
