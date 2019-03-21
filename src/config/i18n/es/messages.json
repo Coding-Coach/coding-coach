@@ -1,7 +1,9 @@
 {
   "auth.signin.description": "Entra en tu cuenta o crea una nueva para empezar",
+  "auth.signin.forbiden": "No estas autorizado para ver esta página, por favor regístrate.",
   "auth.signin.go": "¡Vamos!",
   "auth.signin.help": "¡Enviar Ayuda!",
+  "auth.signin.loginRegister": "Identifícate",
   "auth.signin.recovery": "¡Oh no! Parece que has olvidado la contraseña. Introduce tu email y recibirás una dirección de recuperación",
   "auth.signin.recoverycard": "Tu email de recuperación se ha enviado. Utiliza este email para reiniciar tu contraseña y vuelve a Coding Coach",
   "auth.signin.recoveryerror": "Necesitamos esta información para encontrar tu cuenta",

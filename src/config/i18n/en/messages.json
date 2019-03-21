@@ -1,7 +1,9 @@
 {
   "auth.signin.description": "Sign in or create a new account to get started.",
+  "auth.signin.forbiden": "You are not authorized. Please sign in to access this page.",
   "auth.signin.go": "Let's go!",
   "auth.signin.help": "Send Help!",
+  "auth.signin.loginRegister": "Login or Register",
   "auth.signin.recovery": "Oh no! Looks like you forgot your password! Enter your email to get a recovery link!",
   "auth.signin.recoverycard": "Your recovery email has been sent! Head on over to your email to reset your password and get back to Coding Coach!",
   "auth.signin.recoveryerror": "We need this information to find your account.",

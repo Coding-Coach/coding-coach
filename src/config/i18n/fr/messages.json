@@ -1,7 +1,9 @@
 {
   "auth.signin.description": "",
+  "auth.signin.forbiden": "",
   "auth.signin.go": "",
   "auth.signin.help": "",
+  "auth.signin.loginRegister": "",
   "auth.signin.recovery": "",
   "auth.signin.recoverycard": "",
   "auth.signin.recoveryerror": "",
