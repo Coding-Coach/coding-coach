@@ -40,6 +40,15 @@ function Footer({ onClickLegal, t }) {
         >
           <Trans id="footer.legal.privacy" />
         </Button>
+        <Button
+          type="tertiary"
+          typography="capitalize"
+          size="small"
+          onClick={() => onClickLegal('conduct')}
+          className={styles.footerLink}
+        >
+          <Trans id="footer.legal.conduct" />
+        </Button>
       </div>
     </footer>
   );
