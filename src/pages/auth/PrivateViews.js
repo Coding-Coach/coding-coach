@@ -4,7 +4,7 @@ import NavBar from 'pages/dashboard/components/navBar/NavBar';
 
 export default class PrivateViews extends Component {
   static propTypes = {
-    auth: object,
+    auth: object.isRequired,
   };
 
   state = {
