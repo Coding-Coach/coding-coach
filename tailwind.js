@@ -847,6 +847,11 @@ module.exports = {
   */
 
   plugins: [
+    require('./src/theme/plugins/spinner')({
+      name: 'spinner-large',
+      color: 'white',
+      size: '4em',
+    }),
     ({ addComponents, config }) => {
       // This plugins creates a single diagonal background
       // at the bottom of the given element
