@@ -7,7 +7,7 @@ import { Panel, PanelContent } from 'components/panel/Panel';
 
 export default class PrivateViews extends Component {
   static propTypes = {
-    auth: object,
+    auth: object.isRequired,
   };
 
   state = {
