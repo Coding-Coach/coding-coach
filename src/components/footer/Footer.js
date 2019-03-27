@@ -9,8 +9,13 @@ import styles from './footer.module.scss';
 
 function Footer({ onClickLegal, t }) {
   return (
-    <footer className={styles.footerMain}>
-      <div className={styles.footerInner}>
+    <footer className={'w-full'}>
+      <div
+        className={
+          'flex justify-end items-center border-t border-secondary-lightest pt-4 pb-4 pr-24 pl-8 ml-auto mr-auto max-w-4xl'
+        }
+      >
+        {/* TODO: make responsive */}
         <div className={styles.column}>{/* <DonateButton /> */}</div>
 
         <Button
