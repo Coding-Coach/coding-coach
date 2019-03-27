@@ -47,6 +47,7 @@ let colors = {
   'transparent': 'transparent',
   'black': '#202939',
   'white': '#ffffff',
+  'white-dark': '#fafafa',
   'neutral': '#1f386e',
 
   // Green variations
@@ -55,6 +56,8 @@ let colors = {
   'primary-light': '#69D5B1',
   'primary-dark': '#126D4F',
   'primary': '#00bc89',
+
+  // Grey variations
   'secondary-lightest': '#E8E7E7',
   'secondary-lighter': '#A8A4A4',
   'secondary-light': '#979797',
@@ -844,6 +847,11 @@ module.exports = {
   */
 
   plugins: [
+    require('./src/theme/plugins/spinner')({
+      name: 'spinner-large',
+      color: 'white',
+      size: '4em',
+    }),
     ({ addComponents, config }) => {
       // This plugins creates a single diagonal background
       // at the bottom of the given element

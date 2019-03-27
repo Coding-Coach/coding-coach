@@ -1,7 +1,9 @@
 {
   "auth.signin.description": "",
+  "auth.signin.forbiden": "",
   "auth.signin.go": "",
   "auth.signin.help": "",
+  "auth.signin.loginRegister": "",
   "auth.signin.recovery": "",
   "auth.signin.recoverycard": "",
   "auth.signin.recoveryerror": "",
@@ -14,6 +16,7 @@
   "common.scrollToTop": "",
   "dashboard.header.title": "",
   "dashboard.navigation.tab.home": "",
+  "dashboard.navigation.tab.logout": "",
   "dashboard.navigation.tab.mentorships": "",
   "dashboard.navigation.tab.messages": "",
   "dashboard.navigation.tab.settings": "",

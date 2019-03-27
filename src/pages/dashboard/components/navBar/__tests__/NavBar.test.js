@@ -5,29 +5,32 @@ import NavBar from '../NavBar';
 
 afterEach(cleanup);
 
-test('renders the NavBar according the configuration', () => {
-  const tabsArray = [1, 2, 3, 4];
-  const tabsConfig = tabsArray.map((element, index) => ({
-    name: `name ${index}`,
-    label: `Label for ${index}`,
-    path: '/fake_path',
-    icon: IconDashboard,
-  }));
+describe('pages/dashboard/navBar/NavBar', () => {
+  it('should render the dashboard option', () => {
+    const { getByText } = render(<NavBar currentPath="/app/dashboard" />);
 
-  const navbarConfiguration = {
-    tabs: tabsConfig.map((element, index) => ({
-      name: `name ${index}`,
-      label: `Label for ${index}`,
-      path: '/fake_path',
-      icon: IconDashboard,
-      selected: true,
-    })),
-  };
+    expect(getByText('dashboard.navigation.tab.home')).toBeTruthy();
+  });
 
-  const { getByText } = render(
-    <NavBar configuration={navbarConfiguration} currentPath="dashboard" />,
-  );
-  tabsConfig.map((el, index) => {
-    getByText(el.label);
+  it('should render the messages option', () => {
+    const { getByText } = render(<NavBar currentPath="/app/dashboard" />);
+
+    expect(getByText('dashboard.navigation.tab.messages')).toBeTruthy();
+  });
+
+  it('should render the mentorshipts option', () => {
+    const { getByText } = render(<NavBar currentPath="/app/dashboard" />);
+
+    expect(getByText('dashboard.navigation.tab.mentorships')).toBeTruthy();
+  });
+  it('should render the settings option', () => {
+    const { getByText } = render(<NavBar currentPath="/app/dashboard" />);
+
+    expect(getByText('dashboard.navigation.tab.settings')).toBeTruthy();
+  });
+  it('should render the logout option', () => {
+    const { getByText } = render(<NavBar currentPath="/app/dashboard" />);
+
+    expect(getByText('dashboard.navigation.tab.logout')).toBeTruthy();
   });
 });
