@@ -8,11 +8,13 @@ import { Panel, PanelHeader, PanelContent, PanelFooter } from 'components/panel/
 import PrivacyPolicy from 'pages/static/PrivacyPolicy';
 import CookiesPolicy from 'pages/static/CookiesPolicy';
 import TermsAndConditions from 'pages/static/TermsAndConditions';
+import CodeOfConduct from 'pages/static/CodeOfConduct';
 
 const titles = {
   terms: t`footer.legal.terms`,
   privacy: t`footer.legal.privacy`,
   cookies: t`footer.legal.cookies`,
+  conduct: t`footer.legal.conduct`,
 };
 
 function LegalModal({ onClose, page, t }) {
@@ -24,6 +26,10 @@ function LegalModal({ onClose, page, t }) {
 
   if (page === 'privacy') {
     Content = PrivacyPolicy;
+  }
+
+  if (page === 'conduct') {
+    Content = CodeOfConduct;
   }
 
   return (
@@ -47,7 +53,7 @@ function LegalModal({ onClose, page, t }) {
 
 LegalModal.propTypes = {
   onClose: func,
-  page: oneOf(['cookies', 'terms', 'privacy']).isRequired,
+  page: oneOf(['cookies', 'terms', 'privacy', 'conduct']).isRequired,
 };
 
 export default LegalModal;

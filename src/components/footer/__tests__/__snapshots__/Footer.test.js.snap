@@ -25,6 +25,11 @@ exports[`renders the footer element 1`] = `
     >
       footer.legal.privacy
     </button>
+    <button
+      class="button tertiary small rounded capitalize"
+    >
+      footer.legal.conduct
+    </button>
   </div>
 </footer>
 `;

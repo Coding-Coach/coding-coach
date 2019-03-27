@@ -18,8 +18,8 @@
   @include respond-to(tablet) {
     @include spacing('P', 'V', 'M');
     flex-direction: row;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 4rem;
+    margin-right: 4rem;
 
     .column {
       flex: 1;
@@ -32,6 +32,8 @@
 
   @include respond-to(desktop) {
     margin: 0 auto;
+    margin-left: 4rem;
+    margin-right: 4rem;
   }
 }
 
