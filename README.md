@@ -113,8 +113,6 @@ In order to merge a PR, it will first go through a review process. Once it is ap
 When using squash, all the commits will be squashed into one. The idea is to merge features/fixes as oppose of merging each individual commit. This helps when looking back in time for changes in the code base, and if the PR has a great comment, it's easier to know why that code was introduced.
 
 # Code of Conduct
-Code of Conduct
-
 At Coding Coach, we value all our mentors, mentees, and contributors. Our goal is to make this a safe space where new and experienced developers can connect and learn from one another. Therefore, we do not tolerate any form of harassment or prejudice. This Code of Conduct applies to all Coding Coach spaces including but not limited to slack, email correspondence, and social media.
 
 Harassment includes but is not limited to:
