@@ -5,25 +5,23 @@ import Button from 'components/button/Button';
 
 // @TODO: Bring it back when ready
 // import DonateButton from './DonateButton';
-import styles from './footer.module.scss';
 
-function Footer({ onClickLegal, t }) {
+function Footer({ onClickLegal }) {
   return (
-    <footer className={'w-full'}>
+    <footer className={'w-full border-t border-secondary-lightest'}>
       <div
         className={
-          'flex justify-end items-center border-t border-secondary-lightest pt-4 pb-4 pr-24 pl-8 ml-auto mr-auto max-w-4xl'
+          'flex flex-col md:flex-row justify-center items-center sm:justify-end flex-wrap pt-4 pb-4 pr-8 pl-8 mr-16 ml-16 '
         }
       >
-        {/* TODO: make responsive */}
-        <div className={styles.column}>{/* <DonateButton /> */}</div>
+        {/* TODO: consider keeping styling in separate file to reduce repetition */}
+        {/* <div className={styles.column}>{ <DonateButton /> }</div> */}
 
         <Button
           type="tertiary"
           typography="capitalize"
           size="small"
           onClick={() => onClickLegal('terms')}
-          className={styles.footerLink}
         >
           <Trans id="footer.legal.terms" />
         </Button>
@@ -32,7 +30,6 @@ function Footer({ onClickLegal, t }) {
           typography="capitalize"
           size="small"
           onClick={() => onClickLegal('cookies')}
-          className={styles.footerLink}
         >
           <Trans id="footer.legal.cookies" />
         </Button>
@@ -41,7 +38,6 @@ function Footer({ onClickLegal, t }) {
           typography="capitalize"
           size="small"
           onClick={() => onClickLegal('privacy')}
-          className={styles.footerLink}
         >
           <Trans id="footer.legal.privacy" />
         </Button>
@@ -50,7 +46,6 @@ function Footer({ onClickLegal, t }) {
           typography="capitalize"
           size="small"
           onClick={() => onClickLegal('conduct')}
-          className={styles.footerLink}
         >
           <Trans id="footer.legal.conduct" />
         </Button>
