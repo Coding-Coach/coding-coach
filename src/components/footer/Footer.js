@@ -14,7 +14,6 @@ function Footer({ onClickLegal }) {
           'flex flex-col md:flex-row justify-center items-center sm:justify-end flex-wrap pt-4 pb-4 pr-8 pl-8 mr-16 ml-16 '
         }
       >
-        {/* TODO: consider keeping styling in separate file to reduce repetition */}
         {/* <div className={styles.column}>{ <DonateButton /> }</div> */}
 
         <Button
