@@ -1,5 +1,6 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
+import classNames from 'classnames';
 
 import Button from 'components/button/Button';
 
@@ -10,9 +11,10 @@ function Footer({ onClickLegal }) {
   return (
     <footer className={'w-full border-t border-secondary-lightest'}>
       <div
-        className={
-          'flex flex-col md:flex-row justify-center items-center sm:justify-end flex-wrap pt-4 pb-4 pr-8 pl-8 mr-16 ml-16 '
-        }
+        className={classNames(
+          'flex flex-col md:flex-row justify-center items-center sm:justify-end flex-wrap',
+          'pt-4 pb-4 pr-8 pl-8 mr-16 ml-16',
+        )}
       >
         {/* <div className={styles.column}>{ <DonateButton /> }</div> */}
 
