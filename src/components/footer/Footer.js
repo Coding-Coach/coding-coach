@@ -1,24 +1,28 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
+import classNames from 'classnames';
 
 import Button from 'components/button/Button';
 
 // @TODO: Bring it back when ready
 // import DonateButton from './DonateButton';
-import styles from './footer.module.scss';
 
-function Footer({ onClickLegal, t }) {
+function Footer({ onClickLegal }) {
   return (
-    <footer className={styles.footerMain}>
-      <div className={styles.footerInner}>
-        <div className={styles.column}>{/* <DonateButton /> */}</div>
+    <footer className={'w-full border-t border-secondary-lightest'}>
+      <div
+        className={classNames(
+          'flex flex-col md:flex-row justify-center items-center sm:justify-end flex-wrap',
+          'pt-4 pb-4 pr-8 pl-8 mr-16 ml-16',
+        )}
+      >
+        {/* <div className={styles.column}>{ <DonateButton /> }</div> */}
 
         <Button
           type="tertiary"
           typography="capitalize"
           size="small"
           onClick={() => onClickLegal('terms')}
-          className={styles.footerLink}
         >
           <Trans id="footer.legal.terms" />
         </Button>
@@ -27,7 +31,6 @@ function Footer({ onClickLegal, t }) {
           typography="capitalize"
           size="small"
           onClick={() => onClickLegal('cookies')}
-          className={styles.footerLink}
         >
           <Trans id="footer.legal.cookies" />
         </Button>
@@ -36,7 +39,6 @@ function Footer({ onClickLegal, t }) {
           typography="capitalize"
           size="small"
           onClick={() => onClickLegal('privacy')}
-          className={styles.footerLink}
         >
           <Trans id="footer.legal.privacy" />
         </Button>
@@ -45,7 +47,6 @@ function Footer({ onClickLegal, t }) {
           typography="capitalize"
           size="small"
           onClick={() => onClickLegal('conduct')}
-          className={styles.footerLink}
         >
           <Trans id="footer.legal.conduct" />
         </Button>
