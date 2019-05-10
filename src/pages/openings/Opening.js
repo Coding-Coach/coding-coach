@@ -30,7 +30,7 @@ export default function Opening() {
               <Trans id="openings.apply" defaults="Apply now" />
             </a>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 hidden md:block">
             <I18n>
               {({ i18n }) => (
                 <Image

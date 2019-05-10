@@ -1,5 +1,6 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
+import classNames from 'classnames';
 
 const handleClickOnNavigation = (id) => {
   return (event) => {
@@ -22,13 +23,16 @@ function Navbar() {
         <NavLink to="https://mentors.codingcoach.io">
           <Trans id="home.mentors.title" />
         </NavLink>
+        <NavLink to="/openings/frontend-jr">
+          <Trans id="home.mentors.openings" />
+        </NavLink>
         <NavLink to="#about">
           <Trans id="home.about.title" />
         </NavLink>
-        <NavLink to="#mission">
+        <NavLink to="#mission" className="hidden md:block">
           <Trans id="home.mission.title" />
         </NavLink>
-        <NavLink to="#contact">
+        <NavLink to="#contact" className="hidden md:block">
           <Trans id="home.contact.title" />
         </NavLink>
       </div>
@@ -36,11 +40,14 @@ function Navbar() {
   );
 }
 
-function NavLink({ to, children }) {
+function NavLink({ to, children, className }) {
   return (
     <a
       href={to}
-      className="inline-block no-underline text-primary-dark uppercase text-base md:pr-8 font-sans"
+      className={classNames(
+        'inline-block no-underline text-primary-dark uppercase text-base md:pr-8 font-sans',
+        className,
+      )}
       onClick={handleClickOnNavigation(to)}
     >
       {children}

@@ -32,11 +32,13 @@
   "home.contact.title": "Contacto",
   "home.header.cta": "Encontrar un Mentor",
   "home.header.logo": "Este es el logo de Coding Coach",
+  "home.mentors.openings": "",
   "home.mentors.title": "Mentores",
   "home.mission.description": "Creemos que el acceso a un mentor debe ser posible para cualquier persona sin importar su localización, condición económica o financiera. Para conseguir esto, hemos creado una plataforma gratuita y de código abierto para facilitar el acceso a las conexiones con mentores. Nuestra misión es formentar el sentido de la colaboración y la inclusividad en la industria técnica proporcionando una plataforma para ayudar con el proceso de mentorizado.",
   "home.mission.img": "Un grupo de personas",
   "home.mission.title": "Misión",
   "legal.notification": "Para ayudar a personalizar el contenido de los anuncios y para proporcionar a nuestros usuarios una experiencia más segura en nuestro sitio web, usamos cookies. Haciendo click o navegando por la web, estas de acuerdo en que activemos y desactivemos la recolección de información en Coding Coach a traves de las cookies. Para saber más: <0><1>Cookies Policy</1></0>",
+  "openings.apply": "",
   "site.slogan": "Conectando desarrolladores y mentores por todo el mundo",
   "site.title": "Coding Coach"
 }
