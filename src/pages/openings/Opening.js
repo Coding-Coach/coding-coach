@@ -3,6 +3,7 @@ import { Trans, t } from '@lingui/macro';
 import { I18n } from '@lingui/react';
 import Navbar from 'components/navbar/Navbar';
 import Image from 'components/image/Image';
+import ScrollTopButton from 'components/scrollTopButton/ScrollTopButton';
 
 import heroImage from '../home/assets/images/coding-coach-logo.svg';
 
@@ -139,6 +140,7 @@ export default function Opening() {
           * This is a mock opening for a mock company to set up a mock interview process.
         </p>
       </section>
+      <ScrollTopButton />
     </Fragment>
   );
 }
