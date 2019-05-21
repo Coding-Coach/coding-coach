@@ -1,0 +1,19 @@
+{
+  "dashboard.header.title": {
+    "origin": [
+      [
+        "src/pages/dashboard/components/header/Header.js",
+        32
+      ]
+    ]
+  },
+  "home.header.logo": {
+    "defaults": "This is the logo for Coding Coach",
+    "origin": [
+      [
+        "src/pages/dashboard/components/header/Header.js",
+        38
+      ]
+    ]
+  }
+}

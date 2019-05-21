@@ -1,0 +1,24 @@
+{
+  "openings.apply": {
+    "defaults": "Apply now",
+    "origin": [
+      [
+        "src/pages/openings/Opening.js",
+        31
+      ],
+      [
+        "src/pages/openings/Opening.js",
+        136
+      ]
+    ]
+  },
+  "home.header.logo": {
+    "defaults": "This is the logo for Coding Coach",
+    "origin": [
+      [
+        "src/pages/openings/Opening.js",
+        39
+      ]
+    ]
+  }
+}

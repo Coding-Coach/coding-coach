@@ -1,0 +1,42 @@
+{
+  "dashboard.navigation.tab.home": {
+    "origin": [
+      [
+        "src/pages/dashboard/components/navBar/NavBar.js",
+        18
+      ]
+    ]
+  },
+  "dashboard.navigation.tab.messages": {
+    "origin": [
+      [
+        "src/pages/dashboard/components/navBar/NavBar.js",
+        24
+      ]
+    ]
+  },
+  "dashboard.navigation.tab.mentorships": {
+    "origin": [
+      [
+        "src/pages/dashboard/components/navBar/NavBar.js",
+        30
+      ]
+    ]
+  },
+  "dashboard.navigation.tab.settings": {
+    "origin": [
+      [
+        "src/pages/dashboard/components/navBar/NavBar.js",
+        36
+      ]
+    ]
+  },
+  "dashboard.navigation.tab.logout": {
+    "origin": [
+      [
+        "src/pages/dashboard/components/navBar/NavBar.js",
+        42
+      ]
+    ]
+  }
+}

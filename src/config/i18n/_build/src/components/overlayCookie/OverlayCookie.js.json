@@ -1,0 +1,11 @@
+{
+  "legal.notification": {
+    "defaults": "<0><1>Cookies Policy</1></0>",
+    "origin": [
+      [
+        "src/components/overlayCookie/OverlayCookie.js",
+        57
+      ]
+    ]
+  }
+}

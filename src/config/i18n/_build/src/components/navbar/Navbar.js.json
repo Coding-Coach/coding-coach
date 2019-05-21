@@ -1,0 +1,42 @@
+{
+  "home.mentors.title": {
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        24
+      ]
+    ]
+  },
+  "home.mentors.openings": {
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        27
+      ]
+    ]
+  },
+  "home.about.title": {
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        30
+      ]
+    ]
+  },
+  "home.mission.title": {
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        33
+      ]
+    ]
+  },
+  "home.contact.title": {
+    "origin": [
+      [
+        "src/components/navbar/Navbar.js",
+        36
+      ]
+    ]
+  }
+}

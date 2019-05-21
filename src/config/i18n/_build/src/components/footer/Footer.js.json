@@ -1,0 +1,34 @@
+{
+  "footer.legal.terms": {
+    "origin": [
+      [
+        "src/components/footer/Footer.js",
+        27
+      ]
+    ]
+  },
+  "footer.legal.cookies": {
+    "origin": [
+      [
+        "src/components/footer/Footer.js",
+        35
+      ]
+    ]
+  },
+  "footer.legal.privacy": {
+    "origin": [
+      [
+        "src/components/footer/Footer.js",
+        43
+      ]
+    ]
+  },
+  "footer.legal.conduct": {
+    "origin": [
+      [
+        "src/components/footer/Footer.js",
+        51
+      ]
+    ]
+  }
+}

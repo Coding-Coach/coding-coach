@@ -1,0 +1,38 @@
+{
+  "site.title": {
+    "defaults": "Coding Coach",
+    "origin": [
+      [
+        "src/pages/home/components/Hero.js",
+        16
+      ]
+    ]
+  },
+  "site.slogan": {
+    "defaults": "Connecting developers with mentors worldwide",
+    "origin": [
+      [
+        "src/pages/home/components/Hero.js",
+        20
+      ]
+    ]
+  },
+  "home.header.cta": {
+    "defaults": "Find a Mentor",
+    "origin": [
+      [
+        "src/pages/home/components/Hero.js",
+        30
+      ]
+    ]
+  },
+  "home.header.logo": {
+    "defaults": "This is the logo for Coding Coach",
+    "origin": [
+      [
+        "src/pages/home/components/Hero.js",
+        38
+      ]
+    ]
+  }
+}

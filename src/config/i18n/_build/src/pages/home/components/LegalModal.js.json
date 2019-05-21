@@ -1,0 +1,42 @@
+{
+  "footer.legal.terms": {
+    "origin": [
+      [
+        "src/pages/home/components/LegalModal.js",
+        14
+      ]
+    ]
+  },
+  "footer.legal.privacy": {
+    "origin": [
+      [
+        "src/pages/home/components/LegalModal.js",
+        15
+      ]
+    ]
+  },
+  "footer.legal.cookies": {
+    "origin": [
+      [
+        "src/pages/home/components/LegalModal.js",
+        16
+      ]
+    ]
+  },
+  "footer.legal.conduct": {
+    "origin": [
+      [
+        "src/pages/home/components/LegalModal.js",
+        17
+      ]
+    ]
+  },
+  "common.close": {
+    "origin": [
+      [
+        "src/pages/home/components/LegalModal.js",
+        46
+      ]
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "auth.signin.title": {
+    "defaults": "Sign In",
+    "origin": [
+      [
+        "src/pages/auth/Login.js",
+        29
+      ]
+    ]
+  },
+  "auth.signup.email": {
+    "defaults": "Email Address",
+    "origin": [
+      [
+        "src/pages/auth/Login.js",
+        39
+      ]
+    ]
+  },
+  "auth.signup.password": {
+    "defaults": "Password",
+    "origin": [
+      [
+        "src/pages/auth/Login.js",
+        43
+      ]
+    ]
+  },
+  "auth.signin.go": {
+    "defaults": "Let's go!",
+    "origin": [
+      [
+        "src/pages/auth/Login.js",
+        58
+      ]
+    ]
+  }
+}

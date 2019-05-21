@@ -1,0 +1,10 @@
+{
+  "common.scrollToTop": {
+    "origin": [
+      [
+        "src/components/scrollTopButton/ScrollTopButton.js",
+        48
+      ]
+    ]
+  }
+}

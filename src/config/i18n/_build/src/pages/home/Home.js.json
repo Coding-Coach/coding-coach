@@ -1,0 +1,75 @@
+{
+  "home.about.title": {
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        52
+      ]
+    ]
+  },
+  "home.about.description": {
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        53
+      ]
+    ]
+  },
+  "home.about.img": {
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        54
+      ]
+    ]
+  },
+  "home.mission.title": {
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        59
+      ]
+    ]
+  },
+  "home.mission.description": {
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        60
+      ]
+    ]
+  },
+  "home.mission.img": {
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        61
+      ]
+    ]
+  },
+  "home.contact.title": {
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        66
+      ]
+    ]
+  },
+  "home.contact.img": {
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        67
+      ]
+    ]
+  },
+  "home.contact.description": {
+    "defaults": "<0>Slack Organization</0><1>{EMAIL}</1>",
+    "origin": [
+      [
+        "src/pages/home/Home.js",
+        70
+      ]
+    ]
+  }
+}
