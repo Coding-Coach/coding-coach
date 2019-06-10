@@ -12,7 +12,7 @@
     "build:ssr": "react-snap",
     "deploy": "gh-pages -d build",
     "lint": "eslint src/",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom --coverage",
     "test:staged": "cross-env CI=true react-scripts test --env=jsdom --findRelatedTests",
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
