@@ -1,17 +1,27 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
 import classNames from 'classnames';
+import smoothscroll from 'smoothscroll-polyfill';
+
+smoothscroll.polyfill();
 
 const handleClickOnNavigation = (id) => {
   return (event) => {
-    const el = document.getElementById(id);
+    // Strips off extra characters, /#, since
+    // getElementById auto adds #
+    const anchor = id.replace('/#', '');
+
+    const el = document.getElementById(anchor);
 
     if (el) {
       event.preventDefault();
       el.scrollIntoView({
         behavior: 'smooth',
       });
-      window.history.pushState({}, '', `/#${id}`);
+
+      // Remove /#, if not url becomes /#/#
+      // if you just remove # then pushState will error
+      window.history.pushState({}, '', `${id}`);
     }
   };
 };

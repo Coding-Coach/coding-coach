@@ -41,7 +41,8 @@
     "react-ga": "^2.5.7",
     "react-scripts": "2.1.1",
     "remark": "^10.0.1",
-    "remark-react": "^5.0.0"
+    "remark-react": "^5.0.0",
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "husky": {
     "hooks": {
