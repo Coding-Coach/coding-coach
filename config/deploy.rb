@@ -10,7 +10,7 @@ require 'mina/git'
 #   branch       - Branch name to deploy. (needed by mina/git)
 
 set :application_name, 'codingcoach'
-set :repository, 'https://github.com/Coding-Coach/find-a-mentor-api.git'
+set :repository, 'https://github.com/Coding-Coach/coding-coach.git'
 set :domain, 'blog-staging.codingcoach.io'
 set :deploy_to, '/var/www/blog-staging.codingcoach.io'
 set :branch, 'master'
