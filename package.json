@@ -23,6 +23,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "gatsby-cli": "^2.7.39",
     "prettier": "^1.18.2",
     "tailwindcss": "^1.0.5"
   },
