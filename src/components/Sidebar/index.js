@@ -8,7 +8,7 @@ export default function Sidebar({ author }) {
 
   useEffect(() => {
     if (mentors.length === 0) {
-      fetch('https://api-staging.codingcoach.io/mentors?perpage=5')
+      fetch('https://api-staging.codingcoach.io/mentors?limit=5')
         .then(response => response.json())
         .then(response => {
           setMentors(response.data);
