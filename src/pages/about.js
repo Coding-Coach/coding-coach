@@ -50,7 +50,7 @@ export default function About({ data }) {
             </div>
           </div>
         </Section>
-        <Section title="Core Contributors">
+        <Section title="Contributors">
           {contributors.map(({ node: user }) => (
             <Profile
               key={user.id}
