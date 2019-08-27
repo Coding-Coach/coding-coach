@@ -39,7 +39,6 @@ export default function BlogPage(props) {
 }
 
 function PostExcerpt({ author, data, excerpt, fields }) {
-  console.log(author);
   return (
     <article className="mb-16 md:flex">
       <div className="mb-2 md:w-1/3 md:mb-0">
