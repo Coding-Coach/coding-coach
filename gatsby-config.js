@@ -17,6 +17,13 @@ const config = {
       options: {
         plugins: [
           `gatsby-remark-reading-time`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+              linkImagesToOriginal: false,
+            },
+          },
         ],
       },
     },

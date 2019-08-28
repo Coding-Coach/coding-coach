@@ -16,13 +16,23 @@ module.exports = function() {
           padding: `${margin['1']} 0`,
           fontFamily: '"Fjalla One"',
           fontSize: fontSizes['2xl'],
-          fontWeight: '400',
+          fontWeight: '300',
+
+          '@media (min-width: 768px)': {
+            fontSize: fontSizes['3xl'],
+            fontWeight: '400',
+          },
         },
         h3: {
           padding: `${margin['1']} 0`,
           fontFamily: '"Fjalla One"',
-          fontSize: fontSizes['2xl'],
-          fontWeight: '400',
+          fontSize: fontSizes['xl'],
+          fontWeight: '200',
+
+          '@media (min-width: 768px)': {
+            fontSize: fontSizes['2xl'],
+            fontWeight: '300',
+          },
         },
         p: {
           margin: `0 0 ${margin['8']} 0`,
