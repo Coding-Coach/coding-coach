@@ -32,11 +32,13 @@ module.exports = function() {
         },
         ul: {
           margin: `0 0 ${margin['4']} 0`,
+          'padding-left': '18px',
 
           li: {
             fontSize: fontSizes.lg,
-            margin: `0 0 ${margin['4']} 0`,
+            margin: `0 0 ${margin['1']} 0`,
             color: colors['secondary-dark'],
+            'list-style-type': 'disc',
           },
         },
         a: {
