@@ -11,8 +11,8 @@ require 'mina/git'
 
 set :application_name, 'codingcoach'
 set :repository, 'https://github.com/Coding-Coach/coding-coach.git'
-set :domain, 'blog-staging.codingcoach.io'
-set :deploy_to, '/var/www/blog-staging.codingcoach.io'
+set :domain, 'blog.codingcoach.io'
+set :deploy_to, '/var/www/codingcoach.io'
 set :branch, 'master'
 
 # Optional settings:
