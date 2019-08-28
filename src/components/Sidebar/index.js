@@ -8,7 +8,7 @@ export default function Sidebar({ author }) {
 
   useEffect(() => {
     if (mentors.length === 0) {
-      fetch('https://api-staging.codingcoach.io/mentors?perpage=5')
+      fetch(`${process.env.GATSBY_API_URL}/mentors?limit=5`)
         .then(response => response.json())
         .then(response => {
           setMentors(response.data);
@@ -21,7 +21,7 @@ export default function Sidebar({ author }) {
         description: author.frontmatter.about,
       });
     } else {
-      fetch('https://api-staging.codingcoach.io/mentors/featured')
+      fetch(`${process.env.GATSBY_API_URL}/mentors/featured`)
         .then(response => response.json())
         .then(response => {
           setMentor(response.data);

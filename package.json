@@ -8,9 +8,11 @@
     "classnames": "2.2.6",
     "gatsby": "2.13.44",
     "gatsby-image": "2.2.8",
+    "gatsby-plugin-google-analytics": "2.1.11",
     "gatsby-plugin-manifest": "2.2.4",
     "gatsby-plugin-offline": "2.2.4",
     "gatsby-plugin-postcss": "2.1.2",
+    "gatsby-plugin-purgecss": "^4.0.1",
     "gatsby-plugin-react-helmet": "3.1.2",
     "gatsby-plugin-sharp": "2.2.10",
     "gatsby-remark-reading-time": "1.0.1",
@@ -20,13 +22,12 @@
     "prop-types": "15.7.2",
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "react-helmet": "5.2.1"
+    "react-helmet": "5.2.1",
+    "tailwindcss": "1.0.5"
   },
   "devDependencies": {
     "gatsby-cli": "2.7.39",
-    "gatsby-plugin-google-analytics": "2.1.11",
-    "prettier": "1.18.2",
-    "tailwindcss": "1.0.5"
+    "prettier": "1.18.2"
   },
   "keywords": [
     "gatsby"
