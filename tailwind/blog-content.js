@@ -51,6 +51,12 @@ module.exports = function() {
             color: colors.white,
           },
         },
+        code: {
+          fontSize: fontSizes.base,
+          background: colors['secondary-lightest'],
+          display: 'inline-block',
+          padding: '0 5px',
+        },
       },
     };
 

@@ -23,18 +23,18 @@ We are still building the platform to connect people with mentors, but we have a
 If you want to join the dev team, make sure to visit the #front-end/#back-end channels. We have discussions on what technology to use, what needs to be done, general questions about the code and help about the project. Feel free to jump in and participate!
 
 ## Install the app in your local environment
-Running the app in your local environment is the first step to start contributing to any project. Usually the installation steps are defined in the [README.md](https://github.com/Coding-Coach/coding-coach/blob/develop/README.md) file.
+Running the app in your local environment is the first step to start contributing to any project. Usually the installation steps are defined in the [README.md](https://github.com/Coding-Coach/coding-coach/blob/master/README.md) file, sometimes there's a [CONTRIBUTING.md](https://github.com/Coding-Coach/coding-coach/blob/master/CONTRIBUTING.md) file, make sure to read all those guidelines.
 
-In the case of Coding Coach, we decided to separate the backend from the frontend. You can either contribute to one of those or both of them.
+In the case of Coding Coach, we decided to separate the [backend](https://github.com/Coding-Coach/find-a-mentor-api) from the [frontend](https://github.com/Coding-Coach/find-a-mentor). You can either contribute to one of those or both of them. The main reason we decided to split the codebase is because we wanted to make things super simple for you to participate, if you don't want to run the backend in your local, by default the frontend uses a [staging server](https://api-staging.codingcoach.io/) we have in the cloud, you don't have to do anything in order to use it.
 
 It’s a common practice to fork the project you want to contribute, clone your fork to your local and add the original project as remote. We have detailed steps in our readme file.
 
 ## Browse the current issues
-Once you have the app running you might want to start working on something. The best way to find out what you can work on, is to take a look at the issues page in Github.
+Once you have the app running you might want to start working on something. The best way to find out what you can work on, is to take a look at the [issues page](https://github.com/Coding-Coach/coding-coach/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) in Github.
 
-Many projects use labels, when joining a project you should look for theGood first issue label. Most projects will have this label to mark easy to start issues.
+Many projects use labels, when joining a project you should look for the `Good first issue` label. Most projects will have this label to mark easy to start issues.
 
-At coding coach, we use this label to mark easy bugs and tasks, for example we have several tasks about migrating from sass to tailwind, all these issues are fairly easy to complete and will give you enough exposure to the code base to make yourself comfortable.
+At coding coach, we use this label to mark easy bugs and tasks, for example ~~we have several tasks about migrating from sass to tailwind~~ (Migration is completed by now), all these issues are fairly easy to complete and will give you enough exposure to the code base to make yourself comfortable.
 
 ## Ask questions about the issue
 Make sure you understand the task! Ask as many questions as needed, is important to fully understand what needs to be done. Sometimes issues are not well described or missing some important information.
