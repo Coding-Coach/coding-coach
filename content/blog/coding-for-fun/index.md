@@ -15,11 +15,11 @@ Many contributors are already working on the web app, and they are using a stack
 
 I have much experience as a Xamarin developer, but usually, your “pay the bills” projects don’t allow you to check new things and learn about the latest changes and improvements; also, some developers on Coding Coach were asking why I was using Xamarin, here a brief list of my goals for this project:
 
-* Create something useful for the Coding Coach community.
-* Have a playground for mentees that want to learn about Xamarin.
-* Have the opportunity to create high-quality code without the restraint of deadlines or business constraints.
-* Learn about different approaches, tools, and technologies.
-* Have fun!!
+- Create something useful for the Coding Coach community.
+- Have a playground for mentees that want to learn about Xamarin.
+- Have the opportunity to create high-quality code without the restraint of deadlines or business constraints.
+- Learn about different approaches, tools, and technologies.
+- Have fun!!
 
 I’m taking this as the chance to find joy in my craft and do (I hope) something meaningful for the community.
 Friday 2 am caught me fighting happily with the filter functionality for the mentor’s page; if that’s not fun, I don’t know what it is!

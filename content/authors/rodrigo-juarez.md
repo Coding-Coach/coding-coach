@@ -1,6 +1,6 @@
 ---
 name: Rodrigo Juarez
-avatar: https://i.imgur.com/arrI96P.png
-link: https://mentors.codingcoach.io/?name=Rodrigo+Juarez
-about: Just a programmer using Microsoft tools to create awesome apps!
+avatar: https://i.imgur.com/yRyVgVE.jpg
+link: https://rodrigojuarez.com
+about: Just a developer using Microsoft tools to create awesome apps!
 ---
