@@ -70,6 +70,7 @@ module.exports = function() {
           code: {
             backgroundColor: colors['secondary-lightest'],
             display: 'block',
+            overflow: 'auto',
             padding: margin['2'],
           },
         },
