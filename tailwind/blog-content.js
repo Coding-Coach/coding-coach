@@ -52,13 +52,11 @@ module.exports = function() {
           },
         },
         a: {
-          color: colors.primary,
-          textDecoration: 'none',
-          transition: 'background 0.15s ease-out, color 0.15s ease-out',
           cursor: 'pointer',
+          textDecoration: 'underline',
+          transition: 'background 0.15s ease-out, color 0.15s ease-out',
           '&:hover': {
-            background: colors['primary-light'],
-            color: colors.white,
+            color: colors.primary,
           },
         },
         code: {
@@ -66,6 +64,14 @@ module.exports = function() {
           background: colors['secondary-lightest'],
           display: 'inline-block',
           padding: '0 5px',
+        },
+        pre: {
+          margin: `0 0 ${margin['8']} 0`,
+          code: {
+            backgroundColor: colors['secondary-lightest'],
+            display: 'block',
+            padding: margin['2'],
+          },
         },
       },
     };
