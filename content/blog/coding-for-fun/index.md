@@ -1,7 +1,10 @@
 ---
 title: Coding for fun for Coding Coach
 date: 2019-04-29
-tags: ['developer', 'coding', 'community']
+tags: 
+  - developer
+  - coding
+  - community
 image: coding-fun.jpeg
 author: rodrigo-juarez
 ---

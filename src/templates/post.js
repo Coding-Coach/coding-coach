@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
 import Footer from '../components/Footer';
@@ -22,16 +22,15 @@ export default function PostTemplate({ data }) {
         <main className="lg:w-3/4 xl:pr-16">
           <p className=" font-body text-xs md:text-sm">
             {frontmatter.tags.map(tag => (
-              <Link
+              <span
                 key={tag}
-                to={`/blog?tag=${tag}`}
-                className="inline-block mr-2 uppercase hover:underline"
+                className="inline-block mr-2 uppercase"
               >
                 {tag}
-              </Link>
+              </span>
             ))}
           </p>
-          <h1 className=" font-display text-2xl md:text-3xl">
+          <h1 className=" font-display text-2xl md:text-3xl lg:text-4xl">
             {frontmatter.title}
           </h1>
           <p className="mb-4 font-body uppercase  text-xs md:text-sm">

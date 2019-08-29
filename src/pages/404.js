@@ -29,7 +29,7 @@ const NotFoundPage = () => (
         <p>
           How did you get here? Is this a broken link within the blog? Or maybe
           a link from a third party website? Please{' '}
-          <a href="mailto:crysfel@bleext.com">let us know</a> and we will fix it
+          <a href="mailto:admin@codingcoach.io">let us know</a> and we will fix it
           ASAP!
         </p>
       </div>
