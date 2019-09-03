@@ -125,7 +125,7 @@ export const listQuery = graphql`
         fields: { slug: { regex: "/^/contributors/.*/" } }
         fileAbsolutePath: {}
       }
-      sort: { order: DESC, fields: frontmatter___date }
+      sort: { order: ASC, fields: frontmatter___name }
     ) {
       edges {
         node {
