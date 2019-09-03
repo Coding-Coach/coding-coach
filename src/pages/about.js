@@ -73,7 +73,7 @@ function Profile({ className, highlight, image, name, title, to }) {
     },
     className
   );
-  const titleCss = classNames('font-display', {
+  const titleCss = classNames('font-display truncate', {
     'text-2xl mt-2': highlight,
     'text-lg mt-2': !highlight,
   });
@@ -81,10 +81,10 @@ function Profile({ className, highlight, image, name, title, to }) {
   return (
     <div className={css}>
       <a href={to}>
-        <img src={image} alt={name} />
+        <img src={image} alt={name} title={name} />
       </a>
       <h3 className={titleCss}>
-        <a href={to} className="hover:underline">
+        <a href={to} className="hover:underline" title={name}>
           {name}
         </a>
       </h3>
@@ -125,7 +125,7 @@ export const listQuery = graphql`
         fields: { slug: { regex: "/^/contributors/.*/" } }
         fileAbsolutePath: {}
       }
-      sort: { order: DESC, fields: frontmatter___date }
+      sort: { order: ASC, fields: frontmatter___name }
     ) {
       edges {
         node {
