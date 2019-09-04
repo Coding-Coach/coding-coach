@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
+import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 import Image from 'gatsby-image';
 
 import Footer from '../components/Footer';
@@ -13,6 +14,11 @@ export default function PostTemplate({ data }) {
   const { frontmatter, html, fields } = post;
   const authorIndex = buildAuthorIndex(authors);
   const author = authorIndex[frontmatter.author] || {};
+  const disqusConfig = {
+    url: `https://codingcoach.io${window.location.pathname}`,
+    identifier: post.fields.slug,
+    title: post.frontmatter.title,
+  }
 
   return (
     <Fragment>
@@ -39,6 +45,8 @@ export default function PostTemplate({ data }) {
             {frontmatter.date}{' '}
             <span className="inline-block mx-2">&middot;</span>{' '}
             {fields.readingTime.text}
+            <span className="inline-block mx-2">&middot;</span>{' '}
+            <CommentCount config={disqusConfig} placeholder={'...'} />
           </p>
           <div className="mb-4" style={{ maxHeight: '480px' }}>
             {frontmatter.image && (
@@ -52,6 +60,7 @@ export default function PostTemplate({ data }) {
             className="blog-content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
+          <Disqus config={disqusConfig} style={{ margin: '0', width: 'auto' }}/>
         </main>
         <Sidebar author={author} />
       </div>
@@ -81,6 +90,7 @@ export const pageQuery = graphql`
         }
       }
       fields {
+        slug
         readingTime {
           text
         }
