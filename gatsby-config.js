@@ -46,6 +46,12 @@ const config = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `coding-coach`
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Coding Coach`,
