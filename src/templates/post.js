@@ -9,13 +9,15 @@ import Sidebar from '../components/Sidebar';
 import SEO from '../components/SEO';
 import { buildAuthorIndex } from '../utils/authors';
 
+const windowGlobal = typeof window !== 'undefined' && window
+
 export default function PostTemplate({ data }) {
   const { authors, post } = data;
   const { frontmatter, html, fields } = post;
   const authorIndex = buildAuthorIndex(authors);
   const author = authorIndex[frontmatter.author] || {};
   const disqusConfig = {
-    url: `https://codingcoach.io${window.location.pathname}`,
+    url: `https://codingcoach.io${windowGlobal.location && windowGlobal.location.pathname}`,
     identifier: post.fields.slug,
     title: post.frontmatter.title,
   }
@@ -46,7 +48,7 @@ export default function PostTemplate({ data }) {
             <span className="inline-block mx-2">&middot;</span>{' '}
             {fields.readingTime.text}
             <span className="inline-block mx-2">&middot;</span>{' '}
-            <CommentCount config={disqusConfig} placeholder={'...'} />
+            { windowGlobal && <CommentCount config={disqusConfig} placeholder={'...'} /> }
           </p>
           <div className="mb-4" style={{ maxHeight: '480px' }}>
             {frontmatter.image && (
@@ -60,7 +62,7 @@ export default function PostTemplate({ data }) {
             className="blog-content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
-          <Disqus config={disqusConfig} style={{ margin: '0', width: 'auto' }}/>
+          { windowGlobal && <Disqus config={disqusConfig} style={{ margin: '0', width: 'auto' }}/> }
         </main>
         <Sidebar author={author} />
       </div>
