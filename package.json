@@ -16,6 +16,7 @@
     "gatsby-plugin-purgecss": "^4.0.1",
     "gatsby-plugin-react-helmet": "3.1.2",
     "gatsby-plugin-sharp": "2.2.10",
+    "gatsby-plugin-sitemap": "^2.2.12",
     "gatsby-remark-images": "^3.1.19",
     "gatsby-remark-reading-time": "1.0.1",
     "gatsby-source-filesystem": "2.1.6",
