@@ -19,6 +19,7 @@ export default function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const twitterCardImage = `https://avatars3.githubusercontent.com/u/43143751?s=200&v=4`
 
   return (
     <Helmet
@@ -47,6 +48,10 @@ export default function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:card`,
           content: `summary`,
+        },
+        {
+          name: `twitter:image`,
+          content: twitterCardImage,
         },
         {
           name: `twitter:creator`,
