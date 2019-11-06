@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Link, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
@@ -9,8 +9,18 @@ import SEO from '../components/SEO';
 import { buildAuthorIndex } from '../utils/authors';
 
 export default function BlogPage(props) {
+  const [current, setCurrent] = useState(1);
+  const postsPerPage = 3;
   const { posts, authors } = props.data;
   const authorIndex = buildAuthorIndex(authors);
+
+  let totalPages = posts.edges.length / postsPerPage;
+  const lowerBound = postsPerPage * (current - 1);
+  const upperBound = postsPerPage * current;
+
+  if ((posts.edges.length) % postsPerPage !== 0) {
+    totalPages++;
+  }
 
   return (
     <Fragment>
@@ -21,15 +31,17 @@ export default function BlogPage(props) {
       <MainNav showLogo title="Blog" />
       <div className="container py-16 lg:flex lg:flex-row">
         <main className="lg:w-3/4">
-          {posts.edges.map(({ node }) => (
+          {posts.edges.map(({ node }, index) => (
             <PostExcerpt
               key={node.id}
               data={node.frontmatter}
               author={authorIndex[node.frontmatter.author]}
               excerpt={node.excerpt}
               fields={node.fields}
+              display={index >= lowerBound && index < upperBound}
             />
           ))}
+          <PaginationContainer totalPages={totalPages} current={current} setCurrent={setCurrent} />
         </main>
         <Sidebar />
       </div>
@@ -38,9 +50,48 @@ export default function BlogPage(props) {
   );
 }
 
-function PostExcerpt({ author, data, excerpt, fields }) {
+function PaginationContainer({ totalPages, current, setCurrent }) {
+  let pageNumbers = [];
+
+  for (let i = 1; i <= totalPages; i++) {
+    pageNumbers.push(<PageNumber key={i} number={i} selected={i === current} setCurrent={setCurrent} />);
+  }
+
   return (
-    <article className="mb-16 md:flex">
+    <div style={{ width: '100%', display: 'inline-block', textAlign: 'right', marginBottom: '3px' }}>
+      {pageNumbers.map(pageNumber => pageNumber)}
+    </div>
+  );
+}
+
+function PageNumber({ number, selected, setCurrent }) {
+  let className = "text-dark-secondary cursor-pointer";
+
+  if (selected) {
+    className = "bg-primary text-white cursor-pointer";
+  }
+
+  const style = {
+    display: 'inline-block',
+    width: '25px',
+    textAlign: 'center',
+    borderRadius: '3px',
+    fontSize: '16px',
+  };
+
+  return (
+    <div key={number}
+         className={className}
+         style={style}
+         onClick={() => setCurrent(number)}>
+      {number}
+    </div>
+  );
+}
+
+function PostExcerpt({ author, data, excerpt, fields, display }) {
+  return (
+    <article className="mb-16 md:flex" style={display ? {} : { display: 'none' }}>
       <div className="mb-2 md:w-1/3 md:mb-0">
         {data.image && (
           <Link to={fields.slug}>
@@ -113,7 +164,7 @@ export const postsQuery = graphql`
           }
         }
       }
-    
+
     authors: allMarkdownRemark(
       filter: { fields: { slug: { regex: "/^/authors/.*/" } } }
     ) {
