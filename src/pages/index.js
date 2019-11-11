@@ -57,9 +57,9 @@ export default function IndexPage() {
           or send us an email at{' '}
           <a
             className="text-primary-light no-underline hover:underline"
-            href="mailto:codingcoachio@gmail.com"
+            href="mailto:admin@codingcoach.io"
           >
-            codingcoachio@gmail.com
+            admin@codingcoach.io
           </a>
         </p>
         <p className="flex flex-row text-primary-light">
