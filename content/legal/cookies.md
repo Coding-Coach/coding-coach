@@ -22,4 +22,4 @@ In some special cases we also use cookies provided by trusted third parties, as 
 
 ## More Information
 
-If you are unsure of whether certain cookies are required for the correct operation of the site, we recommend you leave the cookies in question enabled to avoid inadvertently degrading your experience. If you are still looking for more information then you can contact us via email at <codingcoachio@gmail.com>.
+If you are unsure of whether certain cookies are required for the correct operation of the site, we recommend you leave the cookies in question enabled to avoid inadvertently degrading your experience. If you are still looking for more information then you can contact us via email at <admin@codingcoach.io>.
