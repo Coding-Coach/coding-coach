@@ -4,23 +4,21 @@ import Image from 'gatsby-image';
 
 import Footer from '../components/Footer';
 import MainNav from '../components/MainNav';
+import Pagination from '../components/Pagination';
 import Sidebar from '../components/Sidebar';
 import SEO from '../components/SEO';
 import { buildAuthorIndex } from '../utils/authors';
 
 export default function BlogPage(props) {
   const [current, setCurrent] = useState(1);
-  const postsPerPage = 3;
+
   const { posts, authors } = props.data;
   const authorIndex = buildAuthorIndex(authors);
 
-  let totalPages = posts.edges.length / postsPerPage;
+  const postsPerPage = 10;
+  const totalPages = getTotalPages(posts.edges.length, postsPerPage);
   const lowerBound = postsPerPage * (current - 1);
   const upperBound = postsPerPage * current;
-
-  if ((posts.edges.length) % postsPerPage !== 0) {
-    totalPages++;
-  }
 
   return (
     <Fragment>
@@ -41,7 +39,7 @@ export default function BlogPage(props) {
               display={index >= lowerBound && index < upperBound}
             />
           ))}
-          <PaginationContainer totalPages={totalPages} current={current} setCurrent={setCurrent} />
+          <Pagination totalPages={totalPages} current={current} setCurrent={setCurrent} />
         </main>
         <Sidebar />
       </div>
@@ -50,43 +48,15 @@ export default function BlogPage(props) {
   );
 }
 
-function PaginationContainer({ totalPages, current, setCurrent }) {
-  let pageNumbers = [];
+function getTotalPages(numPosts, postsPerPage) {
+  let totalPages = numPosts / postsPerPage;
+  totalPages = Math.floor(totalPages);
 
-  for (let i = 1; i <= totalPages; i++) {
-    pageNumbers.push(<PageNumber key={i} number={i} selected={i === current} setCurrent={setCurrent} />);
+  if (numPosts % postsPerPage !== 0) {
+    totalPages++;
   }
 
-  return (
-    <div style={{ width: '100%', display: 'inline-block', textAlign: 'right', marginBottom: '3px' }}>
-      {pageNumbers.map(pageNumber => pageNumber)}
-    </div>
-  );
-}
-
-function PageNumber({ number, selected, setCurrent }) {
-  let className = "text-dark-secondary cursor-pointer";
-
-  if (selected) {
-    className = "bg-primary text-white cursor-pointer";
-  }
-
-  const style = {
-    display: 'inline-block',
-    width: '25px',
-    textAlign: 'center',
-    borderRadius: '3px',
-    fontSize: '16px',
-  };
-
-  return (
-    <div key={number}
-         className={className}
-         style={style}
-         onClick={() => setCurrent(number)}>
-      {number}
-    </div>
-  );
+  return totalPages;
 }
 
 function PostExcerpt({ author, data, excerpt, fields, display }) {
