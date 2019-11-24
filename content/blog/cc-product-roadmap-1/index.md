@@ -21,7 +21,7 @@ For this first release, we are going to create a new private area for members, t
 
 ![User profile](./release-1.jpg)
 
-We will allow members to update their avatar as well. For now there will be only two options in the main navigation menu, `Home` and `Mentors`.
+We will allow members to update their avatar as well. For now, there will be only two options in the main navigation menu, `Home` and `Mentors`.
 
 The Home link will redirect the user to the profile, later on we want to show several widgets here to provider mentors and mentees with useful information about their mentorships.
 
