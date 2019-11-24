@@ -59,7 +59,7 @@ We also know that it's ok to terminate a mentorship, for whatever reason this is
 ### Asking for help
 Today I was asked by a mentee who recently join the community:
 
-> Why did you guys decided to help people like us(mentees)? You decided to give us a little bit of your time and share knowledge with us. You might not know how valuable your advices are to us, but It's as valuable as gold, even more. I'm just curious about what motivate mentors like you?.
+> Why did you guys decided to help people like us(mentees)? You decided to give us a little bit of your time and share knowledge with us. You might not know how valuable your advice is to us, but It's as valuable as gold, even more. I'm just curious about what motivates mentors like you?.
 
 My answer was something like this:
 
