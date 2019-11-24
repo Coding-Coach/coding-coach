@@ -17,7 +17,7 @@ One of the goals is to deliver features as quickly as we can, for that reason we
 ### Release 1: User profiles
 At the moment mentees can't really do anything in the plaform, but it would be great if any user can update their profile so mentors can see their goals and expectations when a mentee reach out to them.
 
-For this firt release, we are going to create a new private area for members, the profile page will look like this, from here members can update their profile.
+For this first release, we are going to create a new private area for members, the profile page will look like this, from here members can update their profile.
 
 ![User profile](./release-1.jpg)
 
