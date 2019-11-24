@@ -10,7 +10,7 @@ author: crysfel-villa
 ---
 Over the last couple weeks we've been working on the new features we want to implement in the platform. We've finally came up with a plan for the improvements we will be working over the next couple months.
 
-While this is not set on stone, it'll definately give us the direction we need to keep this project moving forward. I'm really excited about the new things to come and I hope all of you can join us in this adventure.
+While this is not set on stone, it'll definitely give us the direction we need to keep this project moving forward. I'm really excited about the new things to come and I hope all of you can join us on this adventure.
 
 One of the goals is to deliver features as quickly as we can, for that reason we are going to release all new features incrementally. We are planning to have four small/medium releases over the next several months.
 
