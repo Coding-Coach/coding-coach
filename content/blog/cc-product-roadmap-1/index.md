@@ -67,6 +67,6 @@ My answer was something like this:
 
 I'm sure all our mentors agree that it really brings joy to help people, real joy, one that money can't buy. And at least that's one of the things that motivates me to work on this project.
 
-We have several plans and ideas, but we need your help! We all have jobs and families, time is very limited for everyone in the team. But we have a mission, we want to impact as many lives as possible by helping them succeed in ther careers.
+We have several plans and ideas, but we need your help! We all have jobs and families, time is very limited for everyone in the team. But we have a mission, we want to impact as many lives as possible by helping them succeed in their careers.
 
 You are more than welcome to join the development team or become a patron, feel free to help in any way you can!
