@@ -52,14 +52,14 @@ We have more ideas and plans to help mentors and mentees to succeed in the relat
 ### Release 4: Notes and finishing a mentorship
 As a mentor myself I like to keep track of my mentees by keeping some notes, this is very useful especially at the beginning. We will work on introducing a feature to keep notes directly on the mentorship, this way it will be easier for a mentor to keep everything in a single place.
 
-We also know that it's ok to terminate a mentorship, for whatever reason this is, we want to allow mentors and mentees to terminate the relationship at any time, that's why we are going to introduce an easy way to terminate the mentorship and leaving feedback to the mentor and to the Coding Coach stuff.
+We also know that it's ok to terminate a mentorship, for whatever reason this is. We want to allow mentors and mentees to terminate the relationship at any time, that's why we are going to introduce an easy way to terminate the mentorship and leaving feedback to the mentor and to the Coding Coach staff.
 
 ![Terminate mentorhip](./release-4.jpg)
 
 ### Asking for help
 Today I was asked by a mentee who recently join the community:
 
-> Why did you guys decided to help people like us(mentees)? You decided to give us a little bit of your time and share knowledge with us. You might not know how valuable your advice is to us, but It's as valuable as gold, even more. I'm just curious about what motivates mentors like you?.
+> Why did you guys decided to help people like us (mentees)? You decided to give us a little bit of your time and share knowledge with us. You might not know how valuable your advice is to us, but it's as valuable as gold, even more. I'm just curious about what motivates mentors like you?.
 
 My answer was something like this:
 
