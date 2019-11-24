@@ -63,7 +63,7 @@ Today I was asked by a mentee who recently join the community:
 
 My answer was something like this:
 
-> well... we all been there, we know first hand what's like to start learning something new, it's a bit intimidating and in my case I enjoy helping people, it makes me really happy 😁
+> well... we all been there, we know first hand what's like to start learning something new, it's a bit intimidating and in my case, I enjoy helping people; it makes me really happy 😁
 
 I'm sure all our mentors agree that it really brings joy to help people, real joy, one that money can't buy. And at least that's one of the things that motivates me to work on this project.
 
