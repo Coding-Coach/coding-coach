@@ -12,7 +12,7 @@ Over the last couple weeks we've been working on the new features we want to imp
 
 While this is not set on stone, it'll definitely give us the direction we need to keep this project moving forward. I'm really excited about the new things to come and I hope all of you can join us on this adventure.
 
-One of the goals is to deliver features as quickly as we can, for that reason we are going to release all new features incrementally. We are planning to have four small/medium releases over the next several months.
+One of the goals is to deliver features as quickly as we can, for that reason we are going to release all-new features incrementally. We are planning to have four small/medium releases over the next several months.
 
 ### Release 1: User profiles
 At the moment mentees can't really do anything in the plaform, but it would be great if any user can update their profile so mentors can see their goals and expectations when a mentee reach out to them.
