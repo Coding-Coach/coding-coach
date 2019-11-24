@@ -15,7 +15,7 @@ While this is not set on stone, it'll definitely give us the direction we need t
 One of the goals is to deliver features as quickly as we can, for that reason we are going to release all-new features incrementally. We are planning to have four small/medium releases over the next several months.
 
 ### Release 1: User profiles
-At the moment mentees can't really do anything in the plaform, but it would be great if any user can update their profile so mentors can see their goals and expectations when a mentee reach out to them.
+At the moment mentees can't really do anything in the platform, but it would be great if any user can update their profile so mentors can see their goals and expectations when a mentee reaches out to them.
 
 For this first release, we are going to create a new private area for members, the profile page will look like this, from here members can update their profile.
 
