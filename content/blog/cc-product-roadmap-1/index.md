@@ -5,7 +5,7 @@ tags:
   - product
   - plans
   - announcements
-image: release-1.jpg
+image: product-roadmap-tns.jpg
 author: crysfel-villa
 ---
 Over the last couple weeks we've been working on the new features we want to implement in the platform. We've finally came up with a plan for the improvements we will be working over the next couple of months.
