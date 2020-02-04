@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 // import Button from '../Button';
 import tshirtImage from '../../assets/images/cc-tshirt.png';
+import twitchImage from '../../assets/images/twitch.png';
 
 export default function Sidebar({ author }) {
   const [mentor, setMentor] = useState(null);
@@ -34,6 +35,7 @@ export default function Sidebar({ author }) {
     <aside className="md:flex lg:block lg:pl-8 lg:w-1/4">
       {mentor && <FeaturedMentor mentor={mentor} isAuthor={!!author} />}
       <LatestMentors mentors={mentors} />
+      <TwitchAd />
       <StoreAd />
       {/* <NewsletterSignup /> */}
     </aside>
@@ -102,6 +104,17 @@ function LatestMentors({ mentors }) {
 //     </div>
 //   );
 // }
+
+function TwitchAd() {
+  return (
+    <div className="mb-12 pt-4 md:mr-4 md:flex-1 lg:flex-none">
+      <SidebarTitle>Follow us in Twitch</SidebarTitle>
+      <a href="https://www.twitch.tv/codingcoach/">
+        <img src={twitchImage} alt="Twitch Logo" />
+      </a>
+    </div>
+  )
+}
 
 function StoreAd() {
   return (
