@@ -25,7 +25,7 @@ All these concepts are framework agnostic, understanding them will help you jump
 
 Please let me know if there's a topic you'd like me to cover in the series, I'm happy to add new topics to the list. I want to keep this course up to date, therefore I will be updating and adding new tutorials as time goes by.
 
-## Twitch Channel
+### Twitch Channel
 We are planning to start a [twitch channel]( https://www.twitch.tv/codingcoach/) and this seems the right time to do so! I will be streaming these lessons every week, starting *Thursday Feb 13th at 5pm ET*.
 
 I will target each episode to be about 20 mins length with a 10-15 mins of live questions from the audience. So this is a great apportunity for you to level up your JavaScript skills and improve in your career.
