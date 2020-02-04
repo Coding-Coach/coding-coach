@@ -108,7 +108,7 @@ function StoreAd() {
     <div className="mb-12 pt-4 md:mr-4 md:flex-1 lg:flex-none">
       <SidebarTitle>Get the T-Shirt</SidebarTitle>
       <a href="https://shop.spreadshirt.com/coding-coach" target="_blank">
-        <img src={tshirtImage} />
+        <img src={tshirtImage} alt="Coding Coach T-Shirt" />
       </a>
     </div>
   )
