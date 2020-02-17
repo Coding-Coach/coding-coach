@@ -1,6 +1,6 @@
 ---
 title: How references work in JavaScript
-date: 2020-01-04
+date: 2020-02-17
 tags: ['javascript', 'tutorial', 'js-core']
 author: crysfel-villa
 image: references.jpg
