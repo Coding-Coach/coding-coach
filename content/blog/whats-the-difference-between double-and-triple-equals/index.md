@@ -52,8 +52,8 @@ And here's the list of values evaluated as false:
 
 We need to learn this by memory, don't bather on the truthy values just learn the falsies and everything else will be true. Now we can move on to the next topic in this tutorial.
 
-### Evaluation values and types
-The main diference between the double and triple equals is that the double equals doesn't take the type into consideration when evauating an expression, just uses the inherent truthy or falsy value, for example:
+### Evaluating values and types
+The main diference between the double and triple equals is that the double equals (Also known as Abstract Equality Comparison) doesn't take the type into consideration when evauating an expression, just uses the inherent truthy or falsy value, for example:
 
 ```
 const a = 1
@@ -63,7 +63,7 @@ console.log(a == b)  // --> true
 console.log(0 == '') // --> true
 ```
 
-However, the triple equals (also called as strict comparison) takes the type into consideration. For example:
+However, the triple equals (also called as Strict Equality) takes the type into consideration. For example:
 
 ```
 const a = 1
@@ -73,4 +73,21 @@ console.log(a === b)  // --> false
 console.log(0 === '') // --> false
 ```
 
-That's the main reason 
+Now you can see the result is different when we use the strict comparison, even if the two values are truthy the triple equals is also checking for the type, given that the two are different then it returns what we'd expect in the first place.
+
+### How to prevent issues in my code?
+It's a very well known practice to always use an strict equality comparison, this will make sure to always compare the value as well as the type of both variables. In my experience I don't recall a time when the double equals was needed and in code reviews people tend to ask to always use a strict comparison.
+
+New JavaScript developers might find this odd and confusing, but it's not all bad. Truthy values are awesome when it comes to accessing properties in objects, for example:
+
+```
+const person = undefined
+const name = person && person.name || 'No name'
+
+console.log(name) // --> No name
+```
+
+As you can see, we are using the truthy values in two different ways here:
+
+1. We can check if the `person` object exist before trying to access a property.
+1. If we get a falsy value (due to person being `undefined`) we get the string on the right, which will be the default value the variable `name` will get.
