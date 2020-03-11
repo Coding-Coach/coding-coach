@@ -4,3 +4,6 @@ export { default as ForgotPassword } from './auth/ForgotPassword';
 export { default as PrivateViews } from './auth/PrivateViews';
 export { default as Dashboard } from './dashboard/Dashboard';
 export { default as Opening } from './openings/Opening';
+export { default as OpeningRuleOne } from './openings/OpeningRuleOne';
+export { default as OpeningRuleTwo } from './openings/OpeningRuleTwo';
+export { default as OpeningRuleThree } from './openings/OpeningRuleThree';

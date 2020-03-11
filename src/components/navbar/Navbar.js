@@ -23,7 +23,7 @@ function Navbar() {
         <NavLink to="https://mentors.codingcoach.io">
           <Trans id="home.mentors.title" />
         </NavLink>
-        <NavLink to="/openings/frontend-jr">
+        <NavLink to="/openings">
           <Trans id="home.mentors.openings" />
         </NavLink>
         <NavLink to="/#about">

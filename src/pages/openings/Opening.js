@@ -14,22 +14,7 @@ export default function Opening() {
       <section className="bg-primary-light bg-diagonal bg-diagonal-primary-light">
         <div className="container flex pt-20 pb-10">
           <div className="flex-1">
-            <h1 className="mt-12 text-white text-5xl font-titles tracking-wide">
-              Jr. Frontend Developer
-            </h1>
-            <h2 className="text-white text-sans text-2xl mb-4 font-content font-hairline leading-normal">
-              Reactive Technologies
-            </h2>
-            <a
-              href="https://forms.gle/hWXxd7kHimBfEG5M6"
-              className={`
-                inline-block bg-primary text-white shadows border-4 border-primary shadow-floating rounded
-                text-center whitespace-no-wrap no-underline medium uppercase
-                hover:shadow hover:bg-primary-dark hover:border-primary-dark
-              `}
-            >
-              <Trans id="openings.apply" defaults="Apply now" />
-            </a>
+            <h1 className="mt-12 text-white text-5xl font-titles tracking-wide">Mock Openings</h1>
           </div>
           <div className="flex-1 hidden md:block">
             <I18n>
@@ -46,96 +31,90 @@ export default function Opening() {
       </section>
       <section className="my-24 container">
         <h3 className="inline text-primary-light text-3xl font-titles font-normal uppercase leading-tight text-left mb-6 border-b border-secondary-lightest text-secondary-dark">
-          About the company
+          Mock Openings
         </h3>
         <p className="mt-6 mb-6 text-lg text-secondary-dark leading-normal font-content">
-          Reactive Technologies is looking for a full time Junior Frontend Developer to support our
-          food related products. Reactive Recipes is a platform that connects chefs, dieticians and
-          nutriologies with people looking to eat healthy.
-        </p>
-        <p className="mb-6 text-lg text-secondary-dark leading-normal font-content">
-          Our focus is to allow people, from all over the world, to find help planning their meals
-          by professionals depending on their goals. Reactive Recipes front end is written primarily
-          in React JS (javascript) for the backend we use microservices written mostly with Ruby or
-          Python.
-        </p>
-        <p className="mb-12 text-lg text-secondary-dark leading-normal font-content">
-          The ideal candidate for this position is a fast learner excited to use the latest
-          frameworks to build new and innovative products.
+          In Coding Coach beside our open-source application, we have an opportunity for all
+          developers to try a mock job opportunity. This way developers can learn the common process
+          of applying for a job, how to prepare C.V. and cover letters, different steps of the
+          process, and estimate themselves and their knowledge during the different rules. We are
+          defining a company named CodingCoach CO. as our fake company.
         </p>
 
-        <h3 className="inline text-primary-light text-3xl font-titles font-normal uppercase leading-tight text-left mb-6 border-b border-secondary-lightest text-secondary-dark">
-          Primary responsibilities
-        </h3>
-        <ul className="mt-6 mb-12">
-          <li className="text-lg text-secondary-dark leading-normal font-content">
-            Work with development team to build and maintain our web software
-          </li>
-          <li className="text-lg text-secondary-dark leading-normal font-content">
-            Implement new features for our frontend software
-          </li>
-          <li className="text-lg text-secondary-dark leading-normal font-content">
-            Fix issues and bugs in our current platform
-          </li>
-          <li className="text-lg text-secondary-dark leading-normal font-content">
-            Ensure quality code through test development and code review
-          </li>
-        </ul>
-        <h3 className="inline text-primary-light text-3xl font-titles font-normal uppercase leading-tight text-left mb-6 border-b border-secondary-lightest text-secondary-dark">
-          Requirements
-        </h3>
-        <ul className="mt-6 mb-12">
-          <li className="text-lg text-secondary-dark leading-normal font-content">
-            Excellent oral and written communication skills
-          </li>
-          <li className="text-lg text-secondary-dark leading-normal font-content">
-            Ability to work independently as well as with a team of local and remote developers
-          </li>
-          <li className="text-lg text-secondary-dark leading-normal font-content">
-            Able to stay current with bleeding edge technologies for web
-          </li>
-          <li className="text-lg text-secondary-dark leading-normal font-content">
-            Experience with JavaScript
-          </li>
-          <li className="text-lg text-secondary-dark leading-normal font-content">
-            Familiarity with modern frontend JS frameworks and libraries, like React, Vue, Angular,
-            Flux, Redux and the core principles surrounding these.
-          </li>
-          <li className="text-lg text-secondary-dark leading-normal font-content">
-            Familiarity with front-end styling implementations (CSS, CSS in JS, styled-components,
-            glamorous, etc.)
-          </li>
-        </ul>
-        <h3 className="inline text-primary-light text-3xl font-titles font-normal uppercase leading-tight text-left mb-6 border-b border-secondary-lightest text-secondary-dark">
-          Bonus skills
-        </h3>
-        <ul className="mt-6 mb-12">
-          <li className="text-lg text-secondary-dark leading-normal font-content">
-            Familiarity with Node and Express
-          </li>
-          <li className="text-lg text-secondary-dark leading-normal font-content">
-            Familiarity with React Native
-          </li>
-          <li className="text-lg text-secondary-dark leading-normal font-content">
-            Familiarity with web application servers, like Nginx
-          </li>
-          <li className="text-lg text-secondary-dark leading-normal font-content">
-            Familiarity with Devops tools like Docker/Kubernetes or continuous integration
-            experience with Jenkins or circleCI
-          </li>
-        </ul>
-        <div className="mb-12 text-center">
-          <a
-            href="https://forms.gle/hWXxd7kHimBfEG5M6"
-            className={`
-                inline-block bg-primary text-white shadows border-4 border-primary shadow-floating rounded
-                text-center whitespace-no-wrap no-underline medium uppercase
-                hover:shadow hover:bg-primary-dark hover:border-primary-dark
-              `}
-          >
-            <Trans id="openings.apply" defaults="Apply now" />
-          </a>
+        <div className="text-lg danger mb-12 font-content p-8 rounded">
+          NOTE: this is a fake job opportunity created by Coding Coach to train developers getting
+          familiar with the process of interviewing
         </div>
+
+        <h3 className="inline text-primary-light text-3xl font-titles font-normal uppercase leading-tight text-left mb-6 border-b border-secondary-lightest text-secondary-dark">
+          Open positions:
+        </h3>
+
+        <table className="table-auto ml-auto mr-auto mt-12 mb-12">
+          <thead>
+            <tr>
+              <th class="px-2 py-1 bg-primary" />
+              <th class="px-2 py-1 bg-primary">Role</th>
+              <th class="px-2 py-1 bg-primary">Title</th>
+              <th class="px-2 py-1 bg-primary">Experience Level</th>
+              <th class="px-2 py-1 bg-primary" />
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border px-4 py-2">1</td>
+              <td class="border px-4 py-2">Front-End</td>
+              <td class="border px-4 py-2">Jr. Front-end Engineer</td>
+              <td class="border px-4 py-2">Junior, Mid-Level</td>
+              <td class="border px-4 py-2">
+                <a
+                  href="/openings/jr-frontend-engineer"
+                  className={`
+                      inline-block bg-primary text-white shadows border-1 border-primary shadow-floating rounded
+                      text-center whitespace-no-wrap no-underline small uppercase
+                    `}
+                >
+                  <Trans id="openings.detailandapply" defaults="View detail & Apply" />
+                </a>
+              </td>
+            </tr>
+            <tr class="bg-gray-100">
+              <td class="border px-4 py-2">2</td>
+              <td class="border px-4 py-2">Front-End</td>
+              <td class="border px-4 py-2">Senior Front-end Developer, React Focus</td>
+              <td class="border px-4 py-2">Mid-Level, Senior</td>
+              <td class="border px-4 py-2">
+                <a
+                  href="/openings/senior-frontend-developer-react-focus"
+                  className={`
+                      inline-block bg-primary text-white shadows border-1 border-primary shadow-floating rounded
+                      text-center whitespace-no-wrap no-underline small uppercase
+                    `}
+                >
+                  <Trans id="openings.detailandapply" defaults="View detail & Apply" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-2">3</td>
+              <td class="border px-4 py-2">Back-end</td>
+              <td class="border px-4 py-2">Back-end Node.Js developer</td>
+              <td class="border px-4 py-2">Junior, Mid-Level</td>
+              <td class="border px-4 py-2">
+                <a
+                  href="/openings/backend-nodejs-developer"
+                  className={`
+                      inline-block bg-primary text-white shadows border-1 border-primary shadow-floating rounded
+                      text-center whitespace-no-wrap no-underline small uppercase
+                    `}
+                >
+                  <Trans id="openings.detailandapply" defaults="View detail & Apply" />
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
         <p className="text-lg text-secondary-light leading-normal font-content">
           * This is a mock opening for a mock company to set up a mock interview process.
         </p>
