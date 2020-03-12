@@ -8,6 +8,7 @@ import MainNav from '../components/MainNav';
 export default function LegalTemplate({ data }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
+
   return (
     <Fragment>
       <MainNav />
