@@ -12,7 +12,7 @@ export default () => (
     <div className="container py-16 blog-content md:flex">
       <div className="flex-1 md:pl-16">
 
-        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-12" role="alert">
+        <div className="bg-danger-lighter border-danger-darker border px-4 py-3 rounded relative mb-12" role="alert">
           <strong className="font-bold">NOTE:</strong>
           <span className="block sm:inline"> This is a fake job opportunity created by Coding Coach to train developers getting familiar with the process of interviewing.</span>
         </div>

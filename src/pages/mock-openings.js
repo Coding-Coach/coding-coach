@@ -15,7 +15,7 @@ const MockOpenings = () => (
           In Coding Coach beside our open-source application,  we have an opportunity for all developers to try a mock job opportunity. This way developers can learn the common process of applying for a job, how to prepare C.V. and cover letters, different steps of the process, and estimate themself and their knowledge during the different rules. We are defining a company named CodingCoach CO. as our fake company.
         </p>
 
-        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+        <div className="bg-danger-lighter border-danger-darker border px-4 py-3 rounded relative" role="alert">
           <strong className="font-bold">NOTE:</strong>
           <span className="block sm:inline"> This is a fake job opportunity created by Coding Coach to train developers getting familiar with the process of interviewing.</span>
         </div>
@@ -23,11 +23,11 @@ const MockOpenings = () => (
         <table className="table-auto w-full mt-12 mb-12">
           <thead>
             <tr>
-              <th className="px-2 py-1 bg-primary" />
-              <th className="px-2 py-1 bg-primary">Role</th>
-              <th className="px-2 py-1 bg-primary">Title</th>
-              <th className="px-2 py-1 bg-primary">Experience Level</th>
-              <th className="px-2 py-1 bg-primary" />
+              <th className="px-2 py-1 bg-primary-lighter" />
+              <th className="px-2 py-1 bg-primary-lighter">Role</th>
+              <th className="px-2 py-1 bg-primary-lighter">Title</th>
+              <th className="px-2 py-1 bg-primary-lighter">Experience Level</th>
+              <th className="px-2 py-1 bg-primary-lighter" />
             </tr>
           </thead>
           <tbody>
