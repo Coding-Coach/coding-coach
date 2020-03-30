@@ -18,11 +18,11 @@ As we try to keep the process the same as a real job process so you need to acce
 
 ### How process goes
 For make it clear, we have some steps in this process:
- 1. 1\) You need to apply with your information, resume, and cover letter
- 2. 2\) A behavioral interview takes around 20-40 minutes of a video call.
- 3. 3\) Code assignment, that takes around 30 minutes
- 4. 4\) Technical Interview, that takes around 30-50 minutes
- 5. 5\) Evaluate and Give feedback.
+ 1. You need to apply with your information, resume, and cover letter
+ 2. A behavioral interview takes around 20-40 minutes of a video call.
+ 3. Code assignment, that takes around 30 minutes
+ 4. Technical Interview, that takes around 30-50 minutes
+ 5. Evaluate and Give feedback.
 
 
 Your information, interviewing process, and your evaluation keep private with us.
