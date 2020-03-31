@@ -28,4 +28,4 @@ For make it clear, we have some steps in this process:
 Your information, interviewing process, and your evaluation keep private with us.
 
 
-For starting, visit link [Mock Opening](/mock-openings/).
+For starting, visit link [Mock Opening](https://codingcoach.io/mock-openings).
