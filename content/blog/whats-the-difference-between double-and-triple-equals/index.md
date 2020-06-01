@@ -1,6 +1,6 @@
 ---
 title: What's the difference between == and ===?
-date: 2020-02-24
+date: 2020-06-01
 tags: ['javascript', 'tutorial', 'js-core']
 author: crysfel-villa
 image: dogs.jpg
