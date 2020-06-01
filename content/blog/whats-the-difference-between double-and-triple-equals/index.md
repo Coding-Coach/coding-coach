@@ -40,7 +40,7 @@ Now you can see the result is different when we use the strict comparison, the t
 ### When to use one or the other?
 Now the question is, how do we know when to use double or triple equals when writing a comparison? In most cases, a triple equals comparison would be preferred to avoid potential bugs.
 
-However, in some instances using double equals might make sense, for example let's say you want to check that a value is defined and is not null, you can write something like this:
+However, in some instances using double equals might make sense. For example, let's say you want to check that a value is defined and is not null, you can write something like this:
 
 ```
 const value = undefined;
