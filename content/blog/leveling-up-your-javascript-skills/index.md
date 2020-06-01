@@ -14,7 +14,7 @@ Today I want to start a series of posts, where I'm going to explain in detail ea
 ### Topics to cover
 
 - [How references work in JavaScript](/blog/how-references-work-in-javascript).
-- [What's the difference between `==` and `===`](/blog/whats-the-difference-between double-and-triple-equals)?
+- [What's the difference between `==` and `===`](/blog/whats-the-difference-between-double-and-triple-equals)?
 - Global scope and function scope.
 - Local scope, also known as block scope.
 - Closures, explained in a simple way
