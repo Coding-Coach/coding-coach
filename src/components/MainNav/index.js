@@ -21,6 +21,7 @@ export default React.memo(function MainNav({ showLogo, title }) {
           <ul className="inline-block">
             <MenuLink to="https://mentors.codingcoach.io">Mentors</MenuLink>
             <MenuLink to="https://shop.spreadshirt.com/coding-coach">Store</MenuLink>
+            <MenuLink to="/mock-openings">Mock Openings</MenuLink>
             <MenuLink to="/blog">Blog</MenuLink>
             <MenuLink to="/about">About</MenuLink>
           </ul>

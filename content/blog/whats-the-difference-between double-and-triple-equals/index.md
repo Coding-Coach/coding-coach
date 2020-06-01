@@ -5,12 +5,12 @@ tags: ['javascript', 'tutorial', 'js-core']
 author: crysfel-villa
 image: dogs.jpg
 ---
-A few months ago I was interviewing a Sr. Frontend Dev and I asked this question, he oviously knew that using triple equals when comparing values is the way to go and that this is a well known best practice in the JavaScript community. However, he had some issues explaining the difference between the two.
+A few months ago I was interviewing a Sr. Frontend Dev and I asked this question, he obviously knew that using triple equals when comparing values is the way to go and that this is a well known best practice in the JavaScript community. However, he had some issues explaining the difference between the two.
 
 I think is important to fully understand the difference between the two to avoid potencial issues and bugs in your code, but also we should be able to explain these conceps when mentoring Jr Developers.
 
 ### Abstract Equality Comparison
-The main diference between the double and triple equals is that the double equals (Also known as Abstract Equality Comparison) will cast the type of both variables and compare the value afterwards, in other words it will check the types if both are different it will convert them to the same type and then execute the comparison, for example:
+The main difference between the double and triple equals is that the double equals (Also known as Abstract Equality Comparison) will cast the type of both variables and compare the value afterwards.  In other words, it will check the types if both are different it will convert them to the same type and then execute the comparison, for example:
 
 ```
 const a = 1
@@ -38,9 +38,9 @@ console.log(0 === '') // --> false
 Now you can see the result is different when we use the strict comparison, the triple equals is not casting the type but rather returning `false` if types are different, the comparison algorithm is not even checking the values, because the type comparison is already returning `false`.
 
 ### When to use one or the other?
-Now the question is, how do we know when to use double or triple equals when writing a comparison? For most cases a triple comparison would be preferred to avoid potential bugs.
+Now the question is, how do we know when to use double or triple equals when writing a comparison? In most cases, a triple equals comparison would be preferred to avoid potential bugs.
 
-However, in some instances using double equals might make sense, for example let's say you want to check that a value is defined and is not null, you can write something like this:
+However, in some instances using double equals might make sense. For example, let's say you want to check that a value is defined and is not null, you can write something like this:
 
 ```
 const value = undefined;
