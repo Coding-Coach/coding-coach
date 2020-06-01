@@ -5,7 +5,7 @@ tags: ['javascript', 'tutorial', 'js-core']
 author: crysfel-villa
 image: dogs.jpg
 ---
-A few months ago I was interviewing a Sr. Frontend Dev and I asked this question, he oviously knew that using triple equals when comparing values is the way to go and that this is a well known best practice in the JavaScript community. However, he had some issues explaining the difference between the two.
+A few months ago I was interviewing a Sr. Frontend Dev and I asked this question, he obviously knew that using triple equals when comparing values is the way to go and that this is a well known best practice in the JavaScript community. However, he had some issues explaining the difference between the two.
 
 I think is important to fully understand the difference between the two to avoid potencial issues and bugs in your code, but also we should be able to explain these conceps when mentoring Jr Developers.
 
