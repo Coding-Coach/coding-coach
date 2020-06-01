@@ -75,7 +75,7 @@ And this is the reason to avoid mutating data, you might be updating data in pla
 
 React uses the memory addresses to compare if an object has changed, therefore if you mutate the object react will not pick up the new changes and won't be able to trigger a re-render.
 
-The same applies to redux, in order to find out if an objects was updated we need to create a new reference to the new object, for example:
+The same applies to redux, in order to find out if an object was updated we need to create a new reference to the new object, for example:
 
 ```
 var state = {
@@ -90,7 +90,7 @@ var newState = {
 console.log(state.people === newState.people) // --> false
 ```
 
-If you have any question or somethign was not very clear, just leave a comment below!
+If you have any question or something was not very clear, just leave a comment below!
 
 
 This tutorial is part of the [Leveling up your JavaScript skills](/blog/leveling-up-your-javascript-skills) series.
