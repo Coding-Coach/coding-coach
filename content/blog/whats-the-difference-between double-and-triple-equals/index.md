@@ -38,7 +38,7 @@ console.log(0 === '') // --> false
 Now you can see the result is different when we use the strict comparison, the triple equals is not casting the type but rather returning `false` if types are different, the comparison algorithm is not even checking the values, because the type comparison is already returning `false`.
 
 ### When to use one or the other?
-Now the question is, how do we know when to use double or triple equals when writing a comparison? For most cases a triple comparison would be preferred to avoid potential bugs.
+Now the question is, how do we know when to use double or triple equals when writing a comparison? In most cases, a triple equals comparison would be preferred to avoid potential bugs.
 
 However, in some instances using double equals might make sense, for example let's say you want to check that a value is defined and is not null, you can write something like this:
 
