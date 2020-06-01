@@ -10,7 +10,7 @@ A few months ago I was interviewing a Sr. Frontend Dev and I asked this question
 I think is important to fully understand the difference between the two to avoid potencial issues and bugs in your code, but also we should be able to explain these conceps when mentoring Jr Developers.
 
 ### Abstract Equality Comparison
-The main diference between the double and triple equals is that the double equals (Also known as Abstract Equality Comparison) will cast the type of both variables and compare the value afterwards, in other words it will check the types if both are different it will convert them to the same type and then execute the comparison, for example:
+The main difference between the double and triple equals is that the double equals (Also known as Abstract Equality Comparison) will cast the type of both variables and compare the value afterwards.  In other words, it will check the types if both are different it will convert them to the same type and then execute the comparison, for example:
 
 ```
 const a = 1
