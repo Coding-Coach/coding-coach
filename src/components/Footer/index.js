@@ -14,6 +14,7 @@ export default function Footer() {
             <LinkItem to="/legal/cookies">Cookies</LinkItem>
             <LinkItem to="/legal/privacy">Privacy Policy</LinkItem>
             <LinkItem to="/legal/code-of-conduct">Code Of Conduct</LinkItem>
+            <LinkItem href="https://jooble.org/jobs-junior-software-engineer" target="_blank">Jr. Software Engineer </LinkItem>
           </ul>
         </div>
       </footer>
@@ -23,15 +24,12 @@ export default function Footer() {
   );
 }
 
-function LinkItem({ children, to }) {
+function LinkItem({ children, to, target, href }) {
+  const props = { children, to, target, href, className: 'text-body text-secondary-dark hover:underline hover:text-primary-light' };
+  const LinkComponent = href ? <a {...props} /> : <Link {...props} />;
   return (
     <li className="mr-4 inline-block md:ml-4 md:mr-0">
-      <Link
-        to={to}
-        className="text-body text-secondary-dark hover:underline hover:text-primary-light"
-      >
-        {children}
-      </Link>
+      {LinkComponent}
     </li>
   );
 }
