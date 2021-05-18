@@ -14,7 +14,6 @@ export default function Footer() {
             <LinkItem to="/legal/cookies">Cookies</LinkItem>
             <LinkItem to="/legal/privacy">Privacy Policy</LinkItem>
             <LinkItem to="/legal/code-of-conduct">Code Of Conduct</LinkItem>
-            <LinkItem href="https://jooble.org/jobs-junior-software-engineer" target="_blank">Jr. Software Engineer </LinkItem>
           </ul>
         </div>
       </footer>
