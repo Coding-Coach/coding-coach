@@ -5,11 +5,11 @@ import Button from './index';
 
 const styles = {
   hide: {
-    bottom: 20,
+    bottom: 90,
     right: -65,
   },
   show: {
-    right: 20,
+    right: 15,
   },
 };
 
