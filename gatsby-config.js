@@ -31,6 +31,13 @@ const config = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `guidelines`,
+        path: `${__dirname}/content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `legal`,
         path: `${__dirname}/content`,
       },
