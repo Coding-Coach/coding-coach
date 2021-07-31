@@ -44,6 +44,9 @@ module.exports = {
       '6xl': '4rem',
       '7xl': '5.25rem',
     },
+     maxWidth: {
+      '1/2': '50%',
+    },
     container: {
       center: true,
       padding: '1.5rem',

@@ -48,7 +48,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const legalResult = await graphql(`
     {
       allMarkdownRemark(
-        filter: {fields: {slug: {regex: "/^\\/legal\\/.*/"}}}
+        filter: {fields: {slug: {regex: "/^\\/(legal|guidelines)\\/.*/"}}}
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
       ) {

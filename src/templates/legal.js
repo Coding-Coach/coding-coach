@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import MainNav from '../components/MainNav';
+import SEO from '../components/SEO';
 
 export default function LegalTemplate({ data }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
@@ -11,6 +12,7 @@ export default function LegalTemplate({ data }) {
 
   return (
     <Fragment>
+      <SEO title={frontmatter.title} />
       <MainNav />
       <Header title={frontmatter.title} subtitle={frontmatter.date} />
       <div
