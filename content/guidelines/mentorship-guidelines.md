@@ -1,5 +1,7 @@
 ---
 title: Mentorship Guidelines
+date: 2021-01-08
+path: /guidelines/mentorship-guidelines
 ---
 
 Welcome to the Coding Coach Mentorship Guidelines! We’re happy you’re here.
@@ -16,19 +18,19 @@ Below are some of the terms you may hear in relation to mentorship.
 
 A mentee is someone who aspires to grow their skills in a particular topic or set of topics, and needs advice, assistance, support, and/or guidance.
 
-<img src="https://lh4.googleusercontent.com/r3ZTlLfbGyRc4ux-3a1kRzz6-GKwqQfGK0_cX9kpfNw9kxpHO0UnzIuuZRnRpIn_zUYvPmL1z2FHaKr1btTEfYETnPR9X08zVeJuRhhQiUuC4NC0FEuF21iLamSXB8I8eGQHj4-s" class="max-w-1/2">
+<img src="https://lh4.googleusercontent.com/r3ZTlLfbGyRc4ux-3a1kRzz6-GKwqQfGK0_cX9kpfNw9kxpHO0UnzIuuZRnRpIn_zUYvPmL1z2FHaKr1btTEfYETnPR9X08zVeJuRhhQiUuC4NC0FEuF21iLamSXB8I8eGQHj4-s" class="max-w-1/2 mx-auto">
 
 ### Mentor
 
 A mentor is someone confident enough with their experiences and knowledge in a particular topic or set of topics, to comfortably assist others with less experience or knowledge.
 
-<img src="https://lh3.googleusercontent.com/SyKXYV3EAEua0ySXGvnDUxZ9PFyYBY0osLA0zqvn8VIhp_BkAs-sa2US9HgsKzH4aHDZxfGDBP4_7YnTA_Z4-B5n2rxdnuXqwe82bE-8_FO9bgvOu88I2pfj-K0Wg0wLrvmN41pN" class="max-w-1/2">
+<img src="https://lh3.googleusercontent.com/SyKXYV3EAEua0ySXGvnDUxZ9PFyYBY0osLA0zqvn8VIhp_BkAs-sa2US9HgsKzH4aHDZxfGDBP4_7YnTA_Z4-B5n2rxdnuXqwe82bE-8_FO9bgvOu88I2pfj-K0Wg0wLrvmN41pN" class="max-w-1/2 mx-auto">
 
 ### Mentorship
 
 A mentorship is the relationship formed between two people, a mentor and a mentee, in which the mentor provides guidance or shares knowledge with the mentee in order to improve their skills or confidence.
 
-<img src="https://lh4.googleusercontent.com/BSMxFvX72c1o-seSVgV85X7y-LFmIqgt7bOwsfAEWFY2fx4cWIvVIWpoPf0QK-yHxuxmyJdxMFm2Sl_F1Fr7Xzt9RsyXr4_hcRXWyoDgiQVHq_35xRYwNyy1zyLn_Yt3iYAkoGUL" class="max-w-1/2">
+<img src="https://lh4.googleusercontent.com/BSMxFvX72c1o-seSVgV85X7y-LFmIqgt7bOwsfAEWFY2fx4cWIvVIWpoPf0QK-yHxuxmyJdxMFm2Sl_F1Fr7Xzt9RsyXr4_hcRXWyoDgiQVHq_35xRYwNyy1zyLn_Yt3iYAkoGUL" class="max-w-1/2 mx-auto">
 
 ## Why Mentorship?
 
