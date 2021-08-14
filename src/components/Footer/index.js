@@ -25,6 +25,7 @@ export default function Footer() {
 
 function LinkItem({ children, to, target, href }) {
   const props = { children, to, target, href, className: 'text-body text-secondary-dark hover:underline hover:text-primary-light' };
+  // eslint-disable-next-line
   const LinkComponent = href ? <a {...props} /> : <Link {...props} />;
   return (
     <li className="mr-4 inline-block md:ml-4 md:mr-0">
