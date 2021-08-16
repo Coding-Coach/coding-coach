@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 import Image from 'gatsby-image';
@@ -21,6 +21,15 @@ export default function PostTemplate({ data }) {
     identifier: post.fields.slug,
     title: post.frontmatter.title,
   }
+
+  useEffect(() => {
+    const twitterTweet = document.querySelector('.twitter-tweet');
+    if (twitterTweet) {
+      var s1 = document.createElement('script');
+      s1.src = 'https://platform.twitter.com/widgets.js';
+      twitterTweet.parentNode.insertBefore(s1, twitterTweet);
+    }
+  }, []);
 
   return (
     <Fragment>
