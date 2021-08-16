@@ -35,6 +35,8 @@ const NotFoundPage = () => (
       </div>
     </div>
     <Footer />
+    {/* Use these classes to stop gatsby-plugin-purgecss from removing them these classes  */}
+    <span className="flex-col flex-grow max-w-1/2 mx-auto" style={{display: 'none'}}></span>
   </Fragment>
 );
 
