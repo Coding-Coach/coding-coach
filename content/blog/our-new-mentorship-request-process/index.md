@@ -49,7 +49,7 @@ But, surprisingly, some of them actually want and can be mentors but due technic
 We are so excited to see these mentors are taking new mentees following our inquiries 🥳
 Here are some examples:
 
-<div class="flex flex-row">
+<div class="flex md:flex-row flex-col">
   <div class="flex-grow">
     <img src="./linkedin.jpeg" alt="Linkedin chat - mentor wasn't aware of the requests">
     <figure>
