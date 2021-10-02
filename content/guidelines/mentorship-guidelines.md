@@ -164,6 +164,10 @@ Some mentees may be completely new to mentorship and thus it’s extremely impor
 
 It’s always worth asking the question, “are you comfortable with...or if we…” These kinds of questions help put mentees at ease and re-assure them that you are sensitive to the possibility that they may feel a little skeptical about receiving guidance.
 
+**Be Discreet**
+
+Respect your mentees' privacy. Don't share their name, email or any of their details with anyone unless you received their explicit permission. Before you send groups messages make sure that no one can see each other details unless they agreed to.
+
 ## How To Respond To Mentees
 
 So your first mentee has reached out! You’re extremely excited, but… now what? Below are the steps you should take once you’ve received your first mentee request.
