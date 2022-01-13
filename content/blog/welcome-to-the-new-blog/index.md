@@ -5,7 +5,7 @@ tags: ['community', 'collaboration']
 author: crysfel-villa
 image: main.jpg
 ---
-Over the last months we've been getting requests from different members to create a blog where everyone can participate and collaborate. 
+Over the last months we've been getting requests from different members to create a blog where everyone can participate and collaborate.
 
 Today I'm pleased to annouced our new blog! Where anyone can create a post through a GitHub PR! The idea is to have different topics such as mentoring, career growth, tutorials about technology, case studies and anything related to what Coding Coach stands for.
 
@@ -21,7 +21,7 @@ To create a profile you need to create a new markdown file under [/content/autho
 ---
 name: Crysfel Villa
 avatar: https://avatars2.githubusercontent.com/u/219207?s=460&v=4
-link: https://mentors.codingcoach.io/?name=Crysfel+Villa
+link: https://mentors.codingcoach.io/u/5d543b6f5d08e470cb2a3b4d
 about: I love writing tutorials about JavaScript, Node, IoT, etc.
 ---
 ```
@@ -37,7 +37,7 @@ Inside this folder you need need to add all the images you might want to show in
 ---
 title: Coding for fun for Coding Coach
 date: 2019-04-29
-tags: 
+tags:
   - developer
   - coding
   - community

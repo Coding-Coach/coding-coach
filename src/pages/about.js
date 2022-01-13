@@ -26,7 +26,7 @@ export default function About({ data }) {
                 image="https://avatars0.githubusercontent.com/u/7671983?s=460&v=4"
                 name="Emma Wedekind"
                 title="Founder"
-                to="https://mentors.codingcoach.io/?name=Emma+Wedekind"
+                to="https://mentors.codingcoach.io/u/5d543b705d08e470cb2a3c1d"
                 highlight
               />
             </div>
@@ -35,7 +35,7 @@ export default function About({ data }) {
                 image="https://avatars0.githubusercontent.com/u/219207?s=460&v=4"
                 name="Crysfel Villa"
                 title="Backend Lead"
-                to="https://mentors.codingcoach.io/?name=Crysfel+Villa"
+                to="https://mentors.codingcoach.io/u/5d543b6f5d08e470cb2a3b4d"
                 highlight
               />
             </div>
@@ -44,7 +44,7 @@ export default function About({ data }) {
                 image="https://avatars3.githubusercontent.com/u/3723951?s=460&v=4"
                 name="Mosh Feuchtwanger"
                 title="Frontend Lead"
-                to="https://mentors.codingcoach.io/?name=Mosh+Feuchtwanger"
+                to="https://mentors.codingcoach.io/u/5d543b6f5d08e470cb2a3b49"
                 highlight
               />
             </div>
