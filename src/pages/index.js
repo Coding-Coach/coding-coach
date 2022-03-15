@@ -50,7 +50,7 @@ export default function IndexPage() {
           We want to hear your thoughts! Feel free to join our
           <a
             className="inline-block mx-2 text-black border-b border-black no-underline hover:bg-primary-light hover:text-white hover:border-primary-light"
-            href="https://join.slack.com/t/coding-coach/shared_invite/enQtODYwODU0NDE2OTkzLTRmMTY3NTZmOGI2MjYyZTM2ZDBlZTNjNmMwNGRhY2I3MzZkMjA3ZjlhZjliYmQzMGQyYTkxNTViZTc3MzJmOTU"
+            href="https://join.slack.com/t/coding-coach/shared_invite/zt-15kky1m4x-JrrLzQevCLkdyZiaqT_DTg"
           >
             Slack Organization
           </a>
