@@ -20,7 +20,7 @@
     "gatsby-remark-images": "^3.1.19",
     "gatsby-remark-reading-time": "1.0.1",
     "gatsby-source-filesystem": "2.1.6",
-    "gatsby-transformer-remark": "2.6.10",
+    "gatsby-transformer-remark": "5.25.1",
     "gatsby-transformer-sharp": "2.2.6",
     "prop-types": "15.7.2",
     "react": "16.8.6",
