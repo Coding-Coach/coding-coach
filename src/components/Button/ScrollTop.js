@@ -49,7 +49,7 @@ export default class ScrollTop extends React.Component {
 
     return (
       <div
-        aria-label="Scroll to top"
+        aria-label="Scroll to the top of the page"
         tabIndex={scrollToTopClass ? 0 : -1}
         className={`transition-slow fixed cursor-pointer opacity-0 z-10 ${scrollToTopClass}`}
         style={{
