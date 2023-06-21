@@ -23,13 +23,13 @@ const NotFoundPage = () => (
           <Link to="/">home page</Link> would be a good idea. You might want to{' '}
           <Link to="/blog">read the blog</Link>, we have very interesting
           articles and tutorials! Maybe looking for{' '}
-          <a href="https://mentors.codingcoach.io">a mentor</a> to improve your
+          <a aria-label="Link to page with all the mentors" href="https://mentors.codingcoach.io">a mentor</a> to improve your
           career?
         </p>
         <p>
           How did you get here? Is this a broken link within the blog? Or maybe
           a link from a third party website? Please{' '}
-          <a href="mailto:admin@codingcoach.io">let us know</a> and we will fix it
+          <a aria-label="Send email to the page admin" href="mailto:admin@codingcoach.io">let us know</a> and we will fix it
           ASAP!
         </p>
       </div>

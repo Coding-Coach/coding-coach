@@ -58,7 +58,7 @@ export default class ScrollTop extends React.Component {
         }}
       >
         <Button onClick={this.scrollToTop} onKeyPress={this.scrollToTop} className="px-3">
-          <ArrowUp width={27} height={28} color="currentColor" />
+          <ArrowUp width={27} height={28} color="currentColor" ariaLabelledby="Scroll to the top of the page" />
         </Button>
       </div>
     );

@@ -51,7 +51,7 @@ export default function PostTemplate({ data }) {
             {frontmatter.title}
           </h1>
           <p className="mb-4 font-body uppercase  text-xs md:text-sm">
-            <a href={author.frontmatter.link} className="hover:underline">{author.frontmatter.name}</a>{' '}
+            <a aria-label={author.frontmatter.name} href={author.frontmatter.link} className="hover:underline">{author.frontmatter.name}</a>{' '}
             <span className="inline-block mx-2">&middot;</span>{' '}
             {frontmatter.date}{' '}
             <span className="inline-block mx-2">&middot;</span>{' '}

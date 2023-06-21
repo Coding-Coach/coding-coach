@@ -68,7 +68,7 @@ function PostExcerpt({ author, data, excerpt, fields }) {
           </Link>
         </h2>
         <p className="mb-1 font-body text-sm uppercase text-secondary-dark">
-          <a href={author.frontmatter.link} className="hover:underline">{author.frontmatter.name}</a> <span className="inline-block mx-2">&middot;</span>{' '}
+          <a aria-label={author.frontmatter.name} href={author.frontmatter.link} className="hover:underline">{author.frontmatter.name}</a> <span className="inline-block mx-2">&middot;</span>{' '}
           {data.date} <span className="inline-block mx-2">&middot;</span>{' '}
           {fields.readingTime.text}
         </p>

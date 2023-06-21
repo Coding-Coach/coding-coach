@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="367" height="272" viewBox="0 0 367 272">
+<svg xmlns="http://www.w3.org/2000/svg" width="367" height="272" viewBox="0 0 367 272" role="img" aria-labelledby="title  desc">
+  <title>Decorative image used in about section</title>
+  <desc>Bird's eye view of a person walking next to a laptop. The background is light green and there are also some plants at the bottom left corner.</desc>
   <defs>
     <linearGradient id="startup-life-a" x1="49.997%" x2="49.997%" y1="100.01%" y2="-.004%">
       <stop offset="0%" stop-color="gray" stop-opacity=".25"/>

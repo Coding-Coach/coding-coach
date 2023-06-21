@@ -9,7 +9,7 @@ const Button = React.memo(({ children, className, to, onClick }) => {
   if (to) {
     if (to.startsWith('http')) {
       return (
-        <a href={to} className={css}>{children}</a>
+        <a aria-label={children} href={to} className={css}>{children}</a>
       );
     }
 
