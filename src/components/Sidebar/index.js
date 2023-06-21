@@ -53,7 +53,7 @@ function FeaturedMentor({ mentor, isAuthor }) {
         <img src={mentor.avatar} className="w-full" alt={mentor.name} />
       </a>
       <h3 className="font-body mb-1 text-lg truncate" title={mentor.name}>
-        <a href={`https://mentors.codingcoach.io/u/${mentor._id}`} className="hover:underline">{mentor.name}</a>
+        <a aria-label={mentor.name} href={`https://mentors.codingcoach.io/u/${mentor._id}`} className="hover:underline">{mentor.name}</a>
       </h3>
       {mentor.tags &&
         <p className="font-body mb-1 text-xs uppercase truncate text-secondary-dark">
@@ -75,7 +75,7 @@ function LatestMentors({ mentors }) {
         {mentors.map(mentor =>
           <li key={mentor.name} className="mb-2">
             <h4 className="font-body">
-              <a href={`https://mentors.codingcoach.io/u/${mentor._id}`} className="hover:underline">{mentor.name}</a>
+              <a aria-label={mentor.name} href={`https://mentors.codingcoach.io/u/${mentor._id}`} className="hover:underline">{mentor.name}</a>
             </h4>
             <p className="uppercase text-xs text-secondary-dark truncate">{mentor.tags.join(', ')}</p>
           </li>
