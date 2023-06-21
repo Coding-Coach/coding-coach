@@ -8,7 +8,7 @@ export default React.memo(function Header({ children, title, subtitle }) {
       <div className="container pt-20 pb-10 flex">
         <div className="flex-1">
           <h1 className="font-display font-semibold text-white text-7xl uppercase tracking-wider leading-tight md:whitespace-pre">{title}</h1>
-          {subtitle && <p className="text-white text-sans text-2xl mb-4 font-body font-hairline leading-tight">{subtitle}</p>}
+          {subtitle && <h2 className="text-white text-sans text-2xl mb-4 font-body font-hairline leading-tight">{subtitle}</h2>}
           {children}
         </div>
         <div className="hidden md:block flex-1">
