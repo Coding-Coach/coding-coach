@@ -49,11 +49,11 @@ function FeaturedMentor({ mentor, isAuthor }) {
       <SidebarTitle>
         { isAuthor ? 'Author' : 'Featured Mentor' }
       </SidebarTitle>
-      <a href={`https://mentors.codingcoach.io/u/${mentor._id}`} className="block mb-4 w-full">
+      <a title href={`https://mentors.codingcoach.io/u/${mentor._id}`} className="block mb-4 w-full">
         <img src={mentor.avatar} className="w-full" alt={mentor.name} />
       </a>
       <h3 className="font-body mb-1 text-lg truncate" title={mentor.name}>
-        <a href={`https://mentors.codingcoach.io/u/${mentor._id}`} className="hover:underline">{mentor.name}</a>
+        <a aria-label={mentor.name} href={`https://mentors.codingcoach.io/u/${mentor._id}`} className="hover:underline">{mentor.name}</a>
       </h3>
       {mentor.tags &&
         <p className="font-body mb-1 text-xs uppercase truncate text-secondary-dark">
@@ -75,7 +75,7 @@ function LatestMentors({ mentors }) {
         {mentors.map(mentor =>
           <li key={mentor.name} className="mb-2">
             <h4 className="font-body">
-              <a href={`https://mentors.codingcoach.io/u/${mentor._id}`} className="hover:underline">{mentor.name}</a>
+              <a aria-label={mentor.name} href={`https://mentors.codingcoach.io/u/${mentor._id}`} className="hover:underline">{mentor.name}</a>
             </h4>
             <p className="uppercase text-xs text-secondary-dark truncate">{mentor.tags.join(', ')}</p>
           </li>
@@ -109,7 +109,7 @@ function TwitchAd() {
   return (
     <div className="mb-12 pt-4 md:mr-4 md:flex-1 lg:flex-none">
       <SidebarTitle>Follow us in Twitch</SidebarTitle>
-      <a href="https://www.twitch.tv/codingcoach/">
+      <a aria-label="Access our page on Twitch" href="https://www.twitch.tv/codingcoach/">
         <img src={twitchImage} alt="Twitch Logo" />
       </a>
     </div>
@@ -120,7 +120,7 @@ function StoreAd() {
   return (
     <div className="mb-12 pt-4 md:mr-4 md:flex-1 lg:flex-none">
       <SidebarTitle>Get the T-Shirt</SidebarTitle>
-      <a href="https://shop.spreadshirt.com/coding-coach" target="_blank" rel="noopener noreferrer">
+      <a aria-label="Buy coding-coach merchandise" href="https://shop.spreadshirt.com/coding-coach" target="_blank" rel="noopener noreferrer">
         <img src={tshirtImage} alt="Coding Coach T-Shirt" />
       </a>
     </div>

@@ -46,7 +46,7 @@ const MenuLink = React.memo(({ children, to }) => {
   if (to && to.startsWith('http')) {
     return (
       <li className={liCss}>
-        <a href={to} className={linkCss}>{children}</a>
+        <a aria-label={children} href={to} className={linkCss}>{children}</a>
       </li>
     );
   }

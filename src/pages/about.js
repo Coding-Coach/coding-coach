@@ -80,11 +80,11 @@ function Profile({ className, highlight, image, name, title, to }) {
 
   return (
     <div className={css}>
-      <a href={to}>
-        <img src={image} alt={name} title={name} />
+      <a aria-label={name} href={to}>
+        <img aria-label={name} src={image} alt={name} title={name} />
       </a>
       <h3 className={titleCss}>
-        <a href={to} className="hover:underline" title={name}>
+        <a aria-label={name} href={to} className="hover:underline" title={name}>
           {name}
         </a>
       </h3>
