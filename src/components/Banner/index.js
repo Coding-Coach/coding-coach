@@ -20,7 +20,7 @@ export default class Banner extends PureComponent {
             {children}
           </div>
           { closable &&
-            <CloseIcon onClick={onClose} width={16} height={16} className="fill-current text-secondary-dark cursor-pointer hover:text-primary-light" />
+            <CloseIcon onClick={onClose} width={16} height={16} className="fill-current text-secondary-dark cursor-pointer hover:text-primary-light" ariaLabelledby="Close icon"/>
           }
         </div>
       </section>

@@ -13,6 +13,7 @@ export default function Icon(props) {
     width,
     vectors,
     viewBox,
+    ariaLabelledby
   } = props;
 
   return (
@@ -20,7 +21,7 @@ export default function Icon(props) {
       width={width}
       height={height}
       viewBox={viewBox}
-      aria-labelledby="title"
+      aria-labelledby={ariaLabelledby}
       className={className}
       style={style}
       onClick={onClick}
@@ -43,4 +44,5 @@ Icon.propTypes = {
   vectors: string,
   viewBox: string,
   width: number,
+  ariaLabelledby: string
 };
