@@ -31,7 +31,7 @@ export default function IndexPage() {
           to="https://mentors.codingcoach.io"
           className="uppercase shadow-lg"
         >
-          Find a mentor
+          {children="Find a mentor"}
         </Button>
       </Header>
       <Section
